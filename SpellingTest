@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KS2 SATs Practice Runner (Local)</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    body { margin: 0; padding: 16px; background: #fafafa; color: #111; }
+    .wrap { max-width: 1100px; margin: 0 auto; display: grid; gap: 14px; }
+    .card { background: #fff; border: 1px solid #e6e6e6; border-radius: 12px; padding: 14px; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
+    h1 { font-size: 18px; margin: 0 0 8px; }
+    h2 { font-size: 14px; margin: 0 0 8px; }
+    h3 { font-size: 13px; margin: 0 0 8px; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    button, input, textarea, select {
+      font: inherit; border: 1px solid #d0d0d0; border-radius: 10px; padding: 10px 12px; background: #fff;
+    }
+    button { cursor: pointer; }
+    button.primary { background: #111; color: #fff; border-color: #111; }
+    button.ghost { background:#f3f3f3; border-color:#e0e0e0; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .pill { display:inline-block; padding: 2px 8px; border-radius: 999px; background:#f3f3f3; font-size:12px; }
+    .muted { color: #666; font-size: 12px; }
+    .grid2 { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid3 { display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+    @media (max-width: 980px){ .grid2, .grid3 { grid-template-columns: 1fr; } }
+    .hidden { display:none; }
+
+    .tabs { display:flex; gap:8px; flex-wrap:wrap; }
+    .tab { padding:8px 10px; border-radius:999px; border:1px solid #ddd; background:#fff; cursor:pointer; font-size:13px; }
+    .tab.active { background:#111; color:#fff; border-color:#111; }
+
+    .timer { font-variant-numeric: tabular-nums; font-weight: 800; }
+    .q { border:1px solid #eee; border-radius:12px; padding:10px; background:#fcfcfc; }
+    .q + .q { margin-top:10px; }
+    .q .stem { font-weight:600; margin-bottom:8px; }
+    .q .choices { display:grid; gap:6px; margin:8px 0; }
+    .q label { display:flex; gap:8px; align-items:flex-start; }
+    .q input[type="radio"]{ margin-top:3px; }
+
+    table { width:100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align:left; padding: 8px 6px; border-bottom: 1px solid #eee; vertical-align: top; }
+    th { color:#444; font-weight:700; }
+    .right { text-align:right; }
+
+    .bigword {
+      font-size: 34px; font-weight: 800; letter-spacing: 0.5px;
+      padding: 10px 12px; border-radius: 12px; background: #f3f3f3; display: inline-block;
+      min-width: 180px; text-align: center;
+    }
+    .ok { color:#0a7a2f; font-weight:700; }
+    .bad { color:#b00020; font-weight:700; }
+    textarea { width:100%; min-height:140px; }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <div class="card">
+    <div class="row" style="justify-content:space-between;">
+      <div>
+        <h1>KS2 SATs Practice Runner</h1>
+        <div class="muted">Runs locally. Saves progress to this browser (localStorage). Timers optional.</div>
+      </div>
+      <div class="row">
+        <span class="pill" id="overallPill">Overall: 0 attempts</span>
+        <span class="pill" id="weakPill">Weak areas: —</span>
+      </div>
+    </div>
+
+    <div class="tabs" style="margin-top:10px;">
+      <button class="tab active" data-tab="runner">Practice Run</button>
+      <button class="tab" data-tab="training">Training Tools</button>
+      <button class="tab" data-tab="banks">Question Banks</button>
+      <button class="tab" data-tab="stats">Stats</button>
+      <button class="tab" data-tab="settings">Settings</button>
+    </div>
+  </div>
+
+  <!-- PRACTICE RUN -->
+  <div class="card" id="tab-runner">
+    <h2>Practice Run</h2>
+
+    <div class="grid3">
+      <div class="card" style="background:#fcfcfc;">
+        <h3>Choose a run</h3>
+        <div class="muted">Mimics SATs paper structure. Use “Timed” for exam pacing; “Untimed” for learning.</div>
+        <div class="row" style="margin-top:10px;">
+          <select id="runSelect">
+            <option value="full">Full Run (Maths + English)</option>
+            <option value="maths">Maths Only (P1+P2+P3)</option>
+            <option value="english">English Only (Reading + SPaG + Spelling)</option>
+          </select>
+          <select id="timingSelect">
+            <option value="timed">Timed</option>
+            <option value="untimed" selected>Untimed</option>
+          </select>
+        </div>
+        <div class="row" style="margin-top:10px;">
+          <button class="primary" id="startRunBtn">Start run</button>
+          <button id="stopRunBtn" disabled>Stop</button>
+        </div>
+        <div class="muted" style="margin-top:10px;">
+          Tip: start untimed first. Use timed once the flow feels familiar.
+        </div>
+      </div>
+
+      <div class="card" style="background:#fcfcfc;">
+        <h3>Current paper</h3>
+        <div class="row" style="justify-content:space-between;">
+          <div>
+            <div id="paperTitle" style="font-weight:800;">—</div>
+            <div class="muted" id="paperMeta">—</div>
+          </div>
+          <div class="timer" id="paperTimer">--:--</div>
+        </div>
+        <div class="row" style="margin-top:10px;">
+          <button id="prevPaperBtn" disabled>Prev</button>
+          <button id="nextPaperBtn" disabled>Next</button>
+          <button class="ghost" id="toggleInstructionsBtn" disabled>Show instructions</button>
+        </div>
+        <div class="hidden" id="paperInstructions" style="margin-top:10px;">
+          <div class="q">
+            <div class="stem" style="margin-bottom:6px;">Instructions</div>
+            <div class="muted" id="paperInstructionsText">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="background:#fcfcfc;">
+        <h3>Submit paper</h3>
+        <div class="muted">End a paper to score it and save results.</div>
+        <div class="row" style="margin-top:10px;">
+          <button class="primary" id="submitPaperBtn" disabled>Submit & score</button>
+          <button id="resetPaperBtn" disabled>Reset paper</button>
+        </div>
+        <div class="muted" style="margin-top:10px;" id="paperScoreLine">—</div>
+      </div>
+    </div>
+
+    <div style="margin-top:12px;">
+      <div id="paperArea" class="q">
+        <div class="stem">Press “Start run” to begin.</div>
+        <div class="muted">This MVP includes a starter bank + generators. You can paste full banks in the Question Banks tab.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRAINING -->
+  <div class="card hidden" id="tab-training">
+    <h2>Training Tools</h2>
+    <div class="grid2">
+      <div class="card" style="background:#fcfcfc;">
+        <h3>Maths: Arithmetic generator</h3>
+        <div class="row">
+          <select id="arithDifficulty">
+            <option value="y6" selected>Year 6 mix</option>
+            <option value="easy">Easier</option>
+            <option value="hard">Harder</option>
+          </select>
+          <button class="primary" id="arithNewBtn">New 10-question set</button>
+        </div>
+        <div class="muted" style="margin-top:8px;">This matches Paper 1 style (no word problems).</div>
+        <div id="arithArea" style="margin-top:10px;"></div>
+        <div class="row" style="margin-top:10px;">
+          <button id="arithScoreBtn" disabled>Score</button>
+          <div class="muted" id="arithScoreLine">—</div>
+        </div>
+      </div>
+
+      <div class="card" style="background:#fcfcfc;">
+        <h3>English: Spelling trainer (your pools)</h3>
+        <div class="row">
+          <label class="muted">Pool:</label>
+          <select id="spellPoolSelect">
+            <option value="statutory_y5y6_100">Statutory (Y5/6)</option>
+            <option value="sats_practice_supplement">SATs supplement</option>
+            <option value="both" selected>Both</option>
+          </select>
+
+          <label class="muted">Mode:</label>
+          <select id="spellModeSelect">
+            <option value="flash">Hidden (flash)</option>
+            <option value="show">Visible</option>
+            <option value="speak">Spoken (en-GB)</option>
+          </select>
+
+          <label class="muted">Flash:</label>
+          <select id="spellFlashSelect">
+            <option value="2">2s</option>
+            <option value="3" selected>3s</option>
+            <option value="5">5s</option>
+          </select>
+        </div>
+
+        <div class="row" style="margin-top:10px;">
+          <span class="bigword" id="spellPrompt">—</span>
+          <button id="spellRepeatBtn">Repeat</button>
+          <button id="spellNextBtn">Next</button>
+        </div>
+
+        <div class="row" style="margin-top:10px;">
+          <input id="spellInput" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Type here…" />
+          <button class="primary" id="spellCheckBtn">Check</button>
+        </div>
+
+        <div style="margin-top:10px;">
+          <div id="spellFeedback"></div>
+          <div class="muted" id="spellHelp"></div>
+        </div>
+
+        <div class="row" style="margin-top:10px;">
+          <span class="pill" id="spellProgressPill">0 / 0 mastered</span>
+          <span class="pill" id="spellSessionPill">Session: 0 correct, 0 wrong</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANKS -->
+  <div class="card hidden" id="tab-banks">
+    <h2>Question Banks (paste JSON)</h2>
+    <div class="muted">
+      This MVP includes starter banks for: Reading (1 passage), SPaG (a few items), Reasoning (a few items).
+      Paste bigger banks here over time.
+    </div>
+
+    <div class="grid2" style="margin-top:10px;">
+      <div class="card" style="background:#fcfcfc;">
+        <h3>Current banks (preview)</h3>
+        <div class="muted" id="bankSummary">—</div>
+        <button class="ghost" id="exportBanksBtn" style="margin-top:10px;">Export current banks JSON</button>
+        <pre id="exportOut" class="hidden" style="white-space:pre-wrap; font-size:12px; margin-top:10px;"></pre>
+      </div>
+
+      <div class="card" style="background:#fcfcfc;">
+        <h3>Import / Replace</h3>
+        <div class="muted">Paste JSON matching the schema shown below, then click Import.</div>
+        <textarea id="bankImport"></textarea>
+        <div class="row" style="margin-top:10px;">
+          <button class="primary" id="importBanksBtn">Import banks</button>
+          <button id="resetBanksBtn">Reset to defaults</button>
+        </div>
+
+        <details style="margin-top:10px;">
+          <summary style="cursor:pointer; font-weight:700;">Bank JSON schema (minimal)</summary>
+          <pre style="white-space:pre-wrap; font-size:12px;">
+{
+  "reading": [
+    {
+      "id": "r1",
+      "title": "Passage title",
+      "text": "Passage text...",
+      "questions": [
+        { "id":"q1", "type":"mcq", "stem":"...", "choices":["A","B","C","D"], "answer":"B" },
+        { "id":"q2", "type":"short", "stem":"...", "answer":"expected text (for self-check or exact match)" }
+      ]
+    }
+  ],
+  "spag": [
+    { "id":"g1", "type":"mcq", "stem":"...", "choices":["..."], "answer":"..." },
+    { "id":"g2", "type":"short", "stem":"...", "answer":"..." }
+  ],
+  "reasoning": [
+    { "id":"mR1", "paper":"P2", "type":"short", "stem":"...", "answer":"42" },
+    { "id":"mR2", "paper":"P3", "type":"mcq", "stem":"...", "choices":["..."], "answer":"..." }
+  ]
+}
+          </pre>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="card hidden" id="tab-stats">
+    <div class="row" style="justify-content:space-between;">
+      <h2 style="margin:0;">Stats</h2>
+      <div class="row">
+        <button id="toggleStatsBtn">Show details</button>
+        <button id="resetAllProgressBtn">Reset all progress</button>
+      </div>
+    </div>
+
+    <div class="muted" style="margin-top:6px;" id="statsTopLine">—</div>
+
+    <div id="statsWrap" class="hidden" style="margin-top:10px;">
+      <div class="grid2">
+        <div class="card" style="background:#fcfcfc;">
+          <h3>Paper attempts</h3>
+          <div id="paperAttemptsOut" class="muted">—</div>
+        </div>
+        <div class="card" style="background:#fcfcfc;">
+          <h3>Spelling word stats (hardest first)</h3>
+          <div class="muted">Includes Pool + Prompt (Hidden/Visible/Spoken).</div>
+          <div style="overflow:auto; margin-top:8px;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Word</th>
+                  <th>Pool</th>
+                  <th>Prompt</th>
+                  <th class="right">Mastery</th>
+                  <th class="right">Attempts</th>
+                  <th class="right">Wrong</th>
+                  <th class="right">Last</th>
+                </tr>
+              </thead>
+              <tbody id="spellStatsBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SETTINGS -->
+  <div class="card hidden" id="tab-settings">
+    <h2>Settings</h2>
+    <div class="grid2">
+      <div class="card" style="background:#fcfcfc;">
+        <h3>General</h3>
+        <div class="row">
+          <label class="muted">Default run timing:</label>
+          <select id="defaultTiming">
+            <option value="untimed" selected>Untimed</option>
+            <option value="timed">Timed</option>
+          </select>
+        </div>
+        <div class="muted" style="margin-top:8px;">
+          Timed uses official paper durations (Maths 30/40/40, Reading 60, SPaG 45).
+          Spelling is left untimed.
+        </div>
+      </div>
+
+      <div class="card" style="background:#fcfcfc;">
+        <h3>Speech</h3>
+        <div class="muted">Spoken spelling uses Web Speech API (speechSynthesis).</div>
+        <div class="muted" style="margin-top:8px;">
+          Language is set to <b>en-GB</b>. Actual voice depends on OS/browser installed voices.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(() => {
+  // =========================
+  // STORAGE
+  // =========================
+  const STORE_KEY = "ks2_sats_runner_v1";
+
+  function loadStore() {
+    try {
+      const raw = localStorage.getItem(STORE_KEY);
+      if (!raw) return null;
+      return JSON.parse(raw);
+    } catch { return null; }
+  }
+  function saveStore(store) {
+    localStorage.setItem(STORE_KEY, JSON.stringify(store));
+  }
+  function now() { return Date.now(); }
+  function clamp(n,a,b){ return Math.max(a, Math.min(b,n)); }
+  function esc(s){ return String(s).replace(/[&<>"']/g, m => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;" }[m])); }
+
+  // =========================
+  // WORD POOLS (from your earlier work)
+  // =========================
+  const WORD_POOLS = {
+    statutory_y5y6_100: {
+      label: "Year 5/6 statutory (100)",
+      words: ["accommodate","accompany","according","achieve","aggressive","amateur","ancient","apparent","appreciate","attached","available","average","awkward","bargain","bruise","category","cemetery","committee","communicate","community","competition","conscience","conscious","controversy","convenience","correspond","criticise","curiosity","definite","desperate","determined","develop","dictionary","disastrous","embarrass","environment","equip","especially","exaggerate","excellent","existence","explanation","familiar","foreign","forty","frequently","government","guarantee","harass","hindrance","identity","immediate","individual","interfere","interrupt","language","leisure","lightning","marvellous","mischievous","muscle","necessary","neighbour","nuisance","occupy","occur","opportunity","parliament","persuade","physical","prejudice","privilege","profession","programme","pronunciation","queue","recognise","recommend","relevant","restaurant","rhyme","rhythm","sacrifice","secretary","shoulder","signature","sincere","soldier","stomach","sufficient","suggest","symbol","system","temperature","thorough","twelfth","variety","vegetable","vehicle","yacht"]
+    },
+    sats_practice_supplement: {
+      label: "SATs practice supplement",
+      words: ["able","accidentally","admission","adventurous","adventure","although","attempts","architect","audience","babies","badger","beginning","believe","biggest","bodies","bridge","building","capable","capture","carried","carriages","castles","ceiling","century","centre","caution","character","challenging","chorus","cities","circle","climbing","coarse","collection","column","completion","confession","confusion","conclusion","cough","council","creatures","creature","crumb","curiously","curious","cycle","decision","deceit","deceive","designed","destination","diameter","diagram","direction","disagreement","disapprove","disconnect","discontinue","discover","disobey","disobeyed","disorder","disqualify","disappear","distance","dissolve","discussion","dodge","dough","drawer","edible","education","emergency","engines","enough","escaping","exciting","extinguishing","extremely","expression","families","fable","feature","ferociously","flexible","fixture","foundation","foundations","fridge","generation","generous","gleaming","grabbed","gradually","gymnastics","hedges","heir","height","horrible","impossible","impression","importantly","including","inconceivable","incredible","inspiring","invention","judged","knee","kneel","knife","knight","knit","knot","knuckle","know","knowledge","league","legible","lettuce","liar","licence","loose","lorries","largest","materials","material","mention","mission","miniature","monarch","moisture","moving","nationality","navigation","nature","notice","noticeable","nudged","numb","occasion","obtained","obsession","offering","omission","operation","parties","participate","passion","peculiar","perfectly","particularly","piano","picture","pieces","physically","planning","planned","polishing","pollution","porridge","possession","position","precious","prey","previous","produce","protein","qualified","question","raising","reaction","receive","receipt","reign","reliable","replace","responsible","resting","rough","satisfied","scent","sensible","seize","sensation","should","silence","sign","smallest","smudged","smoothly","special","sprawling","spreading","station","straight","stretched","stopped","stopping","stripes","structures","structure","sympathetic","television","temperature","tension","terrible","thoroughly","though","thought","thumb","topping","tough","trapped","tries","trudged","tongue","typical","vague","vanishing","various","variation","vegetable","vision","visitors","wrestling","weird","weight","wrong","yacht"]
+    }
+  };
+  const POOL_SETS = {
+    statutory: new Set(WORD_POOLS.statutory_y5y6_100.words.map(w => w.toLowerCase())),
+    supplement: new Set(WORD_POOLS.sats_practice_supplement.words.map(w => w.toLowerCase()))
+  };
+  function poolLabelForWord(wl){
+    const a = POOL_SETS.statutory.has(wl);
+    const b = POOL_SETS.supplement.has(wl);
+    if (a && b) return "Both";
+    if (a) return "Statutory";
+    if (b) return "Supplement";
+    return "—";
+  }
+  function promptLabelFromMode(mode){
+    if (mode === "flash") return "Hidden";
+    if (mode === "show") return "Visible";
+    if (mode === "speak") return "Spoken";
+    return "—";
+  }
+
+  // =========================
+  // STARTER BANKS (you will expand these)
+  // =========================
+  const DEFAULT_BANKS = {
+    reading: [
+      {
+        id: "r1",
+        title: "The Storm Lantern",
+        text:
+`Ella found the old lantern in the shed behind her grandmother’s house. The glass was cloudy and the handle creaked, but when she wiped it clean, a faint star-shaped mark appeared on the metal rim.
+
+Outside, the sky had turned the colour of slate. Wind pushed through the trees like a fast-moving whisper, bending branches and scattering leaves across the garden path. Ella held the lantern up. It was unlit, yet the mark on the rim seemed to glow, as if it remembered what it was for.
+
+A crack of thunder rolled over the rooftops. Ella hesitated—then stepped out anyway. She did not know why she felt drawn to the lantern. She only knew that, in the middle of the gathering storm, it made her feel less alone.`,
+        questions: [
+          { id:"r1q1", type:"mcq", stem:"Which word best describes the sky?", choices:["Golden","Slate","Crimson","Clear"], answer:"Slate" },
+          { id:"r1q2", type:"short", stem:"What did Ella do to make the lantern look better?", answer:"wiped it clean / cleaned it" },
+          { id:"r1q3", type:"mcq", stem:"What does the lantern’s glowing mark suggest?", choices:["It is broken","It remembers its purpose","It is dangerous","It is very new"], answer:"It remembers its purpose" }
+        ]
+      }
+    ],
+    spag: [
+      { id:"g1", type:"mcq", stem:"Choose the sentence with the correct apostrophe.", choices:["The dogs bone was buried.","The dog's bone was buried.","The dogs' bone was buried."], answer:"The dog's bone was buried." },
+      { id:"g2", type:"short", stem:"Rewrite in the past tense: 'She walks to school.'", answer:"She walked to school." },
+      { id:"g3", type:"mcq", stem:"Which word is an adverb? 'He ran quickly to the gate.'", choices:["ran","quickly","gate","He"], answer:"quickly" }
+    ],
+    reasoning: [
+      { id:"mR1", paper:"P2", type:"short", stem:"A box holds 24 pencils. How many pencils are there in 5 boxes?", answer:"120" },
+      { id:"mR2", paper:"P2", type:"mcq", stem:"Which fraction is equivalent to 3/6?", choices:["1/2","1/3","2/3","3/12"], answer:"1/2" },
+      { id:"mR3", paper:"P3", type:"short", stem:"A train leaves at 09:35 and arrives at 10:20. How long is the journey?", answer:"45 minutes" },
+      { id:"mR4", paper:"P3", type:"mcq", stem:"A rectangle has length 8 cm and width 3 cm. What is its area?", choices:["11 cm²","24 cm²","22 cm²","16 cm²"], answer:"24 cm²" }
+    ]
+  };
+
+  // =========================
+  // STORE INITIALISE
+  // =========================
+  let store = loadStore() || {
+    banks: structuredClone(DEFAULT_BANKS),
+    settings: { defaultTiming: "untimed" },
+    progress: {
+      paperAttempts: [], // {paperId, ts, score, total, seconds}
+      spelling: { wordsByWord: {}, mode: "flash", poolChoice: "both", flashSeconds: 3 },
+      overallAttempts: 0
+    }
+  };
+
+  // =========================
+  // TABS
+  // =========================
+  const tabs = Array.from(document.querySelectorAll(".tab"));
+  function showTab(name){
+    for (const t of tabs) t.classList.toggle("active", t.dataset.tab === name);
+    document.getElementById("tab-runner").classList.toggle("hidden", name !== "runner");
+    document.getElementById("tab-training").classList.toggle("hidden", name !== "training");
+    document.getElementById("tab-banks").classList.toggle("hidden", name !== "banks");
+    document.getElementById("tab-stats").classList.toggle("hidden", name !== "stats");
+    document.getElementById("tab-settings").classList.toggle("hidden", name !== "settings");
+    refreshTopPills();
+    if (name === "banks") refreshBankSummary();
+    if (name === "stats") refreshStats();
+  }
+  tabs.forEach(btn => btn.addEventListener("click", () => showTab(btn.dataset.tab)));
+
+  // =========================
+  // TOP PILLS
+  // =========================
+  const overallPill = document.getElementById("overallPill");
+  const weakPill = document.getElementById("weakPill");
+
+  function refreshTopPills(){
+    overallPill.textContent = `Overall: ${store.progress.overallAttempts} attempts`;
+
+    // naive "weak areas" summary (first iteration)
+    const pa = store.progress.paperAttempts.slice(-8);
+    if (!pa.length) { weakPill.textContent = "Weak areas: —"; return; }
+    const avg = pa.reduce((s,x)=>s+(x.score/x.total),0)/pa.length;
+    weakPill.textContent = `Recent average: ${Math.round(avg*100)}%`;
+  }
+
+  // =========================
+  // PRACTICE RUN SYSTEM
+  // =========================
+  const runSelect = document.getElementById("runSelect");
+  const timingSelect = document.getElementById("timingSelect");
+  const startRunBtn = document.getElementById("startRunBtn");
+  const stopRunBtn = document.getElementById("stopRunBtn");
+  const prevPaperBtn = document.getElementById("prevPaperBtn");
+  const nextPaperBtn = document.getElementById("nextPaperBtn");
+  const toggleInstructionsBtn = document.getElementById("toggleInstructionsBtn");
+  const paperInstructions = document.getElementById("paperInstructions");
+  const paperInstructionsText = document.getElementById("paperInstructionsText");
+
+  const paperTitle = document.getElementById("paperTitle");
+  const paperMeta = document.getElementById("paperMeta");
+  const paperTimer = document.getElementById("paperTimer");
+  const paperArea = document.getElementById("paperArea");
+  const submitPaperBtn = document.getElementById("submitPaperBtn");
+  const resetPaperBtn = document.getElementById("resetPaperBtn");
+  const paperScoreLine = document.getElementById("paperScoreLine");
+
+  let runState = null; // {papers:[...], idx, timing, timerId, endAt, startedAt, paperWorkState}
+
+  const PAPER_DEFS = {
+    M_A: { id:"M_A", label:"Maths Paper 1: Arithmetic", minutes:30, instructions:"No calculators. Answer the calculations. Work quickly and carefully." },
+    M_R2:{ id:"M_R2", label:"Maths Paper 2: Reasoning", minutes:40, instructions:"Solve problems in context. Show working where needed." },
+    M_R3:{ id:"M_R3", label:"Maths Paper 3: Reasoning", minutes:40, instructions:"Solve problems in context. Show working where needed." },
+    E_R: { id:"E_R", label:"English Reading", minutes:60, instructions:"Read the texts carefully. Answer all questions using evidence from the text." },
+    E_G: { id:"E_G", label:"English SPaG Paper 1", minutes:45, instructions:"Answer grammar and punctuation questions. Some are multiple-choice; some are short answers." },
+    E_S: { id:"E_S", label:"English Spelling Paper 2", minutes:0,  instructions:"Spelling is usually dictated. Use Spoken mode to mimic dictation, or practise visually." }
+  };
+
+  function buildRun(runType){
+    if (runType === "maths") return ["M_A","M_R2","M_R3"];
+    if (runType === "english") return ["E_R","E_G","E_S"];
+    return ["M_A","M_R2","M_R3","E_R","E_G","E_S"];
+  }
+
+  function formatTimer(ms){
+    if (ms < 0) ms = 0;
+    const s = Math.floor(ms/1000);
+    const m = Math.floor(s/60);
+    const r = s % 60;
+    return `${String(m).padStart(2,"0")}:${String(r).padStart(2,"0")}`;
+  }
+
+  function setPaperUI(def){
+    paperTitle.textContent = def.label;
+    paperMeta.textContent = def.minutes ? `${def.minutes} minutes` : `Untimed`;
+    paperInstructionsText.textContent = def.instructions;
+    paperInstructions.classList.add("hidden");
+    toggleInstructionsBtn.textContent = "Show instructions";
+  }
+
+  function startPaperTimer(def){
+    clearInterval(runState?.timerId);
+    if (runState.timing !== "timed" || !def.minutes) {
+      paperTimer.textContent = "--:--";
+      return;
+    }
+    runState.startedAt = now();
+    runState.endAt = runState.startedAt + def.minutes*60*1000;
+    paperTimer.textContent = formatTimer(runState.endAt - now());
+    runState.timerId = setInterval(() => {
+      const left = runState.endAt - now();
+      paperTimer.textContent = formatTimer(left);
+      if (left <= 0) {
+        clearInterval(runState.timerId);
+        paperTimer.textContent = "00:00";
+      }
+    }, 250);
+  }
+
+  function renderCurrentPaper(){
+    const pid = runState.papers[runState.idx];
+    const def = PAPER_DEFS[pid];
+    setPaperUI(def);
+    startPaperTimer(def);
+    paperScoreLine.textContent = "—";
+
+    runState.paperWorkState = createPaperWorkState(pid);
+
+    submitPaperBtn.disabled = false;
+    resetPaperBtn.disabled = false;
+    prevPaperBtn.disabled = runState.idx === 0;
+    nextPaperBtn.disabled = runState.idx === runState.papers.length - 1;
+    toggleInstructionsBtn.disabled = false;
+
+    paperArea.innerHTML = "";
+    paperArea.appendChild(renderPaperContent(pid, runState.paperWorkState));
+  }
+
+  function createPaperWorkState(paperId){
+    if (paperId === "M_A") {
+      return { questions: genArithmeticSet(10, "y6"), answers: {} };
+    }
+    if (paperId === "M_R2" || paperId === "M_R3") {
+      const list = store.banks.reasoning.filter(x => x.paper === (paperId === "M_R2" ? "P2" : "P3"));
+      return { questions: pickN(list, Math.min(6, list.length)), answers: {} };
+    }
+    if (paperId === "E_G") {
+      const list = store.banks.spag;
+      return { questions: pickN(list, Math.min(8, list.length)), answers: {} };
+    }
+    if (paperId === "E_R") {
+      const p = store.banks.reading[0] || null;
+      return { passage: p, answers: {} };
+    }
+    if (paperId === "E_S") {
+      return { mode: store.progress.spelling.mode, poolChoice: store.progress.spelling.poolChoice, flashSeconds: store.progress.spelling.flashSeconds };
+    }
+    return {};
+  }
+
+  function pickN(arr, n){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a.slice(0,n);
+  }
+
+  function renderPaperContent(paperId, ws){
+    const wrap = document.createElement("div");
+
+    if (paperId === "M_A") {
+      wrap.appendChild(renderQuestionList(ws.questions, ws.answers, {showChoices:false}));
+      return wrap;
+    }
+    if (paperId === "M_R2" || paperId === "M_R3" || paperId === "E_G") {
+      wrap.appendChild(renderQuestionList(ws.questions, ws.answers, {showChoices:true}));
+      return wrap;
+    }
+    if (paperId === "E_R") {
+      const p = ws.passage;
+      if (!p) {
+        wrap.innerHTML = `<div class="stem">No reading passage in bank.</div><div class="muted">Add one in Question Banks tab.</div>`;
+        return wrap;
+      }
+      const top = document.createElement("div");
+      top.className = "q";
+      top.innerHTML = `<div class="stem">${esc(p.title)}</div><div style="white-space:pre-wrap; margin-top:8px;">${esc(p.text)}</div>`;
+      wrap.appendChild(top);
+
+      const qWrap = document.createElement("div");
+      qWrap.style.marginTop = "10px";
+      qWrap.appendChild(renderQuestionList(p.questions, ws.answers, {showChoices:true}));
+      wrap.appendChild(qWrap);
+      return wrap;
+    }
+    if (paperId === "E_S") {
+      const box = document.createElement("div");
+      box.innerHTML = `<div class="stem">Use the Spelling trainer in the Training tab (includes Spoken mode).</div>
+                       <div class="muted">This MVP treats spelling as a separate trainer with adaptive repetition.</div>`;
+      wrap.appendChild(box);
+      return wrap;
+    }
+
+    wrap.innerHTML = `<div class="stem">Not implemented yet.</div>`;
+    return wrap;
+  }
+
+  function renderQuestionList(questions, answersObj, opts){
+    const outer = document.createElement("div");
+    (questions || []).forEach((q, idx) => {
+      const card = document.createElement("div");
+      card.className = "q";
+      const id = q.id || `q${idx+1}`;
+
+      const stem = document.createElement("div");
+      stem.className = "stem";
+      stem.textContent = `${idx+1}. ${q.stem || ""}`;
+      card.appendChild(stem);
+
+      if (q.type === "mcq" && opts.showChoices) {
+        const cwrap = document.createElement("div");
+        cwrap.className = "choices";
+        q.choices.forEach((c, i) => {
+          const label = document.createElement("label");
+          const r = document.createElement("input");
+          r.type = "radio";
+          r.name = id;
+          r.value = c;
+          r.checked = (answersObj[id] === c);
+          r.addEventListener("change", () => { answersObj[id] = c; saveStore(store); });
+          label.appendChild(r);
+          const span = document.createElement("div");
+          span.textContent = c;
+          label.appendChild(span);
+          cwrap.appendChild(label);
+        });
+        card.appendChild(cwrap);
+      } else {
+        const inp = document.createElement("input");
+        inp.type = "text";
+        inp.placeholder = "Type your answer…";
+        inp.value = answersObj[id] || "";
+        inp.addEventListener("input", () => { answersObj[id] = inp.value; saveStore(store); });
+        card.appendChild(inp);
+      }
+
+      outer.appendChild(card);
+    });
+    return outer;
+  }
+
+  function scorePaper(paperId, ws){
+    if (paperId === "M_A" || paperId === "M_R2" || paperId === "M_R3" || paperId === "E_G") {
+      const qs = ws.questions || [];
+      let score = 0;
+      let total = qs.length;
+      for (let i=0;i<qs.length;i++){
+        const q = qs[i];
+        const id = q.id || `q${i+1}`;
+        const given = (ws.answers[id] || "").trim();
+        const ans = String(q.answer || "").trim();
+        if (!ans) continue;
+        if (q.type === "mcq") {
+          if (given === ans) score++;
+        } else {
+          // exact-ish match: numeric or case-insensitive string compare
+          if (given.toLowerCase() === ans.toLowerCase()) score++;
+        }
+      }
+      return {score, total};
+    }
+    if (paperId === "E_R") {
+      const p = ws.passage;
+      if (!p) return {score:0, total:0};
+      const qs = p.questions;
+      let score=0, total=qs.length;
+      for (let i=0;i<qs.length;i++){
+        const q=qs[i];
+        const id=q.id || `q${i+1}`;
+        const given=(ws.answers[id]||"").trim();
+        const ans=String(q.answer||"").trim();
+        if (!ans) continue;
+        if (q.type==="mcq") {
+          if (given===ans) score++;
+        } else {
+          // self-check friendly: allow if answer text appears in given
+          if (given && ans && (given.toLowerCase().includes(ans.toLowerCase()) || ans.toLowerCase().includes(given.toLowerCase()))) score++;
+        }
+      }
+      return {score,total};
+    }
+    return {score:0,total:0};
+  }
+
+  function endPaperRecord(paperId, result){
+    const def = PAPER_DEFS[paperId];
+    const seconds = runState?.startedAt ? Math.round((now()-runState.startedAt)/1000) : 0;
+    store.progress.paperAttempts.push({ paperId, ts: now(), score: result.score, total: result.total, seconds });
+    store.progress.overallAttempts++;
+    saveStore(store);
+    refreshTopPills();
+  }
+
+  function startRun(){
+    const type = runSelect.value;
+    const timing = timingSelect.value;
+
+    runState = { papers: buildRun(type), idx: 0, timing, timerId: null, startedAt: 0, endAt: 0, paperWorkState: null };
+    startRunBtn.disabled = true;
+    stopRunBtn.disabled = false;
+    prevPaperBtn.disabled = true;
+    nextPaperBtn.disabled = false;
+    toggleInstructionsBtn.disabled = false;
+    submitPaperBtn.disabled = false;
+    resetPaperBtn.disabled = false;
+
+    renderCurrentPaper();
+  }
+
+  function stopRun(){
+    clearInterval(runState?.timerId);
+    runState = null;
+
+    paperTitle.textContent = "—";
+    paperMeta.textContent = "—";
+    paperTimer.textContent = "--:--";
+    paperArea.innerHTML = `<div class="stem">Run stopped.</div><div class="muted">Press “Start run” to begin again.</div>`;
+
+    startRunBtn.disabled = false;
+    stopRunBtn.disabled = true;
+    prevPaperBtn.disabled = true;
+    nextPaperBtn.disabled = true;
+    toggleInstructionsBtn.disabled = true;
+    submitPaperBtn.disabled = true;
+    resetPaperBtn.disabled = true;
+    paperInstructions.classList.add("hidden");
+    paperScoreLine.textContent = "—";
+  }
+
+  startRunBtn.addEventListener("click", startRun);
+  stopRunBtn.addEventListener("click", stopRun);
+
+  prevPaperBtn.addEventListener("click", () => {
+    if (!runState) return;
+    runState.idx = Math.max(0, runState.idx - 1);
+    renderCurrentPaper();
+  });
+  nextPaperBtn.addEventListener("click", () => {
+    if (!runState) return;
+    runState.idx = Math.min(runState.papers.length - 1, runState.idx + 1);
+    renderCurrentPaper();
+  });
+
+  toggleInstructionsBtn.addEventListener("click", () => {
+    paperInstructions.classList.toggle("hidden");
+    toggleInstructionsBtn.textContent = paperInstructions.classList.contains("hidden") ? "Show instructions" : "Hide instructions";
+  });
+
+  resetPaperBtn.addEventListener("click", () => {
+    if (!runState) return;
+    renderCurrentPaper();
+  });
+
+  submitPaperBtn.addEventListener("click", () => {
+    if (!runState) return;
+    const pid = runState.papers[runState.idx];
+    const res = scorePaper(pid, runState.paperWorkState);
+    endPaperRecord(pid, res);
+    paperScoreLine.textContent = `Scored: ${res.score} / ${res.total}${res.total ? ` (${Math.round(res.score/res.total*100)}%)` : ""}`;
+  });
+
+  // =========================
+  // TRAINING: ARITHMETIC
+  // =========================
+  const arithNewBtn = document.getElementById("arithNewBtn");
+  const arithArea = document.getElementById("arithArea");
+  const arithScoreBtn = document.getElementById("arithScoreBtn");
+  const arithScoreLine = document.getElementById("arithScoreLine");
+  const arithDifficulty = document.getElementById("arithDifficulty");
+
+  let arithWS = null;
+
+  function genArithmeticSet(n, difficulty){
+    const qs = [];
+    for (let i=0;i<n;i++){
+      const t = pickArithmeticType(difficulty);
+      qs.push(makeArithmeticQuestion(`a${i+1}`, t, difficulty));
+    }
+    return qs;
+  }
+
+  function pickArithmeticType(diff){
+    const types = ["add","sub","mul","div","fracAdd","decMul","percent"];
+    if (diff === "easy") return ["add","sub","mul","div"][Math.floor(Math.random()*4)];
+    if (diff === "hard") return types[Math.floor(Math.random()*types.length)];
+    // y6 mix
+    const pool = ["add","sub","mul","div","mul","div","fracAdd","decMul","percent"];
+    return pool[Math.floor(Math.random()*pool.length)];
+  }
+
+  function randInt(a,b){ return Math.floor(Math.random()*(b-a+1))+a; }
+
+  function makeArithmeticQuestion(id, type, diff){
+    let stem="", answer="";
+    if (type==="add"){
+      const x=randInt(1000, 90000), y=randInt(1000, 90000);
+      stem = `${x} + ${y} =`;
+      answer = String(x+y);
+    } else if (type==="sub"){
+      const x=randInt(1000, 90000), y=randInt(1000, x);
+      stem = `${x} − ${y} =`;
+      answer = String(x-y);
+    } else if (type==="mul"){
+      const x=randInt(12, 999), y=randInt(12, 99);
+      stem = `${x} × ${y} =`;
+      answer = String(x*y);
+    } else if (type==="div"){
+      const y=randInt(12, 99);
+      const x=y*randInt(12, 99);
+      stem = `${x} ÷ ${y} =`;
+      answer = String(x/y);
+    } else if (type==="fracAdd"){
+      // (a/b + c/b) simplified not required; just numeric fraction form
+      const b=[4,5,6,8,10,12][randInt(0,5)];
+      const a=randInt(1,b-1), c=randInt(1,b-1);
+      stem = `${a}/${b} + ${c}/${b} = (write as a fraction)`;
+      answer = `${a+c}/${b}`;
+    } else if (type==="decMul"){
+      const x=(randInt(12,99)/10).toFixed(1);
+      const y=randInt(2,9);
+      stem = `${x} × ${y} =`;
+      answer = String((parseFloat(x)*y).toFixed(1)).replace(/\.0$/,"");
+    } else if (type==="percent"){
+      const p=[10,20,25,50][randInt(0,3)];
+      const base=randInt(40, 400);
+      stem = `${p}% of ${base} =`;
+      answer = String(base*p/100);
+    }
+    return { id, type:"short", stem, answer };
+  }
+
+  function renderArithmeticTraining(){
+    arithArea.innerHTML = "";
+    if (!arithWS) return;
+    arithArea.appendChild(renderQuestionList(arithWS.questions, arithWS.answers, {showChoices:false}));
+  }
+
+  arithNewBtn.addEventListener("click", () => {
+    arithWS = { questions: genArithmeticSet(10, arithDifficulty.value), answers: {} };
+    renderArithmeticTraining();
+    arithScoreBtn.disabled = false;
+    arithScoreLine.textContent = "—";
+  });
+
+  arithScoreBtn.addEventListener("click", () => {
+    if (!arithWS) return;
+    const res = scorePaper("M_A", arithWS);
+    store.progress.paperAttempts.push({ paperId:"TRAIN_ARITH", ts: now(), score:res.score, total:res.total, seconds:0 });
+    store.progress.overallAttempts++;
+    saveStore(store);
+    refreshTopPills();
+    arithScoreLine.textContent = `Score: ${res.score} / ${res.total} (${Math.round(res.score/res.total*100)}%)`;
+  });
+
+  // =========================
+  // TRAINING: SPELLING (ADAPTIVE)
+  // =========================
+  const spellPoolSelect = document.getElementById("spellPoolSelect");
+  const spellModeSelect = document.getElementById("spellModeSelect");
+  const spellFlashSelect = document.getElementById("spellFlashSelect");
+  const spellPrompt = document.getElementById("spellPrompt");
+  const spellRepeatBtn = document.getElementById("spellRepeatBtn");
+  const spellNextBtn = document.getElementById("spellNextBtn");
+  const spellInput = document.getElementById("spellInput");
+  const spellCheckBtn = document.getElementById("spellCheckBtn");
+  const spellFeedback = document.getElementById("spellFeedback");
+  const spellHelp = document.getElementById("spellHelp");
+  const spellProgressPill = document.getElementById("spellProgressPill");
+  const spellSessionPill = document.getElementById("spellSessionPill");
+
+  let spellSession = { correct:0, wrong:0 };
+  let spellCurrent = null;
+  let spellFlashTimer = null;
+
+  function normWord(w){ return (w||"").trim(); }
+
+  function uniqueLower(words){
+    const out=[]; const seen=new Set();
+    for (const w of words){
+      const s = normWord(w).toLowerCase();
+      if (!s) continue;
+      if (seen.has(s)) continue;
+      seen.add(s);
+      out.push(s);
+    }
+    return out;
+  }
+
+  function getSpellActiveWords(){
+    const choice = store.progress.spelling.poolChoice;
+    if (choice === "both") return uniqueLower([...WORD_POOLS.statutory_y5y6_100.words, ...WORD_POOLS.sats_practice_supplement.words]);
+    return uniqueLower(WORD_POOLS[choice]?.words || []);
+  }
+
+  function createWordStat(word){
+    return { word, attempts:0, correct:0, wrong:0, mastery:0.25, wrongStreak:0, lastResult:"—", lastSeenAt:0 };
+  }
+
+  function ensureWordStats(){
+    const active = getSpellActiveWords();
+    const map = store.progress.spelling.wordsByWord;
+    for (const w of active){
+      if (!map[w]) map[w] = createWordStat(w);
+    }
+  }
+
+  function computeSpellWeight(ws){
+    const mastery = clamp(ws.mastery, 0, 1);
+    let w = 0.2 + (1.2 * (1 - mastery));
+    w += 0.35 * Math.min(ws.wrongStreak, 6);
+    const ratio = ws.attempts ? (ws.wrong/ws.attempts) : 0;
+    w += 0
