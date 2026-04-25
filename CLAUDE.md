@@ -144,6 +144,18 @@ Indices are zero-based positions in `sentence.split(" ")`. Punctuation stays att
 
 ---
 
+## Version control
+
+- GitHub: `git@github.com:nilskloth/SAT_Trainer.git`
+- Branch: `main`
+- SSH key: `~/.ssh/id_ed25519` (ed25519, added to GitHub as Authentication Key)
+
+```bash
+git add -A && git commit -m "message" && git push origin main
+```
+
+---
+
 ## Deployment
 
 SFTP to Strato hosting:
