@@ -1,0 +1,251 @@
+[
+  {
+    "id": "r1",
+    "paper": "P2",
+    "type": "short",
+    "domain": "number",
+    "stem": "A packet contains 8 biscuits.\n\nHow many biscuits are there in 7 packets?",
+    "answer": "56"
+  },
+  {
+    "id": "r2",
+    "paper": "P2",
+    "type": "short",
+    "domain": "number",
+    "stem": "There are 450 pupils in a school.\n\n120 pupils walk to school.\n\nHow many pupils do not walk to school?",
+    "answer": "330"
+  },
+  {
+    "id": "r3",
+    "paper": "P2",
+    "type": "mcq",
+    "domain": "fractions",
+    "stem": "Which fraction is equivalent to 4/10?",
+    "choices": [
+      "2/5",
+      "1/4",
+      "5/10",
+      "8/20"
+    ],
+    "answer": "2/5"
+  },
+  {
+    "id": "r4",
+    "paper": "P2",
+    "type": "short",
+    "domain": "fractions",
+    "stem": "Write 3/4 as a decimal.",
+    "answer": "0.75"
+  },
+  {
+    "id": "r5",
+    "paper": "P2",
+    "type": "short",
+    "domain": "percentages",
+    "stem": "What is 25% of 240?",
+    "answer": "60"
+  },
+  {
+    "id": "r6",
+    "paper": "P2",
+    "type": "mcq",
+    "domain": "place_value",
+    "stem": "What is the value of the digit 7 in the number 3.742?",
+    "choices": [
+      "7",
+      "0.7",
+      "70",
+      "0.07"
+    ],
+    "answer": "0.7"
+  },
+  {
+    "id": "r7",
+    "paper": "P2",
+    "type": "short",
+    "domain": "time",
+    "stem": "A film starts at 14:35 and ends at 15:55.\n\nHow long is the film?",
+    "answer": "1 hour 20 minutes"
+  },
+  {
+    "id": "r8",
+    "paper": "P2",
+    "type": "short",
+    "domain": "measure",
+    "stem": "A rope is 3.6 metres long.\n\nHow many centimetres is this?",
+    "answer": "360"
+  },
+  {
+    "id": "r9",
+    "paper": "P2",
+    "type": "mcq",
+    "domain": "geometry",
+    "stem": "Which shape has exactly one line of symmetry?",
+    "choices": [
+      "square",
+      "circle",
+      "isosceles triangle",
+      "rectangle"
+    ],
+    "answer": "isosceles triangle"
+  },
+  {
+    "id": "r10",
+    "paper": "P2",
+    "type": "short",
+    "domain": "geometry",
+    "stem": "A rectangle has a length of 9 cm and a width of 4 cm.\n\nWhat is its perimeter?",
+    "answer": "26 cm"
+  },
+
+  {
+    "id": "r11",
+    "paper": "P3",
+    "type": "short",
+    "domain": "ratio",
+    "stem": "The ratio of boys to girls in a class is 3:5.\n\nThere are 24 pupils in total.\n\nHow many boys are there?",
+    "answer": "9"
+  },
+  {
+    "id": "r12",
+    "paper": "P3",
+    "type": "short",
+    "domain": "fractions",
+    "stem": "Lucy eats 2/5 of a chocolate bar.\n\nWhat fraction of the bar is left?",
+    "answer": "3/5"
+  },
+  {
+    "id": "r13",
+    "paper": "P3",
+    "type": "mcq",
+    "domain": "decimals",
+    "stem": "Which number is the largest?",
+    "choices": [
+      "0.605",
+      "0.65",
+      "0.506",
+      "0.56"
+    ],
+    "answer": "0.65"
+  },
+  {
+    "id": "r14",
+    "paper": "P3",
+    "type": "short",
+    "domain": "measure",
+    "stem": "A jug holds 1.2 litres of water.\n\nHow many millilitres is this?",
+    "answer": "1200"
+  },
+  {
+    "id": "r15",
+    "paper": "P3",
+    "type": "short",
+    "domain": "algebra",
+    "stem": "Find the value of n.\n\nn + 7 = 19",
+    "answer": "12"
+  },
+  {
+    "id": "r16",
+    "paper": "P3",
+    "type": "mcq",
+    "domain": "statistics",
+    "stem": "Which chart is best for showing how a value changes over time?",
+    "choices": [
+      "bar chart",
+      "line graph",
+      "pictogram",
+      "Venn diagram"
+    ],
+    "answer": "line graph"
+  },
+  {
+    "id": "r17",
+    "paper": "P3",
+    "type": "short",
+    "domain": "statistics",
+    "stem": "The mean of four numbers is 6.\n\nWhat is the total of the four numbers?",
+    "answer": "24"
+  },
+  {
+    "id": "r18",
+    "paper": "P3",
+    "type": "short",
+    "domain": "multiplication_division",
+    "stem": "A box holds 36 apples.\n\nThe apples are shared equally between 9 children.\n\nHow many apples does each child get?",
+    "answer": "4"
+  },
+  {
+    "id": "r19",
+    "paper": "P3",
+    "type": "mcq",
+    "domain": "angles",
+    "stem": "What is the size of a right angle?",
+    "choices": [
+      "45°",
+      "90°",
+      "180°",
+      "360°"
+    ],
+    "answer": "90°"
+  },
+  {
+    "id": "r20",
+    "paper": "P3",
+    "type": "short",
+    "domain": "problem_solving",
+    "stem": "A book costs £4.75.\n\nHow much do 3 books cost?",
+    "answer": "£14.25"
+  },
+  {
+    "id": "r21",
+    "paper": "P3",
+    "type": "short",
+    "domain": "money",
+    "stem": "Amir buys a drink for £1.35.\n\nHe pays with a £2 coin.\n\nHow much change does he get?",
+    "answer": "£0.65"
+  },
+  {
+    "id": "r22",
+    "paper": "P3",
+    "type": "mcq",
+    "domain": "shape_properties",
+    "stem": "Which statement about a parallelogram is true?",
+    "choices": [
+      "All sides are equal",
+      "Opposite sides are equal",
+      "All angles are right angles",
+      "It has one line of symmetry"
+    ],
+    "answer": "Opposite sides are equal"
+  },
+  {
+    "id": "r23",
+    "paper": "P3",
+    "type": "short",
+    "domain": "fractions_of_amounts",
+    "stem": "What is 3/8 of 64?",
+    "answer": "24"
+  },
+  {
+    "id": "r24",
+    "paper": "P3",
+    "type": "short",
+    "domain": "time",
+    "stem": "A lesson lasts 45 minutes.\n\nIt starts at 10:10.\n\nWhat time does it end?",
+    "answer": "10:55"
+  },
+  {
+    "id": "r25",
+    "paper": "P3",
+    "type": "mcq",
+    "domain": "estimation",
+    "stem": "Which is the best estimate for 198 × 6?",
+    "choices": [
+      "600",
+      "1000",
+      "1200",
+      "2000"
+    ],
+    "answer": "1200"
+  }
+]

@@ -1,0 +1,528 @@
+[
+  {
+    "id": "g1",
+    "type": "mcq",
+    "skill": "punctuation",
+    "stem": "Which sentence uses a comma correctly?",
+    "choices": [
+      "After lunch we went to the park.",
+      "After lunch, we went to the park.",
+      "After, lunch we went to the park.",
+      "After lunch we, went to the park."
+    ],
+    "answer": "After lunch, we went to the park."
+  },
+  {
+    "id": "g2",
+    "type": "mcq",
+    "skill": "apostrophes",
+    "stem": "Which sentence shows the apostrophe used correctly?",
+    "choices": [
+      "The girls coat was hanging by the door.",
+      "The girl's coat was hanging by the door.",
+      "The girls' coat was hanging by the door.",
+      "The girls coats was hanging by the door."
+    ],
+    "answer": "The girl's coat was hanging by the door."
+  },
+  {
+    "id": "g3",
+    "type": "short",
+    "skill": "tense",
+    "stem": "Rewrite the sentence in the past tense:\n\nShe runs towards the gate.",
+    "answer": "She ran towards the gate."
+  },
+  {
+    "id": "g4",
+    "type": "mcq",
+    "skill": "word_class",
+    "stem": "Which word is an adjective in the sentence below?\n\nThe curious cat crept silently.",
+    "choices": [
+      "curious",
+      "cat",
+      "crept",
+      "silently"
+    ],
+    "answer": "curious"
+  },
+  {
+    "id": "g5",
+    "type": "mcq",
+    "skill": "adverbs",
+    "stem": "Which sentence contains an adverb?",
+    "choices": [
+      "She opened the door.",
+      "The dog barked.",
+      "He ran quickly.",
+      "They watched the film."
+    ],
+    "answer": "He ran quickly."
+  },
+  {
+    "id": "g6",
+    "type": "short",
+    "skill": "prefixes",
+    "stem": "Add a prefix to the word \"agree\" to make its opposite.",
+    "answer": "disagree"
+  },
+  {
+    "id": "g7",
+    "type": "mcq",
+    "skill": "clauses",
+    "stem": "Which sentence contains a subordinate clause?",
+    "choices": [
+      "I packed my bag.",
+      "She smiled.",
+      "When it started raining, we went inside.",
+      "The sun was bright."
+    ],
+    "answer": "When it started raining, we went inside."
+  },
+  {
+    "id": "g8",
+    "type": "short",
+    "skill": "pronouns",
+    "stem": "Replace the underlined noun with a pronoun:\n\nThe teacher asked the class to listen.",
+    "answer": "She asked the class to listen."
+  },
+  {
+    "id": "g9",
+    "type": "mcq",
+    "skill": "verbs",
+    "stem": "Which word is a verb?",
+    "choices": [
+      "careful",
+      "running",
+      "happiness",
+      "quickly"
+    ],
+    "answer": "running"
+  },
+  {
+    "id": "g10",
+    "type": "short",
+    "skill": "plural_nouns",
+    "stem": "Write the plural of the word \"child\".",
+    "answer": "children"
+  },
+  {
+    "id": "g11",
+    "type": "mcq",
+    "skill": "punctuation",
+    "stem": "Which sentence uses speech marks correctly?",
+    "choices": [
+      "She said, \"I am tired\".",
+      "\"She said, I am tired.\"",
+      "She said \"I am tired.\"",
+      "\"I am tired,\" she said."
+    ],
+    "answer": "\"I am tired,\" she said."
+  },
+  {
+    "id": "g12",
+    "type": "short",
+    "skill": "modal_verbs",
+    "stem": "Circle the modal verb in the sentence:\n\nYou should finish your homework.",
+    "answer": "should"
+  },
+  {
+    "id": "g13",
+    "type": "mcq",
+    "skill": "synonyms",
+    "stem": "Which word is closest in meaning to \"angry\"?",
+    "choices": [
+      "pleased",
+      "furious",
+      "tired",
+      "nervous"
+    ],
+    "answer": "furious"
+  },
+  {
+    "id": "g14",
+    "type": "short",
+    "skill": "sentence_types",
+    "stem": "What type of sentence is this?\n\nPlease sit down.",
+    "answer": "command / imperative"
+  },
+  {
+    "id": "g15",
+    "type": "mcq",
+    "skill": "suffixes",
+    "stem": "Which suffix changes the word \"help\" into a noun?",
+    "choices": [
+      "-ful",
+      "-less",
+      "-er",
+      "-ness"
+    ],
+    "answer": "-er"
+  },
+  {
+    "id": "g16",
+    "type": "short",
+    "skill": "punctuation",
+    "stem": "Add commas to the sentence:\n\nBefore dinner we washed our hands.",
+    "answer": "Before dinner, we washed our hands."
+  },
+  {
+    "id": "g17",
+    "type": "mcq",
+    "skill": "homophones",
+    "stem": "Choose the correct word to complete the sentence:\n\nI would like ___ go home.",
+    "choices": [
+      "too",
+      "to",
+      "two",
+      "tow"
+    ],
+    "answer": "to"
+  },
+  {
+    "id": "g18",
+    "type": "short",
+    "skill": "expanded_noun_phrase",
+    "stem": "Add an adjective to expand the noun phrase:\n\nthe house",
+    "answer": [
+        "the old house",
+        "the large house"
+      ]
+  },
+  {
+    "id": "g19",
+    "type": "mcq",
+    "skill": "conjunctions",
+    "stem": "Which word is a conjunction?",
+    "choices": [
+      "quickly",
+      "because",
+      "happy",
+      "jumped"
+    ],
+    "answer": "because"
+  },
+  {
+    "id": "g20",
+    "type": "short",
+    "skill": "active_passive",
+    "stem": "Rewrite the sentence in the passive voice:\n\nThe dog chased the ball.",
+    "answer": "The ball was chased by the dog."
+  },
+  {
+    "id": "g21",
+    "type": "mcq",
+    "skill": "standard_english",
+    "stem": "Which sentence is written in Standard English?",
+    "choices": [
+      "We was late for school.",
+      "We were late for school.",
+      "We was being late.",
+      "We be late for school."
+    ],
+    "answer": "We were late for school."
+  },
+  {
+    "id": "g22",
+    "type": "short",
+    "skill": "capitalisation",
+    "stem": "Correct the capital letters:\n\ni live in london.",
+    "answer": "I live in London."
+  },
+  {
+    "id": "g23",
+    "type": "mcq",
+    "skill": "relative_clauses",
+    "stem": "Which sentence includes a relative clause?",
+    "choices": [
+      "I lost my book.",
+      "The boy who won smiled.",
+      "She laughed loudly.",
+      "It started raining."
+    ],
+    "answer": "The boy who won smiled."
+  },
+  {
+    "id": "g24",
+    "type": "short",
+    "skill": "determiners",
+    "stem": "Which determiner could complete this sentence?\n\n___ apples were missing.",
+    "answer": [
+        "some",
+        "those",
+        "many"
+      ]
+  },
+  {
+    "id": "g25",
+    "type": "mcq",
+    "skill": "suffixes",
+    "stem": "Which word contains a suffix?",
+    "choices": [
+      "jump",
+      "care",
+      "happiness",
+      "run"
+    ],
+    "answer": "happiness"
+  },
+  {
+    "id": "g26",
+    "type": "mcq",
+    "skill": "semi_colons",
+    "stem": "Which sentence uses a semicolon correctly?",
+    "choices": [
+      "It was raining; and we stayed inside.",
+      "It was raining; we stayed inside.",
+      "It was raining; because we stayed inside.",
+      "It was; raining we stayed inside."
+    ],
+    "answer": "It was raining; we stayed inside."
+  },
+  {
+    "id": "g27",
+    "type": "short",
+    "skill": "present_perfect",
+    "stem": "Rewrite the sentence using the present perfect tense:\n\nShe finished her homework.",
+    "answer": "She has finished her homework."
+  },
+  {
+    "id": "g28",
+    "type": "mcq",
+    "skill": "fronted_adverbials",
+    "stem": "Which sentence includes a fronted adverbial?",
+    "choices": [
+      "We walked home slowly.",
+      "After the storm, the streets were quiet.",
+      "The streets were quiet after the storm.",
+      "We quietly walked home."
+    ],
+    "answer": "After the storm, the streets were quiet."
+  },
+  {
+    "id": "g29",
+    "type": "short",
+    "skill": "relative_pronouns",
+    "stem": "Underline the relative pronoun in the sentence:\n\nThe book that I borrowed was interesting.",
+    "answer": "that"
+  },
+  {
+    "id": "g30",
+    "type": "mcq",
+    "skill": "hyphens",
+    "stem": "Which sentence uses a hyphen correctly?",
+    "choices": [
+      "This is a well known fact.",
+      "This is a well-known fact.",
+      "This is a wellknown fact.",
+      "This is a well known-fact."
+    ],
+    "answer": "This is a well-known fact."
+  },
+  {
+    "id": "g31",
+    "type": "short",
+    "skill": "suffixes",
+    "stem": "Add a suffix to turn \"kind\" into a noun.",
+    "answer": "kindness"
+  },
+  {
+    "id": "g32",
+    "type": "mcq",
+    "skill": "formal_language",
+    "stem": "Which sentence uses formal language?",
+    "choices": [
+      "I wanna go now.",
+      "Can you help me?",
+      "Please assist me with this task.",
+      "This is really cool."
+    ],
+    "answer": "Please assist me with this task."
+  },
+  {
+    "id": "g33",
+    "type": "short",
+    "skill": "synonyms",
+    "stem": "Write a synonym for the word \"quick\".",
+    "answer": ["fast", "rapid", "swift"]
+  },
+  {
+    "id": "g34",
+    "type": "mcq",
+    "skill": "standard_english",
+    "stem": "Which sentence is NOT written in Standard English?",
+    "choices": [
+      "I did my homework.",
+      "We were playing football.",
+      "I ain't got any pencils.",
+      "She has finished her work."
+    ],
+    "answer": "I ain't got any pencils."
+  },
+  {
+    "id": "g35",
+    "type": "short",
+    "skill": "commas_clarity",
+    "stem": "Add commas to clarify the meaning:\n\nLet's eat Grandma.",
+    "answer": "Let's eat, Grandma."
+  },
+  {
+    "id": "g36",
+    "type": "mcq",
+    "skill": "verb_forms",
+    "stem": "Which sentence uses the verb form correctly?",
+    "choices": [
+      "She done her work.",
+      "She did her work.",
+      "She has did her work.",
+      "She done did her work."
+    ],
+    "answer": "She did her work."
+  },
+  {
+    "id": "g37",
+    "type": "short",
+    "skill": "question_tags",
+    "stem": "Add a question tag:\n\nYou finished your homework, ___?",
+    "answer": "didn't you"
+  },
+  {
+    "id": "g38",
+    "type": "mcq",
+    "skill": "antonyms",
+    "stem": "Which word is the opposite of \"expand\"?",
+    "choices": [
+      "stretch",
+      "increase",
+      "contract",
+      "develop"
+    ],
+    "answer": "contract"
+  },
+  {
+    "id": "g39",
+    "type": "short",
+    "skill": "plural_possession",
+    "stem": "Rewrite with correct plural possession:\n\nThe toys of the children were broken.",
+    "answer": "The children's toys were broken."
+  },
+  {
+    "id": "g40",
+    "type": "mcq",
+    "skill": "subjunctive",
+    "stem": "Which sentence uses the subjunctive form?",
+    "choices": [
+      "If I was taller, I would play basketball.",
+      "If I were taller, I would play basketball.",
+      "If I am taller, I would play basketball.",
+      "If I be taller, I would play basketball."
+    ],
+    "answer": "If I were taller, I would play basketball."
+  },
+  {
+    "id": "g41",
+    "type": "short",
+    "skill": "expanded_noun_phrase",
+    "stem": "Expand the noun phrase:\n\nthe dog",
+    "answer": [
+        "the small nervous dog",
+        "the large brown dog"
+      ]
+  },
+  {
+    "id": "g42",
+    "type": "mcq",
+    "skill": "ellipsis",
+    "stem": "Which sentence uses ellipsis correctly?",
+    "choices": [
+      "I was thinking...about the problem.",
+      "I was thinking .... about the problem.",
+      "I was thinking... about the problem.",
+      "I was thinking.. about the problem."
+    ],
+    "answer": "I was thinking... about the problem."
+  },
+  {
+    "id": "g43",
+    "type": "short",
+    "skill": "modal_verbs",
+    "stem": "Write a modal verb that could complete the sentence:\n\nYou ___ wear a helmet.",
+    "answer": [
+        "must",
+        "should",
+        "could"
+      ]
+  },
+  {
+    "id": "g44",
+    "type": "mcq",
+    "skill": "homophones",
+    "stem": "Choose the correct word:\n\nShe packed ___ bag carefully.",
+    "choices": [
+      "there",
+      "their",
+      "they're",
+      "theirs"
+    ],
+    "answer": "their"
+  },
+  {
+    "id": "g45",
+    "type": "short",
+    "skill": "passive_voice",
+    "stem": "Rewrite in the active voice:\n\nThe window was broken by the ball.",
+    "answer": "The ball broke the window."
+  },
+  {
+    "id": "g46",
+    "type": "mcq",
+    "skill": "prefixes",
+    "stem": "Which prefix could be added to \"possible\" to make its opposite?",
+    "choices": [
+      "un-",
+      "re-",
+      "pre-",
+      "mis-"
+    ],
+    "answer": "im-"
+  },
+  {
+    "id": "g47",
+    "type": "short",
+    "skill": "capital_letters",
+    "stem": "Correct the sentence:\n\nmy uncle lives in manchester.",
+    "answer": "My uncle lives in Manchester."
+  },
+  {
+    "id": "g48",
+    "type": "mcq",
+    "skill": "word_families",
+    "stem": "Which word belongs to the same word family as \"decide\"?",
+    "choices": [
+      "decision",
+      "describe",
+      "divide",
+      "desire"
+    ],
+    "answer": "decision"
+  },
+  {
+    "id": "g49",
+    "type": "short",
+    "skill": "contractions",
+    "stem": "Write the contraction for:\n\n\"do not\"",
+    "answer": "don't"
+  },
+  {
+    "id": "g50",
+    "type": "mcq",
+    "skill": "prepositions",
+    "stem": "Which word is a preposition?",
+    "choices": [
+      "jumped",
+      "under",
+      "happy",
+      "quickly"
+    ],
+    "answer": "under"
+  }
+]

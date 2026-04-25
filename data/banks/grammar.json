@@ -1,0 +1,382 @@
+{
+  "grammar": {
+    "meta": {
+      "level": "KS2",
+      "version": "2.1",
+      "notes": "SPaG concepts using direct sentence selection (SAT-aligned, token-based)"
+    },
+    "topics": [
+      {
+        "id": "nouns",
+        "label": "Nouns",
+        "definition": "A noun is a naming word for a person, place, thing or idea.",
+        "examples": [
+          {
+            "sentence": "The dog ran across the field.",
+            "highlight": [1, 5],
+            "explanation": "Dog and field are nouns because they name things."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "The cat slept on the sofa.",
+            "task": "Select all the nouns in the sentence.",
+            "answer": [1, 5]
+          },
+          {
+            "sentence": "London is the capital city.",
+            "task": "Select all the nouns in the sentence.",
+            "answer": [0, 4]
+          },
+          {
+            "sentence": "Happiness is important.",
+            "task": "Select the noun in the sentence.",
+            "answer": [0]
+          },
+          {
+            "sentence": "My brother plays football.",
+            "task": "Select all the nouns in the sentence.",
+            "answer": [1, 3]
+          },
+          {
+            "sentence": "The red car stopped suddenly.",
+            "task": "Select the noun in the sentence.",
+            "answer": [2]
+          }
+        ]
+      },
+      {
+        "id": "verbs",
+        "label": "Verbs",
+        "definition": "A verb shows an action or a state of being. Some verbs are auxiliary (helping) verbs.",
+        "examples": [
+          {
+            "sentence": "She is running to school.",
+            "highlight": [1, 2],
+            "explanation": "Is is an auxiliary verb and running is the main verb."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "The children laughed loudly.",
+            "task": "Select the verb in the sentence.",
+            "answer": [2]
+          },
+          {
+            "sentence": "She is happy today.",
+            "task": "Select the verb in the sentence.",
+            "answer": [1]
+          },
+          {
+            "sentence": "They were running quickly.",
+            "task": "Select all the verbs, including auxiliary verbs.",
+            "answer": [1, 2]
+          },
+          {
+            "sentence": "I feel tired.",
+            "task": "Select the verb in the sentence.",
+            "answer": [1]
+          },
+          {
+            "sentence": "The door slammed shut.",
+            "task": "Select the verb in the sentence.",
+            "answer": [2]
+          },
+          {
+            "sentence": "She has finished her work.",
+            "task": "Select all the verbs, including auxiliary verbs.",
+            "answer": [1, 2]
+          },
+          {
+            "sentence": "They are going to the park.",
+            "task": "Select all the verbs, including auxiliary verbs.",
+            "answer": [1, 2]
+          },
+          {
+            "sentence": "He did not understand the question.",
+            "task": "Select all the verbs, including auxiliary verbs.",
+            "answer": [1, 3]
+          },
+          {
+            "sentence": "You must finish your homework.",
+            "task": "Select all the verbs, including modal verbs.",
+            "answer": [1, 2]
+          }
+        ]
+      },
+      {
+        "id": "adjectives",
+        "label": "Adjectives",
+        "definition": "An adjective describes a noun.",
+        "examples": [
+          {
+            "sentence": "The tall building touched the clouds.",
+            "highlight": [1],
+            "explanation": "Tall describes the noun building."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "She wore a blue dress.",
+            "task": "Select the adjective in the sentence.",
+            "answer": [3]
+          },
+          {
+            "sentence": "The old tree fell down.",
+            "task": "Select the adjective in the sentence.",
+            "answer": [1]
+          },
+          {
+            "sentence": "It was a cold morning.",
+            "task": "Select the adjective in the sentence.",
+            "answer": [3]
+          },
+          {
+            "sentence": "The noisy class lined up.",
+            "task": "Select the adjective in the sentence.",
+            "answer": [1]
+          },
+          {
+            "sentence": "A small, brown dog barked.",
+            "task": "Select all the adjectives in the sentence.",
+            "answer": [1, 2]
+          }
+        ]
+      },
+      {
+        "id": "adverbs",
+        "label": "Adverbs",
+        "definition": "An adverb gives more information about a verb. It often tells us how, when or where.",
+        "examples": [
+          {
+            "sentence": "She ran quickly to the gate.",
+            "highlight": [2],
+            "explanation": "Quickly tells us how she ran."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "He spoke softly to the baby.",
+            "task": "Select the adverb in the sentence.",
+            "answer": [2]
+          },
+          {
+            "sentence": "The children played outside.",
+            "task": "Select the adverb in the sentence.",
+            "answer": [3]
+          },
+          {
+            "sentence": "She finished early.",
+            "task": "Select the adverb in the sentence.",
+            "answer": [2]
+          },
+          {
+            "sentence": "The dog barked loudly.",
+            "task": "Select the adverb in the sentence.",
+            "answer": [3]
+          },
+          {
+            "sentence": "They arrived late again.",
+            "task": "Select all the adverbs in the sentence.",
+            "answer": [2, 3]
+          }
+        ]
+      },
+      {
+        "id": "determiners",
+        "label": "Determiners",
+        "definition": "A determiner comes before a noun and shows which one or how many.",
+        "examples": [
+          {
+            "sentence": "Those apples are ripe.",
+            "highlight": [0],
+            "explanation": "Those tells us which apples."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "My brother lost his bag.",
+            "task": "Select all the determiners in the sentence.",
+            "answer": [0, 3]
+          },
+          {
+            "sentence": "The cat sat on the mat.",
+            "task": "Select all the determiners in the sentence.",
+            "answer": [0, 4]
+          },
+          {
+            "sentence": "Each child received a prize.",
+            "task": "Select all the determiners in the sentence.",
+            "answer": [0, 3]
+          },
+          {
+            "sentence": "These books are heavy.",
+            "task": "Select the determiner in the sentence.",
+            "answer": [0]
+          },
+          {
+            "sentence": "She found some shells.",
+            "task": "Select the determiner in the sentence.",
+            "answer": [2]
+          }
+        ]
+      },
+      {
+        "id": "prepositions",
+        "label": "Prepositions",
+        "definition": "A preposition shows the relationship between a noun and another word in the sentence.",
+        "examples": [
+          {
+            "sentence": "The cat slept under the table.",
+            "highlight": [3],
+            "explanation": "Under shows the position of the cat."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "The book is on the shelf.",
+            "task": "Select the preposition in the sentence.",
+            "answer": [3]
+          },
+          {
+            "sentence": "She stood behind the door.",
+            "task": "Select the preposition in the sentence.",
+            "answer": [2]
+          },
+          {
+            "sentence": "We walked through the park.",
+            "task": "Select the preposition in the sentence.",
+            "answer": [2]
+          },
+          {
+            "sentence": "The keys are inside the drawer.",
+            "task": "Select the preposition in the sentence.",
+            "answer": [3]
+          },
+          {
+            "sentence": "He arrived before dinner.",
+            "task": "Select the preposition in the sentence.",
+            "answer": [2]
+          }
+        ]
+      },
+      {
+        "id": "subordinate-clauses",
+        "label": "Subordinate Clauses",
+        "definition": "A subordinate clause gives extra information but cannot stand alone as a sentence.",
+        "examples": [
+          {
+            "sentence": "I stayed inside because it was raining.",
+            "highlight": [3, 4, 5, 6],
+            "explanation": "Because it was raining is a subordinate clause."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "She stayed home because she felt ill.",
+            "task": "Select the subordinate clause in the sentence.",
+            "answer": [3, 4, 5, 6]
+          },
+          {
+            "sentence": "When the bell rang, the class left.",
+            "task": "Select the subordinate clause in the sentence.",
+            "answer": [0, 1, 2, 3]
+          },
+          {
+            "sentence": "I will go if it stops raining.",
+            "task": "Select the subordinate clause in the sentence.",
+            "answer": [3, 4, 5, 6]
+          },
+          {
+            "sentence": "Although he was tired, he continued.",
+            "task": "Select the subordinate clause in the sentence.",
+            "answer": [0, 1, 2, 3]
+          },
+          {
+            "sentence": "We waited while the rain fell.",
+            "task": "Select the subordinate clause in the sentence.",
+            "answer": [2, 3, 4, 5]
+          }
+        ]
+      },
+      {
+        "id": "pronouns",
+        "label": "Pronouns",
+        "definition": "A pronoun replaces a noun to avoid repetition.",
+        "examples": [
+          {
+            "sentence": "Sarah lost her book.",
+            "highlight": [2],
+            "explanation": "Her is a pronoun referring to Sarah."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "Tom said he was tired.",
+            "task": "Select the pronoun in the sentence.",
+            "answer": [2]
+          },
+          {
+            "sentence": "The dog wagged its tail.",
+            "task": "Select the pronoun in the sentence.",
+            "answer": [3]
+          },
+          {
+            "sentence": "These are mine.",
+            "task": "Select all the pronouns in the sentence.",
+            "answer": [0, 2]
+          },
+          {
+            "sentence": "The girl who won smiled.",
+            "task": "Select the pronoun in the sentence.",
+            "answer": [2]
+          },
+          {
+            "sentence": "This is the one I like.",
+            "task": "Select all the pronouns in the sentence.",
+            "answer": [0, 4]
+          }
+        ]
+      },
+      {
+        "id": "conjunctions",
+        "label": "Conjunctions",
+        "definition": "A conjunction joins words, phrases or clauses.",
+        "examples": [
+          {
+            "sentence": "I wanted to go but it was raining.",
+            "highlight": [4],
+            "explanation": "But joins two ideas."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "She ran and jumped.",
+            "task": "Select the conjunction in the sentence.",
+            "answer": [2]
+          },
+          {
+            "sentence": "I stayed inside because it was cold.",
+            "task": "Select the conjunction in the sentence.",
+            "answer": [3]
+          },
+          {
+            "sentence": "We can play or read.",
+            "task": "Select the conjunction in the sentence.",
+            "answer": [3]
+          },
+          {
+            "sentence": "He tried hard but failed.",
+            "task": "Select the conjunction in the sentence.",
+            "answer": [3]
+          },
+          {
+            "sentence": "You can go if you finish.",
+            "task": "Select the conjunction in the sentence.",
+            "answer": [3]
+          }
+        ]
+      }
+    ]
+  }
+}

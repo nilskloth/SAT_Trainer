@@ -1,0 +1,72 @@
+{
+  "runs": {
+    "full": {
+      "label": "Full KS2 SATs",
+      "papers": ["M_A", "M_R2", "M_R3", "E_R", "E_G", "E_S"]
+    },
+    "maths": {
+      "label": "Maths Only",
+      "papers": ["M_A", "M_R2", "M_R3"]
+    },
+    "english": {
+      "label": "English Only",
+      "papers": ["E_R", "E_G", "E_S"]
+    }
+  },
+
+  "papers": {
+    "M_A": {
+      "id": "M_A",
+      "subject": "Maths",
+      "label": "Maths Paper 1: Arithmetic",
+      "minutes": 30,
+      "type": "arithmetic",
+      "instructions": "Answer all questions. Calculators are not allowed. Work quickly and carefully."
+    },
+
+    "M_R2": {
+      "id": "M_R2",
+      "subject": "Maths",
+      "label": "Maths Paper 2: Reasoning",
+      "minutes": 40,
+      "type": "reasoning",
+      "instructions": "Answer all questions. You may need to show your working to help you answer some questions."
+    },
+
+    "M_R3": {
+      "id": "M_R3",
+      "subject": "Maths",
+      "label": "Maths Paper 3: Reasoning",
+      "minutes": 40,
+      "type": "reasoning",
+      "instructions": "Answer all questions. You may need to show your working to help you answer some questions."
+    },
+
+    "E_R": {
+      "id": "E_R",
+      "subject": "English",
+      "label": "English Reading",
+      "minutes": 60,
+      "type": "reading",
+      "instructions": "Read the texts carefully. Answer all the questions using evidence from the text."
+    },
+
+    "E_G": {
+      "id": "E_G",
+      "subject": "English",
+      "label": "English Grammar, Punctuation and Spelling – Paper 1",
+      "minutes": 45,
+      "type": "spag",
+      "instructions": "Answer all questions. Some questions are multiple-choice, others require short answers."
+    },
+
+    "E_S": {
+      "id": "E_S",
+      "subject": "English",
+      "label": "English Grammar, Punctuation and Spelling – Paper 2 (Spelling)",
+      "minutes": 0,
+      "type": "spelling",
+      "instructions": "You will hear sentences containing spelling words. Write each word correctly."
+    }
+  }
+}

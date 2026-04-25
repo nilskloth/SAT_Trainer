@@ -1,0 +1,246 @@
+[
+    {
+    "id": "r_fiction_01",
+    "title": "The Storm Lantern",
+    "genre": "fiction",
+    "wordCount": 420,
+    "text": "Ella discovered the lantern in the shed behind her grandmother’s house. The door creaked as she pushed it open, releasing a smell of dust and old wood. Light slipped through the cracked window panes, settling on forgotten tools and spider webs stretched thin like silver threads.\n\nThe lantern sat on a shelf at the back, its glass cloudy and its metal frame cold to the touch. As Ella wiped away the grime with her sleeve, she noticed a small star-shaped mark engraved along the rim. It seemed to glow faintly, though she could not tell why.\n\nOutside, the sky darkened. Clouds rolled in quickly, piling up like heavy blankets. The air felt tight, and the wind whispered through the trees, bending their branches until leaves scattered across the path. Thunder rumbled somewhere far away.\n\nElla hesitated. She had been told not to wander during storms, yet something about the lantern made her feel braver. Holding it firmly, she stepped outside. A flash of lightning lit the garden, and for a moment the star on the lantern shone brightly.\n\nElla did not understand the lantern’s purpose, but as the rain began to fall, she felt certain it was meant to guide her through the storm.",
+    "questions": [
+      {
+        "id": "r1_q1",
+        "type": "mcq",
+        "skill": "retrieval",
+        "stem": "Where did Ella find the lantern?",
+        "choices": [
+          "In the garden",
+          "In the shed",
+          "In the house",
+          "In the tree"
+        ],
+        "answer": "In the shed"
+      },
+      {
+        "id": "r1_q2",
+        "type": "short",
+        "skill": "retrieval",
+        "stem": "Give one detail that shows the shed had not been used for a long time.",
+        "answer": "dust / old wood / spider webs / forgotten tools"
+      },
+      {
+        "id": "r1_q3",
+        "type": "mcq",
+        "skill": "vocabulary",
+        "stem": "Which word best describes how the air felt before the storm?",
+        "choices": [
+          "Fresh",
+          "Tight",
+          "Warm",
+          "Dry"
+        ],
+        "answer": "Tight"
+      },
+      {
+        "id": "r1_q4",
+        "type": "short",
+        "skill": "inference",
+        "stem": "Why does Ella hesitate before going outside?",
+        "answer": "She had been told not to wander during storms / she knew it was dangerous"
+      },
+      {
+        "id": "r1_q5",
+        "type": "short",
+        "skill": "inference",
+        "stem": "What makes Ella feel braver as she steps outside?",
+        "answer": "The lantern / holding the lantern / the lantern makes her feel safe"
+      },
+      {
+        "id": "r1_q6",
+        "type": "mcq",
+        "skill": "language",
+        "stem": "Which phrase suggests the storm is approaching quickly?",
+        "choices": [
+          "Light slipped through the cracked window panes",
+          "Clouds rolled in quickly",
+          "The lantern sat on a shelf",
+          "She wiped away the grime"
+        ],
+        "answer": "Clouds rolled in quickly"
+      },
+      {
+        "id": "r1_q7",
+        "type": "short",
+        "skill": "explanation",
+        "stem": "Explain what the author suggests about the lantern at the end of the story.",
+        "answer": "It is meant to guide or protect her / it has a special purpose"
+      }
+    ]
+    },
+    {
+    "id": "r_fiction_02",
+    "title": "The Long Walk Home",
+    "genre": "fiction",
+    "wordCount": 390,
+    "text": "Sam tightened his grip on the straps of his rucksack as he stepped through the school gates. The playground noise faded behind him, replaced by the hum of traffic and the distant bark of a dog. Normally, he walked home with his friends, but today he had chosen the longer route.\n\nThe pavement narrowed as he moved away from the main road. Houses stood closer together here, their windows dark and silent. Sam slowed his pace, listening to the sound of his shoes against the concrete. Each step echoed louder than he expected.\n\nHe reached into his pocket and felt the folded piece of paper. The edges were soft now, worn from being unfolded and refolded throughout the day. Sam stopped beneath a streetlight and stared at the ground. He knew what the note said without reading it again.\n\nA bus roared past, making him jump. Sam took a deep breath and continued walking. By the time he reached the corner shop, his shoulders had relaxed slightly. The light from the shop window spilled onto the pavement, and for the first time since leaving school, Sam allowed himself a small smile.",
+    "questions": [
+    {
+      "id": "r2_q1",
+      "type": "mcq",
+      "skill": "retrieval",
+      "stem": "Why does Sam choose to walk a different way home?",
+      "choices": [
+        "He has forgotten something",
+        "He wants to avoid his friends",
+        "He chooses the longer route",
+        "The usual road is closed"
+      ],
+      "answer": "He chooses the longer route"
+    },
+    {
+      "id": "r2_q2",
+      "type": "short",
+      "skill": "inference",
+      "stem": "What does the note in Sam’s pocket suggest about how he is feeling?",
+      "answer": "He is worried / nervous / thinking about something important"
+    },
+    {
+      "id": "r2_q3",
+      "type": "mcq",
+      "skill": "vocabulary",
+      "stem": "Which word best describes how Sam feels when the bus roars past?",
+      "choices": [
+        "Excited",
+        "Angry",
+        "Calm",
+        "Startled"
+      ],
+      "answer": "Startled"
+    },
+    {
+      "id": "r2_q4",
+      "type": "short",
+      "skill": "inference",
+      "stem": "Why does Sam relax when he reaches the corner shop?",
+      "answer": "It is brighter / feels safer / he is nearly home"
+    },
+    {
+      "id": "r2_q5",
+      "type": "short",
+      "skill": "explanation",
+      "stem": "Explain how the author shows Sam becoming more confident by the end of the text.",
+      "answer": "He relaxes his shoulders / he smiles / the light makes him feel safer"
+    }
+    ]
+    },
+    {
+      "id": "r_nonfiction_01",
+      "title": "Why Do Volcanoes Erupt?",
+      "genre": "non-fiction",
+      "wordCount": 360,
+      "text": "A volcano is an opening in the Earth’s surface through which molten rock, ash and gases can escape. This molten rock, known as magma, lies beneath the Earth’s crust and is under extreme pressure.\n\nAs heat builds up, gases trapped in the magma begin to expand. Eventually, the pressure becomes so great that the magma is forced upwards. When it reaches the surface, an eruption occurs.\n\nSome eruptions are gentle, allowing lava to flow slowly down the sides of a volcano. Others are violent and explosive, sending ash clouds high into the atmosphere. These powerful eruptions can change the surrounding landscape and affect weather patterns.\n\nVolcanoes are often found along the edges of tectonic plates. These plates are constantly moving, although very slowly. When they collide or pull apart, magma can rise through cracks in the Earth’s crust, creating volcanoes.",
+      "questions": [
+        {
+          "id": "r3_q1",
+          "type": "short",
+          "skill": "retrieval",
+          "stem": "What is molten rock beneath the Earth’s crust called?",
+          "answer": "magma"
+        },
+        {
+          "id": "r3_q2",
+          "type": "mcq",
+          "skill": "retrieval",
+          "stem": "What causes magma to move towards the Earth’s surface?",
+          "choices": [
+            "Rainfall",
+            "Wind",
+            "Pressure from gases",
+            "Cooling temperatures"
+          ],
+          "answer": "Pressure from gases"
+        },
+        {
+          "id": "r3_q3",
+          "type": "short",
+          "skill": "retrieval",
+          "stem": "Give one effect of a powerful volcanic eruption.",
+          "answer": "ash clouds / landscape changes / weather changes"
+        },
+        {
+          "id": "r3_q4",
+          "type": "mcq",
+          "skill": "language",
+          "stem": "Which word best describes tectonic plates?",
+          "choices": [
+            "Fixed",
+            "Unmoving",
+            "Slow-moving",
+            "Fragile"
+          ],
+          "answer": "Slow-moving"
+        },
+        {
+          "id": "r3_q5",
+          "type": "short",
+          "skill": "explanation",
+          "stem": "Why are volcanoes often found at the edges of tectonic plates?",
+          "answer": "Magma can rise through cracks when plates move"
+        }
+      ]
+    },
+    {
+      "id": "r_nonfiction_02",
+      "title": "Life in the Rainforest",
+      "genre": "non-fiction",
+      "wordCount": 340,
+      "text": "Rainforests are warm, wet forests found near the equator. They receive large amounts of rainfall throughout the year, which allows a wide variety of plants and animals to thrive.\n\nThe forest is divided into layers. At the top is the emergent layer, where the tallest trees grow. Below this lies the canopy, which forms a thick green roof over the forest. The understory and forest floor receive much less sunlight.\n\nMany animals have adapted to life in the rainforest. Some have bright colours to warn predators, while others blend in with their surroundings. Plants often have large leaves to collect as much sunlight as possible.\n\nRainforests play an important role in regulating the Earth’s climate. They absorb carbon dioxide and release oxygen, helping to keep the planet healthy.",
+      "questions": [
+        {
+          "id": "r4_q1",
+          "type": "mcq",
+          "skill": "retrieval",
+          "stem": "Where are rainforests usually found?",
+          "choices": [
+            "Near the poles",
+            "In deserts",
+            "Near the equator",
+            "On mountains"
+          ],
+          "answer": "Near the equator"
+        },
+        {
+          "id": "r4_q2",
+          "type": "short",
+          "skill": "retrieval",
+          "stem": "Name one layer of the rainforest.",
+          "answer": "emergent / canopy / understory / forest floor"
+        },
+        {
+          "id": "r4_q3",
+          "type": "mcq",
+          "skill": "inference",
+          "stem": "Why do plants in the rainforest have large leaves?",
+          "choices": [
+            "To catch rain",
+            "To collect sunlight",
+            "To scare animals",
+            "To store water"
+          ],
+          "answer": "To collect sunlight"
+        },
+        {
+          "id": "r4_q4",
+          "type": "short",
+          "skill": "retrieval",
+          "stem": "How do rainforests help the Earth’s climate?",
+          "answer": "They absorb carbon dioxide / release oxygen"
+        },
+        {
+          "id": "r4_q5",
+          "type": "short",
+          "skill": "explanation",
+          "stem": "Explain why rainforests are important for animals.",
+          "answer": "They provide habitats / food / protection"
+        }
+      ]
+    }
+]

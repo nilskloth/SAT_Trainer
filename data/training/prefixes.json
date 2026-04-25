@@ -1,0 +1,225 @@
+{
+  "prefixDefs": [
+    { "prefix": "un",   "meaning": "not / opposite of",              "examples": ["unhappy", "unkind", "unsafe"] },
+    { "prefix": "dis",  "meaning": "not / opposite of",              "examples": ["disagree", "dishonest", "disappear"] },
+    { "prefix": "mis",  "meaning": "wrongly / badly",                "examples": ["misbehave", "misspell", "mislead"] },
+    { "prefix": "re",   "meaning": "again / back",                   "examples": ["rewrite", "replay", "refill"] },
+    { "prefix": "pre",  "meaning": "before",                         "examples": ["prehistoric", "preview", "preschool"] },
+    { "prefix": "sub",  "meaning": "under / below",                  "examples": ["submarine", "subway", "submerge"] },
+    { "prefix": "tele", "meaning": "far away / at a distance",       "examples": ["telephone", "telescope", "television"] },
+    { "prefix": "bi",   "meaning": "two",                            "examples": ["bicycle", "bilingual"] },
+    { "prefix": "anti", "meaning": "against / opposite of",          "examples": ["anticlockwise", "antiseptic", "antisocial"] },
+    { "prefix": "im",   "meaning": "not (before m, p or b)",         "examples": ["impossible", "impolite", "impatient"] },
+    { "prefix": "in",   "meaning": "not",                            "examples": ["incorrect", "invisible", "incomplete"] },
+    { "prefix": "ir",   "meaning": "not (before r)",                 "examples": ["irregular", "irresponsible"] },
+    { "prefix": "il",   "meaning": "not (before l)",                 "examples": ["illegible", "illegal"] }
+  ],
+
+  "wordPairs": [
+    { "root": "happy",      "prefix": "un",   "options": ["un",   "dis",  "mis",  "re"]   },
+    { "root": "kind",       "prefix": "un",   "options": ["un",   "in",   "dis",  "mis"]  },
+    { "root": "fair",       "prefix": "un",   "options": ["un",   "dis",  "in",   "mis"]  },
+    { "root": "safe",       "prefix": "un",   "options": ["un",   "dis",  "mis",  "re"]   },
+    { "root": "tidy",       "prefix": "un",   "options": ["un",   "in",   "dis",  "re"]   },
+    { "root": "appear",     "prefix": "dis",  "options": ["dis",  "un",   "mis",  "pre"]  },
+    { "root": "agree",      "prefix": "dis",  "options": ["dis",  "un",   "mis",  "pre"]  },
+    { "root": "like",       "prefix": "dis",  "options": ["dis",  "pre",  "mis",  "re"]   },
+    { "root": "obey",       "prefix": "dis",  "options": ["dis",  "un",   "mis",  "in"]   },
+    { "root": "honest",     "prefix": "dis",  "options": ["dis",  "un",   "in",   "mis"]  },
+    { "root": "behave",     "prefix": "mis",  "options": ["mis",  "dis",  "un",   "re"]   },
+    { "root": "lead",       "prefix": "mis",  "options": ["mis",  "un",   "dis",  "re"]   },
+    { "root": "spell",      "prefix": "mis",  "options": ["mis",  "dis",  "un",   "pre"]  },
+    { "root": "place",      "prefix": "mis",  "options": ["mis",  "pre",  "un",   "re"]   },
+    { "root": "write",      "prefix": "re",   "options": ["re",   "un",   "dis",  "pre"]  },
+    { "root": "play",       "prefix": "re",   "options": ["re",   "un",   "dis",  "pre"]  },
+    { "root": "build",      "prefix": "re",   "options": ["re",   "un",   "dis",  "sub"]  },
+    { "root": "fill",       "prefix": "re",   "options": ["re",   "un",   "pre",  "dis"]  },
+    { "root": "historic",   "prefix": "pre",  "options": ["pre",  "re",   "sub",  "tele"] },
+    { "root": "view",       "prefix": "pre",  "options": ["pre",  "mis",  "tele", "sub"]  },
+    { "root": "school",     "prefix": "pre",  "options": ["pre",  "re",   "sub",  "tele"] },
+    { "root": "marine",     "prefix": "sub",  "options": ["sub",  "tele", "bi",   "anti"] },
+    { "root": "way",        "prefix": "sub",  "options": ["sub",  "bi",   "tele", "pre"]  },
+    { "root": "merge",      "prefix": "sub",  "options": ["sub",  "pre",  "bi",   "tele"] },
+    { "root": "phone",      "prefix": "tele", "options": ["tele", "bi",   "sub",  "pre"]  },
+    { "root": "scope",      "prefix": "tele", "options": ["tele", "bi",   "sub",  "pre"]  },
+    { "root": "vision",     "prefix": "tele", "options": ["tele", "bi",   "sub",  "pre"]  },
+    { "root": "cycle",      "prefix": "bi",   "options": ["bi",   "tele", "sub",  "pre"]  },
+    { "root": "lingual",    "prefix": "bi",   "options": ["bi",   "tele", "sub",  "pre"]  },
+    { "root": "clockwise",  "prefix": "anti", "options": ["anti", "sub",  "tele", "pre"]  },
+    { "root": "septic",     "prefix": "anti", "options": ["anti", "sub",  "pre",  "tele"] },
+    { "root": "social",     "prefix": "anti", "options": ["anti", "sub",  "un",   "dis"]  },
+    { "root": "possible",   "prefix": "im",   "options": ["im",   "un",   "in",   "dis"]  },
+    { "root": "polite",     "prefix": "im",   "options": ["im",   "in",   "un",   "dis"]  },
+    { "root": "patient",    "prefix": "im",   "options": ["im",   "in",   "un",   "dis"]  },
+    { "root": "mature",     "prefix": "im",   "options": ["im",   "in",   "un",   "dis"]  },
+    { "root": "correct",    "prefix": "in",   "options": ["in",   "im",   "un",   "dis"]  },
+    { "root": "visible",    "prefix": "in",   "options": ["in",   "im",   "un",   "dis"]  },
+    { "root": "complete",   "prefix": "in",   "options": ["in",   "im",   "un",   "dis"]  },
+    { "root": "regular",    "prefix": "ir",   "options": ["ir",   "in",   "im",   "un"]   },
+    { "root": "responsible","prefix": "ir",   "options": ["ir",   "in",   "im",   "un"]   }
+  ],
+
+  "sentences": [
+    {
+      "before": "She was",
+      "root": "able",
+      "after": "to swim in the deep end.",
+      "prefix": "un",
+      "options": ["un", "dis", "mis", "re"]
+    },
+    {
+      "before": "He made a careless",
+      "root": "take",
+      "after": "in the test.",
+      "prefix": "mis",
+      "options": ["mis", "dis", "un", "re"]
+    },
+    {
+      "before": "The scientists found",
+      "root": "historic",
+      "after": "bones buried in the ground.",
+      "prefix": "pre",
+      "options": ["pre", "re", "sub", "tele"]
+    },
+    {
+      "before": "They rode the",
+      "root": "way",
+      "after": "to get across the city.",
+      "prefix": "sub",
+      "options": ["sub", "bi", "tele", "pre"]
+    },
+    {
+      "before": "It was",
+      "root": "possible",
+      "after": "to lift the enormous boulder.",
+      "prefix": "im",
+      "options": ["im", "un", "in", "dis"]
+    },
+    {
+      "before": "She looked through the",
+      "root": "scope",
+      "after": "to see the stars.",
+      "prefix": "tele",
+      "options": ["tele", "bi", "sub", "pre"]
+    },
+    {
+      "before": "The nurse cleaned the wound with",
+      "root": "septic",
+      "after": "cream.",
+      "prefix": "anti",
+      "options": ["anti", "sub", "pre", "dis"]
+    },
+    {
+      "before": "She had to",
+      "root": "do",
+      "after": "her homework because it was too messy.",
+      "prefix": "re",
+      "options": ["re", "un", "dis", "pre"]
+    },
+    {
+      "before": "The magician made the rabbit",
+      "root": "appear",
+      "after": "into thin air.",
+      "prefix": "dis",
+      "options": ["dis", "un", "mis", "pre"]
+    },
+    {
+      "before": "It is",
+      "root": "safe",
+      "after": "to run near the swimming pool.",
+      "prefix": "un",
+      "options": ["un", "dis", "in", "mis"]
+    },
+    {
+      "before": "The explorer dove down to the",
+      "root": "marine",
+      "after": "and peered inside.",
+      "prefix": "sub",
+      "options": ["sub", "tele", "bi", "anti"]
+    },
+    {
+      "before": "She could ride her",
+      "root": "cycle",
+      "after": "faster than anyone in the class.",
+      "prefix": "bi",
+      "options": ["bi", "tele", "sub", "pre"]
+    },
+    {
+      "before": "The hands on the broken clock were moving",
+      "root": "clockwise",
+      "after": ".",
+      "prefix": "anti",
+      "options": ["anti", "pre", "sub", "un"]
+    },
+    {
+      "before": "She could speak both French and English — she was completely",
+      "root": "lingual",
+      "after": ".",
+      "prefix": "bi",
+      "options": ["bi", "tele", "sub", "pre"]
+    },
+    {
+      "before": "She attended",
+      "root": "school",
+      "after": "before starting Year 1.",
+      "prefix": "pre",
+      "options": ["pre", "re", "sub", "tele"]
+    },
+    {
+      "before": "The answer on her worksheet was",
+      "root": "correct",
+      "after": ".",
+      "prefix": "in",
+      "options": ["in", "un", "mis", "dis"]
+    },
+    {
+      "before": "The ghost was",
+      "root": "visible",
+      "after": "to everyone in the room.",
+      "prefix": "in",
+      "options": ["in", "un", "im", "dis"]
+    },
+    {
+      "before": "It was very",
+      "root": "polite",
+      "after": "to interrupt while someone was talking.",
+      "prefix": "im",
+      "options": ["im", "in", "un", "dis"]
+    },
+    {
+      "before": "His handwriting was so messy it was almost",
+      "root": "legible",
+      "after": ".",
+      "prefix": "il",
+      "options": ["il", "in", "im", "un"]
+    },
+    {
+      "before": "She was",
+      "root": "patient",
+      "after": "and kept tapping her foot.",
+      "prefix": "im",
+      "options": ["im", "un", "in", "dis"]
+    },
+    {
+      "before": "The new pupil felt",
+      "root": "comfortable",
+      "after": "on his first day.",
+      "prefix": "un",
+      "options": ["un", "dis", "mis", "in"]
+    },
+    {
+      "before": "He had to",
+      "root": "read",
+      "after": "the chapter because he had forgotten it.",
+      "prefix": "re",
+      "options": ["re", "un", "pre", "dis"]
+    },
+    {
+      "before": "It would be",
+      "root": "responsible",
+      "after": "to leave the gate open.",
+      "prefix": "ir",
+      "options": ["ir", "in", "un", "mis"]
+    }
+  ]
+}

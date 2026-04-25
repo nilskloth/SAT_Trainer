@@ -1,0 +1,113 @@
+/* =========================
+   App bootstrap (ES module)
+========================= */
+/* jshint esversion: 11 */
+
+import { initStore, getStore } from "./store.js";
+import { loadAllData } from "./loader.js";
+import { initTabs } from "./tabs.js";
+
+import { initPapers } from "./runner/papers.js";
+import { initRunner } from "./runner/runner.js";
+import { initArithmetic } from "./training/arithmetic.js";
+import { initSpelling } from "./training/spelling.js";
+import { initGrammar } from "./training/grammar.js";
+import { initPrefixes } from "./training/prefixes.js";
+import { initAlgebra } from "./training/algebra.js";
+import { initStats } from "./stats/stats.js";
+
+(async function initApp() {
+  try {
+    /* =========================
+       Load external JSON data
+    ========================= */
+
+    const data = await loadAllData();
+    window.DATA = data;
+
+    /* =========================
+       Initialise core systems
+    ========================= */
+
+    initStore();
+    initTabs();
+
+    /* =========================
+       Initialise feature modules
+    ========================= */
+
+    initPapers();
+    initRunner();
+    initArithmetic();
+    initSpelling();
+    initGrammar();
+    initPrefixes();
+    initAlgebra();
+
+    /* =========================
+       Training sub-tabs (Maths / Spelling / Grammar)
+    ========================= */
+
+    const trainingTabButtons = document.querySelectorAll(".training-tabs button[data-training]");
+    const trainingPanels = document.querySelectorAll(".training-panel");
+
+    if (trainingTabButtons.length && trainingPanels.length) {
+
+      const activateTraining = function (target) {
+        trainingTabButtons.forEach(b => {
+          b.classList.toggle("active", b.dataset.training === target);
+        });
+
+        trainingPanels.forEach(panel => {
+          panel.classList.toggle(
+            "hidden",
+            panel.id !== `training-${target}`
+          );
+        });
+      };
+
+      trainingTabButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          activateTraining(btn.dataset.training);
+        });
+      });
+
+      // Ensure default state is Maths
+      activateTraining("maths");
+    }
+    
+    // ✅ FIX: pass required dependencies explicitly
+    initStats(
+      getStore(),
+      DATA.spelling,
+      DATA.papers
+    );
+
+    console.log("KS2 SATs Practice Runner ready");
+
+  } catch (err) {
+    console.error("Failed to initialise app:", err);
+
+    document.body.innerHTML = `
+      <div style="
+        max-width: 600px;
+        margin: 60px auto;
+        padding: 20px;
+        font-family: system-ui, sans-serif;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+      ">
+        <h2>Something went wrong</h2>
+        <p>The SATs Practice Runner could not start.</p>
+        <pre style="white-space:pre-wrap; font-size:12px; color:#b00020;">
+${err.message}
+        </pre>
+        <p style="font-size:12px; color:#666;">
+          Tip: if you are running this locally, make sure you are using a local web server
+          (e.g. <code>python3 -m http.server</code>) and not opening the file directly.
+        </p>
+      </div>
+    `;
+  }
+})();

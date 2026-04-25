@@ -1,0 +1,581 @@
+{
+  "sets": [
+    {
+      "id": "set1",
+      "label": "Set 1",
+      "questions": [
+        {
+          "id": "s1q1",
+          "type": "short",
+          "strand": "missing_value",
+          "stem": "Find the value of <em>n</em>.<br><strong>n + 14 = 31</strong>",
+          "label": "n =",
+          "answer": "17",
+          "solution": "n = 31 − 14 = 17.   Check: 17 + 14 = 31 ✓"
+        },
+        {
+          "id": "s1q2",
+          "type": "short",
+          "strand": "missing_value",
+          "stem": "Find the value of <em>m</em>.<br><strong>5m = 60</strong>",
+          "label": "m =",
+          "answer": "12",
+          "solution": "m = 60 ÷ 5 = 12.   Check: 5 × 12 = 60 ✓"
+        },
+        {
+          "id": "s1q3",
+          "type": "short",
+          "strand": "substitution",
+          "stem": "Work out <strong>4p + 3</strong> when <em>p</em> = 5.",
+          "label": "Answer =",
+          "answer": "23",
+          "solution": "4 × 5 + 3 = 20 + 3 = 23.   Multiply before adding (BIDMAS)!"
+        },
+        {
+          "id": "s1q4",
+          "type": "multi",
+          "strand": "sequence",
+          "stem": "Continue the sequence. Write the next <strong>two</strong> terms.<br>3, 8, 13, 18, ___, ___",
+          "placeholder": "e.g. 23, 28",
+          "answers": ["23", "28"],
+          "solution": "Rule: add 5 each time.   18 + 5 = 23,   23 + 5 = 28."
+        },
+        {
+          "id": "s1q5",
+          "type": "short",
+          "strand": "formula",
+          "stem": "A plumber uses the formula <strong>C = 3h + 5</strong> to work out his charge (C = total cost in £, h = hours worked).<br>What is the charge for <strong>4 hours</strong>?",
+          "label": "C = £",
+          "answer": "17",
+          "solution": "C = 3 × 4 + 5 = 12 + 5 = 17.   Multiply first (BIDMAS)!"
+        },
+        {
+          "id": "s1q6",
+          "type": "mcq",
+          "strand": "express",
+          "stem": "Amir has <em>n</em> sweets. He gives <strong>4</strong> away.<br>Which expression shows how many he has left?",
+          "choices": ["n + 4", "n − 4", "4n", "n ÷ 4"],
+          "answer": "n − 4",
+          "solution": "He gives 4 away, so we subtract: n − 4."
+        },
+        {
+          "id": "s1q7",
+          "type": "short",
+          "strand": "missing_value",
+          "stem": "Find the value of <em>t</em>.<br><strong>3t − 4 = 20</strong>",
+          "label": "t =",
+          "answer": "8",
+          "solution": "3t = 20 + 4 = 24.   t = 24 ÷ 3 = 8.   Check: 3 × 8 − 4 = 24 − 4 = 20 ✓"
+        },
+        {
+          "id": "s1q8",
+          "type": "short",
+          "strand": "substitution",
+          "stem": "Work out <strong>c² + d</strong> when <em>c</em> = 3 and <em>d</em> = 8.",
+          "label": "Answer =",
+          "answer": "17",
+          "solution": "c² = 3 × 3 = 9.   Then 9 + 8 = 17.   Remember: square first, then add!"
+        },
+        {
+          "id": "s1q9",
+          "type": "mcq",
+          "strand": "sequence",
+          "stem": "What is the rule for this sequence?<br><strong>64, 32, 16, 8, ...</strong>",
+          "choices": ["Add 4 each time", "Subtract 8 each time", "Divide by 2 each time", "Multiply by 4 each time"],
+          "answer": "Divide by 2 each time",
+          "solution": "Rule: divide by 2 (halve) each time.   Next terms: 4, 2, 1."
+        },
+        {
+          "id": "s1q10",
+          "type": "pairs",
+          "strand": "two_unknowns",
+          "stem": "<em>a</em> and <em>b</em> are positive whole numbers and <em>a</em> &gt; <em>b</em>.<br><strong>a + b = 10</strong><br>Write <strong>one</strong> pair of values that works.",
+          "labels": ["a", "b"],
+          "validator": "sum10_agtb",
+          "solution": "Any pair where a + b = 10 and a &gt; b works:<br>a = 6, b = 4 &nbsp;|&nbsp; a = 7, b = 3 &nbsp;|&nbsp; a = 8, b = 2 &nbsp;|&nbsp; a = 9, b = 1"
+        }
+      ]
+    },
+    {
+      "id": "set2",
+      "label": "Set 2",
+      "questions": [
+        {
+          "id": "s2q1",
+          "type": "short",
+          "strand": "missing_value",
+          "stem": "Find the value of <em>k</em>.<br><strong>6k + 5 = 41</strong>",
+          "label": "k =",
+          "answer": "6",
+          "solution": "6k = 41 − 5 = 36.   k = 36 ÷ 6 = 6.   Check: 6 × 6 + 5 = 36 + 5 = 41 ✓"
+        },
+        {
+          "id": "s2q2",
+          "type": "short",
+          "strand": "substitution",
+          "stem": "Work out <strong>3a²</strong> when <em>a</em> = 4.",
+          "label": "Answer =",
+          "answer": "48",
+          "solution": "a² = 4 × 4 = 16.   Then 3 × 16 = 48.   Square first, then multiply!"
+        },
+        {
+          "id": "s2q3",
+          "type": "multi",
+          "strand": "sequence",
+          "stem": "Continue the sequence. Write the next <strong>two</strong> terms.<br>5, 9, 13, 17, ___, ___",
+          "placeholder": "e.g. 21, 25",
+          "answers": ["21", "25"],
+          "solution": "Rule: add 4 each time.   17 + 4 = 21,   21 + 4 = 25."
+        },
+        {
+          "id": "s2q4",
+          "type": "short",
+          "strand": "missing_value",
+          "stem": "The formula is <strong>F = 2m + 4</strong>.<br>If F = 20, find <em>m</em>.",
+          "label": "m =",
+          "answer": "8",
+          "solution": "2m + 4 = 20.   2m = 20 − 4 = 16.   m = 16 ÷ 2 = 8.   Check: 2 × 8 + 4 = 20 ✓"
+        },
+        {
+          "id": "s2q5",
+          "type": "mcq",
+          "strand": "express",
+          "stem": "A bag has <em>n</em> apples. <strong>6 more</strong> are added.<br>Which expression shows the total?",
+          "choices": ["n − 6", "6n", "n + 6", "n ÷ 6"],
+          "answer": "n + 6",
+          "solution": "6 more are added, so we add: n + 6."
+        },
+        {
+          "id": "s2q6",
+          "type": "short",
+          "strand": "formula",
+          "stem": "The formula for the perimeter of a square is <strong>P = 4l</strong>.<br>What is the perimeter when <em>l</em> = 7?",
+          "label": "P =",
+          "answer": "28",
+          "solution": "P = 4 × 7 = 28."
+        },
+        {
+          "id": "s2q7",
+          "type": "short",
+          "strand": "missing_value",
+          "stem": "Find the value of <em>n</em>.<br><strong>48 ÷ n = 6</strong>",
+          "label": "n =",
+          "answer": "8",
+          "solution": "n = 48 ÷ 6 = 8.   Check: 48 ÷ 8 = 6 ✓"
+        },
+        {
+          "id": "s2q8",
+          "type": "short",
+          "strand": "substitution",
+          "stem": "Work out <strong>5x − y</strong> when <em>x</em> = 6 and <em>y</em> = 9.",
+          "label": "Answer =",
+          "answer": "21",
+          "solution": "5 × 6 − 9 = 30 − 9 = 21.   Multiply before subtracting (BIDMAS)!"
+        },
+        {
+          "id": "s2q9",
+          "type": "multi",
+          "strand": "sequence",
+          "stem": "Continue the sequence. Write the next <strong>two</strong> terms.<br>96, 48, 24, 12, ___, ___",
+          "placeholder": "e.g. 6, 3",
+          "answers": ["6", "3"],
+          "solution": "Rule: divide by 2 each time.   12 ÷ 2 = 6,   6 ÷ 2 = 3."
+        },
+        {
+          "id": "s2q10",
+          "type": "pairs",
+          "strand": "two_unknowns",
+          "stem": "<em>x</em> and <em>y</em> are positive whole numbers and <em>x</em> &lt; 20.<br><strong>x − y = 6</strong><br>Write <strong>one</strong> pair of values that works.",
+          "labels": ["x", "y"],
+          "validator": "diff6_xlt20",
+          "solution": "Any pair where x − y = 6 and x &lt; 20 works:<br>x = 7, y = 1 &nbsp;|&nbsp; x = 8, y = 2 &nbsp;|&nbsp; x = 9, y = 3 &nbsp;|&nbsp; x = 10, y = 4 &nbsp;(and more)"
+        }
+      ]
+    }
+  ,
+    {
+      "id": "set3",
+      "label": "Set 3",
+      "questions": [
+        {
+          "id": "s3q1",
+          "type": "short",
+          "strand": "missing_value",
+          "stem": "Find the value of <em>n</em>.<br><strong>2n + 7 = 19</strong>",
+          "label": "n =",
+          "answer": "6",
+          "solution": "2n = 19 − 7 = 12.   n = 12 ÷ 2 = 6.   Check: 2 × 6 + 7 = 12 + 7 = 19 ✓"
+        },
+        {
+          "id": "s3q2",
+          "type": "short",
+          "strand": "substitution",
+          "stem": "Work out <strong>6m − 4</strong> when <em>m</em> = 3.",
+          "label": "Answer =",
+          "answer": "14",
+          "solution": "6 × 3 − 4 = 18 − 4 = 14.   Multiply before subtracting (BIDMAS)!"
+        },
+        {
+          "id": "s3q3",
+          "type": "multi",
+          "strand": "sequence",
+          "stem": "Continue the sequence. Write the next <strong>two</strong> terms.<br>2, 6, 18, 54, ___, ___",
+          "placeholder": "e.g. 162, 486",
+          "answers": ["162", "486"],
+          "solution": "Rule: multiply by 3 each time.   54 × 3 = 162,   162 × 3 = 486."
+        },
+        {
+          "id": "s3q4",
+          "type": "short",
+          "strand": "substitution",
+          "stem": "Work out <strong>(a + b) × 3</strong> when <em>a</em> = 4 and <em>b</em> = 6.",
+          "label": "Answer =",
+          "answer": "30",
+          "solution": "Brackets first: (4 + 6) = 10.   Then 10 × 3 = 30.   Always work out brackets first (BIDMAS)!"
+        },
+        {
+          "id": "s3q5",
+          "type": "mcq",
+          "strand": "express",
+          "stem": "<em>y</em> pencils are shared equally between <strong>3</strong> children.<br>Which expression shows how many pencils each child gets?",
+          "choices": ["y − 3", "3y", "y + 3", "y ÷ 3"],
+          "answer": "y ÷ 3",
+          "solution": "Shared equally between 3 means divide: y ÷ 3."
+        },
+        {
+          "id": "s3q6",
+          "type": "short",
+          "strand": "missing_value",
+          "stem": "Find the value of <em>n</em>.<br><strong>n² = 49</strong>",
+          "label": "n =",
+          "answer": "7",
+          "solution": "n² means n × n.   7 × 7 = 49, so n = 7.   Check: 7² = 49 ✓"
+        },
+        {
+          "id": "s3q7",
+          "type": "short",
+          "strand": "formula",
+          "stem": "A formula for the area of a rectangle is <strong>A = l × w</strong>.<br>What is the area when <em>l</em> = 8 and <em>w</em> = 5?",
+          "label": "A =",
+          "answer": "40",
+          "solution": "A = 8 × 5 = 40."
+        },
+        {
+          "id": "s3q8",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "The sequence 4, 7, 10, 13, … follows a rule.<br>Write an expression for the <strong>nth term</strong>.",
+          "label": "nth term =",
+          "answer": "3n+1",
+          "solution": "The rule adds 3 each time, so start with 3n.   When n = 1: 3(1) = 3, but we need 4, so add 1.   nth term = 3n + 1.   Check: n=2 → 3(2)+1 = 7 ✓"
+        },
+        {
+          "id": "s3q9",
+          "type": "mcq",
+          "strand": "sequence",
+          "stem": "What is the rule for this sequence?<br><strong>1, 4, 9, 16, 25, ...</strong>",
+          "choices": ["Add 3 each time", "Multiply by 4 each time", "Square numbers (1², 2², 3², …)", "Add 10 each time"],
+          "answer": "Square numbers (1², 2², 3², …)",
+          "solution": "These are square numbers: 1², 2², 3², 4², 5², …   Next terms: 36, 49, 64."
+        },
+        {
+          "id": "s3q10",
+          "type": "pairs",
+          "strand": "two_unknowns",
+          "stem": "<em>a</em> and <em>b</em> are positive whole numbers.<br><strong>2a + b = 11</strong><br>Write <strong>one</strong> pair of values that works.",
+          "labels": ["a", "b"],
+          "validator": "2a_plus_b_11",
+          "solution": "Any pair where 2a + b = 11 works:<br>a = 1, b = 9 &nbsp;|&nbsp; a = 2, b = 7 &nbsp;|&nbsp; a = 3, b = 5 &nbsp;|&nbsp; a = 4, b = 3 &nbsp;|&nbsp; a = 5, b = 1"
+        }
+      ]
+    },
+    {
+      "id": "set4",
+      "label": "Set 4",
+      "questions": [
+        {
+          "id": "s4q1",
+          "type": "short",
+          "strand": "missing_value",
+          "stem": "Find the value of <em>t</em>.<br><strong>4t + 9 = 37</strong>",
+          "label": "t =",
+          "answer": "7",
+          "solution": "4t = 37 − 9 = 28.   t = 28 ÷ 4 = 7.   Check: 4 × 7 + 9 = 28 + 9 = 37 ✓"
+        },
+        {
+          "id": "s4q2",
+          "type": "short",
+          "strand": "substitution",
+          "stem": "Work out <strong>p² − q</strong> when <em>p</em> = 5 and <em>q</em> = 7.",
+          "label": "Answer =",
+          "answer": "18",
+          "solution": "p² = 5 × 5 = 25.   Then 25 − 7 = 18.   Square first, then subtract!"
+        },
+        {
+          "id": "s4q3",
+          "type": "multi",
+          "strand": "sequence",
+          "stem": "Continue the sequence. Write the next <strong>two</strong> terms.<br>3, 7, 11, 15, ___, ___",
+          "placeholder": "e.g. 19, 23",
+          "answers": ["19", "23"],
+          "solution": "Rule: add 4 each time.   15 + 4 = 19,   19 + 4 = 23."
+        },
+        {
+          "id": "s4q4",
+          "type": "short",
+          "strand": "formula",
+          "stem": "A taxi firm uses the formula <strong>C = 45m + 20</strong> to calculate the cost in pence (C = cost, m = miles).<br>What is the cost for <strong>2 miles</strong>?",
+          "label": "C = ",
+          "answer": "110",
+          "solution": "C = 45 × 2 + 20 = 90 + 20 = 110.   Multiply first (BIDMAS)!"
+        },
+        {
+          "id": "s4q5",
+          "type": "mcq",
+          "strand": "express",
+          "stem": "A box holds <em>n</em> biscuits. There are <strong>5</strong> boxes.<br>Which expression shows the total number of biscuits?",
+          "choices": ["n + 5", "n − 5", "5n", "n ÷ 5"],
+          "answer": "5n",
+          "solution": "5 groups of n biscuits means multiply: 5n (which means 5 × n)."
+        },
+        {
+          "id": "s4q6",
+          "type": "short",
+          "strand": "missing_value",
+          "stem": "Find the value of <em>n</em>.<br><strong>n ÷ 4 + 3 = 8</strong>",
+          "label": "n =",
+          "answer": "20",
+          "solution": "n ÷ 4 = 8 − 3 = 5.   n = 5 × 4 = 20.   Check: 20 ÷ 4 + 3 = 5 + 3 = 8 ✓"
+        },
+        {
+          "id": "s4q7",
+          "type": "short",
+          "strand": "substitution",
+          "stem": "Work out <strong>2(x + y)</strong> when <em>x</em> = 5 and <em>y</em> = 3.",
+          "label": "Answer =",
+          "answer": "16",
+          "solution": "Brackets first: (5 + 3) = 8.   Then 2 × 8 = 16.   Always work out brackets first (BIDMAS)!"
+        },
+        {
+          "id": "s4q8",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "The sequence 5, 8, 11, 14, … follows a rule.<br>Write an expression for the <strong>nth term</strong>.",
+          "label": "nth term =",
+          "answer": "3n+2",
+          "solution": "The rule adds 3 each time, so start with 3n.   When n = 1: 3(1) = 3, but we need 5, so add 2.   nth term = 3n + 2.   Check: n=2 → 3(2)+2 = 8 ✓"
+        },
+        {
+          "id": "s4q9",
+          "type": "mcq",
+          "strand": "sequence",
+          "stem": "What is the rule for this sequence?<br><strong>1, 2, 4, 8, 16, ...</strong>",
+          "choices": ["Add 2 each time", "Divide by 2 each time", "Add 4 each time", "Multiply by 2 each time"],
+          "answer": "Multiply by 2 each time",
+          "solution": "Rule: multiply by 2 (double) each time.   Next terms: 32, 64, 128."
+        },
+        {
+          "id": "s4q10",
+          "type": "pairs",
+          "strand": "two_unknowns",
+          "stem": "<em>m</em> and <em>n</em> are positive whole numbers.<br><strong>m × n = 12</strong><br>Write <strong>one</strong> pair of values that works.",
+          "labels": ["m", "n"],
+          "validator": "prod12_pos",
+          "solution": "Any factor pair of 12 works:<br>m = 1, n = 12 &nbsp;|&nbsp; m = 2, n = 6 &nbsp;|&nbsp; m = 3, n = 4 &nbsp;|&nbsp; m = 4, n = 3 &nbsp;|&nbsp; m = 6, n = 2 &nbsp;|&nbsp; m = 12, n = 1"
+        }
+      ]
+    },
+    {
+      "id": "set5",
+      "label": "Set 5 — Sequences",
+      "questions": [
+        {
+          "id": "s5q1",
+          "type": "short",
+          "strand": "missing_value",
+          "stem": "Find the value of <em>n</em>.<br><strong>3n − 5 = 22</strong>",
+          "label": "n =",
+          "answer": "9",
+          "solution": "3n = 22 + 5 = 27.   n = 27 ÷ 3 = 9.   Check: 3 × 9 − 5 = 27 − 5 = 22 ✓"
+        },
+        {
+          "id": "s5q2",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "Find the <strong>missing first term</strong>.<br><strong>___, 7, 13, 19, 25</strong>",
+          "label": "Missing term =",
+          "answer": "1",
+          "solution": "Rule: add 6 each time.   Working backwards: 7 − 6 = 1.   Check: 1, 7, 13, 19, 25 ✓"
+        },
+        {
+          "id": "s5q3",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "The nth term of a sequence is <strong>4n + 3</strong>.<br>What is the <strong>8th term</strong>?",
+          "label": "8th term =",
+          "answer": "35",
+          "solution": "Substitute n = 8:   4 × 8 + 3 = 32 + 3 = 35."
+        },
+        {
+          "id": "s5q4",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "Find the <strong>nth term</strong> of this sequence.<br><strong>11, 19, 27, 35, …</strong>",
+          "label": "nth term =",
+          "answer": "8n+3",
+          "solution": "Increases by 8 each time → start with 8n.   When n = 1: 8(1) = 8, but we need 11, so add 3.   nth term = 8n + 3.   Check: n = 2 → 8(2) + 3 = 19 ✓"
+        },
+        {
+          "id": "s5q5",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "A sequence has the rule <strong>6n + 1</strong>.<br>What is the <strong>10th term</strong>?",
+          "label": "10th term =",
+          "answer": "61",
+          "solution": "Substitute n = 10:   6 × 10 + 1 = 60 + 1 = 61."
+        },
+        {
+          "id": "s5q6",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "Find the <strong>missing term</strong>.<br><strong>3, ___, 15, 21, 27</strong>",
+          "label": "Missing term =",
+          "answer": "9",
+          "solution": "Rule: add 6 each time.   3 + 6 = 9.   Check: 9 + 6 = 15 ✓"
+        },
+        {
+          "id": "s5q7",
+          "type": "short",
+          "strand": "substitution",
+          "stem": "Work out <strong>3(p − q)</strong> when <em>p</em> = 8 and <em>q</em> = 3.",
+          "label": "Answer =",
+          "answer": "15",
+          "solution": "Brackets first: (8 − 3) = 5.   Then 3 × 5 = 15.   Always work out brackets first (BIDMAS)!"
+        },
+        {
+          "id": "s5q8",
+          "type": "mcq",
+          "strand": "sequence",
+          "stem": "Which expression is the <strong>nth term</strong> of this sequence?<br><strong>2, 7, 12, 17, …</strong>",
+          "choices": ["5n − 3", "5n + 2", "2n + 5", "n + 5"],
+          "answer": "5n − 3",
+          "solution": "Increases by 5 → start with 5n.   When n = 1: 5(1) = 5, but we need 2, so subtract 3.   nth term = 5n − 3.   Check: n = 2 → 10 − 3 = 7 ✓"
+        },
+        {
+          "id": "s5q9",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "The nth term of a sequence is <strong>8n + 3</strong>.<br>A term in the sequence is <strong>43</strong>. What is its position (<em>n</em>)?",
+          "label": "n =",
+          "answer": "5",
+          "solution": "8n + 3 = 43.   8n = 43 − 3 = 40.   n = 40 ÷ 8 = 5.   Check: 8 × 5 + 3 = 43 ✓"
+        },
+        {
+          "id": "s5q10",
+          "type": "pairs",
+          "strand": "two_unknowns",
+          "stem": "<em>a</em> and <em>b</em> are positive whole numbers.<br><strong>3a + 2b = 16</strong><br>Write <strong>one</strong> pair of values that works.",
+          "labels": ["a", "b"],
+          "validator": "3a_plus_2b_16",
+          "solution": "Valid pairs: &nbsp; a = 2, b = 5 &nbsp;|&nbsp; a = 4, b = 2"
+        }
+      ]
+    },
+    {
+      "id": "set6",
+      "label": "Set 6 — Sequences",
+      "questions": [
+        {
+          "id": "s6q1",
+          "type": "short",
+          "strand": "missing_value",
+          "stem": "Find the value of <em>w</em>.<br><strong>5w − 7 = 43</strong>",
+          "label": "w =",
+          "answer": "10",
+          "solution": "5w = 43 + 7 = 50.   w = 50 ÷ 5 = 10.   Check: 5 × 10 − 7 = 50 − 7 = 43 ✓"
+        },
+        {
+          "id": "s6q2",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "Find the <strong>missing first term</strong>.<br><strong>___, 15, 24, 33, 42</strong>",
+          "label": "Missing term =",
+          "answer": "6",
+          "solution": "Rule: add 9 each time.   Working backwards: 15 − 9 = 6.   Check: 6, 15, 24, 33, 42 ✓"
+        },
+        {
+          "id": "s6q3",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "The nth term of a sequence is <strong>3n − 4</strong>.<br>What is the <strong>12th term</strong>?",
+          "label": "12th term =",
+          "answer": "32",
+          "solution": "Substitute n = 12:   3 × 12 − 4 = 36 − 4 = 32."
+        },
+        {
+          "id": "s6q4",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "Find the <strong>missing term</strong>.<br><strong>4, ___, 22, 31, 40</strong>",
+          "label": "Missing term =",
+          "answer": "13",
+          "solution": "Rule: add 9 each time.   4 + 9 = 13.   Check: 13 + 9 = 22 ✓"
+        },
+        {
+          "id": "s6q5",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "Find the <strong>nth term</strong> of this sequence.<br><strong>6, 11, 16, 21, …</strong>",
+          "label": "nth term =",
+          "answer": "5n+1",
+          "solution": "Increases by 5 → start with 5n.   When n = 1: 5(1) = 5, but we need 6, so add 1.   nth term = 5n + 1.   Check: n = 2 → 5(2) + 1 = 11 ✓"
+        },
+        {
+          "id": "s6q6",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "The nth term of a sequence is <strong>7n − 2</strong>.<br>What is the <strong>6th term</strong>?",
+          "label": "6th term =",
+          "answer": "40",
+          "solution": "Substitute n = 6:   7 × 6 − 2 = 42 − 2 = 40."
+        },
+        {
+          "id": "s6q7",
+          "type": "mcq",
+          "strand": "sequence",
+          "stem": "Which expression is the <strong>nth term</strong> of this sequence?<br><strong>3, 9, 15, 21, …</strong>",
+          "choices": ["3n", "6n − 3", "n + 6", "3n + 6"],
+          "answer": "6n − 3",
+          "solution": "Increases by 6 → start with 6n.   When n = 1: 6(1) = 6, but we need 3, so subtract 3.   nth term = 6n − 3.   Check: n = 2 → 12 − 3 = 9 ✓"
+        },
+        {
+          "id": "s6q8",
+          "type": "short",
+          "strand": "sequence",
+          "stem": "The nth term of a sequence is <strong>9n + 2</strong>.<br>A term in the sequence is <strong>56</strong>. What is its position (<em>n</em>)?",
+          "label": "n =",
+          "answer": "6",
+          "solution": "9n + 2 = 56.   9n = 56 − 2 = 54.   n = 54 ÷ 9 = 6.   Check: 9 × 6 + 2 = 56 ✓"
+        },
+        {
+          "id": "s6q9",
+          "type": "short",
+          "strand": "substitution",
+          "stem": "Work out <strong>4x²</strong> when <em>x</em> = 3.",
+          "label": "Answer =",
+          "answer": "36",
+          "solution": "x² = 3 × 3 = 9.   Then 4 × 9 = 36.   Square first, then multiply!"
+        },
+        {
+          "id": "s6q10",
+          "type": "pairs",
+          "strand": "two_unknowns",
+          "stem": "<em>p</em> and <em>q</em> are positive whole numbers and <em>p</em> &lt; <em>q</em>.<br><strong>p + q = 15</strong><br>Write <strong>one</strong> pair of values that works.",
+          "labels": ["p", "q"],
+          "validator": "sum15_plt_q",
+          "solution": "Any pair where p + q = 15 and p &lt; q works:<br>p = 1, q = 14 &nbsp;|&nbsp; p = 2, q = 13 &nbsp;|&nbsp; p = 3, q = 12 &nbsp;|&nbsp; p = 4, q = 11 &nbsp;|&nbsp; p = 5, q = 10 &nbsp;|&nbsp; p = 6, q = 9 &nbsp;|&nbsp; p = 7, q = 8"
+        }
+      ]
+    }
+  ]
+}

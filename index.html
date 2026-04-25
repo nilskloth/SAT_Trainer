@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KS2 SATs Practice Runner</title>
+
+  <!-- Core styles -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <div class="card">
+      <div class="row" style="justify-content:space-between;">
+        <div>
+          <h1>KS2 SATs Practice Runner</h1>
+          <div class="muted">
+            Runs locally · Progress saved in this browser · JSON-driven content
+          </div>
+        </div>
+        <div class="row">
+          <span class="pill" id="overallPill">Overall: 0 attempts</span>
+          <span class="pill" id="weakPill">Weak areas: —</span>
+        </div>
+      </div>
+
+      <!-- TABS -->
+      <div class="tabs" style="margin-top:10px;">
+        <button class="tab active" data-tab="runner">Practice Run</button>
+        <button class="tab" data-tab="training">Training</button>
+        <button class="tab" data-tab="banks">Question Banks</button>
+        <button class="tab" data-tab="stats">Stats</button>
+        <button class="tab" data-tab="settings">Settings</button>
+      </div>
+    </div>
+
+    <!-- PRACTICE RUN -->
+    <div class="card" id="tab-runner">
+      <h2>Practice Run</h2>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>Choose run</h3>
+          <select id="runSelect">
+            <option value="full">Full SATs (Maths + English)</option>
+            <option value="maths">Maths only</option>
+            <option value="english">English only</option>
+          </select>
+
+          <select id="timingSelect">
+            <option value="untimed" selected>Untimed</option>
+            <option value="timed">Timed</option>
+          </select>
+
+          <div class="row" style="margin-top:10px;">
+            <button class="primary" id="startRunBtn">Start run</button>
+            <button id="stopRunBtn" disabled>Stop</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Current paper</h3>
+          <div id="paperTitle">—</div>
+          <div class="muted" id="paperMeta">—</div>
+          <div class="timer" id="paperTimer">--:--</div>
+
+          <div class="row" style="margin-top:10px;">
+            <button id="prevPaperBtn" disabled>Prev</button>
+            <button id="nextPaperBtn" disabled>Next</button>
+            <button id="toggleInstructionsBtn" disabled>Show instructions</button>
+          </div>
+
+          <div id="paperInstructions" class="hidden">
+            <div class="q">
+              <div class="stem">Instructions</div>
+              <div class="muted" id="paperInstructionsText">—</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Submit</h3>
+          <button class="primary" id="submitPaperBtn" disabled>
+            Submit & score
+          </button>
+          <button id="resetPaperBtn" disabled>Reset</button>
+
+          <div class="muted" id="paperScoreLine">—</div>
+        </div>
+      </div>
+
+      <div id=”paperArea” style=”margin-top:12px;”>
+        <div class=”q”><div class=”stem”>Press &#x201C;Start run&#x201D; to begin.</div></div>
+      </div>
+    </div>
+
+  
+    <!-- TRAINING -->
+    <div class="card hidden" id="tab-training">
+      <h2>Training Tools</h2>
+
+      <!-- Training mode selector -->
+      <div class="training-tabs">
+        <button data-training="maths" class="active">Maths</button>
+        <button data-training="spelling">Spelling</button>
+        <button data-training="grammar">Grammar</button>
+        <button data-training="prefixes">Prefixes</button>
+      </div>
+
+      <!-- MATHS -->
+      <div class="training-panel" id="training-maths">
+        <div class="card">
+          <h3>Maths</h3>
+
+          <!-- Maths sub-tabs -->
+          <div class="row" style="margin-bottom:12px;">
+            <button class="grammar-tab active" data-maths-tab="arithmetic">Arithmetic</button>
+            <button class="grammar-tab" data-maths-tab="algebra">Algebra</button>
+          </div>
+
+          <!-- Arithmetic sub-panel -->
+          <div class="maths-sub" id="maths-sub-arithmetic">
+            <select id="arithDifficulty">
+              <option value="y6" selected>Year 6 mix</option>
+              <option value="easy">Easier</option>
+              <option value="hard">Harder</option>
+            </select>
+
+            <button class="primary" id="arithNewBtn">New set</button>
+
+            <div id="arithArea"></div>
+
+            <button id="arithScoreBtn" disabled>Score</button>
+            <div class="muted" id="arithScoreLine">—</div>
+
+            <div style="margin-top:14px;">
+              <label class="muted" for="arithScratchpad">Working out</label>
+              <textarea id="arithScratchpad" class="arith-scratchpad" placeholder="Use this space to show your working…" spellcheck="false"></textarea>
+            </div>
+          </div>
+
+          <!-- Algebra sub-panel -->
+          <div class="maths-sub hidden" id="maths-sub-algebra">
+            <div class="row" style="margin-bottom:12px;">
+              <label class="muted">Set:</label>
+              <select id="algebraSetSelect"></select>
+            </div>
+
+            <div id="algebraArea"></div>
+
+            <div class="row" style="margin-top:12px;">
+              <button id="algebraCheckBtn" disabled>Check answers</button>
+              <span id="algebraScore"></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SPELLING -->
+      <div class="training-panel hidden" id="training-spelling">
+        
+          <div class="card">
+            <h3>English · Spelling</h3>
+
+            <!-- NEW SET (added) -->
+            <div class="row" style="margin-bottom:6px;">
+              <button id="spellNewSetBtn" class="primary">New set</button>
+
+              <select id="spellSetSizeSelect">
+                <option value="20">20 words</option>
+                <option value="30" selected>30 words</option>
+                <option value="50">50 words</option>
+              </select>
+
+              <span class="muted" id="spellCounter"></span>
+            </div>
+
+            <!-- Controls -->
+            <div class="row">
+              <label class="muted">Pool:</label>
+              <select id="spellPoolSelect"></select>
+
+              <label class="muted">Mode:</label>
+              <select id="spellModeSelect">
+                <option value="hidden">Hidden</option>
+                <option value="show">Visible</option>
+                <option value="speak">Spoken</option>
+              </select>
+              <!--
+              <label class="muted">Dictation:</label>
+              <select id="spellDictationSelect">
+                <option value="off" selected>Off</option>
+                <option value="on">On</option>
+              </select>
+              -->
+              <label class="muted">Flash:</label>
+              <select id="spellFlashSelect">
+                <option value="2">2s</option>
+                <option value="3" selected>3s</option>
+                <option value="5">5s</option>
+              </select>
+            </div>
+
+            <!-- Prompt -->
+            <div class="row" style="margin-top:10px;">
+              <span class="bigword" id="spellPrompt">—</span>
+              <button id="spellRepeatBtn">Repeat</button>
+              <button id="spellNextBtn">Next</button>
+            </div>
+
+            <!-- Input -->
+            <div class="row" style="margin-top:10px;">
+              <input 
+                     id="spellInput" 
+                     type="text" 
+                     placeholder="Type the word…" 
+                    autocomplete="off"
+                    autocapitalize="off"
+                    autocorrect="off"
+                    spellcheck="false"/>
+              <button class="primary" id="spellCheckBtn">Check</button>
+            </div>
+
+            <!-- Feedback -->
+            <div id="spellFeedback"></div>
+            <div class="muted" id="spellHelp"></div>
+
+            <!-- Progress -->
+            <div class="row" style="margin-top:10px;">
+              <span class="pill" id="spellProgressPill"></span>
+              <span class="pill" id="spellSessionPill"></span>
+            </div>
+
+            <!-- Review table -->
+            <div id="spellReviewWrap" class="hidden" style="margin-top:12px;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>✓</th>
+                    <th>You typed</th>
+                    <th>Correct</th>
+                  </tr>
+                </thead>
+                <tbody id="spellReviewBody"></tbody>
+              </table>
+
+              <div class="muted" id="spellReviewSummary" style="margin-top:6px;"></div>
+            </div>
+
+          
+        </div>
+      </div>
+
+      <!-- PREFIXES -->
+      <div class="training-panel hidden" id="training-prefixes">
+        <div class="card">
+          <h3>English · Prefixes</h3>
+
+          <!-- Sub-tabs -->
+          <div class="training-tabs">
+            <button class="active" data-prefix-tab="practice">Practice</button>
+            <button data-prefix-tab="meaning">Meaning &amp; Examples</button>
+          </div>
+
+          <!-- Meaning sub-panel -->
+          <div class="prefix-sub" id="prefix-sub-meaning">
+            <div id="prefixMeaningArea"></div>
+          </div>
+
+          <!-- Practice sub-panel -->
+          <div class="prefix-sub hidden" id="prefix-sub-practice">
+            <div class="row" style="margin-bottom:14px;">
+              <button class="primary" id="prefixNewSetBtn">New set</button>
+              <span class="muted">Pick the right prefix to make a real word, then complete the sentences.</span>
+            </div>
+
+            <!-- Word pairs -->
+            <div class="prefix-section">
+              <h4 class="prefix-section-title">Word pairs — choose the correct prefix</h4>
+              <div id="prefixPairsArea"></div>
+            </div>
+
+            <!-- Sentences -->
+            <div class="prefix-section" style="margin-top:16px;">
+              <h4 class="prefix-section-title">Complete the sentences</h4>
+              <div id="prefixSentencesArea"></div>
+            </div>
+
+            <div class="row" style="margin-top:14px;">
+              <button id="prefixCheckBtn">Check answers</button>
+              <span id="prefixScore"></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GRAMMAR -->
+      <div class="training-panel hidden" id="training-grammar">
+        <div class="card">
+          <h3>English · Grammar (SPaG)</h3>
+          
+          <div class="row" id="grammarTopicTabs"></div>
+          
+          <div class="grammar-block grammar-meaning">
+            <h4>Meaning & Example</h4>
+            <div id="grammarDefinition"></div>
+            <div id="grammarExample"></div>
+            
+           <!--<div id="grammarQuestion"></div> -->
+          </div>
+
+          <div class="grammar-block grammar-test">
+            <h4>Test</h4>
+            <p class="grammar-sentence">...</p>
+            <p class="grammar-task muted"></p>
+            <div class="options"></div>
+            <div id="grammarFeedback"></div><br>
+            <button id="grammarCheckBtn" disabled>Check</button>
+            <button id="grammarNextBtn" disabled>Next</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <!-- BANKS -->
+    <div class="card hidden" id="tab-banks">
+      <h2>Question Banks</h2>
+      <div class="muted" id="bankSummary">—</div>
+
+      <textarea id="bankImport"></textarea>
+
+      <button class="primary" id="importBanksBtn">Import</button>
+      <button id="resetBanksBtn">Reset</button>
+
+      <button id="exportBanksBtn">Export</button>
+      <pre id="exportOut" class="hidden"></pre>
+    </div>
+
+    <!-- STATS -->
+    <div class="card hidden" id="tab-stats">
+      <h2>Stats</h2>
+      <button id="toggleStatsBtn">Show details</button>
+      <button id="resetAllProgressBtn">Reset progress</button>
+
+      <div id="statsTopLine" class="muted">—</div>
+
+      <div id="statsWrap" class="hidden">
+        <div id="paperAttemptsOut"></div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Word</th>
+              <th>Pool</th>
+              <th>Prompt</th>
+              <th>Mastery</th>
+              <th>Attempts</th>
+              <th>Wrong</th>
+              <th>Last</th>
+            </tr>
+          </thead>
+          <tbody id="spellStatsBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div class="card hidden" id="tab-settings">
+      <h2>Settings</h2>
+
+      <label>
+        Default timing:
+        <select id="defaultTiming">
+          <option value="untimed">Untimed</option>
+          <option value="timed">Timed</option>
+        </select>
+      </label>
+
+      <div class="muted">
+        Speech uses Web Speech API (en-GB)
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>

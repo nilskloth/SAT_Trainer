@@ -1,0 +1,727 @@
+/* =========================
+   Base
+========================= */
+
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  background: #fafafa;
+  color: #111;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+/* HARD STOP browser focus glow */
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 2px solid #4da3ff;
+  outline-offset: 2px;
+  box-shadow: none !important;
+}
+
+/* Kill Chrome/Safari animated focus ring */
+input,
+select,
+button {
+  box-shadow: none !important;
+}
+
+/* =========================
+   Layout blocks
+========================= */
+
+.card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 980px) {
+  .grid2,
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   Typography
+========================= */
+
+h1 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+
+h3 {
+  font-size: 13px;
+  margin: 0 0 8px;
+}
+
+.muted {
+  color: #666;
+  font-size: 12px;
+}
+
+/* =========================
+   Buttons & Inputs
+========================= */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+}
+
+button {
+  cursor: pointer;
+}
+
+button.primary {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+button.ghost {
+  background: #f3f3f3;
+  border-color: #e0e0e0;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+textarea {
+  width: 100%;
+  min-height: 140px;
+}
+
+/* =========================
+   Pills & badges
+========================= */
+
+.pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #f3f3f3;
+  font-size: 12px;
+}
+
+/* =========================
+   Tabs
+========================= */
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.tab.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* =========================
+   Training sub-tabs
+========================= */
+
+.training-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.training-tabs button {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.training-tabs button.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* =========================
+   Visibility helpers
+========================= */
+
+.hidden {
+  display: none;
+}
+
+/* =========================
+   Question blocks
+========================= */
+
+.q {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fcfcfc;
+}
+
+.q + .q {
+  margin-top: 10px;
+}
+
+.q .stem {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.q .choices {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.q label {
+  display: blok;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.q input[type="radio"] {
+  margin-top: 3px;
+}
+
+/* =========================
+   Practice runner — result badge
+========================= */
+
+.result-badge {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================
+   Timer
+========================= */
+
+.timer {
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+}
+
+/* =========================
+   Tables (stats)
+========================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 6px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+th {
+  color: #444;
+  font-weight: 700;
+}
+
+.right {
+  text-align: right;
+}
+
+/* =========================
+   Spelling trainer
+========================= */
+
+.bigword {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f3f3f3;
+  display: inline-block;
+  min-width: 180px;
+  text-align: center;
+}
+
+.ok {
+  color: #0a7a2f;
+  font-weight: 700;
+}
+
+.bad {
+  color: #b00020;
+  font-weight: 700;
+}
+
+.correct {
+  color: #1b7f3a;
+  font-weight: 600;
+}
+
+.wrong {
+  color: #b00020;
+  font-weight: 700;
+}
+
+.correct-word {
+  color: #1b7f3a;
+}
+
+.wrong-word {
+  color: #b00020;
+  /*text-decoration: line-through;*/
+}
+
+.bigword {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+/* =========================
+   Grammar trainer
+========================= */
+
+/* Topic tabs */
+.grammar-tab {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.grammar-tab.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* Grammar blocks */
+
+.grammar-block {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+  background: #fafafa;
+}
+
+.grammar-block.grammar-meaning {
+  background: #fffdf5;
+  border-color: #f0e6b5;
+}
+
+.grammar-block.grammar-test {
+  background: #f7f9ff;
+  border-color: #d6e4ff;
+}
+
+/* Sentence in test */
+.grammar-sentence {
+  font-size: 15px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Highlight used in examples AND answer reveal */
+.grammar-highlight {
+  background: #fff2b3;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Grammar test sentence emphasis */
+.grammar-sentence {
+  border: 1px solid #ddd;
+  padding: 12px 14px;
+  margin: 10px 0 12px;
+  border-radius: 10px;
+  background: #fff;
+  line-height: 1.5;
+}
+
+/* Grammar subtitles */
+.grammar-subtitle {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #333;
+}
+
+/* Meaning text */
+.grammar-meaning-text {
+  padding: 10px 12px;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* Example sentence emphasis */
+.grammar-example-sentence {
+  border: 1px solid #ddd;
+  padding: 12px 14px;
+  margin: 6px 0 6px;
+  border-radius: 10px;
+  background: #fffdf5;
+  line-height: 1.5;
+}
+
+/* Example explanation */
+.grammar-example-note {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* =========================
+   Select-in-sentence tokens
+========================= */
+
+/* Base token */
+.grammar-token {
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Hover (before locking) */
+.grammar-token:not(.locked):hover {
+  background: #eef4ff;
+}
+
+/* Selected by user */
+.grammar-token.selected {
+  background: #d6e4ff;
+}
+
+/* Correct answer (always green, even if not selected) */
+.grammar-token.correct-answer {
+  background: #d9f2e3;
+  color: #0a7a2f;
+  font-weight: 600;
+}
+
+/* Wrong selection */
+.grammar-token.wrong-answer {
+  background: #fde0e0;
+  color: #b00020;
+}
+
+/* Locked after checking */
+.grammar-token.locked {
+  cursor: default;
+}
+
+/* =========================
+   Feedback text
+========================= */
+
+#grammarFeedback.correct {
+  color: #0a7a2f;
+  font-weight: 600;
+}
+
+#grammarFeedback.wrong {
+  color: #b00020;
+  font-weight: 600;
+}
+
+/* =========================
+   Prefix meaning grid
+========================= */
+
+.prefix-def-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.prefix-def-card {
+  border: 1px solid #f0e6b5;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fffdf5;
+}
+
+.prefix-def-prefix {
+  font-size: 17px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 3px;
+}
+
+.prefix-def-meaning {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.prefix-def-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* =========================
+   Prefix trainer
+========================= */
+
+.prefix-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #333;
+}
+
+/* Word pair rows */
+.prefix-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  background: #fafafa;
+  margin-bottom: 6px;
+}
+
+.prefix-root {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.prefix-select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  font: inherit;
+  font-size: 13px;
+  background: #fff;
+  min-width: 90px;
+}
+
+/* Inline select inside a sentence */
+.prefix-select--inline {
+  min-width: 80px;
+  padding: 4px 8px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.prefix-inline-root {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Sentence blocks */
+.prefix-sentence-block {
+  border: 1px solid #d6e4ff;
+  border-radius: 10px;
+  background: #f7f9ff;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+}
+
+.prefix-sentence {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.prefix-hint {
+  margin: 6px 0 0;
+  font-size: 12px;
+}
+
+/* Result states */
+.prefix-correct {
+  border-color: #6fcf97 !important;
+  background: #f0faf4 !important;
+}
+
+.prefix-wrong {
+  border-color: #f2a0a0 !important;
+  background: #fff5f5 !important;
+}
+
+/* Badge on word pairs */
+.prefix-badge {
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/* =========================
+   Arithmetic scratchpad
+========================= */
+
+.arith-scratchpad {
+  display: block;
+  width: 100%;
+  min-height: 224px;
+  margin-top: 6px;
+  font-family: "Menlo", "Consolas", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 22.4px;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background-color: #fafafa;
+  background-image:
+    repeating-linear-gradient(
+      transparent,
+      transparent 21.4px,
+      #e2e8f0 21.4px,
+      #e2e8f0 22.4px
+    );
+  background-attachment: local;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.arith-scratchpad:focus {
+  background-color: #fff;
+  border-color: #999;
+  outline: none;
+}
+
+/* Score line */
+#prefixScore {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================
+   Algebra trainer
+========================= */
+
+.algebra-q {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.algebra-q-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.algebra-input {
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  font: inherit;
+  font-size: 14px;
+  width: 80px;
+}
+
+.algebra-input--wide {
+  width: 160px;
+}
+
+.algebra-solution {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #fffdf0;
+  border: 1px solid #f0e8b0;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Result states */
+.algebra-correct {
+  border-color: #6fcf97 !important;
+  background: #f0faf4 !important;
+}
+
+.algebra-wrong {
+  border-color: #f2a0a0 !important;
+  background: #fff5f5 !important;
+}
+
+.algebra-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Score */
+#algebraScore {
+  font-size: 14px;
+  font-weight: 700;
+}
