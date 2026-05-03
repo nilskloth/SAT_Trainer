@@ -76,10 +76,12 @@ export async function loadAllData() {
     reading,
     spag,
     grammar,
-    reasoning,
+    bankReasoning,
     spellingRaw,
     prefixes,
-    algebra
+    algebra,
+    reasoning,
+    readingTraining
   ] = await Promise.all([
     loadJSON("data/papers.json"),
     loadJSON("data/banks/reading.json"),
@@ -88,7 +90,9 @@ export async function loadAllData() {
     loadJSON("data/banks/reasoning.json"),
     loadJSON("data/training/spelling.json"),
     loadJSON("data/training/prefixes.json"),
-    loadJSON("data/training/algebra.json")
+    loadJSON("data/training/algebra.json"),
+    loadJSON("data/training/reasoning.json"),
+    loadJSON("data/training/reading.json")
   ]);
 
   // 🔑 UNWRAP HERE
@@ -104,12 +108,14 @@ export async function loadAllData() {
       reading,
       spag,
       grammar,
-      reasoning
+      reasoning: bankReasoning
     },
 
     spelling,
     prefixes,
-    algebra
+    algebra,
+    reasoning,
+    reading: readingTraining
   };
 
   validateData(data);

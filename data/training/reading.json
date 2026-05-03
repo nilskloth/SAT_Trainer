@@ -1,0 +1,452 @@
+{
+  "tests": [
+    {
+      "id": "b5",
+      "set": "B",
+      "testNumber": 5,
+      "title": "Should We Use Tablet Computers in the Classroom?",
+      "genre": "Argument",
+      "minutes": 10,
+      "totalMarks": 8,
+      "passage": "<p class='reading-note'>A local primary school is considering using tablet computers in all classrooms from next year. The following text has been written by a teacher at the school.</p><h4>Should we use tablet computers in the classroom?</h4><p>The use of tablet computers (or simply 'tablets') in the classroom has become an increasingly popular option in many primary schools across the country, including many in our local area. It is important that we consider this opportunity, but we must also be aware of the drawbacks.</p><p>On the one hand, there are many positives to using tablets in the classroom. Firstly, tablets could improve productivity during the school day. Because of their familiarity with computers and mobile phones, many of our students can type faster than they can write by hand; therefore, using tablets in the classroom could reduce the time it takes for them to complete tasks. Additionally, there are endless tablet functions which could provide interesting teaching activities. For example, we could play interactive games to teach maths, or make simple animations to show how magnets behave. Alternatively, students could take photos outdoors and then use them as prompts for writing tasks.</p><p>However, we must also consider the potential problems with introducing tablets to our classrooms. Some students may become distracted by their tablets, and play with the device instead of focusing on their work. Another issue is that, whilst many students can use tablets already, many of our teachers are not as competent and would need to be trained. We may also have problems with the tablets breaking, which would be both frustrating and expensive to fix. This is in addition to the cost of buying the tablets in the first place.</p><p>Overall, despite these potential downsides, it seems that using tablets in the classroom would be a wonderful opportunity for students and teachers at our school. There are costs involved, but it would almost certainly prove to be a worthwhile investment.</p>",
+      "questions": [
+        {
+          "id": "b5q1", "num": 1, "type": "short", "marks": 1,
+          "stem": "What phrase is the word <em>tablets</em> short for?",
+          "accept": ["tablet computers", "tablet computer"],
+          "solution": "tablet computers"
+        },
+        {
+          "id": "b5q2", "num": 2, "type": "tick2", "marks": 2,
+          "stem": "According to the author, why might using tablets in the classroom be a good idea? Tick <strong>two</strong> reasons.",
+          "choices": [
+            "They could help students to use mobile phones.",
+            "They could help some students to work more quickly.",
+            "They could provide new teaching methods.",
+            "They could distract students from their work.",
+            "They could improve students' handwriting."
+          ],
+          "answers": ["They could help some students to work more quickly.", "They could provide new teaching methods."],
+          "solution": "They could help some students to work more quickly; They could provide new teaching methods."
+        },
+        {
+          "id": "b5q3", "num": 3, "type": "short", "marks": 1,
+          "stem": "<em>Additionally, there are endless tablet functions which could provide interesting teaching activities.</em><br>Which word in this sentence suggests there are many ways in which tablets can be used in the classroom?",
+          "accept": ["endless"],
+          "solution": "endless"
+        },
+        {
+          "id": "b5q4", "num": 4, "type": "mcq", "marks": 1,
+          "stem": "<em>…many of our teachers are not as competent and would need to be trained.</em><br>What does the word <strong>competent</strong> mean in this sentence? Tick <strong>one</strong> box.",
+          "choices": ["enthusiastic", "capable", "happy", "uncertain"],
+          "answer": "capable",
+          "solution": "capable"
+        },
+        {
+          "id": "b5q5", "num": 5, "type": "short", "marks": 1,
+          "stem": "What does the author say would be <em>frustrating</em> about using tablets?",
+          "accept": ["breaking", "tablets breaking", "break"],
+          "solution": "The tablets breaking (which would also be expensive to fix)."
+        },
+        {
+          "id": "b5q6", "num": 6, "type": "open", "marks": 2,
+          "stem": "Using your own words, summarise what the author thinks about using tablets in the classroom.",
+          "solution": "Award up to 2 marks. The author sees positives — tablets could help students work faster and provide new teaching methods (interactive games, animations) — but notes concerns about distraction, teachers needing training, and the cost of tablets breaking. Overall the author is cautiously positive and concludes tablets would be a worthwhile investment."
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "set": "B",
+      "testNumber": 6,
+      "title": "When Pigs Fly",
+      "genre": "Play Script",
+      "minutes": 10,
+      "totalMarks": 8,
+      "passage": "<p class='reading-note'>A medieval court. The KING sits on his throne on a raised platform, centre, surveying the room. LORDS and LADIES are seated around the perimeter. A PAGE stands below, facing him. Behind the PAGE stands LORDS.</p><div class='play-script'><div class='play-line'><span class='play-char'>PAGE:</span><span class='play-speech'>Your Excellency, the final visitor today is Mr Jeremy Dumpling, representing the kingdom's pig farmers. <em>(To Jeremy)</em> You may approach His Royal Highness.</span></div><div class='play-line'><span class='play-char'>JEREMY:</span><span class='play-speech'><em>(stepping forward nervously, then kneeling)</em> Your Royal Highness, I have erm... Well I have come here today to draw your attention to what may, or might, be considered as something of a national inconvenience.</span></div><div class='play-line'><span class='play-char'>KING:</span><span class='play-speech'><em>(yawning)</em> Yes, yes, go on then. What exactly is the nature of this inconvenience?</span></div><div class='play-line'><span class='play-char'>JEREMY:</span><span class='play-speech'>Well, Your Wonderfulness, it's about the pigs, you see.</span></div><div class='play-line'><span class='play-char'>KING:</span><span class='play-speech'>I had guessed as much. What exactly is the problem with these pigs?</span></div><div class='play-line'><span class='play-char'>JEREMY:</span><span class='play-speech'>Well, Your Majesty, to the past few months, very mysteriously and without explanation, the pigs in the kingdom have; one by one, quite independently…</span></div><div class='play-line'><span class='play-char'>KING:</span><span class='play-speech'>Spit it out, man!</span></div><div class='play-line'><span class='play-char'>JEREMY:</span><span class='play-speech'>The pigs have started flying.</span></div><div class='play-line'><span class='play-char'>KING:</span><span class='play-speech'><em>(catching his breath)</em> I beg your pardon, Sire, but I really am quite serious!</span></div><div class='play-line'><span class='play-char'>JEREMY:</span><span class='play-speech'><em>(struggling to be heard over din)</em> I beg your pardon, Sire, but I really am quite serious!</span></div><div class='play-line'><span class='play-char'>KING:</span><span class='play-speech'>Pigs flying! My good man, you cannot possibly be serious! You are quite the comedian, Mr Dumpling. Do be sure to contact my Head of Staff about joining our delightful troupe of court jesters. Until then, good day to you. Page, you may escort Mr Dumpling from the castle.</span></div><div class='play-line'><span class='play-char'>PAGE:</span><span class='play-speech'><em>(The PAGE helps Jeremy up and starts walking him briskly away.)</em></span></div><div class='play-line'><span class='play-char'>JEREMY:</span><span class='play-speech'><em>(firmly)</em> Young man, you are trying my patience. Shall I call my guards? If you would just allow me to show you one pig, Your Joyfulness…</span></div><div class='play-line'><span class='play-char'>KING:</span><span class='play-speech'>Fine. I will permit you to show me one pig, Mr Dumpling. One pig only.</span></div><div class='play-line'><span class='play-char'>JEREMY:</span><span class='play-speech'><em>(kneeling in front of the king)</em> Thank you, Sire. You will not regret it.</span></div></div>",
+      "questions": [
+        {
+          "id": "b6q1", "num": 1, "type": "mcq", "marks": 1,
+          "stem": "Which of the following is <strong>not</strong> present in the King's court? Tick <strong>one</strong> box.",
+          "choices": ["A page", "Jeremy", "Pigs", "Lords and ladies"],
+          "answer": "Pigs",
+          "solution": "Pigs — the play is about pigs flying, but no pigs are actually present in the court."
+        },
+        {
+          "id": "b6q2", "num": 2, "type": "short", "marks": 1,
+          "stem": "What is the <em>national inconvenience</em> that Jeremy mentions in the text?",
+          "accept": ["pigs flying", "flying pigs", "pigs have started flying", "pigs started flying"],
+          "solution": "The pigs have started flying."
+        },
+        {
+          "id": "b6q3", "num": 3, "type": "short", "marks": 1,
+          "stem": "Which stage direction shows the reader that the king is bored?",
+          "accept": ["yawning", "(yawning)"],
+          "solution": "(yawning)"
+        },
+        {
+          "id": "b6q4", "num": 4, "type": "short", "marks": 1,
+          "stem": "Why is the king <em>catching his breath</em>?",
+          "accept": ["pigs flying", "shocked", "surprised", "disbelief", "cannot believe", "stunned", "astonished"],
+          "solution": "He is shocked / cannot believe what he has heard about the pigs flying."
+        },
+        {
+          "id": "b6q5", "num": 5, "type": "short", "marks": 1,
+          "stem": "Find and <strong>copy</strong> one name that Jeremy uses to address the king.",
+          "accept": ["Sire", "Your Royal Highness", "Your Excellency", "Your Majesty", "Your Joyfulness", "Your Wonderfulness"],
+          "solution": "Any one of: Sire / Your Royal Highness / Your Excellency / Your Majesty / Your Joyfulness / Your Wonderfulness"
+        },
+        {
+          "id": "b6q6", "num": 6, "type": "order", "marks": 1,
+          "stem": "Write the numbers 1 to 5 in the boxes to put these events from the script into the right order. The first one has been done for you.",
+          "items": [
+            "The page introduces Jeremy to the king.",
+            "Jeremy tells the king that the pigs are flying.",
+            "The king suggests that Jeremy joins the court jesters.",
+            "The page starts to escort Jeremy out of the room.",
+            "Jeremy kneels in front of the king."
+          ],
+          "order": [1, 2, 3, 4, 5],
+          "fixed": 0,
+          "solution": "1 — page introduces Jeremy; 2 — Jeremy tells about pigs; 3 — king suggests jesters; 4 — page escorts Jeremy out; 5 — Jeremy kneels."
+        },
+        {
+          "id": "b6q7", "num": 7, "type": "open", "marks": 2,
+          "stem": "What do you think might happen next in the play? Mention <strong>two</strong> things.",
+          "solution": "Award 1 mark per plausible prediction. E.g.: Jeremy brings the king to see a flying pig / The king finally believes Jeremy / Jeremy is still threatened with being made a court jester / The king calls his guards / Jeremy and the king go outside to see the pigs."
+        }
+      ]
+    },
+    {
+      "id": "c1",
+      "set": "C",
+      "testNumber": 1,
+      "title": "The Lion and the Hare",
+      "genre": "Narrative / Fable",
+      "minutes": 10,
+      "totalMarks": 8,
+      "passage": "<p>There was once a brave young lion. He was strong and swift. His coat shone in the sunlight and his mane glinted like a crown on his head. When he roared, all the other animals trembled. He strutted around the plains, king of all he saw.</p><p>For months now, there had been no rain. The waterholes where animals had gathered to drink had all dried up. Most of the animals had moved north, where the grass was greener and there was more rain.</p><p>One afternoon, the lion awoke with a stomach as empty as his cave. There were usually many animals grazing around for him to hunt and eat. Herds of zebras, gazelles and antelopes often grazed nearby. Wildebeests and impalas would wander through. Today was different. Today, the plains seemed empty.</p><p>Suddenly, from out of the corner of his eye, the lion saw the grass twitching. He turned and saw the tips of two long, brown ears. A hare, he thought. How perfect! An easy meal if ever there was one. Small, maybe, but enough for today.</p><p>The lion licked his lips and started to move towards the hare. Then he stopped. The hare would make an easy meal, but if he could catch an antelope, he would have a feast! His mouth watering, the lion made his decision. Quick as a flash, he leapt out from his hiding place and chased after the antelope. But the lion, weak and tired from lack of food, was soon left far behind.</p><p>Slowly, he turned and wandered back to the spot where he had watched the hare nibbling the grass. It was nowhere to be found.</p><p>The lion was left with nothing. Just a very empty stomach, and the feeling that maybe he should have been content with what he had to start with.</p>",
+      "questions": [
+        {
+          "id": "c1q1", "num": 1, "type": "short", "marks": 1,
+          "stem": "What time of day is it when the story takes place?",
+          "accept": ["afternoon"],
+          "solution": "afternoon"
+        },
+        {
+          "id": "c1q2", "num": 2, "type": "multishort", "marks": 2,
+          "stem": "Give <strong>two</strong> reasons from the text why most of the other animals in the story had gone north.",
+          "accept": [
+            ["no rain", "not rain", "rain for months", "no rain for months", "had not been rain", "without rain", "lack rain"],
+            ["waterholes dried", "dried up", "water holes dried", "waterholes had dried"],
+            ["grass greener", "greener grass", "greener north", "grass north", "grass green"],
+            ["more rain", "north more rain", "more rain north"]
+          ],
+          "solution": "Award 1 mark per reason (up to 2). E.g.: There had been no rain for months / The waterholes had dried up / The grass was greener in the north / There was more rain in the north."
+        },
+        {
+          "id": "c1q3", "num": 3, "type": "short", "marks": 1,
+          "stem": "What does the word <em>content</em> mean in the final line of the text?",
+          "accept": ["happy", "satisfied", "pleased", "contented", "settled"],
+          "solution": "happy / satisfied / pleased with what he had"
+        },
+        {
+          "id": "c1q4", "num": 4, "type": "mcq", "marks": 1,
+          "stem": "What is the main message of this text? Tick <strong>one</strong> box.",
+          "choices": [
+            "Don't be greedy, or you might end up with nothing.",
+            "Lions are not as smart as people think they are.",
+            "Lions should move north with other animals.",
+            "Never chase an antelope instead of a hare."
+          ],
+          "answer": "Don't be greedy, or you might end up with nothing.",
+          "solution": "Don't be greedy, or you might end up with nothing."
+        },
+        {
+          "id": "c1q5", "num": 5, "type": "open", "marks": 3,
+          "stem": "At the beginning of the story, why do you think the lion is described as being the <em>king of all he saw</em>? Mention <strong>two</strong> reasons, using evidence from the rest of the story to explain your answer.",
+          "solution": "Award up to 3 marks for two supported points. E.g.: He was physically powerful — 'strong and swift', so he could dominate other animals. / His appearance was regal — 'his mane glinted like a crown', which suggests royalty. / All other animals feared him — 'all the other animals trembled', showing his power over them. / He commanded his territory — 'he strutted around the plains', like a king surveying his kingdom."
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "set": "C",
+      "testNumber": 2,
+      "title": "Come to Chester",
+      "genre": "Information / Travel",
+      "minutes": 10,
+      "totalMarks": 8,
+      "passage": "<p class='reading-note'>Give yourself 10 minutes to read the text and answer the questions.</p><h4>Come to Chester…</h4><p>The historic city of Chester is the perfect place for a weekend break, with something for the whole family to enjoy.</p><h4>Roman Ruins</h4><p>The city is perhaps most famous for its Roman ruins. The Romans settled in Chester almost two thousand years ago and evidence of this can still be seen today. You can walk along the impressive city walls, as the soldiers once did to watch for invaders, and appreciate the stunning views of the city. You can find out more about the Roman settlement by visiting the Dewa Roman Experience, where lunch is complimentary. You and the kids can see and smell what a street might have been like, and even try on some armour. You can also visit the famous amphitheatre, where Roman soldiers once fought and trained.</p><h4>Historic City Centre</h4><p>Chester is home to the Victorian-made Eastgate clock, arguably the second most photographed clock in the world (after Big Ben in London). A short detour from there will take you to the Rows. These timber-frame medieval buildings are unique to Chester and house a huge range of shops from high street stores to exclusive boutiques. When you're ready to relax, take a stroll around the beautiful medieval cathedral, or stop for a picnic in Grosvenor Park.</p><h4>Great Sports Facilities</h4><p>If you fancy something energetic, the Northgate Arena has superb facilities, including several swimming pools (with water slides) and a spacious gym.</p><h4>Fantastic Restaurants</h4><p>At the end of a fun-filled day, why not enjoy a meal at one of Chester's many restaurants? There's food for all tastes and ages, from traditional pub fare to exotic Thai curries. You'll be spoilt for choice!</p>",
+      "questions": [
+        {
+          "id": "c2q1", "num": 1, "type": "short", "marks": 1,
+          "stem": "According to the text, what is Chester most well-known for?",
+          "accept": ["roman ruins", "romans", "roman history", "roman"],
+          "solution": "Its Roman ruins."
+        },
+        {
+          "id": "c2q2", "num": 2, "type": "short", "marks": 1,
+          "stem": "Give <strong>one</strong> example of a way to experience Roman life in Chester.",
+          "accept": ["dewa", "roman experience", "city walls", "walk along", "amphitheatre", "armour", "try on"],
+          "solution": "Any one of: Visit the Dewa Roman Experience / Walk along the city walls / Visit the amphitheatre / Try on armour."
+        },
+        {
+          "id": "c2q3", "num": 3, "type": "mcq", "marks": 1,
+          "stem": "<em>…where lunch is complimentary.</em><br>What does the word <strong>complimentary</strong> mean? Tick <strong>one</strong> box.",
+          "choices": ["kind", "complete", "free", "delicious"],
+          "answer": "free",
+          "solution": "free"
+        },
+        {
+          "id": "c2q4", "num": 4, "type": "short", "marks": 1,
+          "stem": "Look at the section titled <strong>Great Sports Facilities</strong>.<br>Find and <strong>copy</strong> one word or phrase from this section which makes the sports facilities in Chester sound appealing.",
+          "accept": ["superb", "superb facilities", "spacious", "water slides"],
+          "solution": "Any one of: superb / superb facilities / spacious / water slides."
+        },
+        {
+          "id": "c2q5", "num": 5, "type": "factopin", "marks": 1,
+          "stem": "Read each statement and <strong>tick</strong> to show whether it is fact or opinion.",
+          "statements": [
+            { "text": "The city walls in Chester are impressive.", "fact": false },
+            { "text": "You can eat Thai curry in Chester.", "fact": true },
+            { "text": "The Eastgate clock can be found in Chester.", "fact": true },
+            { "text": "There is a beautiful cathedral in Chester.", "fact": false }
+          ],
+          "solution": "Opinion, Fact, Fact, Opinion — 'impressive' and 'beautiful' are personal judgements, not verifiable facts."
+        },
+        {
+          "id": "c2q6", "num": 6, "type": "open", "marks": 3,
+          "stem": "How does the text encourage parents to visit Chester? Mention <strong>two</strong> things, using evidence from the text to explain your answer.",
+          "solution": "Award up to 3 marks for two supported points. E.g.: Activities for children mentioned (Dewa Roman Experience lets kids try on armour; water slides at the Northgate Arena) — parents would know their children would enjoy it. / Free lunch at the Dewa Roman Experience — parents would be attracted by the value. / The wide variety of food options for all ages — 'There's food for all tastes and ages' — suggests the whole family is catered for. / The text calls Chester 'the perfect place for a weekend break' — directly aimed at families."
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "set": "C",
+      "testNumber": 3,
+      "title": "The Wright Brothers",
+      "genre": "Biography",
+      "minutes": 10,
+      "totalMarks": 8,
+      "passage": "<p class='reading-note'>Orville and Wilbur Wright were the inventors of the first successful aeroplane. This is the story of how the brothers took to the skies.</p><h4>The Wright Brothers</h4><p>The Wright brothers had always loved building things. As children, they would repair toys and even try building their own. When they grew up, they turned their interest in mechanics into a career. In 1892, inspired by the fashion for cycling, they opened a bike shop together, where they designed and built bicycles.</p><p>A few years later, in 1896, the brothers' attention was caught by stories of men attempting to build flying machines. Adventurous inventors were trying to design gliders that would allow men to fly. However, these gliders were difficult to design and one man even died when his glider crashed. Orville and Wilbur believed that their experience with bicycles could help them to build a safe, successful glider. They soon began spending their time testing gliders of their own.</p><p>By 1902, the brothers believed they had perfected a system of steering and controlling a glider. The next step was to add power. The mechanic from their bike shop, Charlie Taylor, helped them to build an engine for their plane. The next year, they were ready to test their flying machine.</p><p>On December 17th 1903, with some apprehension, Orville and Wilbur tested their plane for the first time. The first exhibition, staying in the air for almost a minute. It does not seem impressive by today's standards, but the triumphant brothers had made the history books with their first powered flight.</p><p>Over the next few years, the brothers performed in their flying machine in America and France before huge crowds. People could hardly believe their eyes. Finally, man's dream of flight had come true.</p>",
+      "questions": [
+        {
+          "id": "c3q1", "num": 1, "type": "short", "marks": 1,
+          "stem": "What does the word <em>adventurous</em> mean in paragraph two?",
+          "accept": ["daring", "brave", "bold", "risk", "willing to try", "not afraid"],
+          "solution": "Daring / willing to try new and risky things."
+        },
+        {
+          "id": "c3q2", "num": 2, "type": "short", "marks": 1,
+          "stem": "Write down the difference between the brothers' gliders and their first plane.",
+          "accept": ["engine", "powered", "power", "motor"],
+          "solution": "The plane had an engine (it was powered); the gliders had no engine."
+        },
+        {
+          "id": "c3q3", "num": 3, "type": "short", "marks": 1,
+          "stem": "Write down a phrase from the <strong>fourth paragraph</strong> which suggests the brothers did something that had not been done before.",
+          "accept": ["made the history books", "history books", "triumphant", "first powered flight"],
+          "solution": "Any of: 'made the history books' / 'triumphant brothers' / 'first powered flight'."
+        },
+        {
+          "id": "c3q4", "num": 4, "type": "match", "marks": 1,
+          "stem": "Draw a line to match each date to the event.",
+          "lefts": ["1892", "1896", "1902", "1903", "1908"],
+          "rights": [
+            "The Wrights are happy with the steering method of their glider.",
+            "The Wrights demonstrate their plane across the world.",
+            "The brothers make their first flight in a powered plane.",
+            "The brothers become interested in gliders.",
+            "The brothers open a bicycle shop."
+          ],
+          "correct": [4, 3, 0, 2, 1],
+          "solution": "1892 → bicycle shop; 1896 → interested in gliders; 1902 → happy with glider steering; 1903 → first powered flight; 1908 → demonstrate plane across the world."
+        },
+        {
+          "id": "c3q5", "num": 5, "type": "short", "marks": 1,
+          "stem": "What does the text make the reader think about the Wright brothers?",
+          "accept": ["determined", "inspiring", "persevering", "brave", "talented", "dedicated", "passionate", "persistent"],
+          "solution": "Any reasonable inference e.g. they were determined / inspiring / passionate about their work."
+        },
+        {
+          "id": "c3q6", "num": 6, "type": "open", "marks": 3,
+          "stem": "How do you think the brothers felt <strong>before</strong>, <strong>during</strong> and <strong>after</strong> their first flight? Use the text to support your answer.",
+          "solution": "Award up to 3 marks covering different phases with text evidence. Before: apprehensive/nervous ('with some apprehension'). During: focused/excited. After: triumphant/proud ('the triumphant brothers had made the history books'). Full marks require reference to the text and cover more than one phase."
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "set": "C",
+      "testNumber": 4,
+      "title": "The Beast Below",
+      "genre": "Poetry",
+      "minutes": 10,
+      "totalMarks": 8,
+      "passage": "<div class='poem'><p class='poem-line'><span class='line-num'>1</span>Under the busy city street,</p><p class='poem-line'><span class='line-num'>2</span>Under the hustling, bustling feet,</p><p class='poem-line'><span class='line-num'>3</span>Beneath the river and the park,</p><p class='poem-line'><span class='line-num'>4</span>In the daylight, in the dark,</p><p class='poem-line'><span class='line-num'>5</span>Below the city, in the tunnels deep</p><p class='poem-line'><span class='line-num'>6</span>A metal dragon lies asleep.</p><p class='poem-line'><span class='line-num'>7</span>With lightning speed and clashing claws,</p><p class='poem-line'><span class='line-num'>8</span>From hidden lair come thunderous roars.</p><p class='poem-line'><span class='line-num'>9</span>It waits and starts its new attack.</p><p class='poem-line'><span class='line-num'>10</span>Slides and glides along the track.</p><p class='poem-line'><span class='line-num'>11</span>With painted body, bright eyes of light</p><p class='poem-line'><span class='line-num'>12</span>See deep into the inky night.</p><p class='poem-line'><span class='line-num'>13</span>It snakes afar by night and day</p><p class='poem-line'><span class='line-num'>14</span>To stations that are far away.</p><p class='poem-line'><span class='line-num'>15</span>At every stop it opens wide</p><p class='poem-line'><span class='line-num'>16</span>To let its passengers inside.</p><p class='poem-line'><span class='line-num'>17</span>Then idles, waiting for some more</p><p class='poem-line'><span class='line-num'>18</span>To squeeze themselves within the door.</p><p class='poem-line'><span class='line-num'>19</span>At times, alone, it rattles by</p><p class='poem-line'><span class='line-num'>20</span>With hissing breath and piercing cry,</p><p class='poem-line'><span class='line-num'>21</span>It sweeps along on metal rails,</p><p class='poem-line'><span class='line-num'>22</span>With whispering sigh of twisting trails,</p><p class='poem-line'><span class='line-num'>23</span>Under the hustling, bustling feet,</p><p class='poem-line'><span class='line-num'>24</span>Searching down the endless lanes</p><p class='poem-line'><span class='line-num'>25</span>For those who like to ride in trains.</p></div>",
+      "questions": [
+        {
+          "id": "c4q1", "num": 1, "type": "circle2", "marks": 2,
+          "stem": "Circle the correct option to complete each sentence below.",
+          "groups": [
+            { "prefix": "The train is…", "choices": ["in a tunnel.", "in a park.", "on a city street."], "answer": "in a tunnel." },
+            { "prefix": "It travels…", "choices": ["long distances.", "short distances.", "nowhere."], "answer": "long distances." }
+          ],
+          "solution": "The train is in a tunnel. It travels long distances."
+        },
+        {
+          "id": "c4q2", "num": 2, "type": "short", "marks": 1,
+          "stem": "<em>bright eyes of light</em> (line 11)<br>Which part of the train do these words describe?",
+          "accept": ["headlights", "lights", "windows", "front lights", "lamps"],
+          "solution": "The headlights / lights at the front of the train."
+        },
+        {
+          "id": "c4q3", "num": 3, "type": "match", "marks": 1,
+          "stem": "Draw lines to match the quotes from the text to the events they are describing.",
+          "lefts": ["it opens wide (line 15)", "idles, waiting (line 17)", "alone, it rattles by (line 19)"],
+          "rights": ["an empty train travelling along", "the train doors opening", "the train standing at a platform"],
+          "correct": [1, 2, 0],
+          "solution": "'it opens wide' → train doors opening; 'idles, waiting' → train standing at a platform; 'alone, it rattles by' → an empty train travelling along."
+        },
+        {
+          "id": "c4q4", "num": 4, "type": "short", "marks": 1,
+          "stem": "Find and <strong>copy</strong> a word or phrase which tells you that the train can be noisy.",
+          "accept": ["thunderous roars", "clashing claws", "hissing breath", "piercing cry", "rattles", "thunderous"],
+          "solution": "Any one of: 'thunderous roars' / 'clashing claws' / 'hissing breath and piercing cry' / 'alone, it rattles by'."
+        },
+        {
+          "id": "c4q5", "num": 5, "type": "short", "marks": 1,
+          "stem": "Towards the end of the poem, how does the writer link back to the beginning of the poem?",
+          "accept": ["hustling bustling", "hustling, bustling feet", "repeats", "same line", "beginning", "city street"],
+          "solution": "The writer repeats 'Under the hustling, bustling feet' (line 23), which echoes lines 1–2 at the start of the poem."
+        },
+        {
+          "id": "c4q6", "num": 6, "type": "open", "marks": 2,
+          "stem": "The train is described as a dragon (line 6). Explain how the description of the train in the rest of the poem supports this idea. Mention <strong>two</strong> things.",
+          "solution": "Award 1 mark per relevant point with evidence. E.g.: 'clashing claws' — dragons have claws, suggesting the train is powerful; 'thunderous roars' — dragons roar loudly, like the noise of a train; 'lightning speed' — dragons are depicted as fast, like a speeding train; 'hidden lair' — dragons live in lairs, like a train in tunnels; 'hissing breath' — dragons hiss and breathe fire, like steam from a train."
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "set": "C",
+      "testNumber": 5,
+      "title": "How Camels Survive in the Desert",
+      "genre": "Information",
+      "minutes": 10,
+      "totalMarks": 8,
+      "passage": "<p>The world's deserts are some of the harshest environments on the planet. Temperatures can reach over 40°C in the day, there are few available water sources, and there can be violent sandstorms. Camels have had to develop special characteristics to survive in these challenging conditions.</p><p>Perhaps the camel's most famous feature is its hump. This is actually a very important adaptation. If the camel cannot find any food in the desert, it can live off the fat stored in its hump instead.</p><p>Desert plants are good sources of water and nutrients for camels, but they are often spiky to try to prevent animals from eating them. In response, camels have developed thick lips and a leathery mouth so that they can eat the plants without feeling pain.</p><p>Sand is everywhere in the desert. It can be blown fiercely by the winds, so camels have to be specially adapted to cope with this. To help them keep sand out of their bodies, camels have very long eye lashes and lots of ear hairs to catch the grains. They also have the ability to close their nostrils against the raging sands.</p><p>Because the desert is a very dry environment, with few available water sources, its inhabitants need to be efficient with their water management. Camels have very few sweat glands, allowing them to sweat less, retain the water they do consume and stay hydrated.</p><p>Despite the high temperatures, lack of food and water, and other challenges in the desert, camels are so well adapted that they are found in deserts across Africa, Asia and Australia. In fact, they have become essential for humans living in these locations, who use camels to transport food, water (and themselves) across the challenging terrains.</p>",
+      "questions": [
+        {
+          "id": "c5q1", "num": 1, "type": "short", "marks": 1,
+          "stem": "What is a camel's hump made of?",
+          "accept": ["fat"],
+          "solution": "fat"
+        },
+        {
+          "id": "c5q2", "num": 2, "type": "short", "marks": 1,
+          "stem": "The text says that sand <em>can be blown fiercely by the winds</em>.<br>What does the word <strong>fiercely</strong> tell you about the winds in the desert?",
+          "accept": ["strong", "powerful", "violent", "forceful", "intense", "harsh", "extreme"],
+          "solution": "The winds are very strong / powerful / violent."
+        },
+        {
+          "id": "c5q3", "num": 3, "type": "short", "marks": 1,
+          "stem": "What does the word <strong>retain</strong> mean in the fifth paragraph of the text?",
+          "accept": ["keep", "hold", "store", "maintain", "hold onto"],
+          "solution": "keep / hold onto (the water)"
+        },
+        {
+          "id": "c5q4", "num": 4, "type": "mcq", "marks": 1,
+          "stem": "Where in the world can camels be found? Circle <strong>one</strong> option.",
+          "choices": ["Africa, America and Asia", "Asia, Australia and Africa", "Africa, Europe and Australia", "Europe, Africa and India"],
+          "answer": "Asia, Australia and Africa",
+          "solution": "Asia, Australia and Africa — the text states 'deserts across Africa, Asia and Australia'."
+        },
+        {
+          "id": "c5q5", "num": 5, "type": "short", "marks": 1,
+          "stem": "How does the conclusion of the text link back to the introduction?",
+          "accept": ["challenging", "harsh", "environment", "difficult", "essential", "survive", "desert"],
+          "solution": "Both refer to the challenging / harsh desert environment. The introduction sets up how difficult the desert is; the conclusion confirms camels are so well adapted they thrive there and have become essential."
+        },
+        {
+          "id": "c5q6", "num": 6, "type": "multishort", "marks": 3,
+          "stem": "Using your own words, summarise <strong>three</strong> ways in which camels are adapted to their environment.",
+          "accept": [
+            ["fat hump", "store fat", "fat reserves", "hump energy", "hump stores fat", "energy reserve", "food scarce"],
+            ["thick lips", "leathery mouth", "spiky plants", "rough plants", "tough plants", "dry plants", "eat plants"],
+            ["long eyelashes", "eyelashes", "ear hairs", "sand eyes", "sand ears", "keep sand out"],
+            ["close nostrils", "nostrils sand", "block sand", "nostrils storm", "sandstorm", "block out sand"],
+            ["sweat glands", "retain water", "stay hydrated", "few sweat", "water retention", "no sweat", "conserve water"]
+          ],
+          "solution": "Award 1 mark per way (up to 3). E.g.: Store fat in their hump as an energy reserve when food is scarce. / Have thick lips and a leathery mouth so they can eat spiky desert plants. / Have long eyelashes and ear hairs to keep sand out of their eyes and ears. / Can close their nostrils to block out sandstorms. / Have very few sweat glands so they retain water and stay hydrated."
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "set": "C",
+      "testNumber": 6,
+      "title": "The Swiss Family Robinson",
+      "genre": "Classic Fiction",
+      "minutes": 10,
+      "totalMarks": 8,
+      "passage": "<p class='reading-note'>An extract from <em>The Swiss Family Robinson</em>, by Johann David Wyss. The narrator, William Robinson, is the ship's company crowded into the lifeboats, and the last who entered the lifeboat cut the remaining boat and leave the ship. The narrator is on deck; his family shelter below.</p><p>Forgetting the passengers, the ship's company crowded into the lifeboats, and the last who entered cut the ropes to leave the ship, the last of the seamen spring into her and push off, regardless of my cries and entreaties that we might be allowed to share their slender chance of preserving their lives. My voice was drowned in the howling of the blast, and even had the crew wished it, the return of the boat was impossible, for the waves were mountain-high.</p><p>Casting my eyes despairingly around, I became gradually aware that our position was by no means hopeless, inasmuch as the ship, though partly shattered, was so jammed between the rocks that it did not go to pieces. As I raised my eyes, I could make out, through rents in the vaporous curtain, a line of rocky coast, rugged and, as it was, my heart bounded towards it as a sign of help in the hour of need.</p><p>Yet the sense of our lonely and forsaken condition weighed heavily upon me, as I returned to my family, constraining myself to say with a smile, 'Courage, dear ones! Although our good ship will never sail more, she is so placed that our cabin will remain above water, and tomorrow, if the wind and waves abate, I see no reason why we should not be able to get ashore.'</p><p>These few words had an immediate effect on the spirits of my children, for my family has always had an implicit faith in my assurances. The boys at once regarded our problematical chance as a happy certainty, and began to enjoy the relief from the violent pitching and rolling of the vessel.</p>",
+      "questions": [
+        {
+          "id": "c6q1", "num": 1, "type": "truefalse", "marks": 1,
+          "stem": "Read each statement and <strong>tick</strong> whether it is true or false.",
+          "statements": [
+            { "text": "The first person in the lifeboat cut the ropes.", "answer": false },
+            { "text": "The narrator doesn't have any sons.", "answer": false },
+            { "text": "The family's cabin was in the stern of the ship.", "answer": true },
+            { "text": "The storm didn't damage the ship.", "answer": false }
+          ],
+          "solution": "False (the last person cut the ropes) / False (he has boys/sons) / True / False (the ship was shattered by the storm)."
+        },
+        {
+          "id": "c6q2", "num": 2, "type": "order", "marks": 1,
+          "stem": "Write the numbers 1 to 5 in the boxes to put these events into the right order. The first one has been done for you.",
+          "items": [
+            "The final sailors abandon ship.",
+            "The narrator catches a glimpse of land.",
+            "The narrator realises that they are stuck on the rocks.",
+            "The narrator reassures his family of survival.",
+            "The narrator's family become more hopeful."
+          ],
+          "order": [1, 2, 3, 4, 5],
+          "fixed": 0,
+          "solution": "1 — sailors abandon ship; 2 — glimpse of land; 3 — stuck on rocks; 4 — narrator reassures family; 5 — family become more hopeful."
+        },
+        {
+          "id": "c6q3", "num": 3, "type": "multishort", "marks": 2,
+          "stem": "Look at the <strong>second paragraph</strong> of the text. Why don't the sailors go back when the narrator calls out to them? Give <strong>two</strong> reasons.",
+          "accept": [
+            ["voice drowned", "drowned out", "howling blast", "wind loud", "too loud", "could not hear", "not heard", "wind drowned", "blast drowned", "wind too loud"],
+            ["waves mountain", "mountain high", "sea rough", "too rough", "boat return", "could not return", "rough sea", "high waves", "impossible return", "boat impossible"]
+          ],
+          "solution": "Award 1 mark per reason. The narrator's voice was drowned out by the howling blast / wind was too loud for them to hear. The waves were mountain-high making it impossible for the boat to return / the sea was too rough."
+        },
+        {
+          "id": "c6q4", "num": 4, "type": "mcq", "marks": 1,
+          "stem": "Circle <strong>one</strong> word that best describes the waves.",
+          "choices": ["heavy", "misty", "tall", "rugged"],
+          "answer": "rugged",
+          "solution": "rugged — the text describes 'a line of rocky coast, rugged', and the waves are 'mountain-high'."
+        },
+        {
+          "id": "c6q5", "num": 5, "type": "short", "marks": 1,
+          "stem": "Look at the <strong>fourth paragraph</strong> of the text, beginning <em>Yet the sense…</em><br>Which phrase in this paragraph suggests that the narrator is in a terrible situation?",
+          "accept": ["lonely and forsaken", "forsaken condition", "weighed heavily", "lonely", "forsaken"],
+          "solution": "'our lonely and forsaken condition weighed heavily upon me' — this suggests the narrator feels abandoned and in a desperate situation."
+        },
+        {
+          "id": "c6q6", "num": 6, "type": "open", "marks": 2,
+          "stem": "What do you think might happen next in the text? Mention <strong>two</strong> things.",
+          "solution": "Award 1 mark per plausible prediction. E.g.: The storm calms down and the family attempts to get ashore / The narrator explores the ship for supplies / The family spends the night in the cabin / The narrator finds a way to signal for help / The family discovers they are alone on the island."
+        }
+      ]
+    }
+  ]
+}

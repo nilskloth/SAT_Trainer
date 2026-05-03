@@ -14,6 +14,8 @@ import { initSpelling } from "./training/spelling.js";
 import { initGrammar } from "./training/grammar.js";
 import { initPrefixes } from "./training/prefixes.js";
 import { initAlgebra } from "./training/algebra.js";
+import { initReasoning } from "./training/reasoning.js";
+import { initReading, checkReadingAnswers, refreshReadingGrid } from "./training/reading.js";
 import { initStats } from "./stats/stats.js";
 
 (async function initApp() {
@@ -43,6 +45,8 @@ import { initStats } from "./stats/stats.js";
     initGrammar();
     initPrefixes();
     initAlgebra();
+    initReasoning();
+    initReading();
 
     /* =========================
        Training sub-tabs (Maths / Spelling / Grammar)
@@ -64,6 +68,8 @@ import { initStats } from "./stats/stats.js";
             panel.id !== `training-${target}`
           );
         });
+
+        if (target === "reading") refreshReadingGrid();
       };
 
       trainingTabButtons.forEach(btn => {
@@ -76,6 +82,9 @@ import { initStats } from "./stats/stats.js";
       activateTraining("maths");
     }
     
+    document.getElementById("readingCheckBtn")
+      ?.addEventListener("click", checkReadingAnswers);
+
     // ✅ FIX: pass required dependencies explicitly
     initStats(
       getStore(),

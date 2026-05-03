@@ -725,3 +725,233 @@ th {
   font-size: 14px;
   font-weight: 700;
 }
+/* =========================
+   Reading module
+========================= */
+
+.reading-test-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.reading-test-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  background: #fff;
+}
+
+.reading-test-card:hover {
+  border-color: #4da3ff;
+  box-shadow: 0 2px 8px rgba(77,163,255,0.15);
+}
+
+.reading-test-num {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.reading-test-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.reading-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 780px) {
+  .reading-split { grid-template-columns: 1fr; }
+}
+
+.reading-passage {
+  font-size: 14px;
+  line-height: 1.7;
+  max-height: 70vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 8px;
+}
+
+.reading-passage h4 {
+  margin: 12px 0 4px;
+  font-size: 14px;
+}
+
+.reading-note {
+  font-style: italic;
+  color: #555;
+  font-size: 13px;
+  border-left: 3px solid #ddd;
+  padding-left: 8px;
+  margin-bottom: 10px;
+}
+
+/* Play script */
+.play-script { margin-top: 8px; }
+.play-line { display: flex; gap: 8px; margin-bottom: 6px; font-size: 13px; }
+.play-char { font-weight: 700; min-width: 70px; flex-shrink: 0; }
+.play-speech { flex: 1; }
+
+/* Poem */
+.poem { font-family: Georgia, serif; line-height: 1.8; }
+.poem-line { display: flex; gap: 12px; margin: 0; }
+.line-num { min-width: 24px; color: #aaa; font-size: 12px; text-align: right; flex-shrink: 0; }
+
+/* Questions */
+.reading-q {
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  position: relative;
+  background: #fff;
+}
+
+.reading-q-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.reading-q-num {
+  font-weight: 700;
+  font-size: 13px;
+  color: #555;
+}
+
+.reading-q-marks {
+  font-size: 12px;
+}
+
+.reading-input {
+  width: 100%;
+  max-width: 360px;
+  margin-top: 8px;
+  display: block;
+}
+
+.reading-open {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+/* True/false + fact/opinion rows */
+.reading-tf-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 13px;
+}
+
+.reading-tf-row span { flex: 1; }
+.reading-tf-row label { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+
+/* Match rows */
+.reading-match-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.reading-match-left {
+  flex: 0 0 auto;
+  font-weight: 600;
+  font-size: 13px;
+  min-width: 80px;
+}
+
+.reading-match-select {
+  flex: 1;
+  font-size: 13px;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Order rows */
+.reading-order-row {
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin-bottom: 8px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.reading-order-input {
+  width: 48px;
+  text-align: center;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* Solution reveal */
+.reading-solution {
+  margin-top: 10px;
+  padding: 8px 10px;
+  background: #f0f7ff;
+  border-left: 3px solid #4da3ff;
+  border-radius: 0 6px 6px 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Result states */
+.reading-partial {
+  border-color: #f5c842 !important;
+  background: #fffdf0 !important;
+}
+
+.reading-open-q {
+  border-color: #b0c8f0 !important;
+  background: #f5f8ff !important;
+}
+
+/* Timer */
+#readingTimerDisplay {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 15px;
+  background: #e8f0fe;
+  color: #1a56db;
+}
+
+#readingTimerDisplay.timer-warn {
+  background: #fff3cd;
+  color: #856404;
+}
+
+#readingTimerDisplay.timer-up {
+  background: #f2a0a0;
+  color: #900;
+}
+
+/* Score badges for partial marks */
+.algebra-badge.warn {
+  color: #856404;
+}

@@ -109,6 +109,7 @@
         <button data-training="spelling">Spelling</button>
         <button data-training="grammar">Grammar</button>
         <button data-training="prefixes">Prefixes</button>
+        <button data-training="reading">Reading</button>
       </div>
 
       <!-- MATHS -->
@@ -120,6 +121,7 @@
           <div class="row" style="margin-bottom:12px;">
             <button class="grammar-tab active" data-maths-tab="arithmetic">Arithmetic</button>
             <button class="grammar-tab" data-maths-tab="algebra">Algebra</button>
+            <button class="grammar-tab" data-maths-tab="reasoning">Reasoning</button>
           </div>
 
           <!-- Arithmetic sub-panel -->
@@ -155,6 +157,23 @@
             <div class="row" style="margin-top:12px;">
               <button id="algebraCheckBtn" disabled>Check answers</button>
               <span id="algebraScore"></span>
+            </div>
+          </div>
+
+          <!-- Reasoning sub-panel -->
+          <div class="maths-sub hidden" id="maths-sub-reasoning">
+            <div class="row" style="margin-bottom:12px;">
+              <select id="reasoningStrandSelect">
+                <option value="all">All topics</option>
+              </select>
+              <button class="primary" id="reasoningNewBtn">New set</button>
+            </div>
+
+            <div id="reasoningArea"></div>
+
+            <div class="row" style="margin-top:12px;">
+              <button id="reasoningCheckBtn" disabled>Check answers</button>
+              <span id="reasoningScore"></span>
             </div>
           </div>
 
@@ -263,9 +282,9 @@
           <h3>English · Prefixes</h3>
 
           <!-- Sub-tabs -->
-          <div class="training-tabs">
-            <button class="active" data-prefix-tab="practice">Practice</button>
-            <button data-prefix-tab="meaning">Meaning &amp; Examples</button>
+          <div class="row" style="margin-bottom:12px;">
+            <button class="grammar-tab active" data-prefix-tab="practice">Practice</button>
+            <button class="grammar-tab" data-prefix-tab="meaning">Meaning &amp; Examples</button>
           </div>
 
           <!-- Meaning sub-panel -->
@@ -298,6 +317,38 @@
             </div>
           </div>
 
+        </div>
+      </div>
+
+      <!-- READING -->
+      <div class="training-panel hidden" id="training-reading">
+        <div class="card">
+          <h3>English · Reading Comprehension</h3>
+          <p class="muted" style="margin:0 0 12px;">Each test takes 10 minutes. Six tests make a full reading paper (48 marks).</p>
+
+          <!-- Select view -->
+          <div id="readingSelectView">
+            <div id="readingTestGrid"></div>
+          </div>
+
+          <!-- Run view -->
+          <div id="readingRunView" class="hidden">
+            <div class="row" style="margin-bottom:12px; flex-wrap:nowrap;">
+              <button id="readingBackBtn">← Tests</button>
+              <span class="muted" id="readingTestLabel" style="flex:1;"></span>
+              <span class="pill" id="readingTimerDisplay">10:00</span>
+            </div>
+
+            <div class="reading-split">
+              <div id="readingPassage" class="reading-passage card"></div>
+              <div id="readingQuestions"></div>
+            </div>
+
+            <div class="row" style="margin-top:14px;">
+              <button class="primary" id="readingCheckBtn">Check answers</button>
+              <span id="readingScore"></span>
+            </div>
+          </div>
         </div>
       </div>
 
