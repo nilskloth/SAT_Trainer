@@ -37,7 +37,9 @@ sats-trainer/
 │   │   ├── spelling.js         # Adaptive spelling trainer, speech synthesis
 │   │   ├── grammar.js          # SPaG topic tabs, token-selection tests
 │   │   ├── prefixes.js         # Prefix word-pair + sentence exercises
-│   │   └── algebra.js          # Algebra question sets, pairs validator
+│   │   ├── algebra.js          # Algebra question sets, pairs validator
+│   │   ├── reading.js          # Reading comprehension test runner
+│   │   └── reasoning.js        # Maths reasoning drill (strand filter)
 │   └── stats/
 │       └── stats.js            # Progress display
 └── data/
@@ -50,7 +52,9 @@ sats-trainer/
     └── training/
         ├── spelling.json       # Word lists with sentences
         ├── prefixes.json       # Word pairs + sentences for prefix trainer
-        └── algebra.json        # 4 sets × 10 questions
+        ├── algebra.json        # 4 sets × 10 questions
+        ├── reading.json        # Reading comprehension tests (passage + questions)
+        └── reasoning.json      # Maths reasoning questions by strand
 ```
 
 ---
@@ -105,6 +109,21 @@ The training tab switching in `app.js` is automatic — it picks up any element 
 - 7 word pairs + 4 sentences per round, randomly sampled
 - All distractor options verified to not form valid English words with the root
 
+### English — Reading (`training/reading.js`)
+- Data from `data/training/reading.json`
+- Tests grouped by set (A, B, …); selection grid shows title, genre, time, and total marks
+- Each test has a full HTML passage and a list of questions
+- Question types: `short`, `mcq`, `tick2` (tick two correct answers)
+- Timed: timer runs while the test is active; shown in the UI
+- Back button returns to the test selection grid without losing test state
+
+### Maths — Reasoning (`training/reasoning.js`)
+- Data from `data/training/reasoning.json`
+- 10 random questions per set, optionally filtered by strand via dropdown
+- Strands: `large_numbers`, `place_value`, `ordering`, `rounding`, `negative`, `roman`
+- Question type: `short` — text input, answer matched as trimmed string
+- "New set" button picks a fresh random selection; "Check answers" reveals all solutions
+
 ---
 
 ## Key data formats
@@ -141,6 +160,55 @@ The training tab switching in `app.js` is automatic — it picks up any element 
 }
 ```
 Indices are zero-based positions in `sentence.split(" ")`. Punctuation stays attached to its token (e.g. "sofa." is index 5).
+
+### reading.json — test object
+```json
+{
+  "id": "b5",
+  "set": "B",
+  "testNumber": 5,
+  "title": "Should We Use Tablet Computers in the Classroom?",
+  "genre": "Argument",
+  "minutes": 10,
+  "totalMarks": 8,
+  "passage": "<p>HTML passage…</p>",
+  "questions": [
+    {
+      "id": "b5q1", "num": 1, "type": "short", "marks": 1,
+      "stem": "HTML string",
+      "accept": ["tablet computers"],   // short: array of accepted strings
+      "solution": "tablet computers"
+    },
+    {
+      "id": "b5q2", "num": 2, "type": "tick2", "marks": 2,
+      "stem": "HTML string",
+      "choices": ["option A", "option B", "option C"],
+      "answers": ["option A", "option B"],  // tick2: correct choices
+      "solution": "option A; option B"
+    },
+    {
+      "id": "b5q4", "num": 4, "type": "mcq", "marks": 1,
+      "stem": "HTML string",
+      "choices": ["option A", "option B"],
+      "answer": "option A",             // mcq: single correct choice
+      "solution": "option A"
+    }
+  ]
+}
+```
+
+### reasoning.json — question object
+```json
+{
+  "id": "rq01",
+  "strand": "large_numbers",
+  "type": "short",
+  "stem": "HTML string",
+  "answer": "999900",
+  "solution": "1,000,000 − 100 = 999,900"
+}
+```
+Valid strands: `large_numbers`, `place_value`, `ordering`, `rounding`, `negative`, `roman`.
 
 ---
 
