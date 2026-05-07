@@ -122,6 +122,7 @@
             <button class="grammar-tab active" data-maths-tab="arithmetic">Arithmetic</button>
             <button class="grammar-tab" data-maths-tab="algebra">Algebra</button>
             <button class="grammar-tab" data-maths-tab="reasoning">Reasoning</button>
+            <button class="grammar-tab" data-maths-tab="division">Short Division</button>
           </div>
 
           <!-- Arithmetic sub-panel -->
@@ -174,6 +175,81 @@
             <div class="row" style="margin-top:12px;">
               <button id="reasoningCheckBtn" disabled>Check answers</button>
               <span id="reasoningScore"></span>
+            </div>
+          </div>
+
+          <!-- Short Division sub-panel -->
+          <div class="maths-sub hidden" id="maths-sub-division">
+
+            <!-- Intro -->
+            <div class="grammar-block grammar-meaning" style="margin-bottom:14px;">
+              <p class="grammar-subtitle" style="margin:0 0 8px;">Short division — the bus stop method</p>
+              <p style="margin:0 0 8px;font-size:13px;line-height:1.5;">Short division breaks a large division into small steps. You work through each digit of the <strong>dividend</strong> (the number being divided) from left to right, dividing by the <strong>divisor</strong> each time. Any leftover is the <strong>remainder</strong>, carried into the next column. The digits written above the line form the <strong>quotient</strong> — the answer.</p>
+
+              <p class="grammar-subtitle" style="margin:10px 0 6px;">Worked example: 1 ÷ 4 = 0.25</p>
+              <div class="bs-scroll" role="img" aria-label="Worked example: 1 divided by 4 equals 0.25. Quotient 0.25 above the line, dividend 1 with decimal zeros inside the bus stop, remainders 1 and 2 carried between columns.">
+                <div class="bs-layout">
+                  <div class="bs-divisor">4</div>
+                  <div class="bs-rows">
+                    <div class="bs-row-q">
+                      <span class="bs-cell bs-done">0</span><span class="bs-dot bs-dot--q">.</span><span class="bs-cell bs-done">2</span><span class="bs-cell bs-done">5</span>
+                    </div>
+                    <div class="bs-row-d">
+                      <span class="bs-cell bs-cell--first">1</span><span class="bs-dot bs-dot--d">.</span><span class="bs-cell"><span class="bs-carry bs-done">1</span>0</span><span class="bs-cell"><span class="bs-carry bs-done">2</span>0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <dl class="div-key">
+                <div><dt>Divisor</dt><dd>4 — the number we divide <em>by</em>, written to the left of the bus stop</dd></div>
+                <div><dt>Dividend</dt><dd>1.00 — the number being divided, written inside the bus stop (zeros added after the decimal point)</dd></div>
+                <div><dt>Quotient</dt><dd>0.25 — the answer, built up digit by digit above the line</dd></div>
+                <div><dt>Remainder</dt><dd>small superscript digits (e.g. ¹ ²) show what is carried into the next column</dd></div>
+              </dl>
+            </div>
+
+            <!-- Input panel -->
+            <div class="row" style="margin-bottom:8px;flex-wrap:nowrap;align-items:flex-end;">
+              <div>
+                <label class="muted" for="divDividend" style="display:block;margin-bottom:4px;">Dividend</label>
+                <input type="number" id="divDividend" value="1" min="1" max="9999" style="width:90px;">
+              </div>
+              <span style="font-size:1.3em;padding-bottom:10px;">÷</span>
+              <div>
+                <label class="muted" for="divDivisor" style="display:block;margin-bottom:4px;">Divisor</label>
+                <input type="number" id="divDivisor" value="32" min="1" max="999" style="width:90px;">
+              </div>
+              <button class="primary" id="divCalcBtn" style="align-self:flex-end;">Calculate</button>
+            </div>
+            <p id="divValidation" class="bad hidden" style="margin:0 0 10px;font-size:13px;"></p>
+
+            <!-- Walkthrough (hidden until Calculate is pressed) -->
+            <div id="divWalkthrough" class="hidden">
+
+              <div class="bs-scroll" id="divBusStop" style="margin:16px 0 8px;"></div>
+
+              <div class="grammar-block grammar-test" style="margin:0 0 10px;">
+                <p id="divCaption" style="margin:0;font-size:14px;line-height:1.5;min-height:3em;"></p>
+              </div>
+
+              <div class="row" style="justify-content:center;gap:16px;">
+                <button id="divPrevBtn" disabled>&#8592; Previous</button>
+                <span id="divStepCounter" class="muted" style="min-width:60px;text-align:center;"></span>
+                <button class="primary" id="divNextBtn">Next &#8594;</button>
+              </div>
+
+              <!-- Sense-check panel (shown after final step) -->
+              <div id="divSenseCheck" class="grammar-block grammar-meaning hidden" style="margin-top:14px;">
+                <p class="grammar-subtitle" style="margin:0 0 8px;">Answer check</p>
+                <dl class="div-key">
+                  <div><dt>As a decimal</dt><dd id="divAnsDecimal" style="font-weight:700;"></dd></div>
+                  <div><dt>As a fraction</dt><dd id="divAnsFraction" style="font-weight:700;"></dd></div>
+                  <div><dt>Rounded to 2 d.p.</dt><dd id="divAnsRounded" style="font-weight:700;"></dd></div>
+                </dl>
+                <p id="divRecurringNote" class="bad hidden" style="margin:8px 0 0;font-size:13px;">This decimal doesn't terminate — it would carry on forever.</p>
+                <p style="margin:8px 0 0;font-size:13px;color:#666;">Now try another pair of numbers above!</p>
+              </div>
+
             </div>
           </div>
 

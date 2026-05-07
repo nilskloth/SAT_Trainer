@@ -955,3 +955,111 @@ th {
 .algebra-badge.warn {
   color: #856404;
 }
+
+/* =========================
+   Short Division — bus stop
+========================= */
+
+.bs-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bs-layout {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Menlo", "Consolas", "Courier New", monospace;
+  font-size: 1.8rem;
+  line-height: 1;
+  white-space: nowrap;
+  padding: 12px 8px 8px 4px;
+}
+
+.bs-divisor {
+  padding-right: 6px;
+}
+
+.bs-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.bs-row-q,
+.bs-row-d {
+  display: flex;
+  align-items: stretch;
+}
+
+.bs-cell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  min-width: 28px;
+  height: 1.6em;
+  position: relative;
+}
+
+.bs-cell--first {
+  border-left: 2px solid #111;
+}
+
+.bs-row-d .bs-cell,
+.bs-row-d .bs-dot {
+  border-top: 2px solid #111;
+}
+
+.bs-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  min-width: 14px;
+  height: 1.6em;
+}
+
+.bs-carry {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  font-size: 0.5em;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.bs-active       { color: #4da3ff; font-weight: 700; }
+.bs-done         { color: #111; }
+.bs-carry.bs-active { color: #4da3ff; }
+.bs-carry.bs-done   { color: #888; }
+
+/* =========================
+   Short Division — key & controls
+========================= */
+
+.div-key {
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.div-key > div {
+  display: flex;
+  gap: 8px;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.div-key > div:last-child { border-bottom: none; }
+
+.div-key dt {
+  color: #555;
+  font-weight: 600;
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.div-key dd {
+  margin: 0;
+  color: #333;
+}

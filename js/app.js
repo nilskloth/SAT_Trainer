@@ -15,6 +15,7 @@ import { initGrammar } from "./training/grammar.js";
 import { initPrefixes } from "./training/prefixes.js";
 import { initAlgebra } from "./training/algebra.js";
 import { initReasoning } from "./training/reasoning.js";
+import { initDivision } from "./training/division.js";
 import { initReading, checkReadingAnswers, refreshReadingGrid } from "./training/reading.js";
 import { initStats } from "./stats/stats.js";
 
@@ -46,6 +47,7 @@ import { initStats } from "./stats/stats.js";
     initPrefixes();
     initAlgebra();
     initReasoning();
+    initDivision();
     initReading();
 
     /* =========================

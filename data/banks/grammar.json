@@ -376,6 +376,240 @@
             "answer": [3]
           }
         ]
+      },
+      {
+        "id": "active-voice",
+        "label": "Active Voice",
+        "definition": "In an <strong>active</strong> sentence the <em>subject performs</em> the action. The verb is a straightforward doing word: <em>The dog bit the postman.</em> The dog (subject) does the biting.",
+        "examples": [
+          {
+            "sentence": "The dog bit the postman.",
+            "highlight": [2],
+            "explanation": "Bit is the active verb — the dog (subject) performs the action."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "The teacher marked the books.",
+            "task": "Select the verb in this active sentence.",
+            "answer": [2]
+          },
+          {
+            "sentence": "The girl kicked the ball.",
+            "task": "Select the verb in this active sentence.",
+            "answer": [2]
+          },
+          {
+            "sentence": "The chef cooked a wonderful meal.",
+            "task": "Select the verb in this active sentence.",
+            "answer": [2]
+          },
+          {
+            "sentence": "A police officer caught the thief.",
+            "task": "Select the verb in this active sentence.",
+            "answer": [3]
+          },
+          {
+            "sentence": "Lightning struck the old oak tree.",
+            "task": "Select the verb in this active sentence.",
+            "answer": [1]
+          }
+        ]
+      },
+      {
+        "id": "passive-voice",
+        "label": "Passive Voice",
+        "definition": "In a <strong>passive</strong> sentence the <em>subject receives</em> the action. We form the passive with <em>was/were</em> + past participle. The doer can be added with <em>by</em>: <em>The postman was bitten by the dog.</em>",
+        "examples": [
+          {
+            "sentence": "The postman was bitten by the dog.",
+            "highlight": [2, 3],
+            "explanation": "Was bitten is the passive verb phrase — the postman (subject) receives the action. The dog follows 'by'."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "The books were marked by the teacher.",
+            "task": "Select the passive verb phrase (auxiliary + past participle).",
+            "answer": [2, 3]
+          },
+          {
+            "sentence": "The window was broken by the ball.",
+            "task": "Select the passive verb phrase (auxiliary + past participle).",
+            "answer": [2, 3]
+          },
+          {
+            "sentence": "The cake was eaten by the children.",
+            "task": "Select the passive verb phrase (auxiliary + past participle).",
+            "answer": [2, 3]
+          },
+          {
+            "sentence": "The goal was scored in the last minute.",
+            "task": "Select the passive verb phrase (auxiliary + past participle).",
+            "answer": [2, 3]
+          },
+          {
+            "sentence": "The sandcastle was swept by the waves.",
+            "task": "Select the passive verb phrase (auxiliary + past participle).",
+            "answer": [2, 3]
+          }
+        ]
+      },
+      {
+        "id": "simple-present",
+        "label": "Simple Present",
+        "definition": "The <strong>simple present tense</strong> describes actions happening now, regularly, or as a general truth. Regular verbs add <em>-s</em> or <em>-es</em> in the third person singular (e.g. <em>runs, watches</em>).",
+        "examples": [
+          {
+            "sentence": "She runs to school every morning.",
+            "highlight": [1],
+            "explanation": "Runs is a simple present tense verb — it describes a regular, repeated action."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "She walks to school.",
+            "task": "Select the simple present tense verb.",
+            "answer": [1]
+          },
+          {
+            "sentence": "They play football every Saturday.",
+            "task": "Select the simple present tense verb.",
+            "answer": [1]
+          },
+          {
+            "sentence": "The sun rises in the east.",
+            "task": "Select the simple present tense verb.",
+            "answer": [2]
+          },
+          {
+            "sentence": "Birds sing in the morning.",
+            "task": "Select the simple present tense verb.",
+            "answer": [1]
+          },
+          {
+            "sentence": "He reads before bed.",
+            "task": "Select the simple present tense verb.",
+            "answer": [1]
+          }
+        ]
+      },
+      {
+        "id": "simple-past",
+        "label": "Simple Past",
+        "definition": "The <strong>simple past tense</strong> describes a completed action in the past. Regular verbs add <em>-ed</em> (e.g. <em>walked</em>). Many common verbs are irregular (e.g. <em>ran, ate, broke, wrote</em>).",
+        "examples": [
+          {
+            "sentence": "She ran to school this morning.",
+            "highlight": [1],
+            "explanation": "Ran is a simple past tense verb — it describes a completed action. Ran is the irregular past of run."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "She walked to school.",
+            "task": "Select the simple past tense verb.",
+            "answer": [1]
+          },
+          {
+            "sentence": "They played football last Saturday.",
+            "task": "Select the simple past tense verb.",
+            "answer": [1]
+          },
+          {
+            "sentence": "The dog barked all night.",
+            "task": "Select the simple past tense verb.",
+            "answer": [2]
+          },
+          {
+            "sentence": "She wrote a long letter.",
+            "task": "Select the simple past tense verb.",
+            "answer": [1]
+          },
+          {
+            "sentence": "The team won the trophy.",
+            "task": "Select the simple past tense verb.",
+            "answer": [2]
+          }
+        ]
+      },
+      {
+        "id": "present-perfect",
+        "label": "Present Perfect",
+        "definition": "The <strong>present perfect</strong> is formed with <em>has</em> or <em>have</em> + past participle. It links the past to the present — describing something that just happened, or that started in the past and still matters now.",
+        "examples": [
+          {
+            "sentence": "She has won the race.",
+            "highlight": [1, 2],
+            "explanation": "Has won is a present perfect verb phrase — has is the auxiliary verb and won is the past participle."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "She has finished her homework.",
+            "task": "Select the present perfect verb phrase (has/have + past participle).",
+            "answer": [1, 2]
+          },
+          {
+            "sentence": "They have arrived at the station.",
+            "task": "Select the present perfect verb phrase (has/have + past participle).",
+            "answer": [1, 2]
+          },
+          {
+            "sentence": "He has broken the record.",
+            "task": "Select the present perfect verb phrase (has/have + past participle).",
+            "answer": [1, 2]
+          },
+          {
+            "sentence": "The children have eaten their lunch.",
+            "task": "Select the present perfect verb phrase (has/have + past participle).",
+            "answer": [2, 3]
+          },
+          {
+            "sentence": "The goalkeeper has saved five penalties.",
+            "task": "Select the present perfect verb phrase (has/have + past participle).",
+            "answer": [2, 3]
+          }
+        ]
+      },
+      {
+        "id": "past-perfect",
+        "label": "Past Perfect",
+        "definition": "The <strong>past perfect</strong> is formed with <em>had</em> + past participle. It describes an action that was completed <em>before</em> another event in the past — the further-back past.",
+        "examples": [
+          {
+            "sentence": "By the time he arrived, she had won the race.",
+            "highlight": [6, 7],
+            "explanation": "Had won is past perfect — her winning happened before he arrived. We use had + past participle to show this earlier past event."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "She had finished her homework before dinner.",
+            "task": "Select the past perfect verb phrase (had + past participle).",
+            "answer": [1, 2]
+          },
+          {
+            "sentence": "They had left before the storm arrived.",
+            "task": "Select the past perfect verb phrase (had + past participle).",
+            "answer": [1, 2]
+          },
+          {
+            "sentence": "The train had departed early.",
+            "task": "Select the past perfect verb phrase (had + past participle).",
+            "answer": [2, 3]
+          },
+          {
+            "sentence": "By the time we arrived, the shop had closed.",
+            "task": "Select the past perfect verb phrase (had + past participle).",
+            "answer": [7, 8]
+          },
+          {
+            "sentence": "She had read the book three times.",
+            "task": "Select the past perfect verb phrase (had + past participle).",
+            "answer": [1, 2]
+          }
+        ]
       }
     ]
   }
