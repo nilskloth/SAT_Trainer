@@ -390,29 +390,49 @@
         ],
         "questions": [
           {
+            "type": "roles",
+            "sentence": "The dog bit the postman.",
+            "parts": [
+              { "role": "subject", "label": "Subject", "hint": "who or what does the action", "answer": [0, 1] },
+              { "role": "verb",    "label": "Verb",    "hint": "the action word",              "answer": [2] },
+              { "role": "object",  "label": "Object",  "hint": "who or what receives the action", "answer": [3, 4] }
+            ]
+          },
+          {
+            "type": "roles",
             "sentence": "The teacher marked the books.",
-            "task": "Select the verb in this active sentence.",
-            "answer": [2]
+            "parts": [
+              { "role": "subject", "label": "Subject", "hint": "who or what does the action", "answer": [0, 1] },
+              { "role": "verb",    "label": "Verb",    "hint": "the action word",              "answer": [2] },
+              { "role": "object",  "label": "Object",  "hint": "who or what receives the action", "answer": [3, 4] }
+            ]
           },
           {
+            "type": "roles",
             "sentence": "The girl kicked the ball.",
-            "task": "Select the verb in this active sentence.",
-            "answer": [2]
+            "parts": [
+              { "role": "subject", "label": "Subject", "hint": "who or what does the action", "answer": [0, 1] },
+              { "role": "verb",    "label": "Verb",    "hint": "the action word",              "answer": [2] },
+              { "role": "object",  "label": "Object",  "hint": "who or what receives the action", "answer": [3, 4] }
+            ]
           },
           {
-            "sentence": "The chef cooked a wonderful meal.",
-            "task": "Select the verb in this active sentence.",
-            "answer": [2]
-          },
-          {
+            "type": "roles",
             "sentence": "A police officer caught the thief.",
-            "task": "Select the verb in this active sentence.",
-            "answer": [3]
+            "parts": [
+              { "role": "subject", "label": "Subject", "hint": "who or what does the action", "answer": [0, 1, 2] },
+              { "role": "verb",    "label": "Verb",    "hint": "the action word",              "answer": [3] },
+              { "role": "object",  "label": "Object",  "hint": "who or what receives the action", "answer": [4, 5] }
+            ]
           },
           {
+            "type": "roles",
             "sentence": "Lightning struck the old oak tree.",
-            "task": "Select the verb in this active sentence.",
-            "answer": [1]
+            "parts": [
+              { "role": "subject", "label": "Subject", "hint": "who or what does the action", "answer": [0] },
+              { "role": "verb",    "label": "Verb",    "hint": "the action word",              "answer": [1] },
+              { "role": "object",  "label": "Object",  "hint": "who or what receives the action", "answer": [2, 3, 4, 5] }
+            ]
           }
         ]
       },
@@ -429,29 +449,48 @@
         ],
         "questions": [
           {
+            "type": "roles",
+            "sentence": "The postman was bitten by the dog.",
+            "parts": [
+              { "role": "subject", "label": "Subject",      "hint": "who or what the sentence is about — it receives the action", "answer": [0, 1] },
+              { "role": "verb",    "label": "Passive verb",  "hint": "the auxiliary verb and past participle", "answer": [2, 3] },
+              { "role": "agent",   "label": "Agent",         "hint": "who actually does the action — includes 'by'", "answer": [4, 5, 6] }
+            ]
+          },
+          {
+            "type": "roles",
             "sentence": "The books were marked by the teacher.",
-            "task": "Select the passive verb phrase (auxiliary + past participle).",
-            "answer": [2, 3]
+            "parts": [
+              { "role": "subject", "label": "Subject",      "hint": "who or what the sentence is about — it receives the action", "answer": [0, 1] },
+              { "role": "verb",    "label": "Passive verb",  "hint": "the auxiliary verb and past participle", "answer": [2, 3] },
+              { "role": "agent",   "label": "Agent",         "hint": "who actually does the action — includes 'by'", "answer": [4, 5, 6] }
+            ]
           },
           {
-            "sentence": "The window was broken by the ball.",
-            "task": "Select the passive verb phrase (auxiliary + past participle).",
-            "answer": [2, 3]
+            "type": "roles",
+            "sentence": "The goal was scored by the striker.",
+            "parts": [
+              { "role": "subject", "label": "Subject",      "hint": "who or what the sentence is about — it receives the action", "answer": [0, 1] },
+              { "role": "verb",    "label": "Passive verb",  "hint": "the auxiliary verb and past participle", "answer": [2, 3] },
+              { "role": "agent",   "label": "Agent",         "hint": "who actually does the action — includes 'by'", "answer": [4, 5, 6] }
+            ]
           },
           {
+            "type": "roles",
             "sentence": "The cake was eaten by the children.",
-            "task": "Select the passive verb phrase (auxiliary + past participle).",
-            "answer": [2, 3]
+            "parts": [
+              { "role": "subject", "label": "Subject",      "hint": "who or what the sentence is about — it receives the action", "answer": [0, 1] },
+              { "role": "verb",    "label": "Passive verb",  "hint": "the auxiliary verb and past participle", "answer": [2, 3] },
+              { "role": "agent",   "label": "Agent",         "hint": "who actually does the action — includes 'by'", "answer": [4, 5, 6] }
+            ]
           },
           {
-            "sentence": "The goal was scored in the last minute.",
-            "task": "Select the passive verb phrase (auxiliary + past participle).",
-            "answer": [2, 3]
-          },
-          {
-            "sentence": "The sandcastle was swept by the waves.",
-            "task": "Select the passive verb phrase (auxiliary + past participle).",
-            "answer": [2, 3]
+            "type": "roles",
+            "sentence": "The window was broken.",
+            "parts": [
+              { "role": "subject", "label": "Subject",      "hint": "who or what the sentence is about — it receives the action", "answer": [0, 1] },
+              { "role": "verb",    "label": "Passive verb",  "hint": "the auxiliary verb and past participle", "answer": [2, 3] }
+            ]
           }
         ]
       },

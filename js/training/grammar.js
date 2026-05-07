@@ -192,12 +192,15 @@ function renderQuestion() {
     return;
   }
 
-  if (taskEl) {
-    taskEl.textContent =
-      q.task || "Select the correct part of the sentence.";
+  if (q.type === "roles") {
+    renderRolesQuestion(sentenceEl, q);
+  } else {
+    if (taskEl) {
+      taskEl.textContent =
+        q.task || "Select the correct part of the sentence.";
+    }
+    renderSelectableSentence(sentenceEl, q);
   }
-
-  renderSelectableSentence(sentenceEl, q);
 }
 
 /* =========================
@@ -271,6 +274,129 @@ function renderSelectableSentence(container, question) {
         }
     }
   };
+}
+
+/* =========================
+   Roles question (subject / verb / object / agent)
+========================= */
+
+function renderRolesQuestion(container, question) {
+  const parts   = question.parts;
+  const tokens  = tokenize(question.sentence);
+  let currentPartIdx = 0;
+  let selected       = new Set();
+  let partConfirmed  = false;
+  const confirmedRoles = new Map(); // tokenIndex → role string
+
+  const checkBtn   = document.getElementById("grammarCheckBtn");
+  const nextBtn    = document.getElementById("grammarNextBtn");
+  const feedbackEl = document.getElementById("grammarFeedback");
+  const taskEl     = document.querySelector(".grammar-test .grammar-task");
+
+  container.innerHTML = "";
+  const spans = [];
+
+  tokens.forEach(t => {
+    const span = document.createElement("span");
+    span.textContent    = t.word;
+    span.className      = "grammar-token";
+    span.dataset.index  = String(t.index);
+    span.addEventListener("click", function () {
+      if (this.classList.contains("locked")) return;
+      const i = Number(this.dataset.index);
+      if (selected.has(i)) {
+        selected.delete(i);
+        this.classList.remove("selected");
+      } else {
+        selected.add(i);
+        this.classList.add("selected");
+      }
+      if (checkBtn) checkBtn.disabled = selected.size === 0;
+    });
+    container.appendChild(span);
+    container.append(" ");
+    spans.push(span);
+  });
+
+  function setTask() {
+    if (!taskEl) return;
+    if (currentPartIdx < parts.length) {
+      const p = parts[currentPartIdx];
+      taskEl.textContent =
+        "Step " + (currentPartIdx + 1) + " of " + parts.length +
+        ": Select the " + p.label + " — " + p.hint + ".";
+    } else {
+      taskEl.textContent = "All parts identified!";
+    }
+  }
+
+  function resetForNextPart() {
+    selected      = new Set();
+    partConfirmed = false;
+    spans.forEach((span, i) => {
+      span.classList.remove("selected", "wrong-answer");
+      if (!confirmedRoles.has(i)) span.classList.remove("locked");
+    });
+    if (feedbackEl) { feedbackEl.textContent = ""; feedbackEl.className = ""; }
+    if (checkBtn)   { checkBtn.textContent = "Check"; checkBtn.disabled = true; }
+    setTask();
+  }
+
+  activeTest = {
+    checked: false,
+
+    check() {
+      if (partConfirmed) {
+        resetForNextPart();
+        return;
+      }
+
+      const part    = parts[currentPartIdx];
+      const correct = new Set(part.answer.map(Number));
+      const isCorrect = selected.size === correct.size &&
+        [...selected].every(i => correct.has(i));
+
+      spans.forEach(span => span.classList.add("locked"));
+      spans.forEach((span, i) => {
+        span.classList.remove("selected");
+        if (correct.has(i)) {
+          span.classList.add("grammar-role-" + part.role);
+          confirmedRoles.set(i, part.role);
+        } else if (selected.has(i)) {
+          span.classList.add("wrong-answer");
+        }
+      });
+
+      if (feedbackEl) {
+        feedbackEl.textContent = isCorrect ? "✓ Correct" : "✗ Not quite — correct answer shown";
+        feedbackEl.className   = isCorrect ? "correct" : "wrong";
+      }
+      if (checkBtn) checkBtn.disabled = true;
+
+      currentPartIdx++;
+
+      if (currentPartIdx < parts.length) {
+        partConfirmed = true;
+        if (checkBtn) {
+          checkBtn.textContent = "Next step →";
+          checkBtn.disabled    = false;
+        }
+      } else {
+        this.checked = true;
+        if (checkBtn) checkBtn.textContent = "Check";
+        if (nextBtn)  nextBtn.disabled = false;
+        setTask();
+        if (feedbackEl) {
+          feedbackEl.textContent = "✓ All parts found!";
+          feedbackEl.className   = "correct";
+        }
+      }
+    }
+  };
+
+  if (checkBtn) { checkBtn.textContent = "Check"; checkBtn.disabled = true; }
+  if (nextBtn)  nextBtn.disabled = true;
+  setTask();
 }
 
 /* =========================
