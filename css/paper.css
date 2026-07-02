@@ -1,0 +1,57 @@
+/* =========================================================
+   SATs-paper question rendering.
+   Mirrors real KS2 papers: cream sheet, numbered boxes,
+   marks badge right-aligned, ruled answer lines.
+   Built out fully in Phase 2.
+   ========================================================= */
+
+.paper-sheet {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--sp-6);
+}
+
+.paper-q {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: var(--sp-4);
+  padding: var(--sp-5) 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.paper-q-num {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  font-weight: 650;
+}
+
+.paper-q-marks {
+  float: right;
+  font-size: var(--fs-0);
+  color: var(--ink-muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 1px 10px;
+  margin-left: var(--sp-3);
+}
+
+.answer-lines input,
+.answer-lines textarea {
+  width: 100%;
+  font: inherit;
+  border: none;
+  border-bottom: 1.5px solid var(--line);
+  background: transparent;
+  padding: var(--sp-2) 0;
+}
+
+.passage {
+  font-family: var(--font-passage);
+  font-size: var(--fs-2);
+  line-height: 1.7;
+}

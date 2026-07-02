@@ -1,0 +1,93 @@
+/* App chrome: layout, nav, cards, buttons. Tokens in theme.css. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: var(--fs-1);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--sp-4) var(--sp-4) var(--sp-7);
+}
+
+/* Header + nav */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+  padding: var(--sp-3) 0;
+}
+
+.app-title {
+  margin: 0;
+  font-size: var(--fs-3);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.app-nav {
+  display: flex;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.app-nav a {
+  display: inline-block;
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: 999px;
+  color: var(--ink-muted);
+  text-decoration: none;
+  font-weight: 550;
+}
+
+.app-nav a.active {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.app-nav a:not(.active):hover { background: var(--accent-soft); color: var(--ink); }
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--sp-5);
+}
+
+/* Buttons */
+button, .btn {
+  font: inherit;
+  font-weight: 550;
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+button.primary, .btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.muted { color: var(--ink-muted); }
+.hidden { display: none !important; }
