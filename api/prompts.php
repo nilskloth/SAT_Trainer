@@ -6,7 +6,7 @@
  * open relay. Generation ops are added in Phase 5.
  */
 
-const OPS = ['ping', 'usage', 'mark'];
+const OPS = ['ping', 'usage', 'mark', 'generate-passage'];
 
 /* Which daily-cap bucket an op draws from. */
 function op_cap_bucket(string $op): string {
@@ -21,9 +21,16 @@ function build_request(string $op, array $payload): array {
   switch ($op) {
     case 'mark':
       return build_mark_request($payload);
+    case 'generate-passage':
+      return build_generate_passage_request($payload);
     default:
       throw new InvalidArgumentException("Unknown op: $op");
   }
+}
+
+/* Generation runs long — give it more wall time than marking. */
+function op_timeout(string $op): int {
+  return $op === 'mark' ? 100 : 280;
 }
 
 function require_string(array $p, string $key, int $maxLen): string {
@@ -34,6 +41,82 @@ function require_string(array $p, string $key, int $maxLen): string {
     throw new InvalidArgumentException("payload.$key too long");
   }
   return $p[$key];
+}
+
+function build_generate_passage_request(array $p): array {
+  $category = $p['category'] ?? 'fiction';
+  if (!in_array($category, ['fiction', 'non-fiction', 'poetry'], true)) {
+    throw new InvalidArgumentException('payload.category must be fiction, non-fiction or poetry');
+  }
+  $theme = isset($p['theme']) && is_string($p['theme']) ? substr($p['theme'], 0, 120) : '';
+
+  $system = <<<SYS
+You are an expert author of UK Key Stage 2 SATs English reading tests,
+writing to the STA test framework for Year 6 pupils (ages 10-11).
+
+Write ONE reading passage of 600-900 words in UK English, age-appropriate,
+engaging, and comparable in difficulty to real KS2 test texts. The "text"
+field must be HTML using only <p>, <em> and <strong> tags.
+
+Then write 8 to 10 questions on the passage. Requirements:
+- Tag each question with its STA content domain: 2a (word meaning),
+  2b (retrieve), 2c (summarise), 2d (inference), 2e (predict),
+  2f (structure), 2g (language choice), 2h (compare).
+- Weight the set like a real paper: mostly 2b and 2d, at least one 2a.
+- Use type "mcq" (4 choices, answer must be one of them), "tick2"
+  (5 choices, exactly 2 correct in answers), "short" (1 mark, brief
+  written answer) or "open" (2-3 marks, explain/justify with evidence).
+- Every question needs acceptablePoints: the mark-scheme points a marker
+  would accept, in official mark-scheme style ("her hands were shaking"),
+  with 2-4 alternatives phrasings for short answers.
+- marks: 1 for mcq/short, 2 for tick2, 2-3 for open. modelAnswer: a
+  complete correct answer.
+- Questions must be answerable from the passage alone.
+SYS;
+
+  $user = "Write a new {$category} passage" . ($theme !== '' ? " about: {$theme}" : '') .
+    " with its questions.";
+
+  $questionSchema = [
+    'type' => 'object',
+    'properties' => [
+      'type' => ['type' => 'string', 'enum' => ['mcq', 'tick2', 'short', 'open']],
+      'domain' => ['type' => 'string', 'enum' => ['2a', '2b', '2c', '2d', '2e', '2f', '2g', '2h']],
+      'marks' => ['type' => 'integer'],
+      'stem' => ['type' => 'string'],
+      'choices' => ['type' => 'array', 'items' => ['type' => 'string']],
+      'answer' => ['type' => 'string'],
+      'answers' => ['type' => 'array', 'items' => ['type' => 'string']],
+      'acceptablePoints' => ['type' => 'array', 'items' => ['type' => 'string']],
+      'modelAnswer' => ['type' => 'string'],
+    ],
+    'required' => ['type', 'domain', 'marks', 'stem', 'choices', 'answer', 'answers', 'acceptablePoints', 'modelAnswer'],
+    'additionalProperties' => false,
+  ];
+
+  return [
+    'model' => 'claude-sonnet-5',
+    'max_tokens' => 16000,
+    'system' => $system,
+    'messages' => [['role' => 'user', 'content' => $user]],
+    'output_config' => [
+      'format' => [
+        'type' => 'json_schema',
+        'schema' => [
+          'type' => 'object',
+          'properties' => [
+            'title' => ['type' => 'string'],
+            'genre' => ['type' => 'string'],
+            'category' => ['type' => 'string', 'enum' => ['fiction', 'non-fiction', 'poetry']],
+            'text' => ['type' => 'string'],
+            'questions' => ['type' => 'array', 'items' => $questionSchema],
+          ],
+          'required' => ['title', 'genre', 'category', 'text', 'questions'],
+          'additionalProperties' => false,
+        ],
+      ],
+    ],
+  ];
 }
 
 function build_mark_request(array $p): array {

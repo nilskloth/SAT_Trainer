@@ -99,13 +99,13 @@ try {
 }
 
 /* Upstream call — raw curl, no SDK (shared hosting) */
-set_time_limit(120);
+set_time_limit(op_timeout($op) + 20);
 $ch = curl_init(ANTHROPIC_URL);
 curl_setopt_array($ch, [
   CURLOPT_POST => true,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_CONNECTTIMEOUT => 10,
-  CURLOPT_TIMEOUT => 100,
+  CURLOPT_TIMEOUT => op_timeout($op),
   CURLOPT_HTTPHEADER => [
     'Content-Type: application/json',
     'x-api-key: ' . $config['anthropic_api_key'],

@@ -4,7 +4,9 @@
    ========================================================= */
 
 import { getStore, saveStore, resetStore } from "../core/store.js";
+import { loadContent } from "../core/loader.js";
 import { ping, usage } from "../core/ai.js";
+import { generateReadingTest } from "../gen/generate.js";
 import { esc } from "../core/utils.js";
 import { domainLabel } from "./paper.js";
 
@@ -79,6 +81,18 @@ export function renderProgress(el) {
       </p>
       <p data-ai-status class="muted"></p>
       <div data-usage></div>
+      <hr style="border:none;border-top:1px solid var(--line-soft);margin:var(--sp-4) 0;">
+      <p style="display:flex;gap:var(--sp-2);flex-wrap:wrap;align-items:center;">
+        <select data-gen-category style="font:inherit;">
+          <option value="fiction">Fiction</option>
+          <option value="non-fiction">Non-fiction</option>
+          <option value="poetry">Poetry</option>
+        </select>
+        <input data-gen-theme type="text" placeholder="Theme (optional), e.g. volcanoes"
+          style="font:inherit;padding:var(--sp-2);border:1px solid var(--line);border-radius:6px;width:min(240px,50vw);">
+        <button data-generate>Generate a new reading test</button>
+      </p>
+      <p data-gen-status class="muted"></p>
     </div>
 
     <div class="card">
@@ -119,6 +133,24 @@ export function renderProgress(el) {
     getStore().settings.proxyToken = el.querySelector("[data-token]").value.trim();
     saveStore();
     refreshUsage();
+  });
+
+  el.querySelector("[data-generate]").addEventListener("click", async () => {
+    const btn = el.querySelector("[data-generate]");
+    const genStatus = el.querySelector("[data-gen-status]");
+    btn.disabled = true;
+    try {
+      await generateReadingTest({
+        category: el.querySelector("[data-gen-category]").value,
+        theme: el.querySelector("[data-gen-theme]").value.trim()
+      }, text => { genStatus.textContent = text; });
+      await loadContent();
+      genStatus.innerHTML += ` <a href="#/papers/reading">Try the reading paper</a> — new tests join the pool.`;
+    } catch (err) {
+      genStatus.textContent = `Couldn't generate a test: ${err.message}`;
+    } finally {
+      btn.disabled = false;
+    }
   });
 
   el.querySelector("[data-export]").addEventListener("click", () => {
