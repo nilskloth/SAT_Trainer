@@ -1,0 +1,16 @@
+# Deny direct web access to the config and state. proxy.php stays reachable.
+<Files "config.php">
+  Require all denied
+</Files>
+<Files "config.example.php">
+  Require all denied
+</Files>
+<Files "prompts.php">
+  Require all denied
+</Files>
+<Files "ratelimit.php">
+  Require all denied
+</Files>
+
+RewriteEngine On
+RewriteRule ^state/ - [F,L]

@@ -7,8 +7,9 @@
 import { getData } from "../core/loader.js";
 import { recordAttempt } from "../core/store.js";
 import { mark } from "../core/marking.js";
+import { markAI } from "../core/ai.js";
 import { pickN, esc } from "../core/utils.js";
-import { renderQuestion, collectAnswer, hasAnswer, showResult } from "../render/question.js";
+import { renderQuestion, collectAnswer, hasAnswer, showResult, showPending } from "../render/question.js";
 import { renderSelfMark } from "../render/selfmark.js";
 import { generateArithmeticPaper } from "../gen/arithmetic.js";
 
@@ -204,10 +205,16 @@ function runPaper(root, paper, set) {
    Marking flow
 ========================= */
 
-function checkAnswers(root, paper, set, els, seconds) {
+async function checkAnswers(root, paper, set, els, seconds) {
   root.querySelector("[data-check]").disabled = true;
-  const results = new Map();      // qid -> {earned, possible, marking}
+  const status = root.querySelector("[data-status]");
+  const results = new Map();      // qid -> {earned, possible, marking, feedback?}
+  const freeText = [];            // [{q, qEl, answer}] needing AI/self marking
   let pendingSelf = 0;
+
+  const maybeFinish = () => {
+    if (pendingSelf === 0) finish(root, paper, set, results, seconds);
+  };
 
   set.questions.forEach(q => {
     const qEl = els.get(q.id);
@@ -220,28 +227,41 @@ function checkAnswers(root, paper, set, els, seconds) {
       return;
     }
 
-    /* Free-text: no answer → 0; otherwise self-mark (AI arrives in Phase 3) */
     if (!hasAnswer(q, answer)) {
       results.set(q.id, { earned: 0, possible: q.marks, marking: "auto" });
       showResult(q, qEl, { earned: 0, possible: q.marks });
       return;
     }
 
-    pendingSelf++;
-    renderSelfMark(q, qEl, res => {
-      results.set(q.id, { ...res, marking: "self" });
-      showResult(q, qEl, res, { marking: "self" });
-      pendingSelf--;
-      if (pendingSelf === 0) finish(root, paper, set, results, seconds);
-    });
+    freeText.push({ q, qEl, answer });
   });
 
-  const status = root.querySelector("[data-status]");
-  if (pendingSelf > 0) {
-    status.textContent = `Mark your ${pendingSelf} written answer${pendingSelf > 1 ? "s" : ""} using the checklists.`;
-  } else {
-    finish(root, paper, set, results, seconds);
+  /* Free-text answers: try the AI marker, fall back to self-marking. */
+  const excerpt = set.passage ? set.passage.text.replace(/<[^>]+>/g, " ").slice(0, 6000) : null;
+  for (let i = 0; i < freeText.length; i++) {
+    const { q, qEl, answer } = freeText[i];
+    status.textContent = `Marking your written answers… ${i + 1} of ${freeText.length}`;
+    showPending(qEl, "Being marked…");
+    try {
+      const res = await markAI(q, answer, excerpt);
+      results.set(q.id, { earned: res.earned, possible: res.possible, marking: "ai", feedback: res.feedback });
+      showResult(q, qEl, res, { marking: "ai", feedback: res.feedback });
+    } catch (err) {
+      /* Offline, no token, rate-limited, or bad response → mark-scheme checklist */
+      pendingSelf++;
+      renderSelfMark(q, qEl, res => {
+        results.set(q.id, { ...res, marking: "self" });
+        showResult(q, qEl, res, { marking: "self" });
+        pendingSelf--;
+        maybeFinish();
+      });
+    }
   }
+
+  status.textContent = pendingSelf > 0
+    ? `Mark your ${pendingSelf} written answer${pendingSelf > 1 ? "s" : ""} using the checklists.`
+    : "";
+  maybeFinish();
 }
 
 function finish(root, paper, set, results, seconds) {
