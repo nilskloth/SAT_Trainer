@@ -184,9 +184,9 @@
     "skill": "expanded_noun_phrase",
     "stem": "Add an adjective to expand the noun phrase:\n\nthe house",
     "answer": [
-        "the old house",
-        "the large house"
-      ]
+      "the old house",
+      "the large house"
+    ]
   },
   {
     "id": "g19",
@@ -247,10 +247,10 @@
     "skill": "determiners",
     "stem": "Which determiner could complete this sentence?\n\n___ apples were missing.",
     "answer": [
-        "some",
-        "those",
-        "many"
-      ]
+      "some",
+      "those",
+      "many"
+    ]
   },
   {
     "id": "g25",
@@ -343,7 +343,11 @@
     "type": "short",
     "skill": "synonyms",
     "stem": "Write a synonym for the word \"quick\".",
-    "answer": ["fast", "rapid", "swift"]
+    "answer": [
+      "fast",
+      "rapid",
+      "swift"
+    ]
   },
   {
     "id": "g34",
@@ -424,9 +428,9 @@
     "skill": "expanded_noun_phrase",
     "stem": "Expand the noun phrase:\n\nthe dog",
     "answer": [
-        "the small nervous dog",
-        "the large brown dog"
-      ]
+      "the small nervous dog",
+      "the large brown dog"
+    ]
   },
   {
     "id": "g42",
@@ -447,10 +451,10 @@
     "skill": "modal_verbs",
     "stem": "Write a modal verb that could complete the sentence:\n\nYou ___ wear a helmet.",
     "answer": [
-        "must",
-        "should",
-        "could"
-      ]
+      "must",
+      "should",
+      "could"
+    ]
   },
   {
     "id": "g44",
@@ -479,7 +483,7 @@
     "stem": "Which prefix could be added to \"possible\" to make its opposite?",
     "choices": [
       "un-",
-      "re-",
+      "im-",
       "pre-",
       "mis-"
     ],

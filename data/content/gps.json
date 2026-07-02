@@ -1,0 +1,4406 @@
+{
+  "topics": [
+    {
+      "id": "nouns",
+      "label": "Nouns",
+      "domain": "G1",
+      "definition": "A noun is a naming word for a person, place, thing or idea.",
+      "examples": [
+        {
+          "sentence": "The dog ran across the field.",
+          "highlight": [
+            1,
+            5
+          ],
+          "explanation": "Dog and field are nouns because they name things."
+        }
+      ]
+    },
+    {
+      "id": "verbs",
+      "label": "Verbs",
+      "domain": "G1",
+      "definition": "A verb shows an action or a state of being. Some verbs are auxiliary (helping) verbs.",
+      "examples": [
+        {
+          "sentence": "She is running to school.",
+          "highlight": [
+            1,
+            2
+          ],
+          "explanation": "Is is an auxiliary verb and running is the main verb."
+        }
+      ]
+    },
+    {
+      "id": "adjectives",
+      "label": "Adjectives",
+      "domain": "G1",
+      "definition": "An adjective describes a noun.",
+      "examples": [
+        {
+          "sentence": "The tall building touched the clouds.",
+          "highlight": [
+            1
+          ],
+          "explanation": "Tall describes the noun building."
+        }
+      ]
+    },
+    {
+      "id": "adverbs",
+      "label": "Adverbs",
+      "domain": "G1",
+      "definition": "An adverb gives more information about a verb. It often tells us how, when or where.",
+      "examples": [
+        {
+          "sentence": "She ran quickly to the gate.",
+          "highlight": [
+            2
+          ],
+          "explanation": "Quickly tells us how she ran."
+        }
+      ]
+    },
+    {
+      "id": "determiners",
+      "label": "Determiners",
+      "domain": "G1",
+      "definition": "A determiner comes before a noun and shows which one or how many.",
+      "examples": [
+        {
+          "sentence": "Those apples are ripe.",
+          "highlight": [
+            0
+          ],
+          "explanation": "Those tells us which apples."
+        }
+      ]
+    },
+    {
+      "id": "prepositions",
+      "label": "Prepositions",
+      "domain": "G1",
+      "definition": "A preposition shows the relationship between a noun and another word in the sentence.",
+      "examples": [
+        {
+          "sentence": "The cat slept under the table.",
+          "highlight": [
+            3
+          ],
+          "explanation": "Under shows the position of the cat."
+        }
+      ]
+    },
+    {
+      "id": "subordinate-clauses",
+      "label": "Subordinate Clauses",
+      "domain": "G3",
+      "definition": "A subordinate clause gives extra information but cannot stand alone as a sentence.",
+      "examples": [
+        {
+          "sentence": "I stayed inside because it was raining.",
+          "highlight": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "Because it was raining is a subordinate clause."
+        }
+      ]
+    },
+    {
+      "id": "pronouns",
+      "label": "Pronouns",
+      "domain": "G1",
+      "definition": "A pronoun replaces a noun to avoid repetition.",
+      "examples": [
+        {
+          "sentence": "Sarah lost her book.",
+          "highlight": [
+            2
+          ],
+          "explanation": "Her is a pronoun referring to Sarah."
+        }
+      ]
+    },
+    {
+      "id": "conjunctions",
+      "label": "Conjunctions",
+      "domain": "G1",
+      "definition": "A conjunction joins words, phrases or clauses.",
+      "examples": [
+        {
+          "sentence": "I wanted to go but it was raining.",
+          "highlight": [
+            4
+          ],
+          "explanation": "But joins two ideas."
+        }
+      ]
+    },
+    {
+      "id": "active-voice",
+      "label": "Active Voice",
+      "domain": "G4",
+      "definition": "In an <strong>active</strong> sentence the <em>subject performs</em> the action. The verb is a straightforward doing word: <em>The dog bit the postman.</em> The dog (subject) does the biting.",
+      "examples": [
+        {
+          "sentence": "The dog bit the postman.",
+          "highlight": [
+            2
+          ],
+          "explanation": "Bit is the active verb — the dog (subject) performs the action."
+        }
+      ]
+    },
+    {
+      "id": "passive-voice",
+      "label": "Passive Voice",
+      "domain": "G4",
+      "definition": "In a <strong>passive</strong> sentence the <em>subject receives</em> the action. We form the passive with <em>was/were</em> + past participle. The doer can be added with <em>by</em>: <em>The postman was bitten by the dog.</em>",
+      "examples": [
+        {
+          "sentence": "The postman was bitten by the dog.",
+          "highlight": [
+            2,
+            3
+          ],
+          "explanation": "Was bitten is the passive verb phrase — the postman (subject) receives the action. The dog follows 'by'."
+        }
+      ]
+    },
+    {
+      "id": "simple-present",
+      "label": "Simple Present",
+      "domain": "G4",
+      "definition": "The <strong>simple present tense</strong> describes actions happening now, regularly, or as a general truth. Regular verbs add <em>-s</em> or <em>-es</em> in the third person singular (e.g. <em>runs, watches</em>).",
+      "examples": [
+        {
+          "sentence": "She runs to school every morning.",
+          "highlight": [
+            1
+          ],
+          "explanation": "Runs is a simple present tense verb — it describes a regular, repeated action."
+        }
+      ]
+    },
+    {
+      "id": "simple-past",
+      "label": "Simple Past",
+      "domain": "G4",
+      "definition": "The <strong>simple past tense</strong> describes a completed action in the past. Regular verbs add <em>-ed</em> (e.g. <em>walked</em>). Many common verbs are irregular (e.g. <em>ran, ate, broke, wrote</em>).",
+      "examples": [
+        {
+          "sentence": "She ran to school this morning.",
+          "highlight": [
+            1
+          ],
+          "explanation": "Ran is a simple past tense verb — it describes a completed action. Ran is the irregular past of run."
+        }
+      ]
+    },
+    {
+      "id": "present-progressive",
+      "label": "Present Progressive",
+      "domain": "G4",
+      "definition": "The <strong>present progressive</strong> (or present continuous) describes actions happening right now or around the present time. It is formed with <em>am/is/are</em> + verb + <em>-ing</em>. Example: <em>I am playing</em>.",
+      "examples": [
+        {
+          "sentence": "She is writing a story.",
+          "highlight": [
+            1,
+            2
+          ],
+          "explanation": "\"Is writing\" is the present progressive verb phrase — \"is\" (auxiliary) + \"writing\" (main verb + -ing)."
+        }
+      ]
+    },
+    {
+      "id": "past-progressive",
+      "label": "Past Progressive",
+      "domain": "G4",
+      "definition": "The <strong>past progressive</strong> (or past continuous) describes actions that were in progress at a particular point in the past. It is formed with <em>was/were</em> + verb + <em>-ing</em>. Example: <em>I was playing</em>.",
+      "examples": [
+        {
+          "sentence": "She was singing when the bell rang.",
+          "highlight": [
+            1,
+            2
+          ],
+          "explanation": "\"Was singing\" is the past progressive verb phrase — \"was\" (auxiliary) + \"singing\" (main verb + -ing)."
+        }
+      ]
+    },
+    {
+      "id": "present-perfect",
+      "label": "Present Perfect",
+      "domain": "G4",
+      "definition": "The <strong>present perfect</strong> is formed with <em>has</em> or <em>have</em> + past participle. It links the past to the present — describing something that just happened, or that started in the past and still matters now.",
+      "examples": [
+        {
+          "sentence": "She has won the race.",
+          "highlight": [
+            1,
+            2
+          ],
+          "explanation": "Has won is a present perfect verb phrase — has is the auxiliary verb and won is the past participle."
+        }
+      ]
+    },
+    {
+      "id": "past-perfect",
+      "label": "Past Perfect",
+      "domain": "G4",
+      "definition": "The <strong>past perfect</strong> is formed with <em>had</em> + past participle. It describes an action that was completed <em>before</em> another event in the past — the further-back past.",
+      "examples": [
+        {
+          "sentence": "By the time he arrived, she had won the race.",
+          "highlight": [
+            6,
+            7
+          ],
+          "explanation": "Had won is past perfect — her winning happened before he arrived. We use had + past participle to show this earlier past event."
+        }
+      ]
+    },
+    {
+      "id": "simple-future",
+      "label": "Simple Future",
+      "domain": "G4",
+      "definition": "The <strong>simple future</strong> describes actions that will happen after now. It is formed with <em>will</em> + base verb. Example: <em>I will play</em>. It can also be expressed with <em>am/is/are going to</em> + base verb.",
+      "examples": [
+        {
+          "sentence": "She will visit her grandparents tomorrow.",
+          "highlight": [
+            1,
+            2
+          ],
+          "explanation": "\"Will visit\" is the simple future — \"will\" (modal auxiliary) + \"visit\" (base form of the verb, no -ing or -ed)."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "gps-g1",
+      "subject": "gps",
+      "domain": "G5",
+      "marks": 1,
+      "stem": "Which sentence uses a comma correctly?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "After lunch we went to the park.",
+        "After lunch, we went to the park.",
+        "After, lunch we went to the park.",
+        "After lunch we, went to the park."
+      ],
+      "answer": "After lunch, we went to the park.",
+      "markScheme": {
+        "modelAnswer": "After lunch, we went to the park."
+      }
+    },
+    {
+      "id": "gps-g2",
+      "subject": "gps",
+      "domain": "G5",
+      "marks": 1,
+      "stem": "Which sentence shows the apostrophe used correctly?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "The girls coat was hanging by the door.",
+        "The girl's coat was hanging by the door.",
+        "The girls' coat was hanging by the door.",
+        "The girls coats was hanging by the door."
+      ],
+      "answer": "The girl's coat was hanging by the door.",
+      "markScheme": {
+        "modelAnswer": "The girl's coat was hanging by the door."
+      }
+    },
+    {
+      "id": "gps-g3",
+      "subject": "gps",
+      "domain": "G4",
+      "marks": 1,
+      "stem": "Rewrite the sentence in the past tense:\n\nShe runs towards the gate.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "She ran towards the gate."
+      ],
+      "markScheme": {
+        "modelAnswer": "She ran towards the gate."
+      }
+    },
+    {
+      "id": "gps-g4",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Which word is an adjective in the sentence below?\n\nThe curious cat crept silently.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "curious",
+        "cat",
+        "crept",
+        "silently"
+      ],
+      "answer": "curious",
+      "markScheme": {
+        "modelAnswer": "curious"
+      }
+    },
+    {
+      "id": "gps-g5",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Which sentence contains an adverb?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "She opened the door.",
+        "The dog barked.",
+        "He ran quickly.",
+        "They watched the film."
+      ],
+      "answer": "He ran quickly.",
+      "markScheme": {
+        "modelAnswer": "He ran quickly."
+      }
+    },
+    {
+      "id": "gps-g6",
+      "subject": "gps",
+      "domain": "G6",
+      "marks": 1,
+      "stem": "Add a prefix to the word \"agree\" to make its opposite.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "disagree"
+      ],
+      "markScheme": {
+        "modelAnswer": "disagree"
+      }
+    },
+    {
+      "id": "gps-g7",
+      "subject": "gps",
+      "domain": "G3",
+      "marks": 1,
+      "stem": "Which sentence contains a subordinate clause?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "I packed my bag.",
+        "She smiled.",
+        "When it started raining, we went inside.",
+        "The sun was bright."
+      ],
+      "answer": "When it started raining, we went inside.",
+      "markScheme": {
+        "modelAnswer": "When it started raining, we went inside."
+      }
+    },
+    {
+      "id": "gps-g8",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Replace the underlined noun with a pronoun:\n\nThe teacher asked the class to listen.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "She asked the class to listen."
+      ],
+      "markScheme": {
+        "modelAnswer": "She asked the class to listen."
+      }
+    },
+    {
+      "id": "gps-g9",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Which word is a verb?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g9",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "careful",
+        "running",
+        "happiness",
+        "quickly"
+      ],
+      "answer": "running",
+      "markScheme": {
+        "modelAnswer": "running"
+      }
+    },
+    {
+      "id": "gps-g10",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Write the plural of the word \"child\".",
+      "meta": {
+        "source": "migrated:banks/spag.json/g10",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "children"
+      ],
+      "markScheme": {
+        "modelAnswer": "children"
+      }
+    },
+    {
+      "id": "gps-g11",
+      "subject": "gps",
+      "domain": "G5",
+      "marks": 1,
+      "stem": "Which sentence uses speech marks correctly?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g11",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "She said, \"I am tired\".",
+        "\"She said, I am tired.\"",
+        "She said \"I am tired.\"",
+        "\"I am tired,\" she said."
+      ],
+      "answer": "\"I am tired,\" she said.",
+      "markScheme": {
+        "modelAnswer": "\"I am tired,\" she said."
+      }
+    },
+    {
+      "id": "gps-g12",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Circle the modal verb in the sentence:\n\nYou should finish your homework.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g12",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "should"
+      ],
+      "markScheme": {
+        "modelAnswer": "should"
+      }
+    },
+    {
+      "id": "gps-g13",
+      "subject": "gps",
+      "domain": "G6",
+      "marks": 1,
+      "stem": "Which word is closest in meaning to \"angry\"?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g13",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "pleased",
+        "furious",
+        "tired",
+        "nervous"
+      ],
+      "answer": "furious",
+      "markScheme": {
+        "modelAnswer": "furious"
+      }
+    },
+    {
+      "id": "gps-g14",
+      "subject": "gps",
+      "domain": "G2",
+      "marks": 1,
+      "stem": "What type of sentence is this?\n\nPlease sit down.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g14",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "command / imperative"
+      ],
+      "markScheme": {
+        "modelAnswer": "command / imperative"
+      }
+    },
+    {
+      "id": "gps-g15",
+      "subject": "gps",
+      "domain": "G6",
+      "marks": 1,
+      "stem": "Which suffix changes the word \"help\" into a noun?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g15",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "-ful",
+        "-less",
+        "-er",
+        "-ness"
+      ],
+      "answer": "-er",
+      "markScheme": {
+        "modelAnswer": "-er"
+      }
+    },
+    {
+      "id": "gps-g16",
+      "subject": "gps",
+      "domain": "G5",
+      "marks": 1,
+      "stem": "Add commas to the sentence:\n\nBefore dinner we washed our hands.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g16",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "Before dinner, we washed our hands."
+      ],
+      "markScheme": {
+        "modelAnswer": "Before dinner, we washed our hands."
+      }
+    },
+    {
+      "id": "gps-g17",
+      "subject": "gps",
+      "domain": "G6",
+      "marks": 1,
+      "stem": "Choose the correct word to complete the sentence:\n\nI would like ___ go home.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g17",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "too",
+        "to",
+        "two",
+        "tow"
+      ],
+      "answer": "to",
+      "markScheme": {
+        "modelAnswer": "to"
+      }
+    },
+    {
+      "id": "gps-g18",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Add an adjective to expand the noun phrase:\n\nthe house",
+      "meta": {
+        "source": "migrated:banks/spag.json/g18",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        [
+          "the old house",
+          "the large house"
+        ]
+      ],
+      "markScheme": {
+        "modelAnswer": [
+          "the old house",
+          "the large house"
+        ]
+      }
+    },
+    {
+      "id": "gps-g19",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Which word is a conjunction?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g19",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "quickly",
+        "because",
+        "happy",
+        "jumped"
+      ],
+      "answer": "because",
+      "markScheme": {
+        "modelAnswer": "because"
+      }
+    },
+    {
+      "id": "gps-g20",
+      "subject": "gps",
+      "domain": "G4",
+      "marks": 1,
+      "stem": "Rewrite the sentence in the passive voice:\n\nThe dog chased the ball.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g20",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "The ball was chased by the dog."
+      ],
+      "markScheme": {
+        "modelAnswer": "The ball was chased by the dog."
+      }
+    },
+    {
+      "id": "gps-g21",
+      "subject": "gps",
+      "domain": "G7",
+      "marks": 1,
+      "stem": "Which sentence is written in Standard English?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g21",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "We was late for school.",
+        "We were late for school.",
+        "We was being late.",
+        "We be late for school."
+      ],
+      "answer": "We were late for school.",
+      "markScheme": {
+        "modelAnswer": "We were late for school."
+      }
+    },
+    {
+      "id": "gps-g22",
+      "subject": "gps",
+      "domain": "G5",
+      "marks": 1,
+      "stem": "Correct the capital letters:\n\ni live in london.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g22",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "I live in London."
+      ],
+      "markScheme": {
+        "modelAnswer": "I live in London."
+      }
+    },
+    {
+      "id": "gps-g23",
+      "subject": "gps",
+      "domain": "G3",
+      "marks": 1,
+      "stem": "Which sentence includes a relative clause?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g23",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "I lost my book.",
+        "The boy who won smiled.",
+        "She laughed loudly.",
+        "It started raining."
+      ],
+      "answer": "The boy who won smiled.",
+      "markScheme": {
+        "modelAnswer": "The boy who won smiled."
+      }
+    },
+    {
+      "id": "gps-g24",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Which determiner could complete this sentence?\n\n___ apples were missing.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g24",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        [
+          "some",
+          "those",
+          "many"
+        ]
+      ],
+      "markScheme": {
+        "modelAnswer": [
+          "some",
+          "those",
+          "many"
+        ]
+      }
+    },
+    {
+      "id": "gps-g25",
+      "subject": "gps",
+      "domain": "G6",
+      "marks": 1,
+      "stem": "Which word contains a suffix?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g25",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "jump",
+        "care",
+        "happiness",
+        "run"
+      ],
+      "answer": "happiness",
+      "markScheme": {
+        "modelAnswer": "happiness"
+      }
+    },
+    {
+      "id": "gps-g26",
+      "subject": "gps",
+      "domain": "G5",
+      "marks": 1,
+      "stem": "Which sentence uses a semicolon correctly?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g26",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "It was raining; and we stayed inside.",
+        "It was raining; we stayed inside.",
+        "It was raining; because we stayed inside.",
+        "It was; raining we stayed inside."
+      ],
+      "answer": "It was raining; we stayed inside.",
+      "markScheme": {
+        "modelAnswer": "It was raining; we stayed inside."
+      }
+    },
+    {
+      "id": "gps-g27",
+      "subject": "gps",
+      "domain": "G4",
+      "marks": 1,
+      "stem": "Rewrite the sentence using the present perfect tense:\n\nShe finished her homework.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g27",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "She has finished her homework."
+      ],
+      "markScheme": {
+        "modelAnswer": "She has finished her homework."
+      }
+    },
+    {
+      "id": "gps-g28",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Which sentence includes a fronted adverbial?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g28",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "We walked home slowly.",
+        "After the storm, the streets were quiet.",
+        "The streets were quiet after the storm.",
+        "We quietly walked home."
+      ],
+      "answer": "After the storm, the streets were quiet.",
+      "markScheme": {
+        "modelAnswer": "After the storm, the streets were quiet."
+      }
+    },
+    {
+      "id": "gps-g29",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Underline the relative pronoun in the sentence:\n\nThe book that I borrowed was interesting.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g29",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "that"
+      ],
+      "markScheme": {
+        "modelAnswer": "that"
+      }
+    },
+    {
+      "id": "gps-g30",
+      "subject": "gps",
+      "domain": "G5",
+      "marks": 1,
+      "stem": "Which sentence uses a hyphen correctly?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g30",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "This is a well known fact.",
+        "This is a well-known fact.",
+        "This is a wellknown fact.",
+        "This is a well known-fact."
+      ],
+      "answer": "This is a well-known fact.",
+      "markScheme": {
+        "modelAnswer": "This is a well-known fact."
+      }
+    },
+    {
+      "id": "gps-g31",
+      "subject": "gps",
+      "domain": "G6",
+      "marks": 1,
+      "stem": "Add a suffix to turn \"kind\" into a noun.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g31",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "kindness"
+      ],
+      "markScheme": {
+        "modelAnswer": "kindness"
+      }
+    },
+    {
+      "id": "gps-g32",
+      "subject": "gps",
+      "domain": "G7",
+      "marks": 1,
+      "stem": "Which sentence uses formal language?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g32",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "I wanna go now.",
+        "Can you help me?",
+        "Please assist me with this task.",
+        "This is really cool."
+      ],
+      "answer": "Please assist me with this task.",
+      "markScheme": {
+        "modelAnswer": "Please assist me with this task."
+      }
+    },
+    {
+      "id": "gps-g33",
+      "subject": "gps",
+      "domain": "G6",
+      "marks": 1,
+      "stem": "Write a synonym for the word \"quick\".",
+      "meta": {
+        "source": "migrated:banks/spag.json/g33",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        [
+          "fast",
+          "rapid",
+          "swift"
+        ]
+      ],
+      "markScheme": {
+        "modelAnswer": [
+          "fast",
+          "rapid",
+          "swift"
+        ]
+      }
+    },
+    {
+      "id": "gps-g34",
+      "subject": "gps",
+      "domain": "G7",
+      "marks": 1,
+      "stem": "Which sentence is NOT written in Standard English?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g34",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "I did my homework.",
+        "We were playing football.",
+        "I ain't got any pencils.",
+        "She has finished her work."
+      ],
+      "answer": "I ain't got any pencils.",
+      "markScheme": {
+        "modelAnswer": "I ain't got any pencils."
+      }
+    },
+    {
+      "id": "gps-g35",
+      "subject": "gps",
+      "domain": "G5",
+      "marks": 1,
+      "stem": "Add commas to clarify the meaning:\n\nLet's eat Grandma.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g35",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "Let's eat, Grandma."
+      ],
+      "markScheme": {
+        "modelAnswer": "Let's eat, Grandma."
+      }
+    },
+    {
+      "id": "gps-g36",
+      "subject": "gps",
+      "domain": "G4",
+      "marks": 1,
+      "stem": "Which sentence uses the verb form correctly?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g36",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "She done her work.",
+        "She did her work.",
+        "She has did her work.",
+        "She done did her work."
+      ],
+      "answer": "She did her work.",
+      "markScheme": {
+        "modelAnswer": "She did her work."
+      }
+    },
+    {
+      "id": "gps-g37",
+      "subject": "gps",
+      "domain": "G2",
+      "marks": 1,
+      "stem": "Add a question tag:\n\nYou finished your homework, ___?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g37",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "didn't you"
+      ],
+      "markScheme": {
+        "modelAnswer": "didn't you"
+      }
+    },
+    {
+      "id": "gps-g38",
+      "subject": "gps",
+      "domain": "G6",
+      "marks": 1,
+      "stem": "Which word is the opposite of \"expand\"?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g38",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "stretch",
+        "increase",
+        "contract",
+        "develop"
+      ],
+      "answer": "contract",
+      "markScheme": {
+        "modelAnswer": "contract"
+      }
+    },
+    {
+      "id": "gps-g39",
+      "subject": "gps",
+      "domain": "G5",
+      "marks": 1,
+      "stem": "Rewrite with correct plural possession:\n\nThe toys of the children were broken.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g39",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "The children's toys were broken."
+      ],
+      "markScheme": {
+        "modelAnswer": "The children's toys were broken."
+      }
+    },
+    {
+      "id": "gps-g40",
+      "subject": "gps",
+      "domain": "G7",
+      "marks": 1,
+      "stem": "Which sentence uses the subjunctive form?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g40",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "If I was taller, I would play basketball.",
+        "If I were taller, I would play basketball.",
+        "If I am taller, I would play basketball.",
+        "If I be taller, I would play basketball."
+      ],
+      "answer": "If I were taller, I would play basketball.",
+      "markScheme": {
+        "modelAnswer": "If I were taller, I would play basketball."
+      }
+    },
+    {
+      "id": "gps-g41",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Expand the noun phrase:\n\nthe dog",
+      "meta": {
+        "source": "migrated:banks/spag.json/g41",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        [
+          "the small nervous dog",
+          "the large brown dog"
+        ]
+      ],
+      "markScheme": {
+        "modelAnswer": [
+          "the small nervous dog",
+          "the large brown dog"
+        ]
+      }
+    },
+    {
+      "id": "gps-g42",
+      "subject": "gps",
+      "domain": "G5",
+      "marks": 1,
+      "stem": "Which sentence uses ellipsis correctly?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g42",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "I was thinking...about the problem.",
+        "I was thinking .... about the problem.",
+        "I was thinking... about the problem.",
+        "I was thinking.. about the problem."
+      ],
+      "answer": "I was thinking... about the problem.",
+      "markScheme": {
+        "modelAnswer": "I was thinking... about the problem."
+      }
+    },
+    {
+      "id": "gps-g43",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Write a modal verb that could complete the sentence:\n\nYou ___ wear a helmet.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g43",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        [
+          "must",
+          "should",
+          "could"
+        ]
+      ],
+      "markScheme": {
+        "modelAnswer": [
+          "must",
+          "should",
+          "could"
+        ]
+      }
+    },
+    {
+      "id": "gps-g44",
+      "subject": "gps",
+      "domain": "G6",
+      "marks": 1,
+      "stem": "Choose the correct word:\n\nShe packed ___ bag carefully.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g44",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "there",
+        "their",
+        "they're",
+        "theirs"
+      ],
+      "answer": "their",
+      "markScheme": {
+        "modelAnswer": "their"
+      }
+    },
+    {
+      "id": "gps-g45",
+      "subject": "gps",
+      "domain": "G4",
+      "marks": 1,
+      "stem": "Rewrite in the active voice:\n\nThe window was broken by the ball.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g45",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "The ball broke the window."
+      ],
+      "markScheme": {
+        "modelAnswer": "The ball broke the window."
+      }
+    },
+    {
+      "id": "gps-g46",
+      "subject": "gps",
+      "domain": "G6",
+      "marks": 1,
+      "stem": "Which prefix could be added to \"possible\" to make its opposite?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g46",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "un-",
+        "im-",
+        "pre-",
+        "mis-"
+      ],
+      "answer": "im-",
+      "markScheme": {
+        "modelAnswer": "im-"
+      }
+    },
+    {
+      "id": "gps-g47",
+      "subject": "gps",
+      "domain": "G5",
+      "marks": 1,
+      "stem": "Correct the sentence:\n\nmy uncle lives in manchester.",
+      "meta": {
+        "source": "migrated:banks/spag.json/g47",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "My uncle lives in Manchester."
+      ],
+      "markScheme": {
+        "modelAnswer": "My uncle lives in Manchester."
+      }
+    },
+    {
+      "id": "gps-g48",
+      "subject": "gps",
+      "domain": "G6",
+      "marks": 1,
+      "stem": "Which word belongs to the same word family as \"decide\"?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g48",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "decision",
+        "describe",
+        "divide",
+        "desire"
+      ],
+      "answer": "decision",
+      "markScheme": {
+        "modelAnswer": "decision"
+      }
+    },
+    {
+      "id": "gps-g49",
+      "subject": "gps",
+      "domain": "G5",
+      "marks": 1,
+      "stem": "Write the contraction for:\n\n\"do not\"",
+      "meta": {
+        "source": "migrated:banks/spag.json/g49",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "don't"
+      ],
+      "markScheme": {
+        "modelAnswer": "don't"
+      }
+    },
+    {
+      "id": "gps-g50",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "stem": "Which word is a preposition?",
+      "meta": {
+        "source": "migrated:banks/spag.json/g50",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "jumped",
+        "under",
+        "happy",
+        "quickly"
+      ],
+      "answer": "under",
+      "markScheme": {
+        "modelAnswer": "under"
+      }
+    },
+    {
+      "id": "gps-nouns-1",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "nouns",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/nouns[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the nouns in the sentence.",
+      "sentence": "The cat slept on the sofa.",
+      "tokenIndices": [
+        1,
+        5
+      ],
+      "markScheme": {
+        "modelAnswer": "cat, sofa."
+      }
+    },
+    {
+      "id": "gps-nouns-2",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "nouns",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/nouns[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the nouns in the sentence.",
+      "sentence": "London is the capital city.",
+      "tokenIndices": [
+        0,
+        4
+      ],
+      "markScheme": {
+        "modelAnswer": "London, city."
+      }
+    },
+    {
+      "id": "gps-nouns-3",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "nouns",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/nouns[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the noun in the sentence.",
+      "sentence": "Happiness is important.",
+      "tokenIndices": [
+        0
+      ],
+      "markScheme": {
+        "modelAnswer": "Happiness"
+      }
+    },
+    {
+      "id": "gps-nouns-4",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "nouns",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/nouns[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the nouns in the sentence.",
+      "sentence": "My brother plays football.",
+      "tokenIndices": [
+        1,
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "brother, football."
+      }
+    },
+    {
+      "id": "gps-nouns-5",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "nouns",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/nouns[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the noun in the sentence.",
+      "sentence": "The red car stopped suddenly.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "car"
+      }
+    },
+    {
+      "id": "gps-verbs-1",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "verbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/verbs[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the verb in the sentence.",
+      "sentence": "The children laughed loudly.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "laughed"
+      }
+    },
+    {
+      "id": "gps-verbs-2",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "verbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/verbs[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the verb in the sentence.",
+      "sentence": "She is happy today.",
+      "tokenIndices": [
+        1
+      ],
+      "markScheme": {
+        "modelAnswer": "is"
+      }
+    },
+    {
+      "id": "gps-verbs-3",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "verbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/verbs[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the verbs, including auxiliary verbs.",
+      "sentence": "They were running quickly.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "were, running"
+      }
+    },
+    {
+      "id": "gps-verbs-4",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "verbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/verbs[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the verb in the sentence.",
+      "sentence": "I feel tired.",
+      "tokenIndices": [
+        1
+      ],
+      "markScheme": {
+        "modelAnswer": "feel"
+      }
+    },
+    {
+      "id": "gps-verbs-5",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "verbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/verbs[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the verb in the sentence.",
+      "sentence": "The door slammed shut.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "slammed"
+      }
+    },
+    {
+      "id": "gps-verbs-6",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "verbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/verbs[5]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the verbs, including auxiliary verbs.",
+      "sentence": "She has finished her work.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "has, finished"
+      }
+    },
+    {
+      "id": "gps-verbs-7",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "verbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/verbs[6]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the verbs, including auxiliary verbs.",
+      "sentence": "They are going to the park.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "are, going"
+      }
+    },
+    {
+      "id": "gps-verbs-8",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "verbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/verbs[7]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the verbs, including auxiliary verbs.",
+      "sentence": "He did not understand the question.",
+      "tokenIndices": [
+        1,
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "did, understand"
+      }
+    },
+    {
+      "id": "gps-verbs-9",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "verbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/verbs[8]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the verbs, including modal verbs.",
+      "sentence": "You must finish your homework.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "must, finish"
+      }
+    },
+    {
+      "id": "gps-adjectives-1",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "adjectives",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/adjectives[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the adjective in the sentence.",
+      "sentence": "She wore a blue dress.",
+      "tokenIndices": [
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "blue"
+      }
+    },
+    {
+      "id": "gps-adjectives-2",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "adjectives",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/adjectives[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the adjective in the sentence.",
+      "sentence": "The old tree fell down.",
+      "tokenIndices": [
+        1
+      ],
+      "markScheme": {
+        "modelAnswer": "old"
+      }
+    },
+    {
+      "id": "gps-adjectives-3",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "adjectives",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/adjectives[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the adjective in the sentence.",
+      "sentence": "It was a cold morning.",
+      "tokenIndices": [
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "cold"
+      }
+    },
+    {
+      "id": "gps-adjectives-4",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "adjectives",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/adjectives[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the adjective in the sentence.",
+      "sentence": "The noisy class lined up.",
+      "tokenIndices": [
+        1
+      ],
+      "markScheme": {
+        "modelAnswer": "noisy"
+      }
+    },
+    {
+      "id": "gps-adjectives-5",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "adjectives",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/adjectives[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the adjectives in the sentence.",
+      "sentence": "A small, brown dog barked.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "small,, brown"
+      }
+    },
+    {
+      "id": "gps-adverbs-1",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "adverbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/adverbs[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the adverb in the sentence.",
+      "sentence": "He spoke softly to the baby.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "softly"
+      }
+    },
+    {
+      "id": "gps-adverbs-2",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "adverbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/adverbs[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the adverb in the sentence.",
+      "sentence": "The children played outside.",
+      "tokenIndices": [
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "outside."
+      }
+    },
+    {
+      "id": "gps-adverbs-3",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "adverbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/adverbs[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the adverb in the sentence.",
+      "sentence": "She finished early.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "early."
+      }
+    },
+    {
+      "id": "gps-adverbs-4",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "adverbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/adverbs[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the adverb in the sentence.",
+      "sentence": "The dog barked loudly.",
+      "tokenIndices": [
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "loudly."
+      }
+    },
+    {
+      "id": "gps-adverbs-5",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "adverbs",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/adverbs[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the adverbs in the sentence.",
+      "sentence": "They arrived late again.",
+      "tokenIndices": [
+        2,
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "late, again."
+      }
+    },
+    {
+      "id": "gps-determiners-1",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "determiners",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/determiners[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the determiners in the sentence.",
+      "sentence": "My brother lost his bag.",
+      "tokenIndices": [
+        0,
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "My, his"
+      }
+    },
+    {
+      "id": "gps-determiners-2",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "determiners",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/determiners[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the determiners in the sentence.",
+      "sentence": "The cat sat on the mat.",
+      "tokenIndices": [
+        0,
+        4
+      ],
+      "markScheme": {
+        "modelAnswer": "The, the"
+      }
+    },
+    {
+      "id": "gps-determiners-3",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "determiners",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/determiners[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the determiners in the sentence.",
+      "sentence": "Each child received a prize.",
+      "tokenIndices": [
+        0,
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "Each, a"
+      }
+    },
+    {
+      "id": "gps-determiners-4",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "determiners",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/determiners[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the determiner in the sentence.",
+      "sentence": "These books are heavy.",
+      "tokenIndices": [
+        0
+      ],
+      "markScheme": {
+        "modelAnswer": "These"
+      }
+    },
+    {
+      "id": "gps-determiners-5",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "determiners",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/determiners[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the determiner in the sentence.",
+      "sentence": "She found some shells.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "some"
+      }
+    },
+    {
+      "id": "gps-prepositions-1",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "prepositions",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/prepositions[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the preposition in the sentence.",
+      "sentence": "The book is on the shelf.",
+      "tokenIndices": [
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "on"
+      }
+    },
+    {
+      "id": "gps-prepositions-2",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "prepositions",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/prepositions[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the preposition in the sentence.",
+      "sentence": "She stood behind the door.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "behind"
+      }
+    },
+    {
+      "id": "gps-prepositions-3",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "prepositions",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/prepositions[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the preposition in the sentence.",
+      "sentence": "We walked through the park.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "through"
+      }
+    },
+    {
+      "id": "gps-prepositions-4",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "prepositions",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/prepositions[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the preposition in the sentence.",
+      "sentence": "The keys are inside the drawer.",
+      "tokenIndices": [
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "inside"
+      }
+    },
+    {
+      "id": "gps-prepositions-5",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "prepositions",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/prepositions[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the preposition in the sentence.",
+      "sentence": "He arrived before dinner.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "before"
+      }
+    },
+    {
+      "id": "gps-subordinate-clauses-1",
+      "subject": "gps",
+      "domain": "G3",
+      "topicId": "subordinate-clauses",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/subordinate-clauses[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the subordinate clause in the sentence.",
+      "sentence": "She stayed home because she felt ill.",
+      "tokenIndices": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "markScheme": {
+        "modelAnswer": "because, she, felt, ill."
+      }
+    },
+    {
+      "id": "gps-subordinate-clauses-2",
+      "subject": "gps",
+      "domain": "G3",
+      "topicId": "subordinate-clauses",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/subordinate-clauses[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the subordinate clause in the sentence.",
+      "sentence": "When the bell rang, the class left.",
+      "tokenIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "When, the, bell, rang,"
+      }
+    },
+    {
+      "id": "gps-subordinate-clauses-3",
+      "subject": "gps",
+      "domain": "G3",
+      "topicId": "subordinate-clauses",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/subordinate-clauses[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the subordinate clause in the sentence.",
+      "sentence": "I will go if it stops raining.",
+      "tokenIndices": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "markScheme": {
+        "modelAnswer": "if, it, stops, raining."
+      }
+    },
+    {
+      "id": "gps-subordinate-clauses-4",
+      "subject": "gps",
+      "domain": "G3",
+      "topicId": "subordinate-clauses",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/subordinate-clauses[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the subordinate clause in the sentence.",
+      "sentence": "Although he was tired, he continued.",
+      "tokenIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "Although, he, was, tired,"
+      }
+    },
+    {
+      "id": "gps-subordinate-clauses-5",
+      "subject": "gps",
+      "domain": "G3",
+      "topicId": "subordinate-clauses",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/subordinate-clauses[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the subordinate clause in the sentence.",
+      "sentence": "We waited while the rain fell.",
+      "tokenIndices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "markScheme": {
+        "modelAnswer": "while, the, rain, fell."
+      }
+    },
+    {
+      "id": "gps-pronouns-1",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "pronouns",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/pronouns[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the pronoun in the sentence.",
+      "sentence": "Tom said he was tired.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "he"
+      }
+    },
+    {
+      "id": "gps-pronouns-2",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "pronouns",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/pronouns[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the pronoun in the sentence.",
+      "sentence": "The dog wagged its tail.",
+      "tokenIndices": [
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "its"
+      }
+    },
+    {
+      "id": "gps-pronouns-3",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "pronouns",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/pronouns[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the pronouns in the sentence.",
+      "sentence": "These are mine.",
+      "tokenIndices": [
+        0,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "These, mine."
+      }
+    },
+    {
+      "id": "gps-pronouns-4",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "pronouns",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/pronouns[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the pronoun in the sentence.",
+      "sentence": "The girl who won smiled.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "who"
+      }
+    },
+    {
+      "id": "gps-pronouns-5",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "pronouns",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/pronouns[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all the pronouns in the sentence.",
+      "sentence": "This is the one I like.",
+      "tokenIndices": [
+        0,
+        4
+      ],
+      "markScheme": {
+        "modelAnswer": "This, I"
+      }
+    },
+    {
+      "id": "gps-conjunctions-1",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "conjunctions",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/conjunctions[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the conjunction in the sentence.",
+      "sentence": "She ran and jumped.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "and"
+      }
+    },
+    {
+      "id": "gps-conjunctions-2",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "conjunctions",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/conjunctions[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the conjunction in the sentence.",
+      "sentence": "I stayed inside because it was cold.",
+      "tokenIndices": [
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "because"
+      }
+    },
+    {
+      "id": "gps-conjunctions-3",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "conjunctions",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/conjunctions[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the conjunction in the sentence.",
+      "sentence": "We can play or read.",
+      "tokenIndices": [
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "or"
+      }
+    },
+    {
+      "id": "gps-conjunctions-4",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "conjunctions",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/conjunctions[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the conjunction in the sentence.",
+      "sentence": "He tried hard but failed.",
+      "tokenIndices": [
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "but"
+      }
+    },
+    {
+      "id": "gps-conjunctions-5",
+      "subject": "gps",
+      "domain": "G1",
+      "topicId": "conjunctions",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/conjunctions[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the conjunction in the sentence.",
+      "sentence": "You can go if you finish.",
+      "tokenIndices": [
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "if"
+      }
+    },
+    {
+      "id": "gps-active-voice-1",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "active-voice",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/active-voice[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "roles",
+      "marking": "auto",
+      "stem": "Identify each part of the sentence.",
+      "sentence": "The dog bit the postman.",
+      "parts": [
+        {
+          "role": "subject",
+          "label": "Subject",
+          "hint": "who or what does the action",
+          "answer": [
+            0,
+            1
+          ]
+        },
+        {
+          "role": "verb",
+          "label": "Verb",
+          "hint": "the action word",
+          "answer": [
+            2
+          ]
+        },
+        {
+          "role": "object",
+          "label": "Object",
+          "hint": "who or what receives the action",
+          "answer": [
+            3,
+            4
+          ]
+        }
+      ],
+      "markScheme": {
+        "modelAnswer": "Subject: The dog; Verb: bit; Object: the postman."
+      }
+    },
+    {
+      "id": "gps-active-voice-2",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "active-voice",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/active-voice[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "roles",
+      "marking": "auto",
+      "stem": "Identify each part of the sentence.",
+      "sentence": "The teacher marked the books.",
+      "parts": [
+        {
+          "role": "subject",
+          "label": "Subject",
+          "hint": "who or what does the action",
+          "answer": [
+            0,
+            1
+          ]
+        },
+        {
+          "role": "verb",
+          "label": "Verb",
+          "hint": "the action word",
+          "answer": [
+            2
+          ]
+        },
+        {
+          "role": "object",
+          "label": "Object",
+          "hint": "who or what receives the action",
+          "answer": [
+            3,
+            4
+          ]
+        }
+      ],
+      "markScheme": {
+        "modelAnswer": "Subject: The teacher; Verb: marked; Object: the books."
+      }
+    },
+    {
+      "id": "gps-active-voice-3",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "active-voice",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/active-voice[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "roles",
+      "marking": "auto",
+      "stem": "Identify each part of the sentence.",
+      "sentence": "The girl kicked the ball.",
+      "parts": [
+        {
+          "role": "subject",
+          "label": "Subject",
+          "hint": "who or what does the action",
+          "answer": [
+            0,
+            1
+          ]
+        },
+        {
+          "role": "verb",
+          "label": "Verb",
+          "hint": "the action word",
+          "answer": [
+            2
+          ]
+        },
+        {
+          "role": "object",
+          "label": "Object",
+          "hint": "who or what receives the action",
+          "answer": [
+            3,
+            4
+          ]
+        }
+      ],
+      "markScheme": {
+        "modelAnswer": "Subject: The girl; Verb: kicked; Object: the ball."
+      }
+    },
+    {
+      "id": "gps-active-voice-4",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "active-voice",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/active-voice[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "roles",
+      "marking": "auto",
+      "stem": "Identify each part of the sentence.",
+      "sentence": "A police officer caught the thief.",
+      "parts": [
+        {
+          "role": "subject",
+          "label": "Subject",
+          "hint": "who or what does the action",
+          "answer": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "role": "verb",
+          "label": "Verb",
+          "hint": "the action word",
+          "answer": [
+            3
+          ]
+        },
+        {
+          "role": "object",
+          "label": "Object",
+          "hint": "who or what receives the action",
+          "answer": [
+            4,
+            5
+          ]
+        }
+      ],
+      "markScheme": {
+        "modelAnswer": "Subject: A police officer; Verb: caught; Object: the thief."
+      }
+    },
+    {
+      "id": "gps-active-voice-5",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "active-voice",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/active-voice[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "roles",
+      "marking": "auto",
+      "stem": "Identify each part of the sentence.",
+      "sentence": "Lightning struck the old oak tree.",
+      "parts": [
+        {
+          "role": "subject",
+          "label": "Subject",
+          "hint": "who or what does the action",
+          "answer": [
+            0
+          ]
+        },
+        {
+          "role": "verb",
+          "label": "Verb",
+          "hint": "the action word",
+          "answer": [
+            1
+          ]
+        },
+        {
+          "role": "object",
+          "label": "Object",
+          "hint": "who or what receives the action",
+          "answer": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "markScheme": {
+        "modelAnswer": "Subject: Lightning; Verb: struck; Object: the old oak tree."
+      }
+    },
+    {
+      "id": "gps-passive-voice-1",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "passive-voice",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/passive-voice[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "roles",
+      "marking": "auto",
+      "stem": "Identify each part of the sentence.",
+      "sentence": "The postman was bitten by the dog.",
+      "parts": [
+        {
+          "role": "subject",
+          "label": "Subject",
+          "hint": "who or what the sentence is about — it receives the action",
+          "answer": [
+            0,
+            1
+          ]
+        },
+        {
+          "role": "verb",
+          "label": "Passive verb",
+          "hint": "the auxiliary verb and past participle",
+          "answer": [
+            2,
+            3
+          ]
+        },
+        {
+          "role": "agent",
+          "label": "Agent",
+          "hint": "who actually does the action — includes 'by'",
+          "answer": [
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "markScheme": {
+        "modelAnswer": "Subject: The postman; Passive verb: was bitten; Agent: by the dog."
+      }
+    },
+    {
+      "id": "gps-passive-voice-2",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "passive-voice",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/passive-voice[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "roles",
+      "marking": "auto",
+      "stem": "Identify each part of the sentence.",
+      "sentence": "The books were marked by the teacher.",
+      "parts": [
+        {
+          "role": "subject",
+          "label": "Subject",
+          "hint": "who or what the sentence is about — it receives the action",
+          "answer": [
+            0,
+            1
+          ]
+        },
+        {
+          "role": "verb",
+          "label": "Passive verb",
+          "hint": "the auxiliary verb and past participle",
+          "answer": [
+            2,
+            3
+          ]
+        },
+        {
+          "role": "agent",
+          "label": "Agent",
+          "hint": "who actually does the action — includes 'by'",
+          "answer": [
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "markScheme": {
+        "modelAnswer": "Subject: The books; Passive verb: were marked; Agent: by the teacher."
+      }
+    },
+    {
+      "id": "gps-passive-voice-3",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "passive-voice",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/passive-voice[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "roles",
+      "marking": "auto",
+      "stem": "Identify each part of the sentence.",
+      "sentence": "The goal was scored by the striker.",
+      "parts": [
+        {
+          "role": "subject",
+          "label": "Subject",
+          "hint": "who or what the sentence is about — it receives the action",
+          "answer": [
+            0,
+            1
+          ]
+        },
+        {
+          "role": "verb",
+          "label": "Passive verb",
+          "hint": "the auxiliary verb and past participle",
+          "answer": [
+            2,
+            3
+          ]
+        },
+        {
+          "role": "agent",
+          "label": "Agent",
+          "hint": "who actually does the action — includes 'by'",
+          "answer": [
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "markScheme": {
+        "modelAnswer": "Subject: The goal; Passive verb: was scored; Agent: by the striker."
+      }
+    },
+    {
+      "id": "gps-passive-voice-4",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "passive-voice",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/passive-voice[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "roles",
+      "marking": "auto",
+      "stem": "Identify each part of the sentence.",
+      "sentence": "The cake was eaten by the children.",
+      "parts": [
+        {
+          "role": "subject",
+          "label": "Subject",
+          "hint": "who or what the sentence is about — it receives the action",
+          "answer": [
+            0,
+            1
+          ]
+        },
+        {
+          "role": "verb",
+          "label": "Passive verb",
+          "hint": "the auxiliary verb and past participle",
+          "answer": [
+            2,
+            3
+          ]
+        },
+        {
+          "role": "agent",
+          "label": "Agent",
+          "hint": "who actually does the action — includes 'by'",
+          "answer": [
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "markScheme": {
+        "modelAnswer": "Subject: The cake; Passive verb: was eaten; Agent: by the children."
+      }
+    },
+    {
+      "id": "gps-passive-voice-5",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "passive-voice",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/passive-voice[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "roles",
+      "marking": "auto",
+      "stem": "Identify each part of the sentence.",
+      "sentence": "The window was broken.",
+      "parts": [
+        {
+          "role": "subject",
+          "label": "Subject",
+          "hint": "who or what the sentence is about — it receives the action",
+          "answer": [
+            0,
+            1
+          ]
+        },
+        {
+          "role": "verb",
+          "label": "Passive verb",
+          "hint": "the auxiliary verb and past participle",
+          "answer": [
+            2,
+            3
+          ]
+        }
+      ],
+      "markScheme": {
+        "modelAnswer": "Subject: The window; Passive verb: was broken."
+      }
+    },
+    {
+      "id": "gps-simple-present-1",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-present",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-present[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the simple present tense verb.",
+      "sentence": "She walks to school.",
+      "tokenIndices": [
+        1
+      ],
+      "markScheme": {
+        "modelAnswer": "walks"
+      }
+    },
+    {
+      "id": "gps-simple-present-2",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-present",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-present[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the simple present tense verb.",
+      "sentence": "They play football every Saturday.",
+      "tokenIndices": [
+        1
+      ],
+      "markScheme": {
+        "modelAnswer": "play"
+      }
+    },
+    {
+      "id": "gps-simple-present-3",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-present",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-present[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the simple present tense verb.",
+      "sentence": "The sun rises in the east.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "rises"
+      }
+    },
+    {
+      "id": "gps-simple-present-4",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-present",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-present[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the simple present tense verb.",
+      "sentence": "Birds sing in the morning.",
+      "tokenIndices": [
+        1
+      ],
+      "markScheme": {
+        "modelAnswer": "sing"
+      }
+    },
+    {
+      "id": "gps-simple-present-5",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-present",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-present[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the simple present tense verb.",
+      "sentence": "He reads before bed.",
+      "tokenIndices": [
+        1
+      ],
+      "markScheme": {
+        "modelAnswer": "reads"
+      }
+    },
+    {
+      "id": "gps-simple-past-1",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-past",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-past[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the simple past tense verb.",
+      "sentence": "She walked to school.",
+      "tokenIndices": [
+        1
+      ],
+      "markScheme": {
+        "modelAnswer": "walked"
+      }
+    },
+    {
+      "id": "gps-simple-past-2",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-past",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-past[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the simple past tense verb.",
+      "sentence": "They played football last Saturday.",
+      "tokenIndices": [
+        1
+      ],
+      "markScheme": {
+        "modelAnswer": "played"
+      }
+    },
+    {
+      "id": "gps-simple-past-3",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-past",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-past[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the simple past tense verb.",
+      "sentence": "The dog barked all night.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "barked"
+      }
+    },
+    {
+      "id": "gps-simple-past-4",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-past",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-past[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the simple past tense verb.",
+      "sentence": "She wrote a long letter.",
+      "tokenIndices": [
+        1
+      ],
+      "markScheme": {
+        "modelAnswer": "wrote"
+      }
+    },
+    {
+      "id": "gps-simple-past-5",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-past",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-past[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the simple past tense verb.",
+      "sentence": "The team won the trophy.",
+      "tokenIndices": [
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "won"
+      }
+    },
+    {
+      "id": "gps-present-progressive-1",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "present-progressive",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/present-progressive[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the present progressive verb phrase.",
+      "sentence": "She is dancing in the hall.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "is, dancing"
+      }
+    },
+    {
+      "id": "gps-present-progressive-2",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "present-progressive",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/present-progressive[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the present progressive verb phrase.",
+      "sentence": "They are building a sandcastle.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "are, building"
+      }
+    },
+    {
+      "id": "gps-present-progressive-3",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "present-progressive",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/present-progressive[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the present progressive verb phrase.",
+      "sentence": "I am watching a film.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "am, watching"
+      }
+    },
+    {
+      "id": "gps-present-progressive-4",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "present-progressive",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/present-progressive[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the present progressive verb phrase.",
+      "sentence": "The dog is sleeping on the sofa.",
+      "tokenIndices": [
+        2,
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "is, sleeping"
+      }
+    },
+    {
+      "id": "gps-present-progressive-5",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "present-progressive",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/present-progressive[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the present progressive verb phrase.",
+      "sentence": "We are learning about fractions.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "are, learning"
+      }
+    },
+    {
+      "id": "gps-past-progressive-1",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "past-progressive",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/past-progressive[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the past progressive verb phrase.",
+      "sentence": "He was reading when I arrived.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "was, reading"
+      }
+    },
+    {
+      "id": "gps-past-progressive-2",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "past-progressive",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/past-progressive[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the past progressive verb phrase.",
+      "sentence": "They were playing football in the rain.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "were, playing"
+      }
+    },
+    {
+      "id": "gps-past-progressive-3",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "past-progressive",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/past-progressive[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the past progressive verb phrase.",
+      "sentence": "I was cooking dinner when the phone rang.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "was, cooking"
+      }
+    },
+    {
+      "id": "gps-past-progressive-4",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "past-progressive",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/past-progressive[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the past progressive verb phrase.",
+      "sentence": "The children were laughing at the clown.",
+      "tokenIndices": [
+        2,
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "were, laughing"
+      }
+    },
+    {
+      "id": "gps-past-progressive-5",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "past-progressive",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/past-progressive[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the past progressive verb phrase.",
+      "sentence": "She was running to catch the bus.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "was, running"
+      }
+    },
+    {
+      "id": "gps-present-perfect-1",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "present-perfect",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/present-perfect[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the present perfect verb phrase (has/have + past participle).",
+      "sentence": "She has finished her homework.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "has, finished"
+      }
+    },
+    {
+      "id": "gps-present-perfect-2",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "present-perfect",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/present-perfect[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the present perfect verb phrase (has/have + past participle).",
+      "sentence": "They have arrived at the station.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "have, arrived"
+      }
+    },
+    {
+      "id": "gps-present-perfect-3",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "present-perfect",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/present-perfect[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the present perfect verb phrase (has/have + past participle).",
+      "sentence": "He has broken the record.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "has, broken"
+      }
+    },
+    {
+      "id": "gps-present-perfect-4",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "present-perfect",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/present-perfect[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the present perfect verb phrase (has/have + past participle).",
+      "sentence": "The children have eaten their lunch.",
+      "tokenIndices": [
+        2,
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "have, eaten"
+      }
+    },
+    {
+      "id": "gps-present-perfect-5",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "present-perfect",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/present-perfect[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the present perfect verb phrase (has/have + past participle).",
+      "sentence": "The goalkeeper has saved five penalties.",
+      "tokenIndices": [
+        2,
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "has, saved"
+      }
+    },
+    {
+      "id": "gps-past-perfect-1",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "past-perfect",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/past-perfect[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the past perfect verb phrase (had + past participle).",
+      "sentence": "She had finished her homework before dinner.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "had, finished"
+      }
+    },
+    {
+      "id": "gps-past-perfect-2",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "past-perfect",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/past-perfect[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the past perfect verb phrase (had + past participle).",
+      "sentence": "They had left before the storm arrived.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "had, left"
+      }
+    },
+    {
+      "id": "gps-past-perfect-3",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "past-perfect",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/past-perfect[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the past perfect verb phrase (had + past participle).",
+      "sentence": "The train had departed early.",
+      "tokenIndices": [
+        2,
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "had, departed"
+      }
+    },
+    {
+      "id": "gps-past-perfect-4",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "past-perfect",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/past-perfect[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the past perfect verb phrase (had + past participle).",
+      "sentence": "By the time we arrived, the shop had closed.",
+      "tokenIndices": [
+        7,
+        8
+      ],
+      "markScheme": {
+        "modelAnswer": "had, closed."
+      }
+    },
+    {
+      "id": "gps-past-perfect-5",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "past-perfect",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/past-perfect[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select the past perfect verb phrase (had + past participle).",
+      "sentence": "She had read the book three times.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "had, read"
+      }
+    },
+    {
+      "id": "gps-simple-future-1",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-future",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-future[0]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the simple future verb phrase.",
+      "sentence": "He will start his new school next week.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "will, start"
+      }
+    },
+    {
+      "id": "gps-simple-future-2",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-future",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-future[1]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the simple future verb phrase.",
+      "sentence": "They will travel to France in the summer.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "will, travel"
+      }
+    },
+    {
+      "id": "gps-simple-future-3",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-future",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-future[2]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the simple future verb phrase.",
+      "sentence": "I will finish my homework after dinner.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "will, finish"
+      }
+    },
+    {
+      "id": "gps-simple-future-4",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-future",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-future[3]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the simple future verb phrase.",
+      "sentence": "The sun will rise at six tomorrow morning.",
+      "tokenIndices": [
+        2,
+        3
+      ],
+      "markScheme": {
+        "modelAnswer": "will, rise"
+      }
+    },
+    {
+      "id": "gps-simple-future-5",
+      "subject": "gps",
+      "domain": "G4",
+      "topicId": "simple-future",
+      "marks": 1,
+      "meta": {
+        "source": "migrated:banks/grammar.json/simple-future[4]",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "tokens",
+      "marking": "auto",
+      "stem": "Select all parts of the simple future verb phrase.",
+      "sentence": "We will celebrate after the test.",
+      "tokenIndices": [
+        1,
+        2
+      ],
+      "markScheme": {
+        "modelAnswer": "will, celebrate"
+      }
+    },
+    {
+      "id": "wu-d0s0q0",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "In the sentence \"The dog barked loudly at the postman\", what word class is \"loudly\"?",
+      "choices": [
+        "Noun",
+        "Adjective",
+        "Adverb",
+        "Verb"
+      ],
+      "answer": "Adverb",
+      "markScheme": {
+        "modelAnswer": "Adverb",
+        "explanation": "Adverbs modify verbs, adjectives, or other adverbs. \"Loudly\" tells us how the dog barked, so it modifies the verb \"barked\"."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/A/q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s0q1",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which sentence uses a colon correctly?",
+      "choices": [
+        "She needed: milk, bread and eggs.",
+        "She needed three things: milk, bread and eggs.",
+        "She needed: to buy things.",
+        "She: needed milk, bread and eggs."
+      ],
+      "answer": "She needed three things: milk, bread and eggs.",
+      "markScheme": {
+        "modelAnswer": "She needed three things: milk, bread and eggs.",
+        "explanation": "A colon introduces a list or explanation. The clause before the colon must be able to stand alone as a complete sentence."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/A/q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s0q2",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which sentence uses a plural possessive apostrophe correctly?",
+      "choices": [
+        "The boys' football was muddy.",
+        "The boys football was muddy.",
+        "The boy's football were muddy.",
+        "The boys's football was muddy."
+      ],
+      "answer": "The boys' football was muddy.",
+      "markScheme": {
+        "modelAnswer": "The boys' football was muddy.",
+        "explanation": "When a plural noun already ends in -s, the apostrophe goes after the s (boys'). \"Boys's\" is never correct in English."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/A/q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s0q3",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "\"By the time the lesson ended, she had finished her work.\" What tense is used?",
+      "choices": [
+        "Simple past",
+        "Present perfect",
+        "Past perfect",
+        "Past continuous"
+      ],
+      "answer": "Past perfect",
+      "markScheme": {
+        "modelAnswer": "Past perfect",
+        "explanation": "The past perfect uses \"had\" + past participle. It describes an action completed before another past action."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/A/q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s0q4",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What does the prefix \"auto-\" mean?",
+      "choices": [
+        "Against",
+        "Before",
+        "Self",
+        "Again"
+      ],
+      "answer": "Self",
+      "markScheme": {
+        "modelAnswer": "Self",
+        "explanation": "\"Auto-\" comes from Greek, meaning \"self\". Examples: autobiography (writing about oneself), automatic (self-acting)."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/A/q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s0q5",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Adding the suffix \"-tion\" to the verb \"explain\" creates which word class?",
+      "choices": [
+        "Verb",
+        "Adjective",
+        "Adverb",
+        "Noun"
+      ],
+      "answer": "Noun",
+      "markScheme": {
+        "modelAnswer": "Noun",
+        "explanation": "The suffix \"-tion\" or \"-ation\" converts verbs into nouns. \"Explain\" becomes \"explanation\". Others: create → creation, decide → decision."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/A/q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s0q6",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which word is a subordinating conjunction?",
+      "choices": [
+        "and",
+        "but",
+        "although",
+        "or"
+      ],
+      "answer": "although",
+      "markScheme": {
+        "modelAnswer": "although",
+        "explanation": "Subordinating conjunctions (although, because, while, if…) join a main clause to a subordinate clause. \"And\", \"but\" and \"or\" are coordinating conjunctions."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/A/q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s0q7",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which sentence punctuates direct speech correctly?",
+      "choices": [
+        "\"Can we go to the park\" asked Mia.",
+        "\"Can we go to the park?\" asked Mia.",
+        "\"Can we go to the park?\" Asked Mia.",
+        "Can we go to the park? asked Mia."
+      ],
+      "answer": "\"Can we go to the park?\" asked Mia.",
+      "markScheme": {
+        "modelAnswer": "\"Can we go to the park?\" asked Mia.",
+        "explanation": "A question inside speech ends with a question mark inside the closing inverted comma. The reporting verb (\"asked\") starts with a lower-case letter."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/A/q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s1q0",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "\"The book, which I borrowed from the library, was fascinating.\" What type of clause is \"which I borrowed from the library\"?",
+      "choices": [
+        "Main clause",
+        "Subordinate clause",
+        "Relative clause",
+        "Adverbial clause"
+      ],
+      "answer": "Relative clause",
+      "markScheme": {
+        "modelAnswer": "Relative clause",
+        "explanation": "A relative clause is introduced by a relative pronoun (who, which, that, whose) and gives more information about a noun. It is a type of subordinate clause."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/B/q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s1q1",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which is an expanded noun phrase?",
+      "choices": [
+        "run quickly",
+        "the old, dusty book",
+        "she smiled",
+        "because it rained"
+      ],
+      "answer": "the old, dusty book",
+      "markScheme": {
+        "modelAnswer": "the old, dusty book",
+        "explanation": "An expanded noun phrase adds detail to a noun using adjectives or other modifiers. \"The old, dusty book\" expands the noun \"book\" with two adjectives."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/B/q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s1q2",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which sentence uses a semicolon correctly?",
+      "choices": [
+        "She was tired; she went to bed early.",
+        "She was tired; going to bed.",
+        "She was; tired and sleepy.",
+        "She; was tired and went to bed."
+      ],
+      "answer": "She was tired; she went to bed early.",
+      "markScheme": {
+        "modelAnswer": "She was tired; she went to bed early.",
+        "explanation": "A semicolon joins two closely related independent clauses — both parts must be able to stand alone as sentences. \"She was tired\" and \"she went to bed early\" both can."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/B/q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s1q3",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which sentence uses the subjunctive mood correctly?",
+      "choices": [
+        "If I was you, I would apologise.",
+        "If I were you, I would apologise.",
+        "If I am you, I would apologise.",
+        "If I be you, I would apologise."
+      ],
+      "answer": "If I were you, I would apologise.",
+      "markScheme": {
+        "modelAnswer": "If I were you, I would apologise.",
+        "explanation": "The subjunctive is used for hypothetical situations. \"If I were you\" (not \"was\") is correct — this is the standard subjunctive form in formal English."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/B/q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s1q4",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which word is a determiner?",
+      "choices": [
+        "quickly",
+        "the",
+        "happy",
+        "run"
+      ],
+      "answer": "the",
+      "markScheme": {
+        "modelAnswer": "the",
+        "explanation": "Determiners introduce nouns and tell us which or how many. \"The\" (definite article) is a determiner. Others include: a, an, some, every, this, my, your."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/B/q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s1q5",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which word uses the prefix \"mis-\" correctly to mean \"wrongly\"?",
+      "choices": [
+        "misfortune",
+        "misbike",
+        "miscold",
+        "misgreat"
+      ],
+      "answer": "misfortune",
+      "markScheme": {
+        "modelAnswer": "misfortune",
+        "explanation": "The prefix \"mis-\" means wrongly or badly. \"Misfortune\" (bad luck) is a real word. The others are not real English words with this prefix."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/B/q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s1q6",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "The suffix \"-less\" means:",
+      "choices": [
+        "full of",
+        "without",
+        "able to be",
+        "the most"
+      ],
+      "answer": "without",
+      "markScheme": {
+        "modelAnswer": "without",
+        "explanation": "\"-less\" means \"without\". Examples: careless (without care), hopeless (without hope), speechless (without speech)."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/B/q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s1q7",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which sentence uses brackets for parenthesis correctly?",
+      "choices": [
+        "My teacher (Mrs Jones gave us lots of homework.",
+        "My teacher (Mrs Jones) gave us lots of homework.",
+        "My teacher Mrs Jones) gave us lots of homework.",
+        "My teacher (Mrs Jones gave us) lots of homework."
+      ],
+      "answer": "My teacher (Mrs Jones) gave us lots of homework.",
+      "markScheme": {
+        "modelAnswer": "My teacher (Mrs Jones) gave us lots of homework.",
+        "explanation": "Parenthesis adds extra information and always comes in pairs — one opening and one closing bracket. Remove the bracketed section and the sentence must still make sense."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/B/q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s2q0",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which sentence is in the passive voice?",
+      "choices": [
+        "The cat caught the mouse.",
+        "The mouse was caught by the cat.",
+        "The cat is catching the mouse.",
+        "The cat had caught the mouse."
+      ],
+      "answer": "The mouse was caught by the cat.",
+      "markScheme": {
+        "modelAnswer": "The mouse was caught by the cat.",
+        "explanation": "In the passive voice, the subject receives the action. \"The mouse was caught by the cat\" uses \"to be\" + past participle. The active voice is \"The cat caught the mouse.\""
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/C/q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s2q1",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which word is a modal verb?",
+      "choices": [
+        "run",
+        "should",
+        "happy",
+        "quickly"
+      ],
+      "answer": "should",
+      "markScheme": {
+        "modelAnswer": "should",
+        "explanation": "Modal verbs express possibility, necessity, or ability: can, could, will, would, shall, should, may, might, must. They always come before a base verb."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/C/q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s2q2",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which sentence uses a hyphen correctly?",
+      "choices": [
+        "She is well known.",
+        "She is a well-known author.",
+        "She is a wellknown author.",
+        "She is a well known-author."
+      ],
+      "answer": "She is a well-known author.",
+      "markScheme": {
+        "modelAnswer": "She is a well-known author.",
+        "explanation": "Hyphens join compound adjectives placed before a noun. \"A well-known author\" needs a hyphen before the noun. \"She is well known\" (after the noun) does not."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/C/q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s2q3",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "\"She has been reading for two hours.\" What tense is this?",
+      "choices": [
+        "Simple present",
+        "Present perfect",
+        "Present perfect continuous",
+        "Past continuous"
+      ],
+      "answer": "Present perfect continuous",
+      "markScheme": {
+        "modelAnswer": "Present perfect continuous",
+        "explanation": "The present perfect continuous uses \"have/has been\" + verb+ing. It describes an action that started in the past and is still continuing now."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/C/q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s2q4",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which word contains the root meaning \"to write\"?",
+      "choices": [
+        "grateful",
+        "paragraph",
+        "grapple",
+        "grape"
+      ],
+      "answer": "paragraph",
+      "markScheme": {
+        "modelAnswer": "paragraph",
+        "explanation": "The root \"graph\" comes from Greek, meaning \"to write\". \"Paragraph\" contains this root. Other examples: autograph, biography, photograph."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/C/q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s2q5",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which pair are both coordinating conjunctions?",
+      "choices": [
+        "because, although",
+        "and, but",
+        "while, when",
+        "if, unless"
+      ],
+      "answer": "and, but",
+      "markScheme": {
+        "modelAnswer": "and, but",
+        "explanation": "Coordinating conjunctions join equal clauses. Remember FANBOYS: For, And, Nor, But, Or, Yet, So. \"Because\", \"although\", \"while\", \"if\" and \"unless\" are all subordinating."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/C/q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s2q6",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which sentence contains a relative pronoun?",
+      "choices": [
+        "She went to the shop.",
+        "He ran quickly.",
+        "The girl who won the race smiled.",
+        "They played football."
+      ],
+      "answer": "The girl who won the race smiled.",
+      "markScheme": {
+        "modelAnswer": "The girl who won the race smiled.",
+        "explanation": "Relative pronouns (who, which, that, whose, where) introduce relative clauses. \"Who\" in \"the girl who won the race\" refers back to \"the girl\"."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/C/q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    },
+    {
+      "id": "wu-d0s2q7",
+      "subject": "gps",
+      "domain": "G1",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which is the most formal version of this sentence?",
+      "choices": [
+        "I can't do it cos I'm busy.",
+        "I cannot do it because I am busy.",
+        "I can't do this as I'm rather busy.",
+        "Cannot do — too busy."
+      ],
+      "answer": "I cannot do it because I am busy.",
+      "markScheme": {
+        "modelAnswer": "I cannot do it because I am busy.",
+        "explanation": "Formal writing uses full words (cannot, I am) rather than contractions (can't, I'm), avoids slang (cos), and uses complete sentences."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Mon 11/C/q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      }
+    }
+  ]
+}

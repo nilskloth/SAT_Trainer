@@ -1,0 +1,96 @@
+{
+  "papers": [
+    {
+      "id": "reading",
+      "subject": "reading",
+      "label": "English reading",
+      "minutes": 60,
+      "totalMarks": 50,
+      "texts": {
+        "count": 3,
+        "minFiction": 1,
+        "minNonFiction": 1,
+        "totalWords": [
+          1800,
+          2300
+        ]
+      },
+      "domainQuotas": {
+        "2a": 4,
+        "2b": 12,
+        "2c": 3,
+        "2d": 22,
+        "2e": 2,
+        "2f": 2,
+        "2g": 3,
+        "2h": 2
+      },
+      "instructions": "You have one hour to read the texts and answer the questions."
+    },
+    {
+      "id": "gps1",
+      "subject": "gps",
+      "label": "Grammar, punctuation and vocabulary (Paper 1)",
+      "minutes": 45,
+      "totalMarks": 50,
+      "domainQuotas": {
+        "G1": 12,
+        "G2": 3,
+        "G3": 6,
+        "G4": 7,
+        "G5": 16,
+        "G6": 3,
+        "G7": 3
+      },
+      "instructions": "Answer every question. You have 45 minutes."
+    },
+    {
+      "id": "gps2",
+      "subject": "spelling",
+      "label": "Spelling (Paper 2)",
+      "minutes": 15,
+      "totalMarks": 20,
+      "words": 20,
+      "instructions": "Listen to each sentence and write the missing word."
+    },
+    {
+      "id": "maths1",
+      "subject": "maths",
+      "label": "Arithmetic (Paper 1)",
+      "minutes": 30,
+      "totalMarks": 40,
+      "kind": "arithmetic",
+      "instructions": "Work out each calculation. Show your method where it helps."
+    },
+    {
+      "id": "maths2",
+      "subject": "maths",
+      "label": "Reasoning (Paper 2)",
+      "minutes": 40,
+      "totalMarks": 35,
+      "kind": "reasoning",
+      "strandShare": {
+        "numberRatioAlgebra": [
+          0.75,
+          0.85
+        ]
+      },
+      "instructions": "Answer every question. You have 40 minutes."
+    },
+    {
+      "id": "maths3",
+      "subject": "maths",
+      "label": "Reasoning (Paper 3)",
+      "minutes": 40,
+      "totalMarks": 35,
+      "kind": "reasoning",
+      "strandShare": {
+        "numberRatioAlgebra": [
+          0.75,
+          0.85
+        ]
+      },
+      "instructions": "Answer every question. You have 40 minutes."
+    }
+  ]
+}

@@ -1,0 +1,3969 @@
+{
+  "questions": [
+    {
+      "id": "m-rq01",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "Write the number that is <strong>100 less</strong> than 1,000,000.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq01",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "999900",
+      "markScheme": {
+        "modelAnswer": "1,000,000 − 100 = 999,900"
+      }
+    },
+    {
+      "id": "m-rq02",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "Write the number that is <strong>30 less</strong> than 300,000.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq02",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "299970",
+      "markScheme": {
+        "modelAnswer": "300,000 − 30 = 299,970"
+      }
+    },
+    {
+      "id": "m-rq03",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "678 is <strong>200 less</strong> than what number?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq03",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "878",
+      "markScheme": {
+        "modelAnswer": "678 + 200 = 878"
+      }
+    },
+    {
+      "id": "m-rq04",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "Write in figures: <strong>five hundred thousand and ten</strong>.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq04",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "500010",
+      "markScheme": {
+        "modelAnswer": "500,000 + 10 = 500,010"
+      }
+    },
+    {
+      "id": "m-rq05",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "Write in figures: <strong>two million, three hundred and forty-two thousand</strong>.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq05",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "2342000",
+      "markScheme": {
+        "modelAnswer": "2,000,000 + 342,000 = 2,342,000"
+      }
+    },
+    {
+      "id": "m-rq06",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "What is <strong>1,000 more</strong> than 45,321?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq06",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "46321",
+      "markScheme": {
+        "modelAnswer": "45,321 + 1,000 = 46,321"
+      }
+    },
+    {
+      "id": "m-rq07",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "What is <strong>10,000 less</strong> than 283,507?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq07",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "273507",
+      "markScheme": {
+        "modelAnswer": "283,507 − 10,000 = 273,507"
+      }
+    },
+    {
+      "id": "m-rq08",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "What is <strong>100 times</strong> 45?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq08",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "4500",
+      "markScheme": {
+        "modelAnswer": "45 × 100 = 4,500"
+      }
+    },
+    {
+      "id": "m-rq09",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "What is 4,500 <strong>divided by 100</strong>?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq09",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "45",
+      "markScheme": {
+        "modelAnswer": "4,500 ÷ 100 = 45"
+      }
+    },
+    {
+      "id": "m-rq10",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "What is <strong>10,000 more</strong> than 395,041?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq10",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "405041",
+      "markScheme": {
+        "modelAnswer": "395,041 + 10,000 = 405,041"
+      }
+    },
+    {
+      "id": "m-rq11",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "Write in figures: <strong>three million and fifty</strong>.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq11",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "3000050",
+      "markScheme": {
+        "modelAnswer": "3,000,000 + 50 = 3,000,050"
+      }
+    },
+    {
+      "id": "m-rq12",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "What is half of <strong>one million and ten</strong>?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq12",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "500005",
+      "markScheme": {
+        "modelAnswer": "1,000,010 ÷ 2 = 500,005"
+      }
+    },
+    {
+      "id": "m-rq13",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "What is the value of the digit <strong>7</strong> in the number 178,390?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq13",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "7",
+        "70",
+        "7,000",
+        "70,000"
+      ],
+      "answer": "70,000",
+      "markScheme": {
+        "modelAnswer": "In 178,390: 1 = hundred-thousands, 7 = ten-thousands. So 7 has a value of 70,000."
+      }
+    },
+    {
+      "id": "m-rq14",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "In the number 178,390.82 — which digit is in the <strong>hundredths</strong> place?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq14",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "2",
+      "markScheme": {
+        "modelAnswer": "178,390.82: tenths = 8, hundredths = 2."
+      }
+    },
+    {
+      "id": "m-rq15",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "In the number 217,361.05 — which digit is in the <strong>hundreds</strong> place?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq15",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "1",
+        "3",
+        "5",
+        "7"
+      ],
+      "answer": "3",
+      "markScheme": {
+        "modelAnswer": "217,361: hundred-thousands = 2, ten-thousands = 1, thousands = 7, hundreds = 3."
+      }
+    },
+    {
+      "id": "m-rq16",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "In the number 217,361.05 — which digit is in the <strong>tenths</strong> place?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq16",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "0",
+      "markScheme": {
+        "modelAnswer": "217,361.05: tenths = 0, hundredths = 5."
+      }
+    },
+    {
+      "id": "m-rq17",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "What is the value of the digit <strong>5</strong> in the number 352,109?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq17",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "500",
+        "5,000",
+        "50,000",
+        "500,000"
+      ],
+      "answer": "50,000",
+      "markScheme": {
+        "modelAnswer": "In 352,109: 3 = hundred-thousands, 5 = ten-thousands. So 5 has a value of 50,000."
+      }
+    },
+    {
+      "id": "m-rq18",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "In the number 4.527 — which digit is in the <strong>thousandths</strong> place?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq18",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "7",
+      "markScheme": {
+        "modelAnswer": "4.527: tenths = 5, hundredths = 2, thousandths = 7."
+      }
+    },
+    {
+      "id": "m-rq19",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "What is the value of the digit <strong>4</strong> in the number 2,046,318?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq19",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "4,000",
+        "40,000",
+        "400,000",
+        "4,000,000"
+      ],
+      "answer": "40,000",
+      "markScheme": {
+        "modelAnswer": "In 2,046,318: ten-thousands digit is 4. So 4 has a value of 40,000."
+      }
+    },
+    {
+      "id": "m-rq20",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "Which is the <strong>smallest</strong> of these numbers?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq20",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "31,750",
+        "30,570",
+        "3,900",
+        "37,150"
+      ],
+      "answer": "3,900",
+      "markScheme": {
+        "modelAnswer": "3,900 is the only number below 10,000. The others are all in the thirty-thousands."
+      }
+    },
+    {
+      "id": "m-rq21",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "These decimals are ordered from <strong>smallest to largest</strong>: 10.1, 1.01, 1.1, 10.11, 11.1.<br>Which number comes <strong>first</strong>?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq21",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "1.01",
+        "1.1",
+        "10.1",
+        "10.11"
+      ],
+      "answer": "1.01",
+      "markScheme": {
+        "modelAnswer": "Ordered: 1.01, 1.1, 10.1, 10.11, 11.1.   Compare digit by digit from the left."
+      }
+    },
+    {
+      "id": "m-rq22",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "Which is the <strong>largest</strong> of these decimals?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq22",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "1.09",
+        "1.9",
+        "1.19",
+        "0.99"
+      ],
+      "answer": "1.9",
+      "markScheme": {
+        "modelAnswer": "1.9 has 9 in the tenths column, which is larger than 0 or 1 in the tenths of the others."
+      }
+    },
+    {
+      "id": "m-rq23",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N2",
+      "marks": 1,
+      "stem": "Which is the <strong>smallest</strong> of these decimals?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq23",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "0.303",
+        "0.33",
+        "0.3",
+        "0.033"
+      ],
+      "answer": "0.033",
+      "markScheme": {
+        "modelAnswer": "0.033 has 0 in the tenths column. All others have 3 in the tenths column, making them larger."
+      }
+    },
+    {
+      "id": "m-rq24",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N3",
+      "marks": 1,
+      "stem": "Round <strong>263,874</strong> to the nearest 10,000.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq24",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "260000",
+      "markScheme": {
+        "modelAnswer": "The ten-thousands digit is 6. The next digit is 3 (< 5), so round down: 260,000."
+      }
+    },
+    {
+      "id": "m-rq25",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N3",
+      "marks": 1,
+      "stem": "Round <strong>263,874</strong> to the nearest 1,000.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq25",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "264000",
+      "markScheme": {
+        "modelAnswer": "The thousands digit is 3. The next digit is 8 (≥ 5), so round up: 264,000."
+      }
+    },
+    {
+      "id": "m-rq26",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N3",
+      "marks": 1,
+      "stem": "Round <strong>263,874</strong> to the nearest 100.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq26",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "263900",
+      "markScheme": {
+        "modelAnswer": "The hundreds digit is 8. The next digit is 7 (≥ 5), so round up: 263,900."
+      }
+    },
+    {
+      "id": "m-rq27",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N3",
+      "marks": 1,
+      "stem": "Round <strong>263,874</strong> to the nearest 10.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq27",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "263870",
+      "markScheme": {
+        "modelAnswer": "The tens digit is 7. The next digit is 4 (< 5), so round down: 263,870."
+      }
+    },
+    {
+      "id": "m-rq28",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N3",
+      "marks": 1,
+      "stem": "Round <strong>4,567,890</strong> to the nearest million.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq28",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "5000000",
+      "markScheme": {
+        "modelAnswer": "The millions digit is 4. The next digit is 5 (≥ 5), so round up: 5,000,000."
+      }
+    },
+    {
+      "id": "m-rq29",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N3",
+      "marks": 1,
+      "stem": "A bag of rice weighs 4,738 g. Round this to the nearest <strong>100 g</strong>.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq29",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "4700",
+      "markScheme": {
+        "modelAnswer": "The hundreds digit is 7. The next digit is 3 (< 5), so round down: 4,700 g."
+      }
+    },
+    {
+      "id": "m-rq30",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N4",
+      "marks": 1,
+      "stem": "What number is <strong>12 more</strong> than −7?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq30",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "5",
+      "markScheme": {
+        "modelAnswer": "−7 + 12 = 5.   Tip: start at −7 on a number line and count up 12 steps."
+      }
+    },
+    {
+      "id": "m-rq31",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N4",
+      "marks": 1,
+      "stem": "What number is <strong>8 less</strong> than 3?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq31",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "-5",
+      "markScheme": {
+        "modelAnswer": "3 − 8 = −5.   Tip: start at 3 and count back 8 steps."
+      }
+    },
+    {
+      "id": "m-rq32",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N4",
+      "marks": 1,
+      "stem": "The temperature outside is −4°C. Inside it is 15°C.<br>What is the <strong>difference</strong> in temperature?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq32",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "19",
+      "markScheme": {
+        "modelAnswer": "15 − (−4) = 15 + 4 = 19°C."
+      }
+    },
+    {
+      "id": "m-rq33",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N4",
+      "marks": 1,
+      "stem": "The temperature at midnight was −12°C. By noon it had <strong>risen by 18°C</strong>.<br>What was the temperature at noon?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq33",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "6",
+      "markScheme": {
+        "modelAnswer": "−12 + 18 = 6°C."
+      }
+    },
+    {
+      "id": "m-rq34",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N4",
+      "marks": 1,
+      "stem": "Write the missing number in this sequence:<br><strong>−8, ___ , −2, 1, 4</strong>",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq34",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "-5",
+      "markScheme": {
+        "modelAnswer": "Rule: add 3 each time.   −8 + 3 = −5,   −5 + 3 = −2,   −2 + 3 = 1,   1 + 3 = 4. ✓"
+      }
+    },
+    {
+      "id": "m-rq35",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N4",
+      "marks": 1,
+      "stem": "Write the missing number in this sequence:<br><strong>5, 0, −5, ___ , −15</strong>",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq35",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "-10",
+      "markScheme": {
+        "modelAnswer": "Rule: subtract 5 each time.   5 → 0 → −5 → −10 → −15. ✓"
+      }
+    },
+    {
+      "id": "m-rq36",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N4",
+      "marks": 1,
+      "stem": "What number is <strong>5 less</strong> than −3?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq36",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "-8",
+      "markScheme": {
+        "modelAnswer": "−3 − 5 = −8.   Tip: start at −3 and count back 5 more steps."
+      }
+    },
+    {
+      "id": "m-rq37",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "6N4",
+      "marks": 1,
+      "stem": "Write the missing number in this sequence:<br><strong>−20, −14, −8, ___ , 4</strong>",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq37",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "-2",
+      "markScheme": {
+        "modelAnswer": "Rule: add 6 each time.   −8 + 6 = −2,   −2 + 6 = 4. ✓"
+      }
+    },
+    {
+      "id": "m-rq38",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "5N3a",
+      "marks": 1,
+      "stem": "Write <strong>DCCIX</strong> in figures.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq38",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "709",
+      "markScheme": {
+        "modelAnswer": "D = 500, CC = 200, IX = 9.   500 + 200 + 9 = 709."
+      }
+    },
+    {
+      "id": "m-rq39",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "5N3a",
+      "marks": 1,
+      "stem": "Write <strong>MMXVII</strong> in figures.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq39",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "2017",
+      "markScheme": {
+        "modelAnswer": "MM = 2,000, X = 10, VII = 7.   2,000 + 10 + 7 = 2,017."
+      }
+    },
+    {
+      "id": "m-rq40",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "5N3a",
+      "marks": 1,
+      "stem": "Write <strong>1,984</strong> in Roman numerals.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq40",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "MCMLXXXIV"
+      ],
+      "markScheme": {
+        "modelAnswer": "M = 1,000, CM = 900, LXXX = 80, IV = 4.   Answer: MCMLXXXIV."
+      }
+    },
+    {
+      "id": "m-rq41",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "5N3a",
+      "marks": 1,
+      "stem": "Write <strong>MCM</strong> in figures.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq41",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "1900",
+      "markScheme": {
+        "modelAnswer": "M = 1,000, CM = 900.   1,000 + 900 = 1,900."
+      }
+    },
+    {
+      "id": "m-rq42",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "5N3a",
+      "marks": 1,
+      "stem": "Which number is equal to <strong>MCMXCIX</strong>?",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq42",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "1,989",
+        "1,909",
+        "1,999",
+        "2,099"
+      ],
+      "answer": "1,999",
+      "markScheme": {
+        "modelAnswer": "M = 1,000, CM = 900, XC = 90, IX = 9.   1,000 + 900 + 90 + 9 = 1,999."
+      }
+    },
+    {
+      "id": "m-rq43",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "5N3a",
+      "marks": 1,
+      "stem": "Write <strong>XLVII</strong> in figures.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq43",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "47",
+      "markScheme": {
+        "modelAnswer": "XL = 40, VII = 7.   40 + 7 = 47."
+      }
+    },
+    {
+      "id": "m-rq44",
+      "subject": "maths",
+      "strand": "number",
+      "domain": "5N3a",
+      "marks": 1,
+      "stem": "Write <strong>2024</strong> in Roman numerals.",
+      "meta": {
+        "source": "migrated:training/reasoning.json/rq44",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "MMXXIV"
+      ],
+      "markScheme": {
+        "modelAnswer": "MM = 2,000, XX = 20, IV = 4.   Answer: MMXXIV."
+      }
+    },
+    {
+      "id": "m-bank-r1",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P2",
+      "marks": 1,
+      "stem": "A packet contains 8 biscuits.\n\nHow many biscuits are there in 7 packets?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "56",
+      "markScheme": {
+        "modelAnswer": "56"
+      }
+    },
+    {
+      "id": "m-bank-r2",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P2",
+      "marks": 1,
+      "stem": "There are 450 pupils in a school.\n\n120 pupils walk to school.\n\nHow many pupils do not walk to school?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "330",
+      "markScheme": {
+        "modelAnswer": "330"
+      }
+    },
+    {
+      "id": "m-bank-r3",
+      "subject": "maths",
+      "strand": "fractions",
+      "domain": "6F4",
+      "paper": "P2",
+      "marks": 1,
+      "stem": "Which fraction is equivalent to 4/10?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "2/5"
+      ],
+      "markScheme": {
+        "modelAnswer": "2/5"
+      }
+    },
+    {
+      "id": "m-bank-r4",
+      "subject": "maths",
+      "strand": "fractions",
+      "domain": "6F4",
+      "paper": "P2",
+      "marks": 1,
+      "stem": "Write 3/4 as a decimal.",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "0.75",
+      "markScheme": {
+        "modelAnswer": "0.75"
+      }
+    },
+    {
+      "id": "m-bank-r5",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P2",
+      "marks": 1,
+      "stem": "What is 25% of 240?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "60",
+      "markScheme": {
+        "modelAnswer": "60"
+      }
+    },
+    {
+      "id": "m-bank-r6",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P2",
+      "marks": 1,
+      "stem": "What is the value of the digit 7 in the number 3.742?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "0.7",
+      "markScheme": {
+        "modelAnswer": "0.7"
+      }
+    },
+    {
+      "id": "m-bank-r7",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P2",
+      "marks": 1,
+      "stem": "A film starts at 14:35 and ends at 15:55.\n\nHow long is the film?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "1 hour 20 minutes"
+      ],
+      "markScheme": {
+        "modelAnswer": "1 hour 20 minutes"
+      }
+    },
+    {
+      "id": "m-bank-r8",
+      "subject": "maths",
+      "strand": "measure",
+      "domain": "6M5",
+      "paper": "P2",
+      "marks": 1,
+      "stem": "A rope is 3.6 metres long.\n\nHow many centimetres is this?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "360",
+      "markScheme": {
+        "modelAnswer": "360"
+      }
+    },
+    {
+      "id": "m-bank-r9",
+      "subject": "maths",
+      "strand": "geometry",
+      "domain": "6G2",
+      "paper": "P2",
+      "marks": 1,
+      "stem": "Which shape has exactly one line of symmetry?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r9",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "isosceles triangle"
+      ],
+      "markScheme": {
+        "modelAnswer": "isosceles triangle"
+      }
+    },
+    {
+      "id": "m-bank-r10",
+      "subject": "maths",
+      "strand": "geometry",
+      "domain": "6G2",
+      "paper": "P2",
+      "marks": 1,
+      "stem": "A rectangle has a length of 9 cm and a width of 4 cm.\n\nWhat is its perimeter?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r10",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "26 cm"
+      ],
+      "markScheme": {
+        "modelAnswer": "26 cm"
+      }
+    },
+    {
+      "id": "m-bank-r11",
+      "subject": "maths",
+      "strand": "ratio",
+      "domain": "6R1",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "The ratio of boys to girls in a class is 3:5.\n\nThere are 24 pupils in total.\n\nHow many boys are there?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r11",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "9",
+      "markScheme": {
+        "modelAnswer": "9"
+      }
+    },
+    {
+      "id": "m-bank-r12",
+      "subject": "maths",
+      "strand": "fractions",
+      "domain": "6F4",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "Lucy eats 2/5 of a chocolate bar.\n\nWhat fraction of the bar is left?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r12",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "3/5"
+      ],
+      "markScheme": {
+        "modelAnswer": "3/5"
+      }
+    },
+    {
+      "id": "m-bank-r13",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "Which number is the largest?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r13",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "0.65",
+      "markScheme": {
+        "modelAnswer": "0.65"
+      }
+    },
+    {
+      "id": "m-bank-r14",
+      "subject": "maths",
+      "strand": "measure",
+      "domain": "6M5",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "A jug holds 1.2 litres of water.\n\nHow many millilitres is this?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r14",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "1200",
+      "markScheme": {
+        "modelAnswer": "1200"
+      }
+    },
+    {
+      "id": "m-bank-r15",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "Find the value of n.\n\nn + 7 = 19",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r15",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "12",
+      "markScheme": {
+        "modelAnswer": "12"
+      }
+    },
+    {
+      "id": "m-bank-r16",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "Which chart is best for showing how a value changes over time?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r16",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "line graph"
+      ],
+      "markScheme": {
+        "modelAnswer": "line graph"
+      }
+    },
+    {
+      "id": "m-bank-r17",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "The mean of four numbers is 6.\n\nWhat is the total of the four numbers?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r17",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "24",
+      "markScheme": {
+        "modelAnswer": "24"
+      }
+    },
+    {
+      "id": "m-bank-r18",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "A box holds 36 apples.\n\nThe apples are shared equally between 9 children.\n\nHow many apples does each child get?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r18",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "4",
+      "markScheme": {
+        "modelAnswer": "4"
+      }
+    },
+    {
+      "id": "m-bank-r19",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "What is the size of a right angle?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r19",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "90°"
+      ],
+      "markScheme": {
+        "modelAnswer": "90°"
+      }
+    },
+    {
+      "id": "m-bank-r20",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "A book costs £4.75.\n\nHow much do 3 books cost?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r20",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "£14.25"
+      ],
+      "markScheme": {
+        "modelAnswer": "£14.25"
+      }
+    },
+    {
+      "id": "m-bank-r21",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "Amir buys a drink for £1.35.\n\nHe pays with a £2 coin.\n\nHow much change does he get?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r21",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "£0.65"
+      ],
+      "markScheme": {
+        "modelAnswer": "£0.65"
+      }
+    },
+    {
+      "id": "m-bank-r22",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "Which statement about a parallelogram is true?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r22",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "Opposite sides are equal"
+      ],
+      "markScheme": {
+        "modelAnswer": "Opposite sides are equal"
+      }
+    },
+    {
+      "id": "m-bank-r23",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "What is 3/8 of 64?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r23",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "24",
+      "markScheme": {
+        "modelAnswer": "24"
+      }
+    },
+    {
+      "id": "m-bank-r24",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "A lesson lasts 45 minutes.\n\nIt starts at 10:10.\n\nWhat time does it end?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r24",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "10:55"
+      ],
+      "markScheme": {
+        "modelAnswer": "10:55"
+      }
+    },
+    {
+      "id": "m-bank-r25",
+      "subject": "maths",
+      "strand": "calculation",
+      "domain": "6C8",
+      "paper": "P3",
+      "marks": 1,
+      "stem": "Which is the best estimate for 198 × 6?",
+      "meta": {
+        "source": "migrated:banks/reasoning.json/r25",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "1200",
+      "markScheme": {
+        "modelAnswer": "1200"
+      }
+    },
+    {
+      "id": "m-s1q1",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set1",
+      "marks": 1,
+      "stem": "Find the value of <em>n</em>.<br><strong>n + 14 = 31</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s1q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "17",
+      "markScheme": {
+        "modelAnswer": "n = 31 − 14 = 17.   Check: 17 + 14 = 31 ✓"
+      }
+    },
+    {
+      "id": "m-s1q2",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set1",
+      "marks": 1,
+      "stem": "Find the value of <em>m</em>.<br><strong>5m = 60</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s1q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "12",
+      "markScheme": {
+        "modelAnswer": "m = 60 ÷ 5 = 12.   Check: 5 × 12 = 60 ✓"
+      }
+    },
+    {
+      "id": "m-s1q3",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set1",
+      "marks": 1,
+      "stem": "Work out <strong>4p + 3</strong> when <em>p</em> = 5.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s1q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "23",
+      "markScheme": {
+        "modelAnswer": "4 × 5 + 3 = 20 + 3 = 23.   Multiply before adding (BIDMAS)!"
+      }
+    },
+    {
+      "id": "m-s1q4",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set1",
+      "marks": 1,
+      "stem": "Continue the sequence. Write the next <strong>two</strong> terms.<br>3, 8, 13, 18, ___, ___",
+      "meta": {
+        "source": "migrated:training/algebra.json/s1q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "multi",
+      "marking": "auto",
+      "answers": [
+        "23",
+        "28"
+      ],
+      "markScheme": {
+        "modelAnswer": "Rule: add 5 each time.   18 + 5 = 23,   23 + 5 = 28."
+      }
+    },
+    {
+      "id": "m-s1q5",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set1",
+      "marks": 1,
+      "stem": "A plumber uses the formula <strong>C = 3h + 5</strong> to work out his charge (C = total cost in £, h = hours worked).<br>What is the charge for <strong>4 hours</strong>?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s1q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "17",
+      "markScheme": {
+        "modelAnswer": "C = 3 × 4 + 5 = 12 + 5 = 17.   Multiply first (BIDMAS)!"
+      }
+    },
+    {
+      "id": "m-s1q6",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set1",
+      "marks": 1,
+      "stem": "Amir has <em>n</em> sweets. He gives <strong>4</strong> away.<br>Which expression shows how many he has left?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s1q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "n + 4",
+        "n − 4",
+        "4n",
+        "n ÷ 4"
+      ],
+      "answer": "n − 4",
+      "markScheme": {
+        "modelAnswer": "He gives 4 away, so we subtract: n − 4."
+      }
+    },
+    {
+      "id": "m-s1q7",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set1",
+      "marks": 1,
+      "stem": "Find the value of <em>t</em>.<br><strong>3t − 4 = 20</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s1q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "8",
+      "markScheme": {
+        "modelAnswer": "3t = 20 + 4 = 24.   t = 24 ÷ 3 = 8.   Check: 3 × 8 − 4 = 24 − 4 = 20 ✓"
+      }
+    },
+    {
+      "id": "m-s1q8",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set1",
+      "marks": 1,
+      "stem": "Work out <strong>c² + d</strong> when <em>c</em> = 3 and <em>d</em> = 8.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s1q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "17",
+      "markScheme": {
+        "modelAnswer": "c² = 3 × 3 = 9.   Then 9 + 8 = 17.   Remember: square first, then add!"
+      }
+    },
+    {
+      "id": "m-s1q9",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set1",
+      "marks": 1,
+      "stem": "What is the rule for this sequence?<br><strong>64, 32, 16, 8, ...</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s1q9",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "Add 4 each time",
+        "Subtract 8 each time",
+        "Divide by 2 each time",
+        "Multiply by 4 each time"
+      ],
+      "answer": "Divide by 2 each time",
+      "markScheme": {
+        "modelAnswer": "Rule: divide by 2 (halve) each time.   Next terms: 4, 2, 1."
+      }
+    },
+    {
+      "id": "m-s1q10",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A4",
+      "set": "set1",
+      "marks": 1,
+      "stem": "<em>a</em> and <em>b</em> are positive whole numbers and <em>a</em> &gt; <em>b</em>.<br><strong>a + b = 10</strong><br>Write <strong>one</strong> pair of values that works.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s1q10",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "pairs",
+      "marking": "auto",
+      "labels": [
+        "a",
+        "b"
+      ],
+      "validator": "sum10_agtb",
+      "markScheme": {
+        "modelAnswer": "Any pair where a + b = 10 and a &gt; b works:<br>a = 6, b = 4 &nbsp;|&nbsp; a = 7, b = 3 &nbsp;|&nbsp; a = 8, b = 2 &nbsp;|&nbsp; a = 9, b = 1"
+      }
+    },
+    {
+      "id": "m-s2q1",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set2",
+      "marks": 1,
+      "stem": "Find the value of <em>k</em>.<br><strong>6k + 5 = 41</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s2q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "6",
+      "markScheme": {
+        "modelAnswer": "6k = 41 − 5 = 36.   k = 36 ÷ 6 = 6.   Check: 6 × 6 + 5 = 36 + 5 = 41 ✓"
+      }
+    },
+    {
+      "id": "m-s2q2",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set2",
+      "marks": 1,
+      "stem": "Work out <strong>3a²</strong> when <em>a</em> = 4.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s2q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "48",
+      "markScheme": {
+        "modelAnswer": "a² = 4 × 4 = 16.   Then 3 × 16 = 48.   Square first, then multiply!"
+      }
+    },
+    {
+      "id": "m-s2q3",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set2",
+      "marks": 1,
+      "stem": "Continue the sequence. Write the next <strong>two</strong> terms.<br>5, 9, 13, 17, ___, ___",
+      "meta": {
+        "source": "migrated:training/algebra.json/s2q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "multi",
+      "marking": "auto",
+      "answers": [
+        "21",
+        "25"
+      ],
+      "markScheme": {
+        "modelAnswer": "Rule: add 4 each time.   17 + 4 = 21,   21 + 4 = 25."
+      }
+    },
+    {
+      "id": "m-s2q4",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set2",
+      "marks": 1,
+      "stem": "The formula is <strong>F = 2m + 4</strong>.<br>If F = 20, find <em>m</em>.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s2q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "8",
+      "markScheme": {
+        "modelAnswer": "2m + 4 = 20.   2m = 20 − 4 = 16.   m = 16 ÷ 2 = 8.   Check: 2 × 8 + 4 = 20 ✓"
+      }
+    },
+    {
+      "id": "m-s2q5",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set2",
+      "marks": 1,
+      "stem": "A bag has <em>n</em> apples. <strong>6 more</strong> are added.<br>Which expression shows the total?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s2q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "n − 6",
+        "6n",
+        "n + 6",
+        "n ÷ 6"
+      ],
+      "answer": "n + 6",
+      "markScheme": {
+        "modelAnswer": "6 more are added, so we add: n + 6."
+      }
+    },
+    {
+      "id": "m-s2q6",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set2",
+      "marks": 1,
+      "stem": "The formula for the perimeter of a square is <strong>P = 4l</strong>.<br>What is the perimeter when <em>l</em> = 7?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s2q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "28",
+      "markScheme": {
+        "modelAnswer": "P = 4 × 7 = 28."
+      }
+    },
+    {
+      "id": "m-s2q7",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set2",
+      "marks": 1,
+      "stem": "Find the value of <em>n</em>.<br><strong>48 ÷ n = 6</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s2q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "8",
+      "markScheme": {
+        "modelAnswer": "n = 48 ÷ 6 = 8.   Check: 48 ÷ 8 = 6 ✓"
+      }
+    },
+    {
+      "id": "m-s2q8",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set2",
+      "marks": 1,
+      "stem": "Work out <strong>5x − y</strong> when <em>x</em> = 6 and <em>y</em> = 9.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s2q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "21",
+      "markScheme": {
+        "modelAnswer": "5 × 6 − 9 = 30 − 9 = 21.   Multiply before subtracting (BIDMAS)!"
+      }
+    },
+    {
+      "id": "m-s2q9",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set2",
+      "marks": 1,
+      "stem": "Continue the sequence. Write the next <strong>two</strong> terms.<br>96, 48, 24, 12, ___, ___",
+      "meta": {
+        "source": "migrated:training/algebra.json/s2q9",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "multi",
+      "marking": "auto",
+      "answers": [
+        "6",
+        "3"
+      ],
+      "markScheme": {
+        "modelAnswer": "Rule: divide by 2 each time.   12 ÷ 2 = 6,   6 ÷ 2 = 3."
+      }
+    },
+    {
+      "id": "m-s2q10",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A4",
+      "set": "set2",
+      "marks": 1,
+      "stem": "<em>x</em> and <em>y</em> are positive whole numbers and <em>x</em> &lt; 20.<br><strong>x − y = 6</strong><br>Write <strong>one</strong> pair of values that works.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s2q10",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "pairs",
+      "marking": "auto",
+      "labels": [
+        "x",
+        "y"
+      ],
+      "validator": "diff6_xlt20",
+      "markScheme": {
+        "modelAnswer": "Any pair where x − y = 6 and x &lt; 20 works:<br>x = 7, y = 1 &nbsp;|&nbsp; x = 8, y = 2 &nbsp;|&nbsp; x = 9, y = 3 &nbsp;|&nbsp; x = 10, y = 4 &nbsp;(and more)"
+      }
+    },
+    {
+      "id": "m-s3q1",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set3",
+      "marks": 1,
+      "stem": "Find the value of <em>n</em>.<br><strong>2n + 7 = 19</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s3q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "6",
+      "markScheme": {
+        "modelAnswer": "2n = 19 − 7 = 12.   n = 12 ÷ 2 = 6.   Check: 2 × 6 + 7 = 12 + 7 = 19 ✓"
+      }
+    },
+    {
+      "id": "m-s3q2",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set3",
+      "marks": 1,
+      "stem": "Work out <strong>6m − 4</strong> when <em>m</em> = 3.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s3q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "14",
+      "markScheme": {
+        "modelAnswer": "6 × 3 − 4 = 18 − 4 = 14.   Multiply before subtracting (BIDMAS)!"
+      }
+    },
+    {
+      "id": "m-s3q3",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set3",
+      "marks": 1,
+      "stem": "Continue the sequence. Write the next <strong>two</strong> terms.<br>2, 6, 18, 54, ___, ___",
+      "meta": {
+        "source": "migrated:training/algebra.json/s3q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "multi",
+      "marking": "auto",
+      "answers": [
+        "162",
+        "486"
+      ],
+      "markScheme": {
+        "modelAnswer": "Rule: multiply by 3 each time.   54 × 3 = 162,   162 × 3 = 486."
+      }
+    },
+    {
+      "id": "m-s3q4",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set3",
+      "marks": 1,
+      "stem": "Work out <strong>(a + b) × 3</strong> when <em>a</em> = 4 and <em>b</em> = 6.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s3q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "30",
+      "markScheme": {
+        "modelAnswer": "Brackets first: (4 + 6) = 10.   Then 10 × 3 = 30.   Always work out brackets first (BIDMAS)!"
+      }
+    },
+    {
+      "id": "m-s3q5",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set3",
+      "marks": 1,
+      "stem": "<em>y</em> pencils are shared equally between <strong>3</strong> children.<br>Which expression shows how many pencils each child gets?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s3q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "y − 3",
+        "3y",
+        "y + 3",
+        "y ÷ 3"
+      ],
+      "answer": "y ÷ 3",
+      "markScheme": {
+        "modelAnswer": "Shared equally between 3 means divide: y ÷ 3."
+      }
+    },
+    {
+      "id": "m-s3q6",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set3",
+      "marks": 1,
+      "stem": "Find the value of <em>n</em>.<br><strong>n² = 49</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s3q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "7",
+      "markScheme": {
+        "modelAnswer": "n² means n × n.   7 × 7 = 49, so n = 7.   Check: 7² = 49 ✓"
+      }
+    },
+    {
+      "id": "m-s3q7",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set3",
+      "marks": 1,
+      "stem": "A formula for the area of a rectangle is <strong>A = l × w</strong>.<br>What is the area when <em>l</em> = 8 and <em>w</em> = 5?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s3q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "40",
+      "markScheme": {
+        "modelAnswer": "A = 8 × 5 = 40."
+      }
+    },
+    {
+      "id": "m-s3q8",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set3",
+      "marks": 1,
+      "stem": "The sequence 4, 7, 10, 13, … follows a rule.<br>Write an expression for the <strong>nth term</strong>.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s3q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "3n+1"
+      ],
+      "markScheme": {
+        "modelAnswer": "The rule adds 3 each time, so start with 3n.   When n = 1: 3(1) = 3, but we need 4, so add 1.   nth term = 3n + 1.   Check: n=2 → 3(2)+1 = 7 ✓"
+      }
+    },
+    {
+      "id": "m-s3q9",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set3",
+      "marks": 1,
+      "stem": "What is the rule for this sequence?<br><strong>1, 4, 9, 16, 25, ...</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s3q9",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "Add 3 each time",
+        "Multiply by 4 each time",
+        "Square numbers (1², 2², 3², …)",
+        "Add 10 each time"
+      ],
+      "answer": "Square numbers (1², 2², 3², …)",
+      "markScheme": {
+        "modelAnswer": "These are square numbers: 1², 2², 3², 4², 5², …   Next terms: 36, 49, 64."
+      }
+    },
+    {
+      "id": "m-s3q10",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A4",
+      "set": "set3",
+      "marks": 1,
+      "stem": "<em>a</em> and <em>b</em> are positive whole numbers.<br><strong>2a + b = 11</strong><br>Write <strong>one</strong> pair of values that works.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s3q10",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "pairs",
+      "marking": "auto",
+      "labels": [
+        "a",
+        "b"
+      ],
+      "validator": "2a_plus_b_11",
+      "markScheme": {
+        "modelAnswer": "Any pair where 2a + b = 11 works:<br>a = 1, b = 9 &nbsp;|&nbsp; a = 2, b = 7 &nbsp;|&nbsp; a = 3, b = 5 &nbsp;|&nbsp; a = 4, b = 3 &nbsp;|&nbsp; a = 5, b = 1"
+      }
+    },
+    {
+      "id": "m-s4q1",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set4",
+      "marks": 1,
+      "stem": "Find the value of <em>t</em>.<br><strong>4t + 9 = 37</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s4q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "7",
+      "markScheme": {
+        "modelAnswer": "4t = 37 − 9 = 28.   t = 28 ÷ 4 = 7.   Check: 4 × 7 + 9 = 28 + 9 = 37 ✓"
+      }
+    },
+    {
+      "id": "m-s4q2",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set4",
+      "marks": 1,
+      "stem": "Work out <strong>p² − q</strong> when <em>p</em> = 5 and <em>q</em> = 7.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s4q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "18",
+      "markScheme": {
+        "modelAnswer": "p² = 5 × 5 = 25.   Then 25 − 7 = 18.   Square first, then subtract!"
+      }
+    },
+    {
+      "id": "m-s4q3",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set4",
+      "marks": 1,
+      "stem": "Continue the sequence. Write the next <strong>two</strong> terms.<br>3, 7, 11, 15, ___, ___",
+      "meta": {
+        "source": "migrated:training/algebra.json/s4q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "multi",
+      "marking": "auto",
+      "answers": [
+        "19",
+        "23"
+      ],
+      "markScheme": {
+        "modelAnswer": "Rule: add 4 each time.   15 + 4 = 19,   19 + 4 = 23."
+      }
+    },
+    {
+      "id": "m-s4q4",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set4",
+      "marks": 1,
+      "stem": "A taxi firm uses the formula <strong>C = 45m + 20</strong> to calculate the cost in pence (C = cost, m = miles).<br>What is the cost for <strong>2 miles</strong>?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s4q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "110",
+      "markScheme": {
+        "modelAnswer": "C = 45 × 2 + 20 = 90 + 20 = 110.   Multiply first (BIDMAS)!"
+      }
+    },
+    {
+      "id": "m-s4q5",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set4",
+      "marks": 1,
+      "stem": "A box holds <em>n</em> biscuits. There are <strong>5</strong> boxes.<br>Which expression shows the total number of biscuits?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s4q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "n + 5",
+        "n − 5",
+        "5n",
+        "n ÷ 5"
+      ],
+      "answer": "5n",
+      "markScheme": {
+        "modelAnswer": "5 groups of n biscuits means multiply: 5n (which means 5 × n)."
+      }
+    },
+    {
+      "id": "m-s4q6",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set4",
+      "marks": 1,
+      "stem": "Find the value of <em>n</em>.<br><strong>n ÷ 4 + 3 = 8</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s4q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "20",
+      "markScheme": {
+        "modelAnswer": "n ÷ 4 = 8 − 3 = 5.   n = 5 × 4 = 20.   Check: 20 ÷ 4 + 3 = 5 + 3 = 8 ✓"
+      }
+    },
+    {
+      "id": "m-s4q7",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set4",
+      "marks": 1,
+      "stem": "Work out <strong>2(x + y)</strong> when <em>x</em> = 5 and <em>y</em> = 3.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s4q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "16",
+      "markScheme": {
+        "modelAnswer": "Brackets first: (5 + 3) = 8.   Then 2 × 8 = 16.   Always work out brackets first (BIDMAS)!"
+      }
+    },
+    {
+      "id": "m-s4q8",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set4",
+      "marks": 1,
+      "stem": "The sequence 5, 8, 11, 14, … follows a rule.<br>Write an expression for the <strong>nth term</strong>.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s4q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "3n+2"
+      ],
+      "markScheme": {
+        "modelAnswer": "The rule adds 3 each time, so start with 3n.   When n = 1: 3(1) = 3, but we need 5, so add 2.   nth term = 3n + 2.   Check: n=2 → 3(2)+2 = 8 ✓"
+      }
+    },
+    {
+      "id": "m-s4q9",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set4",
+      "marks": 1,
+      "stem": "What is the rule for this sequence?<br><strong>1, 2, 4, 8, 16, ...</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s4q9",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "Add 2 each time",
+        "Divide by 2 each time",
+        "Add 4 each time",
+        "Multiply by 2 each time"
+      ],
+      "answer": "Multiply by 2 each time",
+      "markScheme": {
+        "modelAnswer": "Rule: multiply by 2 (double) each time.   Next terms: 32, 64, 128."
+      }
+    },
+    {
+      "id": "m-s4q10",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A4",
+      "set": "set4",
+      "marks": 1,
+      "stem": "<em>m</em> and <em>n</em> are positive whole numbers.<br><strong>m × n = 12</strong><br>Write <strong>one</strong> pair of values that works.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s4q10",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "pairs",
+      "marking": "auto",
+      "labels": [
+        "m",
+        "n"
+      ],
+      "validator": "prod12_pos",
+      "markScheme": {
+        "modelAnswer": "Any factor pair of 12 works:<br>m = 1, n = 12 &nbsp;|&nbsp; m = 2, n = 6 &nbsp;|&nbsp; m = 3, n = 4 &nbsp;|&nbsp; m = 4, n = 3 &nbsp;|&nbsp; m = 6, n = 2 &nbsp;|&nbsp; m = 12, n = 1"
+      }
+    },
+    {
+      "id": "m-s5q1",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set5",
+      "marks": 1,
+      "stem": "Find the value of <em>n</em>.<br><strong>3n − 5 = 22</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s5q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "9",
+      "markScheme": {
+        "modelAnswer": "3n = 22 + 5 = 27.   n = 27 ÷ 3 = 9.   Check: 3 × 9 − 5 = 27 − 5 = 22 ✓"
+      }
+    },
+    {
+      "id": "m-s5q2",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set5",
+      "marks": 1,
+      "stem": "Find the <strong>missing first term</strong>.<br><strong>___, 7, 13, 19, 25</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s5q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "1",
+      "markScheme": {
+        "modelAnswer": "Rule: add 6 each time.   Working backwards: 7 − 6 = 1.   Check: 1, 7, 13, 19, 25 ✓"
+      }
+    },
+    {
+      "id": "m-s5q3",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set5",
+      "marks": 1,
+      "stem": "The nth term of a sequence is <strong>4n + 3</strong>.<br>What is the <strong>8th term</strong>?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s5q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "35",
+      "markScheme": {
+        "modelAnswer": "Substitute n = 8:   4 × 8 + 3 = 32 + 3 = 35."
+      }
+    },
+    {
+      "id": "m-s5q4",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set5",
+      "marks": 1,
+      "stem": "Find the <strong>nth term</strong> of this sequence.<br><strong>11, 19, 27, 35, …</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s5q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "8n+3"
+      ],
+      "markScheme": {
+        "modelAnswer": "Increases by 8 each time → start with 8n.   When n = 1: 8(1) = 8, but we need 11, so add 3.   nth term = 8n + 3.   Check: n = 2 → 8(2) + 3 = 19 ✓"
+      }
+    },
+    {
+      "id": "m-s5q5",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set5",
+      "marks": 1,
+      "stem": "A sequence has the rule <strong>6n + 1</strong>.<br>What is the <strong>10th term</strong>?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s5q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "61",
+      "markScheme": {
+        "modelAnswer": "Substitute n = 10:   6 × 10 + 1 = 60 + 1 = 61."
+      }
+    },
+    {
+      "id": "m-s5q6",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set5",
+      "marks": 1,
+      "stem": "Find the <strong>missing term</strong>.<br><strong>3, ___, 15, 21, 27</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s5q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "9",
+      "markScheme": {
+        "modelAnswer": "Rule: add 6 each time.   3 + 6 = 9.   Check: 9 + 6 = 15 ✓"
+      }
+    },
+    {
+      "id": "m-s5q7",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set5",
+      "marks": 1,
+      "stem": "Work out <strong>3(p − q)</strong> when <em>p</em> = 8 and <em>q</em> = 3.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s5q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "15",
+      "markScheme": {
+        "modelAnswer": "Brackets first: (8 − 3) = 5.   Then 3 × 5 = 15.   Always work out brackets first (BIDMAS)!"
+      }
+    },
+    {
+      "id": "m-s5q8",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set5",
+      "marks": 1,
+      "stem": "Which expression is the <strong>nth term</strong> of this sequence?<br><strong>2, 7, 12, 17, …</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s5q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "5n − 3",
+        "5n + 2",
+        "2n + 5",
+        "n + 5"
+      ],
+      "answer": "5n − 3",
+      "markScheme": {
+        "modelAnswer": "Increases by 5 → start with 5n.   When n = 1: 5(1) = 5, but we need 2, so subtract 3.   nth term = 5n − 3.   Check: n = 2 → 10 − 3 = 7 ✓"
+      }
+    },
+    {
+      "id": "m-s5q9",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set5",
+      "marks": 1,
+      "stem": "The nth term of a sequence is <strong>8n + 3</strong>.<br>A term in the sequence is <strong>43</strong>. What is its position (<em>n</em>)?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s5q9",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "5",
+      "markScheme": {
+        "modelAnswer": "8n + 3 = 43.   8n = 43 − 3 = 40.   n = 40 ÷ 8 = 5.   Check: 8 × 5 + 3 = 43 ✓"
+      }
+    },
+    {
+      "id": "m-s5q10",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A4",
+      "set": "set5",
+      "marks": 1,
+      "stem": "<em>a</em> and <em>b</em> are positive whole numbers.<br><strong>3a + 2b = 16</strong><br>Write <strong>one</strong> pair of values that works.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s5q10",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "pairs",
+      "marking": "auto",
+      "labels": [
+        "a",
+        "b"
+      ],
+      "validator": "3a_plus_2b_16",
+      "markScheme": {
+        "modelAnswer": "Valid pairs: &nbsp; a = 2, b = 5 &nbsp;|&nbsp; a = 4, b = 2"
+      }
+    },
+    {
+      "id": "m-s6q1",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A3",
+      "set": "set6",
+      "marks": 1,
+      "stem": "Find the value of <em>w</em>.<br><strong>5w − 7 = 43</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s6q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "10",
+      "markScheme": {
+        "modelAnswer": "5w = 43 + 7 = 50.   w = 50 ÷ 5 = 10.   Check: 5 × 10 − 7 = 50 − 7 = 43 ✓"
+      }
+    },
+    {
+      "id": "m-s6q2",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set6",
+      "marks": 1,
+      "stem": "Find the <strong>missing first term</strong>.<br><strong>___, 15, 24, 33, 42</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s6q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "6",
+      "markScheme": {
+        "modelAnswer": "Rule: add 9 each time.   Working backwards: 15 − 9 = 6.   Check: 6, 15, 24, 33, 42 ✓"
+      }
+    },
+    {
+      "id": "m-s6q3",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set6",
+      "marks": 1,
+      "stem": "The nth term of a sequence is <strong>3n − 4</strong>.<br>What is the <strong>12th term</strong>?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s6q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "32",
+      "markScheme": {
+        "modelAnswer": "Substitute n = 12:   3 × 12 − 4 = 36 − 4 = 32."
+      }
+    },
+    {
+      "id": "m-s6q4",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set6",
+      "marks": 1,
+      "stem": "Find the <strong>missing term</strong>.<br><strong>4, ___, 22, 31, 40</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s6q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "13",
+      "markScheme": {
+        "modelAnswer": "Rule: add 9 each time.   4 + 9 = 13.   Check: 13 + 9 = 22 ✓"
+      }
+    },
+    {
+      "id": "m-s6q5",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set6",
+      "marks": 1,
+      "stem": "Find the <strong>nth term</strong> of this sequence.<br><strong>6, 11, 16, 21, …</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s6q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "short-closed",
+      "marking": "auto",
+      "accept": [
+        "5n+1"
+      ],
+      "markScheme": {
+        "modelAnswer": "Increases by 5 → start with 5n.   When n = 1: 5(1) = 5, but we need 6, so add 1.   nth term = 5n + 1.   Check: n = 2 → 5(2) + 1 = 11 ✓"
+      }
+    },
+    {
+      "id": "m-s6q6",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set6",
+      "marks": 1,
+      "stem": "The nth term of a sequence is <strong>7n − 2</strong>.<br>What is the <strong>6th term</strong>?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s6q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "40",
+      "markScheme": {
+        "modelAnswer": "Substitute n = 6:   7 × 6 − 2 = 42 − 2 = 40."
+      }
+    },
+    {
+      "id": "m-s6q7",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set6",
+      "marks": 1,
+      "stem": "Which expression is the <strong>nth term</strong> of this sequence?<br><strong>3, 9, 15, 21, …</strong>",
+      "meta": {
+        "source": "migrated:training/algebra.json/s6q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "mcq",
+      "marking": "auto",
+      "choices": [
+        "3n",
+        "6n − 3",
+        "n + 6",
+        "3n + 6"
+      ],
+      "answer": "6n − 3",
+      "markScheme": {
+        "modelAnswer": "Increases by 6 → start with 6n.   When n = 1: 6(1) = 6, but we need 3, so subtract 3.   nth term = 6n − 3.   Check: n = 2 → 12 − 3 = 9 ✓"
+      }
+    },
+    {
+      "id": "m-s6q8",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A2",
+      "set": "set6",
+      "marks": 1,
+      "stem": "The nth term of a sequence is <strong>9n + 2</strong>.<br>A term in the sequence is <strong>56</strong>. What is its position (<em>n</em>)?",
+      "meta": {
+        "source": "migrated:training/algebra.json/s6q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "6",
+      "markScheme": {
+        "modelAnswer": "9n + 2 = 56.   9n = 56 − 2 = 54.   n = 54 ÷ 9 = 6.   Check: 9 × 6 + 2 = 56 ✓"
+      }
+    },
+    {
+      "id": "m-s6q9",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A1",
+      "set": "set6",
+      "marks": 1,
+      "stem": "Work out <strong>4x²</strong> when <em>x</em> = 3.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s6q9",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "numeric",
+      "marking": "auto",
+      "answer": "36",
+      "markScheme": {
+        "modelAnswer": "x² = 3 × 3 = 9.   Then 4 × 9 = 36.   Square first, then multiply!"
+      }
+    },
+    {
+      "id": "m-s6q10",
+      "subject": "maths",
+      "strand": "algebra",
+      "domain": "6A4",
+      "set": "set6",
+      "marks": 1,
+      "stem": "<em>p</em> and <em>q</em> are positive whole numbers and <em>p</em> &lt; <em>q</em>.<br><strong>p + q = 15</strong><br>Write <strong>one</strong> pair of values that works.",
+      "meta": {
+        "source": "migrated:training/algebra.json/s6q10",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "type": "pairs",
+      "marking": "auto",
+      "labels": [
+        "p",
+        "q"
+      ],
+      "validator": "sum15_plt_q",
+      "markScheme": {
+        "modelAnswer": "Any pair where p + q = 15 and p &lt; q works:<br>p = 1, q = 14 &nbsp;|&nbsp; p = 2, q = 13 &nbsp;|&nbsp; p = 3, q = 12 &nbsp;|&nbsp; p = 4, q = 11 &nbsp;|&nbsp; p = 5, q = 10 &nbsp;|&nbsp; p = 6, q = 9 &nbsp;|&nbsp; p = 7, q = 8"
+      }
+    },
+    {
+      "id": "wu-d2s0q0",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 24 × 35?",
+      "choices": [
+        "740",
+        "840",
+        "720",
+        "860"
+      ],
+      "answer": "840",
+      "markScheme": {
+        "modelAnswer": "840",
+        "explanation": "Break it down: 24 × 30 = 720 and 24 × 5 = 120. Add: 720 + 120 = 840."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/A/q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s0q1",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is ¾ of 80?",
+      "choices": [
+        "30",
+        "40",
+        "60",
+        "20"
+      ],
+      "answer": "60",
+      "markScheme": {
+        "modelAnswer": "60",
+        "explanation": "Divide by the denominator first, then multiply by the numerator. 80 ÷ 4 = 20; then 20 × 3 = 60."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/A/q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s0q2",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 0.7 + 0.45?",
+      "choices": [
+        "1.15",
+        "0.52",
+        "1.52",
+        "0.75"
+      ],
+      "answer": "1.15",
+      "markScheme": {
+        "modelAnswer": "1.15",
+        "explanation": "Write 0.7 as 0.70, then add column by column: 0.70 + 0.45. Hundredths: 0+5=5; tenths: 7+4=11, write 1 carry 1; ones: 0+0+1=1. Answer: 1.15."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/A/q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s0q3",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 3 + 4 × 2?",
+      "choices": [
+        "14",
+        "11",
+        "16",
+        "10"
+      ],
+      "answer": "11",
+      "markScheme": {
+        "modelAnswer": "11",
+        "explanation": "BODMAS: Multiplication comes before Addition. Work out 4 × 2 = 8 first, then 3 + 8 = 11."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/A/q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s0q4",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 756 ÷ 4?",
+      "choices": [
+        "189",
+        "192",
+        "181",
+        "188"
+      ],
+      "answer": "189",
+      "markScheme": {
+        "modelAnswer": "189",
+        "explanation": "Short division: 7÷4=1 r3; bring down → 35÷4=8 r3; bring down → 36÷4=9. Answer: 189."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/A/q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s0q5",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 15% of 200?",
+      "choices": [
+        "25",
+        "20",
+        "30",
+        "35"
+      ],
+      "answer": "30",
+      "markScheme": {
+        "modelAnswer": "30",
+        "explanation": "10% of 200 = 20. 5% is half of 10%, so 5% of 200 = 10. Add: 20 + 10 = 30."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/A/q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s0q6",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which set of fractions is in ascending order (smallest first)?",
+      "choices": [
+        "¾, ½, ⅔, ¼",
+        "¼, ½, ⅔, ¾",
+        "½, ¼, ¾, ⅔",
+        "⅔, ¼, ½, ¾"
+      ],
+      "answer": "¼, ½, ⅔, ¾",
+      "markScheme": {
+        "modelAnswer": "¼, ½, ⅔, ¾",
+        "explanation": "Convert to decimals: ¼=0.25, ½=0.5, ⅔≈0.667, ¾=0.75. Ascending: 0.25, 0.5, 0.667, 0.75."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/A/q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s0q7",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which fraction is equivalent to 4/6?",
+      "choices": [
+        "1/3",
+        "2/3",
+        "3/4",
+        "4/8"
+      ],
+      "answer": "2/3",
+      "markScheme": {
+        "modelAnswer": "2/3",
+        "explanation": "Divide numerator and denominator by their HCF. HCF of 4 and 6 is 2. So 4÷2=2, 6÷2=3. Answer: 2/3."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/A/q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s1q0",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 36 × 25?",
+      "choices": [
+        "800",
+        "850",
+        "900",
+        "880"
+      ],
+      "answer": "900",
+      "markScheme": {
+        "modelAnswer": "900",
+        "explanation": "36 × 25 = 36 × 100 ÷ 4 = 3600 ÷ 4 = 900. Or: 36 × 20 + 36 × 5 = 720 + 180 = 900."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/B/q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s1q1",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 2/5 of 60?",
+      "choices": [
+        "20",
+        "24",
+        "30",
+        "12"
+      ],
+      "answer": "24",
+      "markScheme": {
+        "modelAnswer": "24",
+        "explanation": "Divide by the denominator: 60 ÷ 5 = 12. Then multiply by the numerator: 12 × 2 = 24."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/B/q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s1q2",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 3.40 − 1.76?",
+      "choices": [
+        "1.64",
+        "1.74",
+        "2.36",
+        "1.54"
+      ],
+      "answer": "1.64",
+      "markScheme": {
+        "modelAnswer": "1.64",
+        "explanation": "Subtract column by column: 340 − 176 = 164 (in the same way as whole numbers), so 3.40 − 1.76 = 1.64."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/B/q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s1q3",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is (3 + 5) × 2 − 4?",
+      "choices": [
+        "12",
+        "14",
+        "16",
+        "10"
+      ],
+      "answer": "12",
+      "markScheme": {
+        "modelAnswer": "12",
+        "explanation": "Brackets first: (3+5) = 8. Then multiplication: 8×2 = 16. Then subtraction: 16−4 = 12."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/B/q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s1q4",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 504 ÷ 6?",
+      "choices": [
+        "84",
+        "88",
+        "82",
+        "90"
+      ],
+      "answer": "84",
+      "markScheme": {
+        "modelAnswer": "84",
+        "explanation": "Short division: 50÷6=8 r2; bring down → 24÷6=4. Answer: 84."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/B/q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s1q5",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 40% of 350?",
+      "choices": [
+        "120",
+        "130",
+        "140",
+        "150"
+      ],
+      "answer": "140",
+      "markScheme": {
+        "modelAnswer": "140",
+        "explanation": "10% of 350 = 35. Multiply by 4: 35 × 4 = 140."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/B/q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s1q6",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is ½ + ⅓?",
+      "choices": [
+        "2/5",
+        "2/6",
+        "5/6",
+        "1/6"
+      ],
+      "answer": "5/6",
+      "markScheme": {
+        "modelAnswer": "5/6",
+        "explanation": "Find a common denominator. LCM of 2 and 3 is 6. ½ = 3/6, ⅓ = 2/6. Add: 3/6 + 2/6 = 5/6."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/B/q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s1q7",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is the value of the digit 7 in the number 3.478?",
+      "choices": [
+        "7 tenths",
+        "7 hundredths",
+        "7 thousandths",
+        "7 ones"
+      ],
+      "answer": "7 hundredths",
+      "markScheme": {
+        "modelAnswer": "7 hundredths",
+        "explanation": "In a decimal, the columns after the point are: tenths, hundredths, thousandths. In 3.478: 4=tenths, 7=hundredths, 8=thousandths. So 7 = 0.07."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/B/q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s2q0",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 45 × 18?",
+      "choices": [
+        "800",
+        "810",
+        "750",
+        "720"
+      ],
+      "answer": "810",
+      "markScheme": {
+        "modelAnswer": "810",
+        "explanation": "45 × 18 = 45 × 20 − 45 × 2 = 900 − 90 = 810."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/C/q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s2q1",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What fraction of 48 is 12?",
+      "choices": [
+        "1/3",
+        "1/4",
+        "1/6",
+        "1/5"
+      ],
+      "answer": "1/4",
+      "markScheme": {
+        "modelAnswer": "1/4",
+        "explanation": "Write as a fraction: 12/48. Simplify by dividing by the HCF (12): 12÷12=1, 48÷12=4. Answer: 1/4."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/C/q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s2q2",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 0.6 × 0.4?",
+      "choices": [
+        "2.4",
+        "0.24",
+        "0.024",
+        "24"
+      ],
+      "answer": "0.24",
+      "markScheme": {
+        "modelAnswer": "0.24",
+        "explanation": "Ignore decimals first: 6 × 4 = 24. There are 2 decimal places total, so put the decimal 2 places from the right: 0.24."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/C/q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s2q3",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 20 − 4² ÷ 2?",
+      "choices": [
+        "64",
+        "8",
+        "12",
+        "18"
+      ],
+      "answer": "12",
+      "markScheme": {
+        "modelAnswer": "12",
+        "explanation": "BODMAS — Orders (powers) first: 4²=16. Then division: 16÷2=8. Then subtraction: 20−8=12."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/C/q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s2q4",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 250 ÷ 8?",
+      "choices": [
+        "30 remainder 2",
+        "31 remainder 2",
+        "32 remainder 2",
+        "31 remainder 5"
+      ],
+      "answer": "31 remainder 2",
+      "markScheme": {
+        "modelAnswer": "31 remainder 2",
+        "explanation": "8 × 31 = 248. 250 − 248 = 2. So 31 remainder 2."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/C/q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s2q5",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is 35% as a fraction in its simplest form?",
+      "choices": [
+        "35/100",
+        "7/20",
+        "7/10",
+        "3/5"
+      ],
+      "answer": "7/20",
+      "markScheme": {
+        "modelAnswer": "7/20",
+        "explanation": "Write as a fraction over 100: 35/100. Divide both by the HCF (5): 35÷5=7, 100÷5=20. Answer: 7/20."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/C/q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s2q6",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is ¾ − ⅓?",
+      "choices": [
+        "5/12",
+        "2/3",
+        "1/2",
+        "4/12"
+      ],
+      "answer": "5/12",
+      "markScheme": {
+        "modelAnswer": "5/12",
+        "explanation": "LCM of 4 and 3 is 12. ¾ = 9/12, ⅓ = 4/12. Subtract: 9/12 − 4/12 = 5/12."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/C/q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d2s2q7",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which shows 0.3, ¼, 2/5 and 0.28 in descending order (largest first)?",
+      "choices": [
+        "0.3, 2/5, 0.28, ¼",
+        "2/5, 0.3, 0.28, ¼",
+        "¼, 0.28, 0.3, 2/5",
+        "0.28, 0.3, ¼, 2/5"
+      ],
+      "answer": "2/5, 0.3, 0.28, ¼",
+      "markScheme": {
+        "modelAnswer": "2/5, 0.3, 0.28, ¼",
+        "explanation": "Convert to decimals: 2/5=0.40, 0.3=0.30, 0.28, ¼=0.25. Descending: 0.40, 0.30, 0.28, 0.25 → 2/5, 0.3, 0.28, ¼."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Wed 13/C/q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s0q0",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "How many metres are in 3.5 km?",
+      "choices": [
+        "350 m",
+        "3,050 m",
+        "3,500 m",
+        "35,000 m"
+      ],
+      "answer": "3,500 m",
+      "markScheme": {
+        "modelAnswer": "3,500 m",
+        "explanation": "To convert kilometres to metres, multiply by 1,000. 3.5 × 1,000 = 3,500 m."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/A/q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s0q1",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is the area of a rectangle with length 9 cm and width 7 cm?",
+      "choices": [
+        "32 cm²",
+        "63 cm²",
+        "16 cm²",
+        "45 cm²"
+      ],
+      "answer": "63 cm²",
+      "markScheme": {
+        "modelAnswer": "63 cm²",
+        "explanation": "Area of a rectangle = length × width. 9 × 7 = 63 cm²."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/A/q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s0q2",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is the sum of the interior angles in a triangle?",
+      "choices": [
+        "90°",
+        "270°",
+        "360°",
+        "180°"
+      ],
+      "answer": "180°",
+      "markScheme": {
+        "modelAnswer": "180°",
+        "explanation": "The interior angles of any triangle always add up to 180°. For example, a right-angled triangle: 90° + 45° + 45° = 180°."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/A/q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s0q3",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is the mean of 3, 7, 8 and 2?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "5",
+      "markScheme": {
+        "modelAnswer": "5",
+        "explanation": "Mean = total ÷ number of values. Total: 3+7+8+2 = 20. Divide by 4: 20÷4 = 5."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/A/q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s0q4",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Simplify the ratio 12 : 8.",
+      "choices": [
+        "6 : 4",
+        "4 : 3",
+        "3 : 2",
+        "2 : 1"
+      ],
+      "answer": "3 : 2",
+      "markScheme": {
+        "modelAnswer": "3 : 2",
+        "explanation": "Divide both numbers by their HCF. HCF of 12 and 8 is 4. So 12÷4=3, 8÷4=2. Simplified: 3 : 2."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/A/q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s0q5",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "How many faces does a cube have?",
+      "choices": [
+        "4",
+        "5",
+        "8",
+        "6"
+      ],
+      "answer": "6",
+      "markScheme": {
+        "modelAnswer": "6",
+        "explanation": "A cube has 6 square faces: top, bottom, front, back, left, and right. It also has 12 edges and 8 vertices."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/A/q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s0q6",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "A bag weighs 2,500 g. How much is this in kilograms?",
+      "choices": [
+        "25 kg",
+        "250 kg",
+        "2.5 kg",
+        "0.25 kg"
+      ],
+      "answer": "2.5 kg",
+      "markScheme": {
+        "modelAnswer": "2.5 kg",
+        "explanation": "To convert grams to kilograms, divide by 1,000. 2,500 ÷ 1,000 = 2.5 kg."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/A/q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s0q7",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is the area of a triangle with base 8 cm and height 5 cm?",
+      "choices": [
+        "40 cm²",
+        "13 cm²",
+        "20 cm²",
+        "26 cm²"
+      ],
+      "answer": "20 cm²",
+      "markScheme": {
+        "modelAnswer": "20 cm²",
+        "explanation": "Area of a triangle = ½ × base × height. ½ × 8 × 5 = 20 cm²."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/A/q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s1q0",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "How many centimetres are in 2.5 metres?",
+      "choices": [
+        "25 cm",
+        "250 cm",
+        "2,500 cm",
+        "0.025 cm"
+      ],
+      "answer": "250 cm",
+      "markScheme": {
+        "modelAnswer": "250 cm",
+        "explanation": "To convert metres to centimetres, multiply by 100. 2.5 × 100 = 250 cm."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/B/q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s1q1",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is the perimeter of a rectangle with length 12 cm and width 5 cm?",
+      "choices": [
+        "17 cm",
+        "34 cm",
+        "60 cm",
+        "30 cm"
+      ],
+      "answer": "34 cm",
+      "markScheme": {
+        "modelAnswer": "34 cm",
+        "explanation": "Perimeter = 2 × (length + width). 2 × (12 + 5) = 2 × 17 = 34 cm. Perimeter is the total distance around the outside."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/B/q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s1q2",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What type of angle is 145°?",
+      "choices": [
+        "Acute",
+        "Right angle",
+        "Obtuse",
+        "Reflex"
+      ],
+      "answer": "Obtuse",
+      "markScheme": {
+        "modelAnswer": "Obtuse",
+        "explanation": "Acute: under 90°. Right angle: exactly 90°. Obtuse: between 90° and 180°. Reflex: between 180° and 360°. 145° is between 90° and 180°, so obtuse."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/B/q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s1q3",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is the mode of: 3, 5, 7, 3, 8, 5, 3, 2?",
+      "choices": [
+        "5",
+        "3",
+        "7",
+        "8"
+      ],
+      "answer": "3",
+      "markScheme": {
+        "modelAnswer": "3",
+        "explanation": "The mode is the value that appears most often. 3 appears 3 times, 5 appears 2 times, others appear once. Mode = 3."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/B/q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s1q4",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "A recipe uses flour and sugar in a ratio of 3 : 1. If you use 120 g of flour, how much sugar do you need?",
+      "choices": [
+        "30 g",
+        "40 g",
+        "60 g",
+        "90 g"
+      ],
+      "answer": "40 g",
+      "markScheme": {
+        "modelAnswer": "40 g",
+        "explanation": "Find one part: 120 ÷ 3 = 40 g. Sugar is 1 part, so 1 × 40 = 40 g."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/B/q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s1q5",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "How many edges does a triangular prism have?",
+      "choices": [
+        "6",
+        "9",
+        "12",
+        "5"
+      ],
+      "answer": "9",
+      "markScheme": {
+        "modelAnswer": "9",
+        "explanation": "A triangular prism has 2 triangular ends (3 edges each = 6) and 3 edges along the length connecting them. Total: 6 + 3 = 9 edges."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/B/q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s1q6",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is the volume of a cuboid with length 4 cm, width 3 cm, and height 5 cm?",
+      "choices": [
+        "60 cm³",
+        "47 cm³",
+        "12 cm³",
+        "20 cm³"
+      ],
+      "answer": "60 cm³",
+      "markScheme": {
+        "modelAnswer": "60 cm³",
+        "explanation": "Volume of a cuboid = length × width × height. 4 × 3 × 5 = 60 cm³."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/B/q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s1q7",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "A point at (3, 4) is reflected in the y-axis. What are its new coordinates?",
+      "choices": [
+        "(3, −4)",
+        "(−3, 4)",
+        "(−3, −4)",
+        "(4, 3)"
+      ],
+      "answer": "(−3, 4)",
+      "markScheme": {
+        "modelAnswer": "(−3, 4)",
+        "explanation": "Reflecting in the y-axis changes the sign of the x-coordinate but leaves the y-coordinate unchanged. (3, 4) → (−3, 4)."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/B/q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s2q0",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "A train leaves at 09:45 and arrives at 12:20. How long is the journey?",
+      "choices": [
+        "2 hours 25 minutes",
+        "2 hours 35 minutes",
+        "3 hours 25 minutes",
+        "2 hours 15 minutes"
+      ],
+      "answer": "2 hours 35 minutes",
+      "markScheme": {
+        "modelAnswer": "2 hours 35 minutes",
+        "explanation": "09:45 → 10:00 = 15 min. 10:00 → 12:00 = 2 hours. 12:00 → 12:20 = 20 min. Total: 2 hours 35 minutes."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/C/q1",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s2q1",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "An L-shape is made of two rectangles: one 8 cm × 3 cm and one 4 cm × 5 cm. What is the total area?",
+      "choices": [
+        "44 cm²",
+        "54 cm²",
+        "40 cm²",
+        "24 cm²"
+      ],
+      "answer": "44 cm²",
+      "markScheme": {
+        "modelAnswer": "44 cm²",
+        "explanation": "Split into two rectangles. Area 1: 8 × 3 = 24 cm². Area 2: 4 × 5 = 20 cm². Total: 24 + 20 = 44 cm²."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/C/q2",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s2q2",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Angles on a straight line add up to:",
+      "choices": [
+        "90°",
+        "270°",
+        "180°",
+        "360°"
+      ],
+      "answer": "180°",
+      "markScheme": {
+        "modelAnswer": "180°",
+        "explanation": "Angles on a straight line always sum to 180°. Subtract the known angles from 180° to find any missing angle."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/C/q3",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s2q3",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "What is the range of: 4, 9, 2, 15, 7?",
+      "choices": [
+        "13",
+        "11",
+        "9",
+        "15"
+      ],
+      "answer": "13",
+      "markScheme": {
+        "modelAnswer": "13",
+        "explanation": "Range = largest value − smallest value. Largest = 15, smallest = 2. Range = 15 − 2 = 13."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/C/q4",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s2q4",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "In a class of 30 pupils, 12 walk to school. What fraction walk to school, in its simplest form?",
+      "choices": [
+        "12/30",
+        "2/5",
+        "2/6",
+        "4/10"
+      ],
+      "answer": "2/5",
+      "markScheme": {
+        "modelAnswer": "2/5",
+        "explanation": "Write as a fraction: 12/30. HCF of 12 and 30 is 6. 12÷6=2, 30÷6=5. Answer: 2/5."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/C/q5",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s2q5",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "Which shape has exactly one line of symmetry?",
+      "choices": [
+        "Square",
+        "Non-square rectangle",
+        "Equilateral triangle",
+        "Isosceles triangle"
+      ],
+      "answer": "Isosceles triangle",
+      "markScheme": {
+        "modelAnswer": "Isosceles triangle",
+        "explanation": "Square: 4 lines. Non-square rectangle: 2 lines. Equilateral triangle: 3 lines. Isosceles triangle: exactly 1 line (through the apex and midpoint of the base)."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/C/q6",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s2q6",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "A jug holds 2.5 litres. How many 200 ml glasses can it completely fill?",
+      "choices": [
+        "10",
+        "12",
+        "15",
+        "25"
+      ],
+      "answer": "12",
+      "markScheme": {
+        "modelAnswer": "12",
+        "explanation": "Convert 2.5 litres to ml: 2.5 × 1000 = 2,500 ml. Divide: 2,500 ÷ 200 = 12.5. You can fill 12 complete glasses (100 ml left over)."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/C/q7",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    },
+    {
+      "id": "wu-d3s2q7",
+      "subject": "maths",
+      "domain": "6N2",
+      "marks": 1,
+      "type": "mcq",
+      "marking": "auto",
+      "stem": "The angles of a quadrilateral are 85°, 110°, 70°, and x°. What is x?",
+      "choices": [
+        "85°",
+        "95°",
+        "100°",
+        "75°"
+      ],
+      "answer": "95°",
+      "markScheme": {
+        "modelAnswer": "95°",
+        "explanation": "Interior angles of any quadrilateral add up to 360°. 85 + 110 + 70 = 265. So x = 360 − 265 = 95°."
+      },
+      "meta": {
+        "source": "migrated:warmup.js/Thu 14/C/q8",
+        "author": "v1",
+        "added": "2026-07-02"
+      },
+      "strand": "number"
+    }
+  ]
+}

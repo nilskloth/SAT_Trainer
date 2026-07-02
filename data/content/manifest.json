@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "generated": "2026-07-02",
+  "banks": {
+    "reading": {
+      "passages": 12,
+      "questions": 94
+    },
+    "gps": {
+      "questions": 168,
+      "topics": 18
+    },
+    "maths": {
+      "questions": 177
+    },
+    "spelling": {
+      "lists": 2,
+      "wordPairs": 41
+    }
+  }
+}
