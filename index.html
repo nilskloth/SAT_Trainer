@@ -31,6 +31,7 @@
       <!-- TABS -->
       <div class="tabs" style="margin-top:10px;">
         <button class="tab active" data-tab="runner">Practice Run</button>
+        <button class="tab" data-tab="warmup">Warm Up</button>
         <button class="tab" data-tab="training">Training</button>
         <button class="tab" data-tab="banks">Question Banks</button>
         <button class="tab" data-tab="stats">Stats</button>
@@ -93,12 +94,34 @@
         </div>
       </div>
 
-      <div id=”paperArea” style=”margin-top:12px;”>
-        <div class=”q”><div class=”stem”>Press &#x201C;Start run&#x201D; to begin.</div></div>
+      <div id="paperArea" style="margin-top:12px;">
+        <div class="q"><div class="stem">Press &#x201C;Start run&#x201D; to begin.</div></div>
       </div>
     </div>
 
-  
+    <!-- WARM UP -->
+    <div class="card hidden" id="tab-warmup">
+      <div class="row" style="justify-content:space-between;align-items:flex-start;flex-wrap:nowrap;">
+        <div>
+          <h2>Daily Warm Up</h2>
+          <p class="muted" style="margin:0 0 12px;">8 questions each morning to warm up before the test. Scores are saved automatically.</p>
+        </div>
+        <button id="warmup-reset-btn">Reset day</button>
+      </div>
+
+      <div id="warmup-day-tabs" class="warmup-day-tabs"></div>
+
+      <div id="warmup-set-tabs" class="warmup-set-tabs"></div>
+
+      <div id="warmup-score-tracker" class="warmup-score-tracker"></div>
+
+      <div id="warmup-questions"></div>
+
+      <div id="warmup-summary" class="hidden" style="margin-top:16px;"></div>
+
+      <div id="warmup-dashboard" class="warmup-dashboard" style="margin-top:20px;border-top:1px solid #eee;padding-top:16px;"></div>
+    </div>
+
     <!-- TRAINING -->
     <div class="card hidden" id="tab-training">
       <h2>Training Tools</h2>

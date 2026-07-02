@@ -360,6 +360,18 @@ th {
   border-color: #111;
 }
 
+/* Group label in topic tabs */
+.grammar-group-label {
+  display: block;
+  width: 100%;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #888;
+  margin: 8px 0 4px;
+}
+
 /* Grammar blocks */
 
 .grammar-block {
@@ -1062,6 +1074,237 @@ th {
 .div-key dd {
   margin: 0;
   color: #333;
+}
+
+/* =========================
+   Warm Up
+========================= */
+
+.warmup-day-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.warmup-day-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.warmup-day-btn.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.warmup-day-btn.warmup-day-done {
+  background: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}
+
+.warmup-day-name {
+  font-weight: 700;
+}
+
+.warmup-day-btn .warmup-day-subject {
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+.warmup-set-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.warmup-set-btn {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.warmup-set-btn.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.warmup-set-btn.warmup-set-done {
+  background: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}
+
+.warmup-score-tracker {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  background: #f3f3f3;
+  border-radius: 8px;
+}
+
+.warmup-q {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+  background: #fcfcfc;
+}
+
+.warmup-stem {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.warmup-opts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+@media (max-width: 600px) {
+  .warmup-opts {
+    grid-template-columns: 1fr;
+  }
+}
+
+.warmup-opt {
+  text-align: left;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.warmup-opt:hover:not(:disabled) {
+  background: #f0f0f0;
+  border-color: #bbb;
+}
+
+.warmup-opt.warmup-correct {
+  background: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+  font-weight: 600;
+}
+
+.warmup-opt.warmup-wrong {
+  background: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+.warmup-opt.warmup-neutral {
+  opacity: 0.45;
+}
+
+.warmup-hint {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #fffbf0;
+  border: 1px solid #f0e0a0;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.warmup-summary-box {
+  background: #f0f7ff;
+  border: 1px solid #c0d8f0;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+}
+
+.warmup-summary-box h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+.warmup-summary-score {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 8px 0 4px;
+}
+
+.warmup-dash-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #444;
+  margin: 0 0 10px;
+}
+
+.warmup-dash-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 700px) {
+  .warmup-dash-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.warmup-dash-cell {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.warmup-dash-cell.warmup-dash-complete {
+  background: #d4edda;
+  border-color: #28a745;
+}
+
+.warmup-dash-label {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.warmup-dash-subject {
+  font-size: 12px;
+  color: #666;
+  margin: 2px 0;
+}
+
+.warmup-dash-sets {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.warmup-dash-set {
+  font-size: 12px;
+  color: #555;
+}
+
+.warmup-dash-set.warmup-dash-set-done {
+  color: #155724;
+  font-weight: 600;
 }
 
 /* Grammar role colours */

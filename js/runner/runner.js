@@ -170,8 +170,9 @@ function renderPaperContent(paperId) {
   const type = getPaperType(paperId);
 
   if (type === "reading") {
-    const passage = (window.DATA.banks.reading && window.DATA.banks.reading.length)
-      ? window.DATA.banks.reading[0] : null;
+    const pool = window.DATA.banks.reading || [];
+    const passage = pool.length
+      ? pool[Math.floor(Math.random() * pool.length)] : null;
 
     if (!passage) {
       area.innerHTML =

@@ -101,16 +101,20 @@ export async function loadAllData() {
       spellingRaw.spelling
       : spellingRaw;
 
+  const banks = {
+    reading,
+    spag,
+    grammar,
+    reasoning: bankReasoning
+  };
+
+  // Keep a pristine copy so the Banks tab can offer a clean "Reset".
+  window.DATA_BANKS_ORIGINAL = JSON.parse(JSON.stringify(banks));
+  applyBanksOverride(banks);
+
   const data = {
     papers,
-
-    banks: {
-      reading,
-      spag,
-      grammar,
-      reasoning: bankReasoning
-    },
-
+    banks,
     spelling,
     prefixes,
     algebra,
@@ -120,4 +124,26 @@ export async function loadAllData() {
 
   validateData(data);
   return data;
+}
+
+/* =========================
+   Banks override (from the Question Banks tab)
+========================= */
+
+export const BANKS_OVERRIDE_KEY = "ks2_banks_override_v1";
+
+function applyBanksOverride(banks) {
+  let override;
+  try {
+    override = JSON.parse(localStorage.getItem(BANKS_OVERRIDE_KEY) || "null");
+  } catch (err) {
+    console.warn("Ignoring malformed banks override:", err);
+    return;
+  }
+  if (!override || typeof override !== "object") return;
+
+  // Only replace a bank when the override supplies a valid array for it.
+  ["reading", "spag", "grammar", "reasoning"].forEach(key => {
+    if (Array.isArray(override[key])) banks[key] = override[key];
+  });
 }

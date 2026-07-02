@@ -13,7 +13,10 @@
         "examples": [
           {
             "sentence": "The dog ran across the field.",
-            "highlight": [1, 5],
+            "highlight": [
+              1,
+              5
+            ],
             "explanation": "Dog and field are nouns because they name things."
           }
         ],
@@ -21,27 +24,40 @@
           {
             "sentence": "The cat slept on the sofa.",
             "task": "Select all the nouns in the sentence.",
-            "answer": [1, 5]
+            "answer": [
+              1,
+              5
+            ]
           },
           {
             "sentence": "London is the capital city.",
             "task": "Select all the nouns in the sentence.",
-            "answer": [0, 4]
+            "answer": [
+              0,
+              4
+            ]
           },
           {
             "sentence": "Happiness is important.",
             "task": "Select the noun in the sentence.",
-            "answer": [0]
+            "answer": [
+              0
+            ]
           },
           {
             "sentence": "My brother plays football.",
             "task": "Select all the nouns in the sentence.",
-            "answer": [1, 3]
+            "answer": [
+              1,
+              3
+            ]
           },
           {
             "sentence": "The red car stopped suddenly.",
             "task": "Select the noun in the sentence.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           }
         ]
       },
@@ -52,7 +68,10 @@
         "examples": [
           {
             "sentence": "She is running to school.",
-            "highlight": [1, 2],
+            "highlight": [
+              1,
+              2
+            ],
             "explanation": "Is is an auxiliary verb and running is the main verb."
           }
         ],
@@ -60,47 +79,70 @@
           {
             "sentence": "The children laughed loudly.",
             "task": "Select the verb in the sentence.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           },
           {
             "sentence": "She is happy today.",
             "task": "Select the verb in the sentence.",
-            "answer": [1]
+            "answer": [
+              1
+            ]
           },
           {
             "sentence": "They were running quickly.",
             "task": "Select all the verbs, including auxiliary verbs.",
-            "answer": [1, 2]
+            "answer": [
+              1,
+              2
+            ]
           },
           {
             "sentence": "I feel tired.",
             "task": "Select the verb in the sentence.",
-            "answer": [1]
+            "answer": [
+              1
+            ]
           },
           {
             "sentence": "The door slammed shut.",
             "task": "Select the verb in the sentence.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           },
           {
             "sentence": "She has finished her work.",
             "task": "Select all the verbs, including auxiliary verbs.",
-            "answer": [1, 2]
+            "answer": [
+              1,
+              2
+            ]
           },
           {
             "sentence": "They are going to the park.",
             "task": "Select all the verbs, including auxiliary verbs.",
-            "answer": [1, 2]
+            "answer": [
+              1,
+              2
+            ]
           },
           {
             "sentence": "He did not understand the question.",
             "task": "Select all the verbs, including auxiliary verbs.",
-            "answer": [1, 3]
+            "answer": [
+              1,
+              3
+            ]
           },
           {
             "sentence": "You must finish your homework.",
             "task": "Select all the verbs, including modal verbs.",
-            "answer": [1, 2]
+            "answer": [
+              1,
+              2
+            ]
           }
         ]
       },
@@ -111,7 +153,9 @@
         "examples": [
           {
             "sentence": "The tall building touched the clouds.",
-            "highlight": [1],
+            "highlight": [
+              1
+            ],
             "explanation": "Tall describes the noun building."
           }
         ],
@@ -119,27 +163,38 @@
           {
             "sentence": "She wore a blue dress.",
             "task": "Select the adjective in the sentence.",
-            "answer": [3]
+            "answer": [
+              3
+            ]
           },
           {
             "sentence": "The old tree fell down.",
             "task": "Select the adjective in the sentence.",
-            "answer": [1]
+            "answer": [
+              1
+            ]
           },
           {
             "sentence": "It was a cold morning.",
             "task": "Select the adjective in the sentence.",
-            "answer": [3]
+            "answer": [
+              3
+            ]
           },
           {
             "sentence": "The noisy class lined up.",
             "task": "Select the adjective in the sentence.",
-            "answer": [1]
+            "answer": [
+              1
+            ]
           },
           {
             "sentence": "A small, brown dog barked.",
             "task": "Select all the adjectives in the sentence.",
-            "answer": [1, 2]
+            "answer": [
+              1,
+              2
+            ]
           }
         ]
       },
@@ -150,7 +205,9 @@
         "examples": [
           {
             "sentence": "She ran quickly to the gate.",
-            "highlight": [2],
+            "highlight": [
+              2
+            ],
             "explanation": "Quickly tells us how she ran."
           }
         ],
@@ -158,27 +215,38 @@
           {
             "sentence": "He spoke softly to the baby.",
             "task": "Select the adverb in the sentence.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           },
           {
             "sentence": "The children played outside.",
             "task": "Select the adverb in the sentence.",
-            "answer": [3]
+            "answer": [
+              3
+            ]
           },
           {
             "sentence": "She finished early.",
             "task": "Select the adverb in the sentence.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           },
           {
             "sentence": "The dog barked loudly.",
             "task": "Select the adverb in the sentence.",
-            "answer": [3]
+            "answer": [
+              3
+            ]
           },
           {
             "sentence": "They arrived late again.",
             "task": "Select all the adverbs in the sentence.",
-            "answer": [2, 3]
+            "answer": [
+              2,
+              3
+            ]
           }
         ]
       },
@@ -189,7 +257,9 @@
         "examples": [
           {
             "sentence": "Those apples are ripe.",
-            "highlight": [0],
+            "highlight": [
+              0
+            ],
             "explanation": "Those tells us which apples."
           }
         ],
@@ -197,27 +267,40 @@
           {
             "sentence": "My brother lost his bag.",
             "task": "Select all the determiners in the sentence.",
-            "answer": [0, 3]
+            "answer": [
+              0,
+              3
+            ]
           },
           {
             "sentence": "The cat sat on the mat.",
             "task": "Select all the determiners in the sentence.",
-            "answer": [0, 4]
+            "answer": [
+              0,
+              4
+            ]
           },
           {
             "sentence": "Each child received a prize.",
             "task": "Select all the determiners in the sentence.",
-            "answer": [0, 3]
+            "answer": [
+              0,
+              3
+            ]
           },
           {
             "sentence": "These books are heavy.",
             "task": "Select the determiner in the sentence.",
-            "answer": [0]
+            "answer": [
+              0
+            ]
           },
           {
             "sentence": "She found some shells.",
             "task": "Select the determiner in the sentence.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           }
         ]
       },
@@ -228,7 +311,9 @@
         "examples": [
           {
             "sentence": "The cat slept under the table.",
-            "highlight": [3],
+            "highlight": [
+              3
+            ],
             "explanation": "Under shows the position of the cat."
           }
         ],
@@ -236,27 +321,37 @@
           {
             "sentence": "The book is on the shelf.",
             "task": "Select the preposition in the sentence.",
-            "answer": [3]
+            "answer": [
+              3
+            ]
           },
           {
             "sentence": "She stood behind the door.",
             "task": "Select the preposition in the sentence.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           },
           {
             "sentence": "We walked through the park.",
             "task": "Select the preposition in the sentence.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           },
           {
             "sentence": "The keys are inside the drawer.",
             "task": "Select the preposition in the sentence.",
-            "answer": [3]
+            "answer": [
+              3
+            ]
           },
           {
             "sentence": "He arrived before dinner.",
             "task": "Select the preposition in the sentence.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           }
         ]
       },
@@ -267,7 +362,12 @@
         "examples": [
           {
             "sentence": "I stayed inside because it was raining.",
-            "highlight": [3, 4, 5, 6],
+            "highlight": [
+              3,
+              4,
+              5,
+              6
+            ],
             "explanation": "Because it was raining is a subordinate clause."
           }
         ],
@@ -275,27 +375,52 @@
           {
             "sentence": "She stayed home because she felt ill.",
             "task": "Select the subordinate clause in the sentence.",
-            "answer": [3, 4, 5, 6]
+            "answer": [
+              3,
+              4,
+              5,
+              6
+            ]
           },
           {
             "sentence": "When the bell rang, the class left.",
             "task": "Select the subordinate clause in the sentence.",
-            "answer": [0, 1, 2, 3]
+            "answer": [
+              0,
+              1,
+              2,
+              3
+            ]
           },
           {
             "sentence": "I will go if it stops raining.",
             "task": "Select the subordinate clause in the sentence.",
-            "answer": [3, 4, 5, 6]
+            "answer": [
+              3,
+              4,
+              5,
+              6
+            ]
           },
           {
             "sentence": "Although he was tired, he continued.",
             "task": "Select the subordinate clause in the sentence.",
-            "answer": [0, 1, 2, 3]
+            "answer": [
+              0,
+              1,
+              2,
+              3
+            ]
           },
           {
             "sentence": "We waited while the rain fell.",
             "task": "Select the subordinate clause in the sentence.",
-            "answer": [2, 3, 4, 5]
+            "answer": [
+              2,
+              3,
+              4,
+              5
+            ]
           }
         ]
       },
@@ -306,7 +431,9 @@
         "examples": [
           {
             "sentence": "Sarah lost her book.",
-            "highlight": [2],
+            "highlight": [
+              2
+            ],
             "explanation": "Her is a pronoun referring to Sarah."
           }
         ],
@@ -314,27 +441,39 @@
           {
             "sentence": "Tom said he was tired.",
             "task": "Select the pronoun in the sentence.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           },
           {
             "sentence": "The dog wagged its tail.",
             "task": "Select the pronoun in the sentence.",
-            "answer": [3]
+            "answer": [
+              3
+            ]
           },
           {
             "sentence": "These are mine.",
             "task": "Select all the pronouns in the sentence.",
-            "answer": [0, 2]
+            "answer": [
+              0,
+              2
+            ]
           },
           {
             "sentence": "The girl who won smiled.",
             "task": "Select the pronoun in the sentence.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           },
           {
             "sentence": "This is the one I like.",
             "task": "Select all the pronouns in the sentence.",
-            "answer": [0, 4]
+            "answer": [
+              0,
+              4
+            ]
           }
         ]
       },
@@ -345,7 +484,9 @@
         "examples": [
           {
             "sentence": "I wanted to go but it was raining.",
-            "highlight": [4],
+            "highlight": [
+              4
+            ],
             "explanation": "But joins two ideas."
           }
         ],
@@ -353,27 +494,37 @@
           {
             "sentence": "She ran and jumped.",
             "task": "Select the conjunction in the sentence.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           },
           {
             "sentence": "I stayed inside because it was cold.",
             "task": "Select the conjunction in the sentence.",
-            "answer": [3]
+            "answer": [
+              3
+            ]
           },
           {
             "sentence": "We can play or read.",
             "task": "Select the conjunction in the sentence.",
-            "answer": [3]
+            "answer": [
+              3
+            ]
           },
           {
             "sentence": "He tried hard but failed.",
             "task": "Select the conjunction in the sentence.",
-            "answer": [3]
+            "answer": [
+              3
+            ]
           },
           {
             "sentence": "You can go if you finish.",
             "task": "Select the conjunction in the sentence.",
-            "answer": [3]
+            "answer": [
+              3
+            ]
           }
         ]
       },
@@ -384,7 +535,9 @@
         "examples": [
           {
             "sentence": "The dog bit the postman.",
-            "highlight": [2],
+            "highlight": [
+              2
+            ],
             "explanation": "Bit is the active verb — the dog (subject) performs the action."
           }
         ],
@@ -393,45 +546,162 @@
             "type": "roles",
             "sentence": "The dog bit the postman.",
             "parts": [
-              { "role": "subject", "label": "Subject", "hint": "who or what does the action", "answer": [0, 1] },
-              { "role": "verb",    "label": "Verb",    "hint": "the action word",              "answer": [2] },
-              { "role": "object",  "label": "Object",  "hint": "who or what receives the action", "answer": [3, 4] }
+              {
+                "role": "subject",
+                "label": "Subject",
+                "hint": "who or what does the action",
+                "answer": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "role": "verb",
+                "label": "Verb",
+                "hint": "the action word",
+                "answer": [
+                  2
+                ]
+              },
+              {
+                "role": "object",
+                "label": "Object",
+                "hint": "who or what receives the action",
+                "answer": [
+                  3,
+                  4
+                ]
+              }
             ]
           },
           {
             "type": "roles",
             "sentence": "The teacher marked the books.",
             "parts": [
-              { "role": "subject", "label": "Subject", "hint": "who or what does the action", "answer": [0, 1] },
-              { "role": "verb",    "label": "Verb",    "hint": "the action word",              "answer": [2] },
-              { "role": "object",  "label": "Object",  "hint": "who or what receives the action", "answer": [3, 4] }
+              {
+                "role": "subject",
+                "label": "Subject",
+                "hint": "who or what does the action",
+                "answer": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "role": "verb",
+                "label": "Verb",
+                "hint": "the action word",
+                "answer": [
+                  2
+                ]
+              },
+              {
+                "role": "object",
+                "label": "Object",
+                "hint": "who or what receives the action",
+                "answer": [
+                  3,
+                  4
+                ]
+              }
             ]
           },
           {
             "type": "roles",
             "sentence": "The girl kicked the ball.",
             "parts": [
-              { "role": "subject", "label": "Subject", "hint": "who or what does the action", "answer": [0, 1] },
-              { "role": "verb",    "label": "Verb",    "hint": "the action word",              "answer": [2] },
-              { "role": "object",  "label": "Object",  "hint": "who or what receives the action", "answer": [3, 4] }
+              {
+                "role": "subject",
+                "label": "Subject",
+                "hint": "who or what does the action",
+                "answer": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "role": "verb",
+                "label": "Verb",
+                "hint": "the action word",
+                "answer": [
+                  2
+                ]
+              },
+              {
+                "role": "object",
+                "label": "Object",
+                "hint": "who or what receives the action",
+                "answer": [
+                  3,
+                  4
+                ]
+              }
             ]
           },
           {
             "type": "roles",
             "sentence": "A police officer caught the thief.",
             "parts": [
-              { "role": "subject", "label": "Subject", "hint": "who or what does the action", "answer": [0, 1, 2] },
-              { "role": "verb",    "label": "Verb",    "hint": "the action word",              "answer": [3] },
-              { "role": "object",  "label": "Object",  "hint": "who or what receives the action", "answer": [4, 5] }
+              {
+                "role": "subject",
+                "label": "Subject",
+                "hint": "who or what does the action",
+                "answer": [
+                  0,
+                  1,
+                  2
+                ]
+              },
+              {
+                "role": "verb",
+                "label": "Verb",
+                "hint": "the action word",
+                "answer": [
+                  3
+                ]
+              },
+              {
+                "role": "object",
+                "label": "Object",
+                "hint": "who or what receives the action",
+                "answer": [
+                  4,
+                  5
+                ]
+              }
             ]
           },
           {
             "type": "roles",
             "sentence": "Lightning struck the old oak tree.",
             "parts": [
-              { "role": "subject", "label": "Subject", "hint": "who or what does the action", "answer": [0] },
-              { "role": "verb",    "label": "Verb",    "hint": "the action word",              "answer": [1] },
-              { "role": "object",  "label": "Object",  "hint": "who or what receives the action", "answer": [2, 3, 4, 5] }
+              {
+                "role": "subject",
+                "label": "Subject",
+                "hint": "who or what does the action",
+                "answer": [
+                  0
+                ]
+              },
+              {
+                "role": "verb",
+                "label": "Verb",
+                "hint": "the action word",
+                "answer": [
+                  1
+                ]
+              },
+              {
+                "role": "object",
+                "label": "Object",
+                "hint": "who or what receives the action",
+                "answer": [
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              }
             ]
           }
         ]
@@ -443,7 +713,10 @@
         "examples": [
           {
             "sentence": "The postman was bitten by the dog.",
-            "highlight": [2, 3],
+            "highlight": [
+              2,
+              3
+            ],
             "explanation": "Was bitten is the passive verb phrase — the postman (subject) receives the action. The dog follows 'by'."
           }
         ],
@@ -452,44 +725,160 @@
             "type": "roles",
             "sentence": "The postman was bitten by the dog.",
             "parts": [
-              { "role": "subject", "label": "Subject",      "hint": "who or what the sentence is about — it receives the action", "answer": [0, 1] },
-              { "role": "verb",    "label": "Passive verb",  "hint": "the auxiliary verb and past participle", "answer": [2, 3] },
-              { "role": "agent",   "label": "Agent",         "hint": "who actually does the action — includes 'by'", "answer": [4, 5, 6] }
+              {
+                "role": "subject",
+                "label": "Subject",
+                "hint": "who or what the sentence is about — it receives the action",
+                "answer": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "role": "verb",
+                "label": "Passive verb",
+                "hint": "the auxiliary verb and past participle",
+                "answer": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "role": "agent",
+                "label": "Agent",
+                "hint": "who actually does the action — includes 'by'",
+                "answer": [
+                  4,
+                  5,
+                  6
+                ]
+              }
             ]
           },
           {
             "type": "roles",
             "sentence": "The books were marked by the teacher.",
             "parts": [
-              { "role": "subject", "label": "Subject",      "hint": "who or what the sentence is about — it receives the action", "answer": [0, 1] },
-              { "role": "verb",    "label": "Passive verb",  "hint": "the auxiliary verb and past participle", "answer": [2, 3] },
-              { "role": "agent",   "label": "Agent",         "hint": "who actually does the action — includes 'by'", "answer": [4, 5, 6] }
+              {
+                "role": "subject",
+                "label": "Subject",
+                "hint": "who or what the sentence is about — it receives the action",
+                "answer": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "role": "verb",
+                "label": "Passive verb",
+                "hint": "the auxiliary verb and past participle",
+                "answer": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "role": "agent",
+                "label": "Agent",
+                "hint": "who actually does the action — includes 'by'",
+                "answer": [
+                  4,
+                  5,
+                  6
+                ]
+              }
             ]
           },
           {
             "type": "roles",
             "sentence": "The goal was scored by the striker.",
             "parts": [
-              { "role": "subject", "label": "Subject",      "hint": "who or what the sentence is about — it receives the action", "answer": [0, 1] },
-              { "role": "verb",    "label": "Passive verb",  "hint": "the auxiliary verb and past participle", "answer": [2, 3] },
-              { "role": "agent",   "label": "Agent",         "hint": "who actually does the action — includes 'by'", "answer": [4, 5, 6] }
+              {
+                "role": "subject",
+                "label": "Subject",
+                "hint": "who or what the sentence is about — it receives the action",
+                "answer": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "role": "verb",
+                "label": "Passive verb",
+                "hint": "the auxiliary verb and past participle",
+                "answer": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "role": "agent",
+                "label": "Agent",
+                "hint": "who actually does the action — includes 'by'",
+                "answer": [
+                  4,
+                  5,
+                  6
+                ]
+              }
             ]
           },
           {
             "type": "roles",
             "sentence": "The cake was eaten by the children.",
             "parts": [
-              { "role": "subject", "label": "Subject",      "hint": "who or what the sentence is about — it receives the action", "answer": [0, 1] },
-              { "role": "verb",    "label": "Passive verb",  "hint": "the auxiliary verb and past participle", "answer": [2, 3] },
-              { "role": "agent",   "label": "Agent",         "hint": "who actually does the action — includes 'by'", "answer": [4, 5, 6] }
+              {
+                "role": "subject",
+                "label": "Subject",
+                "hint": "who or what the sentence is about — it receives the action",
+                "answer": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "role": "verb",
+                "label": "Passive verb",
+                "hint": "the auxiliary verb and past participle",
+                "answer": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "role": "agent",
+                "label": "Agent",
+                "hint": "who actually does the action — includes 'by'",
+                "answer": [
+                  4,
+                  5,
+                  6
+                ]
+              }
             ]
           },
           {
             "type": "roles",
             "sentence": "The window was broken.",
             "parts": [
-              { "role": "subject", "label": "Subject",      "hint": "who or what the sentence is about — it receives the action", "answer": [0, 1] },
-              { "role": "verb",    "label": "Passive verb",  "hint": "the auxiliary verb and past participle", "answer": [2, 3] }
+              {
+                "role": "subject",
+                "label": "Subject",
+                "hint": "who or what the sentence is about — it receives the action",
+                "answer": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "role": "verb",
+                "label": "Passive verb",
+                "hint": "the auxiliary verb and past participle",
+                "answer": [
+                  2,
+                  3
+                ]
+              }
             ]
           }
         ]
@@ -501,7 +890,9 @@
         "examples": [
           {
             "sentence": "She runs to school every morning.",
-            "highlight": [1],
+            "highlight": [
+              1
+            ],
             "explanation": "Runs is a simple present tense verb — it describes a regular, repeated action."
           }
         ],
@@ -509,27 +900,37 @@
           {
             "sentence": "She walks to school.",
             "task": "Select the simple present tense verb.",
-            "answer": [1]
+            "answer": [
+              1
+            ]
           },
           {
             "sentence": "They play football every Saturday.",
             "task": "Select the simple present tense verb.",
-            "answer": [1]
+            "answer": [
+              1
+            ]
           },
           {
             "sentence": "The sun rises in the east.",
             "task": "Select the simple present tense verb.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           },
           {
             "sentence": "Birds sing in the morning.",
             "task": "Select the simple present tense verb.",
-            "answer": [1]
+            "answer": [
+              1
+            ]
           },
           {
             "sentence": "He reads before bed.",
             "task": "Select the simple present tense verb.",
-            "answer": [1]
+            "answer": [
+              1
+            ]
           }
         ]
       },
@@ -540,7 +941,9 @@
         "examples": [
           {
             "sentence": "She ran to school this morning.",
-            "highlight": [1],
+            "highlight": [
+              1
+            ],
             "explanation": "Ran is a simple past tense verb — it describes a completed action. Ran is the irregular past of run."
           }
         ],
@@ -548,27 +951,151 @@
           {
             "sentence": "She walked to school.",
             "task": "Select the simple past tense verb.",
-            "answer": [1]
+            "answer": [
+              1
+            ]
           },
           {
             "sentence": "They played football last Saturday.",
             "task": "Select the simple past tense verb.",
-            "answer": [1]
+            "answer": [
+              1
+            ]
           },
           {
             "sentence": "The dog barked all night.",
             "task": "Select the simple past tense verb.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
           },
           {
             "sentence": "She wrote a long letter.",
             "task": "Select the simple past tense verb.",
-            "answer": [1]
+            "answer": [
+              1
+            ]
           },
           {
             "sentence": "The team won the trophy.",
             "task": "Select the simple past tense verb.",
-            "answer": [2]
+            "answer": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "present-progressive",
+        "label": "Present Progressive",
+        "definition": "The <strong>present progressive</strong> (or present continuous) describes actions happening right now or around the present time. It is formed with <em>am/is/are</em> + verb + <em>-ing</em>. Example: <em>I am playing</em>.",
+        "examples": [
+          {
+            "sentence": "She is writing a story.",
+            "highlight": [
+              1,
+              2
+            ],
+            "explanation": "\"Is writing\" is the present progressive verb phrase — \"is\" (auxiliary) + \"writing\" (main verb + -ing)."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "She is dancing in the hall.",
+            "task": "Select all parts of the present progressive verb phrase.",
+            "answer": [
+              1,
+              2
+            ]
+          },
+          {
+            "sentence": "They are building a sandcastle.",
+            "task": "Select all parts of the present progressive verb phrase.",
+            "answer": [
+              1,
+              2
+            ]
+          },
+          {
+            "sentence": "I am watching a film.",
+            "task": "Select all parts of the present progressive verb phrase.",
+            "answer": [
+              1,
+              2
+            ]
+          },
+          {
+            "sentence": "The dog is sleeping on the sofa.",
+            "task": "Select all parts of the present progressive verb phrase.",
+            "answer": [
+              2,
+              3
+            ]
+          },
+          {
+            "sentence": "We are learning about fractions.",
+            "task": "Select all parts of the present progressive verb phrase.",
+            "answer": [
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "past-progressive",
+        "label": "Past Progressive",
+        "definition": "The <strong>past progressive</strong> (or past continuous) describes actions that were in progress at a particular point in the past. It is formed with <em>was/were</em> + verb + <em>-ing</em>. Example: <em>I was playing</em>.",
+        "examples": [
+          {
+            "sentence": "She was singing when the bell rang.",
+            "highlight": [
+              1,
+              2
+            ],
+            "explanation": "\"Was singing\" is the past progressive verb phrase — \"was\" (auxiliary) + \"singing\" (main verb + -ing)."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "He was reading when I arrived.",
+            "task": "Select all parts of the past progressive verb phrase.",
+            "answer": [
+              1,
+              2
+            ]
+          },
+          {
+            "sentence": "They were playing football in the rain.",
+            "task": "Select all parts of the past progressive verb phrase.",
+            "answer": [
+              1,
+              2
+            ]
+          },
+          {
+            "sentence": "I was cooking dinner when the phone rang.",
+            "task": "Select all parts of the past progressive verb phrase.",
+            "answer": [
+              1,
+              2
+            ]
+          },
+          {
+            "sentence": "The children were laughing at the clown.",
+            "task": "Select all parts of the past progressive verb phrase.",
+            "answer": [
+              2,
+              3
+            ]
+          },
+          {
+            "sentence": "She was running to catch the bus.",
+            "task": "Select all parts of the past progressive verb phrase.",
+            "answer": [
+              1,
+              2
+            ]
           }
         ]
       },
@@ -579,7 +1106,10 @@
         "examples": [
           {
             "sentence": "She has won the race.",
-            "highlight": [1, 2],
+            "highlight": [
+              1,
+              2
+            ],
             "explanation": "Has won is a present perfect verb phrase — has is the auxiliary verb and won is the past participle."
           }
         ],
@@ -587,27 +1117,42 @@
           {
             "sentence": "She has finished her homework.",
             "task": "Select the present perfect verb phrase (has/have + past participle).",
-            "answer": [1, 2]
+            "answer": [
+              1,
+              2
+            ]
           },
           {
             "sentence": "They have arrived at the station.",
             "task": "Select the present perfect verb phrase (has/have + past participle).",
-            "answer": [1, 2]
+            "answer": [
+              1,
+              2
+            ]
           },
           {
             "sentence": "He has broken the record.",
             "task": "Select the present perfect verb phrase (has/have + past participle).",
-            "answer": [1, 2]
+            "answer": [
+              1,
+              2
+            ]
           },
           {
             "sentence": "The children have eaten their lunch.",
             "task": "Select the present perfect verb phrase (has/have + past participle).",
-            "answer": [2, 3]
+            "answer": [
+              2,
+              3
+            ]
           },
           {
             "sentence": "The goalkeeper has saved five penalties.",
             "task": "Select the present perfect verb phrase (has/have + past participle).",
-            "answer": [2, 3]
+            "answer": [
+              2,
+              3
+            ]
           }
         ]
       },
@@ -618,7 +1163,10 @@
         "examples": [
           {
             "sentence": "By the time he arrived, she had won the race.",
-            "highlight": [6, 7],
+            "highlight": [
+              6,
+              7
+            ],
             "explanation": "Had won is past perfect — her winning happened before he arrived. We use had + past participle to show this earlier past event."
           }
         ],
@@ -626,27 +1174,99 @@
           {
             "sentence": "She had finished her homework before dinner.",
             "task": "Select the past perfect verb phrase (had + past participle).",
-            "answer": [1, 2]
+            "answer": [
+              1,
+              2
+            ]
           },
           {
             "sentence": "They had left before the storm arrived.",
             "task": "Select the past perfect verb phrase (had + past participle).",
-            "answer": [1, 2]
+            "answer": [
+              1,
+              2
+            ]
           },
           {
             "sentence": "The train had departed early.",
             "task": "Select the past perfect verb phrase (had + past participle).",
-            "answer": [2, 3]
+            "answer": [
+              2,
+              3
+            ]
           },
           {
             "sentence": "By the time we arrived, the shop had closed.",
             "task": "Select the past perfect verb phrase (had + past participle).",
-            "answer": [7, 8]
+            "answer": [
+              7,
+              8
+            ]
           },
           {
             "sentence": "She had read the book three times.",
             "task": "Select the past perfect verb phrase (had + past participle).",
-            "answer": [1, 2]
+            "answer": [
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "simple-future",
+        "label": "Simple Future",
+        "definition": "The <strong>simple future</strong> describes actions that will happen after now. It is formed with <em>will</em> + base verb. Example: <em>I will play</em>. It can also be expressed with <em>am/is/are going to</em> + base verb.",
+        "examples": [
+          {
+            "sentence": "She will visit her grandparents tomorrow.",
+            "highlight": [
+              1,
+              2
+            ],
+            "explanation": "\"Will visit\" is the simple future — \"will\" (modal auxiliary) + \"visit\" (base form of the verb, no -ing or -ed)."
+          }
+        ],
+        "questions": [
+          {
+            "sentence": "He will start his new school next week.",
+            "task": "Select all parts of the simple future verb phrase.",
+            "answer": [
+              1,
+              2
+            ]
+          },
+          {
+            "sentence": "They will travel to France in the summer.",
+            "task": "Select all parts of the simple future verb phrase.",
+            "answer": [
+              1,
+              2
+            ]
+          },
+          {
+            "sentence": "I will finish my homework after dinner.",
+            "task": "Select all parts of the simple future verb phrase.",
+            "answer": [
+              1,
+              2
+            ]
+          },
+          {
+            "sentence": "The sun will rise at six tomorrow morning.",
+            "task": "Select all parts of the simple future verb phrase.",
+            "answer": [
+              2,
+              3
+            ]
+          },
+          {
+            "sentence": "We will celebrate after the test.",
+            "task": "Select all parts of the simple future verb phrase.",
+            "answer": [
+              1,
+              2
+            ]
           }
         ]
       }

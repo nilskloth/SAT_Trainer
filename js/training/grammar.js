@@ -51,13 +51,28 @@ export function initGrammar() {
    Topic tabs
 ========================= */
 
+const TENSE_IDS = new Set([
+  'simple-present', 'simple-past', 'present-progressive',
+  'past-progressive', 'present-perfect', 'past-perfect', 'simple-future'
+]);
+
 function buildTopicTabs() {
   const wrap = document.getElementById("grammarTopicTabs");
   if (!wrap) return;
 
   wrap.innerHTML = "";
 
+  let tenseLabelAdded = false;
+
   grammarTopics.forEach(topic => {
+    if (TENSE_IDS.has(topic.id) && !tenseLabelAdded) {
+      const label = document.createElement("span");
+      label.className = "grammar-group-label";
+      label.textContent = "Tenses";
+      wrap.appendChild(label);
+      tenseLabelAdded = true;
+    }
+
     const btn = document.createElement("button");
     btn.textContent = topic.label;
     btn.className = "grammar-tab";

@@ -10,7 +10,7 @@ Hosted on Strato shared hosting via SFTP. Deploy by uploading changed files — 
 ## Tech stack
 - Vanilla JS (ES modules), HTML5, CSS3
 - No framework, no bundler
-- `localStorage` key: `ks2_sats_runner_v1`
+- `localStorage` key: `ks2_sats_runner_v1` (main app); `ks2_warmup_v1` (Warm Up)
 - Web Speech API for spoken spelling mode
 - Must be served via HTTP(S) — ES modules block on `file://`
 
@@ -39,7 +39,8 @@ sats-trainer/
 │   │   ├── prefixes.js         # Prefix word-pair + sentence exercises
 │   │   ├── algebra.js          # Algebra question sets, pairs validator
 │   │   ├── reading.js          # Reading comprehension test runner
-│   │   └── reasoning.js        # Maths reasoning drill (strand filter)
+│   │   ├── reasoning.js        # Maths reasoning drill (strand filter)
+│   │   └── warmup.js           # Daily warm-up MCQ (data embedded, no JSON file)
 │   └── stats/
 │       └── stats.js            # Progress display
 └── data/
@@ -69,6 +70,33 @@ sats-trainer/
 6. Import and call `init<Name>()` in `app.js`
 
 The training tab switching in `app.js` is automatic — it picks up any element matching `[data-training]` and `[id^="training-"]`.
+
+---
+
+## Top-level tabs
+
+The main nav tabs are (in order): **Practice Run · Warm Up · Training · Question Banks · Stats · Settings**
+
+Tab switching is handled by `tabs.js` — it matches `[data-tab]` buttons to `[id^="tab-"]` panels automatically.
+
+---
+
+## Warm Up (`js/training/warmup.js`)
+
+A separate top-level tab (not a Training sub-tab). No JSON file — all question data is embedded directly in `warmup.js`.
+
+- 4 day tabs: Mon 11 (SPaG), Tue 12 (Reading), Wed 13 (Maths 1), Thu 14 (Maths 2)
+- 3 sets per day (A, B, C) × 8 MCQ questions = 96 questions total
+- On answer: locks all options, highlights correct (green) and wrong (red), reveals hint below
+- Live score tracker updates after every answer
+- Results summary card shown when all 8 questions in a set are answered
+- Reset button clears the active set only
+- Day tabs turn green when all 3 sets are complete; set tabs turn green individually
+- Parent dashboard at the bottom shows per-set scores for all 4 days
+- State saved to `localStorage` under key `ks2_warmup_v1` (separate from main app state)
+- Old state with wrong shape (e.g. from before sets were added) is silently reset to default
+
+**Adding or editing questions:** edit the `DAYS` array in `warmup.js`. Each day has a `sets` array; each set has a `questions` array of `{ q, opts, ans, hint }` objects where `ans` is the zero-based index of the correct option.
 
 ---
 
@@ -102,6 +130,8 @@ The training tab switching in `app.js` is automatic — it picks up any element 
 - Topic tabs built dynamically from JSON
 - Token-based sentence selection (click words to identify parts of speech)
 - Indices in `answer` arrays are zero-based word positions after `split(" ")`
+- A **"TENSES"** group label is inserted in the tab bar before the first tense topic (handled in `buildTopicTabs()` via the `TENSE_IDS` set)
+- Tense topics in order: Simple Present · Simple Past · Present Progressive · Past Progressive · Present Perfect · Past Perfect · Simple Future
 
 ### English — Prefixes (`training/prefixes.js`)
 - Data from `data/training/prefixes.json`
@@ -159,7 +189,20 @@ The training tab switching in `app.js` is automatic — it picks up any element 
   "answer": [1, 5]
 }
 ```
-Indices are zero-based positions in `sentence.split(" ")`. Punctuation stays attached to its token (e.g. "sofa." is index 5).
+Indices are zero-based positions in `sentence.split(" ")`. Punctuation stays attached to its token (e.g. "sofa." is index 5). Multi-word verb phrases (e.g. progressive tenses) use multiple indices: `"answer": [1, 2]`.
+
+### grammar.json — topic object
+```json
+{
+  "id": "present-progressive",
+  "label": "Present Progressive",
+  "definition": "HTML string",
+  "examples": [
+    { "sentence": "…", "highlight": [1, 2], "explanation": "…" }
+  ],
+  "questions": [ { "sentence": "…", "task": "…", "answer": [1, 2] } ]
+}
+```
 
 ### reading.json — test object
 ```json
@@ -210,6 +253,16 @@ Indices are zero-based positions in `sentence.split(" ")`. Punctuation stays att
 ```
 Valid strands: `large_numbers`, `place_value`, `ordering`, `rounding`, `negative`, `roman`.
 
+### warmup.js — question object (embedded, no JSON file)
+```js
+{
+  q: "Question text",
+  opts: ["Option A", "Option B", "Option C", "Option D"],
+  ans: 1,       // zero-based index of correct option
+  hint: "Explanation shown after answering"
+}
+```
+
 ---
 
 ## Version control
@@ -251,3 +304,6 @@ EOF
 - **Arithmetic normalisation** — commas stripped before comparison so "12,345" matches "12345"
 - **"whole numbers" vs "positive whole numbers"** — always use "positive whole numbers" in algebra stems to avoid 0 being a valid answer where unintended
 - **Maths sub-tabs** — wired in `algebra.js` not `app.js`; initial state set programmatically to ensure Arithmetic is active on load
+- **Warm Up data embedded** — question data lives in `warmup.js` rather than a JSON file; no loader changes needed when editing questions
+- **Warm Up state migration** — `initWarmup()` checks for the new `sets` shape and resets to default if the old shape is detected, avoiding silent bugs from stale localStorage
+- **Grammar tense group label** — the "TENSES" label is injected by `buildTopicTabs()` in `grammar.js` using the `TENSE_IDS` set; it is not stored in `grammar.json`

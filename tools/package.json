@@ -1,0 +1,15 @@
+{
+  "name": "sats-trainer-authoring",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline content-authoring pipeline for the KS2 SATs trainer (not part of the deployed static site).",
+  "scripts": {
+    "validate": "node validate.mjs all",
+    "generate": "node generate.mjs"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0"
+  }
+}

@@ -3,7 +3,7 @@
 ========================= */
 /* jshint esversion: 11 */
 
-import { initStore, getStore } from "./store.js";
+import { initStore, getStore, getSettings, saveStore } from "./store.js";
 import { loadAllData } from "./loader.js";
 import { initTabs } from "./tabs.js";
 
@@ -17,7 +17,9 @@ import { initAlgebra } from "./training/algebra.js";
 import { initReasoning } from "./training/reasoning.js";
 import { initDivision } from "./training/division.js";
 import { initReading, checkReadingAnswers, refreshReadingGrid } from "./training/reading.js";
+import { initWarmup } from "./training/warmup.js";
 import { initStats } from "./stats/stats.js";
+import { initBanks } from "./banks.js";
 
 (async function initApp() {
   try {
@@ -49,6 +51,7 @@ import { initStats } from "./stats/stats.js";
     initReasoning();
     initDivision();
     initReading();
+    initWarmup();
 
     /* =========================
        Training sub-tabs (Maths / Spelling / Grammar)
@@ -94,10 +97,41 @@ import { initStats } from "./stats/stats.js";
       DATA.papers
     );
 
+    initSettings();
+    initBanks();
+
     console.log("KS2 SATs Practice Runner ready");
 
   } catch (err) {
     console.error("Failed to initialise app:", err);
+    handleInitError(err);
+  }
+})();
+
+/* =========================
+   Settings wiring
+========================= */
+
+function initSettings() {
+  const settings = getSettings();
+  const defaultTimingEl = document.getElementById("defaultTiming");
+  const timingSelectEl = document.getElementById("timingSelect");
+
+  if (!defaultTimingEl) return;
+
+  // Reflect the stored default into both the Settings control and the
+  // Practice-Run timing select on load.
+  defaultTimingEl.value = settings.defaultTiming || "untimed";
+  if (timingSelectEl) timingSelectEl.value = defaultTimingEl.value;
+
+  defaultTimingEl.addEventListener("change", () => {
+    settings.defaultTiming = defaultTimingEl.value;
+    saveStore();
+    if (timingSelectEl) timingSelectEl.value = defaultTimingEl.value;
+  });
+}
+
+function handleInitError(err) {
 
     document.body.innerHTML = `
       <div style="
@@ -120,5 +154,4 @@ ${err.message}
         </p>
       </div>
     `;
-  }
-})();
+}
