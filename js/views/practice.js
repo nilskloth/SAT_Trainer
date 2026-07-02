@@ -29,6 +29,7 @@ export function renderPractice(el, params = []) {
   if (params[0] === "spelling") return renderSpelling(el);
   if (params[0] === "division") return renderDivision(el);
   if (params[0] === "prefixes") return runPrefixes(el);
+  if (params[0] === "today") return runToday(el);
   if (params[0] === "maths" && params[1] === "arithmetic") {
     return runSet(el, "maths", "Arithmetic drill", () => pickN(generateArithmeticPaper(), SET_SIZE));
   }
@@ -183,6 +184,49 @@ function runSet(el, subject, label, pickQuestions, introHtml = "") {
   el.querySelector("[data-again]").addEventListener("click", () => {
     runSet(el, subject, label, pickQuestions, introHtml);
   });
+}
+
+/* =========================
+   Today's practice — mixed set weighted to weakest domains
+========================= */
+
+function autoPool() {
+  const data = getData();
+  return [
+    ...data.gps.questions,
+    ...data.maths.questions,
+    ...data.reading.questions.filter(q => !q.passageId)
+  ].filter(q => q.marking === "auto");
+}
+
+function runToday(el) {
+  const stats = getStore().domainStats;
+  const pool = autoPool();
+
+  const weight = q => {
+    const d = stats[`${q.subject}.${q.domain}`];
+    if (!d) return 1.5;                        // never practised → prioritise
+    return 0.25 + (1 - (d.ewma ?? 0)) * 1.75;  // weaker → likelier
+  };
+
+  const picked = [];
+  const candidates = pool.slice();
+  while (picked.length < SET_SIZE && candidates.length) {
+    let total = 0;
+    candidates.forEach(q => { total += weight(q); });
+    let r = Math.random() * total;
+    let idx = candidates.length - 1;
+    for (let i = 0; i < candidates.length; i++) {
+      r -= weight(candidates[i]);
+      if (r <= 0) { idx = i; break; }
+    }
+    picked.push(candidates.splice(idx, 1)[0]);
+  }
+
+  runSet(el, "gps", "Today's practice", () => picked, `
+    <div class="card" style="margin-bottom:var(--sp-4);">
+      <p class="muted" style="margin:0;">A short mix picked from the things you're still learning. About 10–15 minutes.</p>
+    </div>`);
 }
 
 /* =========================

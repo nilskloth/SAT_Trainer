@@ -6,7 +6,7 @@
  * open relay. Generation ops are added in Phase 5.
  */
 
-const OPS = ['ping', 'mark'];
+const OPS = ['ping', 'usage', 'mark'];
 
 /* Which daily-cap bucket an op draws from. */
 function op_cap_bucket(string $op): string {

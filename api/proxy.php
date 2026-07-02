@@ -63,6 +63,30 @@ if ($op === 'ping') {
   exit;
 }
 
+/* usage: no upstream call — remaining quota + recent token log for the parent view */
+if ($op === 'usage') {
+  $entries = [];
+  if (is_file(LOG_FILE)) {
+    $size = filesize(LOG_FILE);
+    $fh = fopen(LOG_FILE, 'r');
+    if ($fh !== false) {
+      if ($size > 16384) fseek($fh, -16384, SEEK_END);
+      $chunk = stream_get_contents($fh);
+      fclose($fh);
+      $lines = array_filter(explode("\n", $chunk));
+      foreach (array_slice($lines, -60) as $line) {
+        $row = json_decode($line, true);
+        if (is_array($row)) $entries[] = $row;
+      }
+    }
+  }
+  echo json_encode(['ok' => true, 'data' => [
+    'remaining' => rl_remaining($config),
+    'log' => $entries,
+  ]]);
+  exit;
+}
+
 $limitError = rl_check_and_record(op_cap_bucket($op), $config);
 if ($limitError !== null) {
   respond_error(429, $limitError['code'], 'Daily or per-minute limit reached', $limitError['retryAfter']);

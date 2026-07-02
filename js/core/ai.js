@@ -45,6 +45,11 @@ export async function ping() {
   return body.data;
 }
 
+export async function usage() {
+  const body = await call("usage", {}, TIMEOUT_MS);
+  return body.data;
+}
+
 /*
  * AI-mark one free-text answer. Returns {earned, possible, feedback,
  * matchedPoints} or throws (caller falls back to self-marking).
