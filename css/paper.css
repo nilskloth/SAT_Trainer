@@ -1,57 +1,310 @@
 /* =========================================================
-   SATs-paper question rendering.
-   Mirrors real KS2 papers: cream sheet, numbered boxes,
-   marks badge right-aligned, ruled answer lines.
-   Built out fully in Phase 2.
+   Paper rendering — mirrors real STA booklets.
+   .paper-cover  : booklet front cover (subject band, title, time)
+   .paper-sheet  : the working page, subject spine on the left
+   .paper-q      : numbered question block with marks box
    ========================================================= */
 
-.paper-sheet {
+/* Subject colour hooks — set data-subject on the container. */
+[data-subject="reading"]  { --subject: var(--c-reading); }
+[data-subject="gps"]      { --subject: var(--c-gps); }
+[data-subject="maths"]    { --subject: var(--c-maths); }
+[data-subject="spelling"] { --subject: var(--c-spelling); }
+
+/* Booklet cover */
+.paper-cover {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: var(--sp-6);
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
+.paper-cover-band {
+  background: var(--subject, var(--accent));
+  color: #fff;
+  padding: var(--sp-3) var(--sp-6);
+  font-family: var(--font-ui);
+  font-size: var(--fs-0);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.paper-cover-body {
+  padding: var(--sp-6);
+  font-family: var(--font-paper);
+}
+
+.paper-cover-body h2 {
+  margin: 0 0 var(--sp-2);
+  font-size: var(--fs-5);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.paper-cover-meta {
+  color: var(--ink-muted);
+  margin-bottom: var(--sp-5);
+}
+
+/* Working page */
+.paper-sheet {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--subject, var(--accent));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--sp-6);
+  font-family: var(--font-paper);
+  font-size: var(--fs-2);
+  line-height: 1.6;
+}
+
+/* Question block */
 .paper-q {
   display: grid;
-  grid-template-columns: 44px 1fr;
+  grid-template-columns: 44px minmax(0, 1fr);
   gap: var(--sp-4);
   padding: var(--sp-5) 0;
   border-bottom: 1px solid var(--line-soft);
 }
 
+.paper-q:last-child { border-bottom: none; }
+
 .paper-q-num {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   display: grid;
   place-items: center;
-  border: 1.5px solid var(--ink);
+  border: 2px solid var(--ink);
   border-radius: 4px;
-  font-weight: 650;
+  font-weight: 700;
+  background: var(--paper);
 }
 
+.paper-q-body { min-width: 0; }
+
+.paper-q-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--sp-3);
+}
+
+.paper-q-stem { flex: 1; }
+.paper-q-stem p:first-child { margin-top: 0; }
+
 .paper-q-marks {
-  float: right;
+  flex: none;
+  font-family: var(--font-ui);
   font-size: var(--fs-0);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 3px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+/* Answer inputs — dotted rules like the real booklets */
+.answer-line input[type="text"],
+.answer-line textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--ink);
+  border: none;
+  border-bottom: var(--rule-dotted);
+  background: transparent;
+  padding: var(--sp-2) 2px;
+  border-radius: 0;
+}
+
+.answer-line textarea { resize: vertical; line-height: 2.1; }
+
+.answer-line input:focus-visible,
+.answer-line textarea:focus-visible {
+  outline: none;
+  border-bottom: 2px solid var(--subject, var(--accent));
+}
+
+.answer-box input {
+  font-family: var(--font-mono);
+  font-size: var(--fs-3);
+  width: 130px;
+  text-align: right;
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  background: transparent;
+  padding: var(--sp-2) var(--sp-3);
+}
+
+/* Choice lists (mcq / tick2) — tick boxes like the booklets */
+.choice-list { display: grid; gap: var(--sp-2); margin-top: var(--sp-3); }
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.choice:hover { background: rgba(0, 0, 0, 0.03); }
+
+.choice input {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--ink);
+  flex: none;
+}
+
+/* Statement grids (truefalse / factopin / match) */
+.stmt-grid { display: grid; gap: var(--sp-2); margin-top: var(--sp-3); }
+
+.stmt-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--sp-3);
+  align-items: center;
+  padding: var(--sp-2) 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.stmt-opts { display: flex; gap: var(--sp-3); font-family: var(--font-ui); font-size: var(--fs-1); }
+
+/* Token selection (grammar) */
+.token-sentence { line-height: 2.2; margin-top: var(--sp-3); }
+
+.token {
+  display: inline-block;
+  padding: 2px 6px;
+  margin: 0 1px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.token:hover { border-color: var(--line); }
+
+.token.selected {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+/* Order boxes */
+.order-row {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: var(--sp-3);
+  align-items: center;
+  padding: var(--sp-1) 0;
+}
+
+.order-row input {
+  width: 44px;
+  height: 38px;
+  text-align: center;
+  font: inherit;
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  background: transparent;
+}
+
+/* Passage pane (reading) */
+.passage-split {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: var(--sp-5);
+  align-items: start;
+}
+
+.passage-pane {
+  position: sticky;
+  top: var(--sp-4);
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--sp-6);
+}
+
+.passage-pane .passage-title {
+  font-family: var(--font-ui);
+  font-size: var(--fs-0);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--subject, var(--ink-muted));
+  margin-bottom: var(--sp-3);
+}
+
+.passage-text {
+  font-family: var(--font-passage);
+  font-size: var(--fs-2);
+  line-height: 1.75;
+}
+
+.passage-text p { margin: 0 0 1em; }
+
+@media (max-width: 900px) {
+  .passage-split { grid-template-columns: 1fr; }
+  .passage-pane { position: static; max-height: 40vh; }
+}
+
+/* Marking states */
+.paper-q.is-correct .paper-q-num { border-color: var(--correct); color: var(--correct); }
+.paper-q.is-partial .paper-q-num { border-color: var(--partial); color: var(--partial); }
+.paper-q.is-wrong   .paper-q-num { border-color: var(--wrong);   color: var(--wrong); }
+
+.mark-note {
+  margin-top: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-ui);
+  font-size: var(--fs-1);
+}
+
+.mark-note.correct { background: var(--correct-soft); }
+.mark-note.partial { background: var(--partial-soft); }
+.mark-note.wrong   { background: var(--wrong-soft); }
+.mark-note.info    { background: var(--accent-soft); }
+
+/* Self-marking card (mark-scheme checklist) */
+.selfmark {
+  margin-top: var(--sp-3);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--partial);
+  border-radius: var(--radius-sm);
+  padding: var(--sp-4);
+  font-family: var(--font-ui);
+  font-size: var(--fs-1);
+  background: var(--surface);
+}
+
+.selfmark h4 { margin: 0 0 var(--sp-2); font-size: var(--fs-1); }
+
+.selfmark label {
+  display: flex;
+  gap: var(--sp-2);
+  align-items: flex-start;
+  padding: var(--sp-1) 0;
+  cursor: pointer;
+}
+
+/* Quiet timer pill */
+.timer-pill {
+  font-family: var(--font-ui);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--fs-1);
   color: var(--ink-muted);
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 1px 10px;
-  margin-left: var(--sp-3);
+  padding: var(--sp-1) var(--sp-4);
+  background: var(--surface);
 }
 
-.answer-lines input,
-.answer-lines textarea {
-  width: 100%;
-  font: inherit;
-  border: none;
-  border-bottom: 1.5px solid var(--line);
-  background: transparent;
-  padding: var(--sp-2) 0;
-}
-
-.passage {
-  font-family: var(--font-passage);
-  font-size: var(--fs-2);
-  line-height: 1.7;
-}
+.timer-pill.closing { color: var(--partial); border-color: var(--partial); }

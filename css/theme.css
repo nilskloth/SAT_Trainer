@@ -1,29 +1,37 @@
 /* =========================================================
    KS2 SATs Trainer v2 — design tokens
-   Calm, exam-focused: cream paper on a muted cool ground,
-   near-black ink, one accent. Final values locked in the
-   Phase 2 design pass — keep all styling on these tokens.
+   Direction: the material world of real STA test booklets.
+   White-ish paper, black ink, flat subject-colour bands
+   (like the real booklet covers), dotted answer rules.
+   Chrome around the paper stays quiet, like a tidy desk.
    ========================================================= */
 
 :root {
-  /* Ground & surfaces */
-  --bg: #edeff2;              /* muted cool background */
-  --paper: #fdfbf4;           /* exam-paper cream */
-  --surface: #ffffff;         /* app chrome cards */
-  --line: #d8d5cc;            /* paper rules / borders */
-  --line-soft: #e6e4dd;
+  /* Desk & paper */
+  --desk: #e8eaed;            /* cool, calm ground */
+  --paper: #fffefa;           /* booklet page */
+  --surface: #f7f7f5;         /* chrome cards */
+  --line: #c9c9c4;
+  --line-soft: #e2e2dd;
+  --rule-dotted: 2px dotted #9a9a94;   /* SATs answer lines are dotted */
 
   /* Ink */
-  --ink: #1c1c1e;
-  --ink-muted: #5f6368;
-  --ink-faint: #8a8f98;
+  --ink: #17181a;
+  --ink-muted: #5c5f63;
+  --ink-faint: #8e9195;
 
-  /* Accent (single) */
-  --accent: #2f5d50;          /* deep green */
+  /* Subject bands — flat, like the real booklet covers */
+  --c-reading: #7a3b5e;       /* plum */
+  --c-gps: #1f6f6b;           /* teal */
+  --c-maths: #2b5d8a;         /* blue */
+  --c-spelling: #a86414;      /* ochre */
+
+  /* Action accent (chrome only, never on the paper) */
+  --accent: #33518e;
   --accent-ink: #ffffff;
-  --accent-soft: #e7efec;
+  --accent-soft: #e4e9f4;
 
-  /* Semantic (marking) */
+  /* Marking */
   --correct: #1b7f3a;
   --correct-soft: #e8f5ec;
   --partial: #9a6b00;
@@ -31,20 +39,31 @@
   --wrong: #a52734;
   --wrong-soft: #fbebed;
 
-  /* Type */
+  /* Type — Andika: SIL literacy face, the letterforms UK primary
+     children are taught with. Literata: reading-booklet serif. */
+  --font-paper: "Andika", "Comic Sans MS", system-ui, sans-serif;
+  --font-passage: "Literata", Georgia, serif;
   --font-ui: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-passage: Charter, Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+
   --fs-0: 0.8125rem;
   --fs-1: 0.9375rem;
   --fs-2: 1.0625rem;
   --fs-3: 1.25rem;
   --fs-4: 1.5rem;
-  --fs-5: 1.875rem;
+  --fs-5: 2rem;
 
   /* Space & shape */
   --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px;
   --sp-4: 16px; --sp-5: 24px; --sp-6: 32px; --sp-7: 48px;
   --radius: 10px;
   --radius-sm: 6px;
-  --shadow: 0 1px 3px rgba(28, 28, 30, 0.07);
+  --shadow: 0 1px 2px rgba(23, 24, 26, 0.06), 0 4px 14px rgba(23, 24, 26, 0.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }

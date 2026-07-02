@@ -85,3 +85,31 @@ export function resetStore() {
   saveStore();
   return store;
 }
+
+/* Record a finished run and fold each item into per-domain stats.
+   items: [{ qid, domain, subject, marks, earned, marking }] */
+const EWMA_ALPHA = 0.3;
+
+export function recordAttempt({ mode, paperId, seconds, items }) {
+  const attempt = {
+    id: `a-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+    ts: Date.now(),
+    mode, paperId, seconds, items
+  };
+  store.attempts.push(attempt);
+
+  items.forEach(it => {
+    const key = `${it.subject}.${it.domain}`;
+    const d = store.domainStats[key] ||
+      (store.domainStats[key] = { attempts: 0, marksSeen: 0, marksEarned: 0, ewma: null, lastSeen: 0 });
+    d.attempts += 1;
+    d.marksSeen += it.marks;
+    d.marksEarned += it.earned;
+    const score = it.marks ? it.earned / it.marks : 0;
+    d.ewma = d.ewma == null ? score : EWMA_ALPHA * score + (1 - EWMA_ALPHA) * d.ewma;
+    d.lastSeen = attempt.ts;
+  });
+
+  saveStore();
+  return attempt;
+}
