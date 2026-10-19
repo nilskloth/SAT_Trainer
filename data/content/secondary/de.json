@@ -206,42 +206,74 @@
             {
               "id": "de-k1-england",
               "de": "…England",
-              "en": "England"
+              "en": "England",
+              "context": {
+                "de": "Ich wohne in …",
+                "en": "I live in …"
+              }
             },
             {
               "id": "de-k1-irland",
               "de": "…Irland",
-              "en": "Ireland"
+              "en": "Ireland",
+              "context": {
+                "de": "Ich wohne in …",
+                "en": "I live in …"
+              }
             },
             {
               "id": "de-k1-nordirland",
               "de": "…Nordirland",
-              "en": "Northern Ireland"
+              "en": "Northern Ireland",
+              "context": {
+                "de": "Ich wohne in …",
+                "en": "I live in …"
+              }
             },
             {
               "id": "de-k1-schottland",
               "de": "…Schottland",
-              "en": "Scotland"
+              "en": "Scotland",
+              "context": {
+                "de": "Ich wohne in …",
+                "en": "I live in …"
+              }
             },
             {
               "id": "de-k1-wales",
               "de": "…Wales",
-              "en": "Wales"
+              "en": "Wales",
+              "context": {
+                "de": "Ich wohne in …",
+                "en": "I live in …"
+              }
             },
             {
               "id": "de-k1-deutschland",
               "de": "…Deutschland",
-              "en": "Germany"
+              "en": "Germany",
+              "context": {
+                "de": "Ich wohne in …",
+                "en": "I live in …"
+              }
             },
             {
               "id": "de-k1-osterreich",
               "de": "…Österreich",
-              "en": "Austria"
+              "en": "Austria",
+              "context": {
+                "de": "Ich wohne in …",
+                "en": "I live in …"
+              }
             },
             {
               "id": "de-k1-der-schweiz",
               "de": "…der Schweiz",
-              "en": "Switzerland"
+              "en": "Switzerland",
+              "context": {
+                "de": "Ich wohne in …",
+                "en": "I live in …"
+              }
             }
           ]
         },
@@ -397,47 +429,83 @@
             {
               "id": "de-k1-einen-computer",
               "de": "einen Computer",
-              "en": "a computer"
+              "en": "a computer",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k1-einen-ipod",
               "de": "einen iPod",
-              "en": "an iPod"
+              "en": "an iPod",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k1-einen-fussball",
               "de": "einen Fußball",
-              "en": "a football"
+              "en": "a football",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k1-eine-gitarre",
               "de": "eine Gitarre",
-              "en": "a guitar"
+              "en": "a guitar",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k1-eine-wii",
               "de": "eine Wii",
-              "en": "a Wii"
+              "en": "a Wii",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k1-eine-schlange",
               "de": "eine Schlange",
-              "en": "a snake"
+              "en": "a snake",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k1-ein-handy",
               "de": "ein Handy",
-              "en": "a mobile phone"
+              "en": "a mobile phone",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k1-ein-keyboard",
               "de": "ein Keyboard",
-              "en": "a keyboard"
+              "en": "a keyboard",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k1-ein-skateboard",
               "de": "ein Skateboard",
-              "en": "a skateboard"
+              "en": "a skateboard",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             }
           ]
         },
@@ -561,57 +629,101 @@
             {
               "id": "de-k2-einen-goldfisch",
               "de": "einen Goldfisch",
-              "en": "a goldfish"
+              "en": "a goldfish",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k2-einen-hamster",
               "de": "einen Hamster",
-              "en": "a hamster"
+              "en": "a hamster",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k2-einen-hund",
               "de": "einen Hund",
-              "en": "a dog"
+              "en": "a dog",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k2-ein-kaninchen",
               "de": "ein Kaninchen",
-              "en": "a rabbit"
+              "en": "a rabbit",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k2-eine-katze",
               "de": "eine Katze",
-              "en": "a cat"
+              "en": "a cat",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k2-eine-maus",
               "de": "eine Maus",
-              "en": "a mouse"
+              "en": "a mouse",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k2-ein-meerschweinchen",
               "de": "ein Meerschweinchen",
-              "en": "a guinea pig"
+              "en": "a guinea pig",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k2-ein-pferd",
               "de": "ein Pferd",
-              "en": "a horse"
+              "en": "a horse",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k2-eine-schlange",
               "de": "eine Schlange",
-              "en": "a snake"
+              "en": "a snake",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k2-einen-wellensittich",
               "de": "einen Wellensittich",
-              "en": "a budgie"
+              "en": "a budgie",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             },
             {
               "id": "de-k2-kein-haustier",
               "de": "kein Haustier",
-              "en": "no pet"
+              "en": "no pet",
+              "context": {
+                "de": "Ich habe …",
+                "en": "I have …"
+              }
             }
           ]
         },
@@ -791,13 +903,8 @@
           "items": [
             {
               "id": "de-k2-es-gibt-personen-in",
-              "de": "Es gibt … Personen in",
-              "en": "There are ... people in"
-            },
-            {
-              "id": "de-k2-meiner-familie",
-              "de": "meiner Familie.",
-              "en": "my family."
+              "de": "Es gibt … Personen in meiner Familie.",
+              "en": "There are ... people in my family."
             },
             {
               "id": "de-k2-meine-mutter",
@@ -961,17 +1068,29 @@
             {
               "id": "de-k2-schwarze-braune-blonde-rote-haare",
               "de": "schwarze/braune/blonde/rote Haare",
-              "en": "black/brown/blond/red hair"
+              "en": "black/brown/blond/red hair",
+              "context": {
+                "de": "Er/Sie hat …",
+                "en": "He/She has …"
+              }
             },
             {
               "id": "de-k2-kurze-lange-mittellange-haare",
               "de": "kurze/lange/mittellange Haare",
-              "en": "short/long/mid-length hair"
+              "en": "short/long/mid-length hair",
+              "context": {
+                "de": "Er/Sie hat …",
+                "en": "He/She has …"
+              }
             },
             {
               "id": "de-k2-blaue-braune-grune-graue-augen",
               "de": "blaue/braune/grüne/graue Augen",
-              "en": "blue/brown/green/grey eyes"
+              "en": "blue/brown/green/grey eyes",
+              "context": {
+                "de": "Er/Sie hat …",
+                "en": "He/She has …"
+              }
             }
           ]
         },
@@ -1227,11 +1346,6 @@
               "en": "What do you like doing?"
             },
             {
-              "id": "de-k3-was-machst-du-gern-2",
-              "de": "Was machst du gern?",
-              "en": "What do you like doing?"
-            },
-            {
               "id": "de-k3-ich-fahre-rad",
               "de": "Ich fahre Rad.",
               "en": "I ride my bike."
@@ -1443,8 +1557,8 @@
               "en": "What do you do on your mobile?"
             },
             {
-              "id": "de-k3-ich-chatte-mit-freundeniauf-facebook",
-              "de": "Ich chatte mit FreundenIauf Facebook.",
+              "id": "de-k3-ich-chatte-mit-freunden-auf-facebook",
+              "de": "Ich chatte mit Freunden auf Facebook.",
               "en": "I chat with friends on Facebook."
             },
             {
@@ -1474,13 +1588,8 @@
             },
             {
               "id": "de-k3-ich-suche-und-lese-infos",
-              "de": "Ich suche und lese Infos",
-              "en": "I look for and read information"
-            },
-            {
-              "id": "de-k3-fur-die-hausaufgaben",
-              "de": "für die Hausaufgaben.",
-              "en": "for my homework."
+              "de": "Ich suche und lese Infos für die Hausaufgaben.",
+              "en": "I look for and read information for my homework."
             },
             {
               "id": "de-k3-ich-surfe-im-internet",
@@ -1494,13 +1603,8 @@
             },
             {
               "id": "de-k3-ich-mache-ziemlich-viel",
-              "de": "Ich mache ziemlich viel",
-              "en": "I do quite a lot of things on my"
-            },
-            {
-              "id": "de-k3-auf-meinem-handy",
-              "de": "auf meinem Handy.",
-              "en": "mobile."
+              "de": "Ich mache ziemlich viel auf meinem Handy.",
+              "en": "I do quite a lot of things on my mobile."
             }
           ]
         },
@@ -1818,13 +1922,8 @@
             },
             {
               "id": "de-k4-am-sonntag-haben-wir",
-              "de": "Am Sonntag haben wir",
-              "en": "We have no school on"
-            },
-            {
-              "id": "de-k4-keine-schule",
-              "de": "keine Schule.",
-              "en": "Sunday."
+              "de": "Am Sonntag haben wir keine Schule.",
+              "en": "We have no school on Sunday."
             }
           ]
         },

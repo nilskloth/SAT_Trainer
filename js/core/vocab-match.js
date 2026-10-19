@@ -200,6 +200,27 @@ export function checkAnswer(expected, answer, { lang, prompt = "" } = {}) {
   return { ok: false };
 }
 
+/* German articles and possessives whose ending carries the case. */
+const DETERMINERS = new Set(("ein eine einen einem einer eines kein keine keinen keinem keiner keines " +
+  "der die das den dem des mein meine meinen meinem meiner meines dein deine deinen deinem deiner deines").split(" "));
+
+/*
+ * If the answer is right except for one article ("ein Gitarre" for
+ * "eine Gitarre"), return the article that was needed; otherwise null.
+ */
+export function articleSlip(expected, answer, lang = "de") {
+  const got = tokens(answer, lang).map(w => String(w).toLowerCase());
+  for (let v of variants(expected, lang)) {
+    if (v[0] === WILD) v = v.slice(1);            // "…der Schweiz": the gap is the opener's
+    if (v.length !== got.length || v.includes(WILD)) continue;
+    const diffs = v.map((w, i) => (w.toLowerCase() === got[i] ? -1 : i)).filter(i => i >= 0);
+    if (diffs.length === 1 && DETERMINERS.has(v[diffs[0]].toLowerCase()) && DETERMINERS.has(got[diffs[0]])) {
+      return v[diffs[0]];
+    }
+  }
+  return null;
+}
+
 /* Text to hand to speech synthesis: no brackets of plural endings,
    no "…", alternatives read as a list, "1. (ersten)" → "ersten". */
 export function speakable(text) {
@@ -218,4 +239,13 @@ export function speakable(text) {
 /* Can this target-language answer be typed from listening alone? */
 export function listenable(text) {
   return !/[/…]|\.\.\./.test(text);
+}
+
+/* Put an entry into its opener's gap: ("Ich habe …", "einen iPod")
+   → "Ich habe einen iPod"; ("Ich wohne in …", "…der Schweiz")
+   → "Ich wohne in der Schweiz". */
+export function fillGap(opener, piece) {
+  const head = String(opener ?? "").replace(/\s*(…|\.\.\.)\s*$/, "");
+  const tail = String(piece ?? "").replace(/^(…|\.\.\.)\s*/, "");
+  return `${head} ${tail}`.trim();
 }

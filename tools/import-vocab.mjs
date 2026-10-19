@@ -15,6 +15,7 @@
      footer          chapter title, then page/copyright junk
    Section headings that are questions ("Wo wohnst du?") are
    also kept as entries — they are real phrases to learn.
+   Rows split mid-sentence are joined; repeated rows dropped.
    ========================================================= */
 
 import { execFileSync } from "node:child_process";
@@ -35,8 +36,27 @@ const slug = s => s.toLowerCase()
 
 /* Typos in the source sheets, fixed on import: [target or English as printed, corrected]. */
 const CORRECTIONS = {
-  de: [["on 3 Februray", "on 3 February"], ["A m Dienstag habe ich …", "Am Dienstag habe ich …"]]
+  de: [
+    ["on 3 Februray", "on 3 February"],
+    ["A m Dienstag habe ich …", "Am Dienstag habe ich …"],
+    ["Ich chatte mit FreundenIauf Facebook.", "Ich chatte mit Freunden auf Facebook."]
+  ]
 };
+
+/* Entries whose form only makes sense after an opener on the sheet
+   ("Ich habe …" → einen Computer, accusative). Chosen by reading every
+   topic — only where case or endings depend on the opener. The trainer
+   shows the opener with these entries. [chapter, section title, opener, English] */
+const CONTEXT = {
+  de: [
+    [1, "Hast du einen Computer?", "Ich habe …", "I have …"],
+    [1, "Wo wohnst du?", "Ich wohne in …", "I live in …"],
+    [2, "Haustiere", "Ich habe …", "I have …"],
+    [2, "Haare und Augen", "Er/Sie hat …", "He/She has …"]
+  ]
+};
+const ENDS_SENTENCE = /[.?!]$/;
+const ENDS_GAP = /(…|\.\.\.)$/;
 const fix = s => (CORRECTIONS[lang] || []).reduce((t, [from, to]) => (t === from ? to : t), s);
 const unbalanced = s => (s.match(/\(/g) || []).length > (s.match(/\)/g) || []).length;
 
@@ -75,8 +95,12 @@ function parseChapter(text, number) {
 
     const [target, en] = [fix(cols[0]), fix(cols.slice(1).join(" "))];
 
-    /* A row whose target wrapped mid-bracket continues on the next row. */
-    if (!newBlock && last && last[lang] && unbalanced(last[lang])) {
+    /* A row whose target wrapped mid-bracket or mid-sentence continues
+       on the next row ("Es gibt … Personen in" + "meiner Familie."). */
+    const wrapsBracket = last?.[lang] && unbalanced(last[lang]);
+    const wrapsSentence = last?.[lang] && !ENDS_SENTENCE.test(last[lang]) && !ENDS_GAP.test(last[lang])
+      && /^\p{Ll}/u.test(target) && ENDS_SENTENCE.test(target);
+    if (!newBlock && (wrapsBracket || wrapsSentence)) {
       const join = (a, b) => clean(a.endsWith("/") ? a + b : `${a} ${b}`);
       last[lang] = join(last[lang], target);
       last.en = join(last.en, en);
@@ -95,9 +119,19 @@ function parseChapter(text, number) {
       }
       continue;
     }
+    if (section.items.some(i => i[lang] === target && i.en === en)) continue;   // listed twice
     const item = { id: itemId(target), [lang]: target, en };
     section.items.push(item);
     last = item;
+  }
+
+  for (const [n, title, opener, openerEn] of CONTEXT[lang] || []) {
+    if (n !== number) continue;
+    const sec = chapter.sections.find(s => s.title === title);
+    if (!sec) throw new Error(`CONTEXT: no section "${title}" in chapter ${n}`);
+    sec.items
+      .filter(i => !ENDS_SENTENCE.test(i[lang]) && !ENDS_GAP.test(i[lang]))
+      .forEach(i => { i.context = { [lang]: opener, en: openerEn }; });
   }
   return chapter;
 }

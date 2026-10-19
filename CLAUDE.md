@@ -105,10 +105,17 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   scanned PDFs have no text layer). Import with
   `node tools/import-vocab.mjs de "German" <folder>` (macOS `textutil`). The importer handles
   section headings (first line after a blank line; question headings also become entries),
-  wrapped English, rows whose target wraps mid-bracket, footer junk (gives the chapter title)
-  and a small per-language `CORRECTIONS` list for typos in the sheets.
+  wrapped English, rows whose target wraps mid-bracket or mid-sentence, repeated rows, footer
+  junk (gives the chapter title) and a small per-language `CORRECTIONS` list for typos.
+  Every entry is from the sheets — nothing added (verified both ways against the .doc files).
+- **Openers (`CONTEXT` in the importer):** entries whose form depends on the sheet's opener
+  get `context: { <lang>: "Ich habe …", en: "I have …" }` — chosen by hand, only where case
+  or endings change (einen iPod, in der Schweiz, schwarze Haare). Never infer these
+  automatically: a rule attached "Es gibt …" to dictionary nouns like "der Tisch(-e)".
+  The trainer shows the opener in the prompt and at the start of the answer line; the
+  piece or the whole sentence both count; a wrong article only gives "Nearly!" + tip.
 - **Data:** `{ language, label, chapters: [{ id:"k1", number, title, pages,
-  sections: [{ id:"k1-s1", title, en, items: [{ id, <lang>, en }] }] }] }`
+  sections: [{ id:"k1-s1", title, en, items: [{ id, <lang>, en, context? }] }] }] }`
 - **Modes:** Practise (adaptive via `core/adaptive.js`, feedback each word, "I was right"
   overrule) and Test 10/20/30 (no feedback until a review screen with overrules).
   Directions `to-en`, `to-target`, `listen` (only items without "/" or "…"); answer by typing
@@ -122,7 +129,8 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   "Kapitel N", mode `vocab-practise` / `vocab-test`) so Grown-ups shows it.
 - **Adding French:** import the French sheets to `fr.json`, set `available: true` in
   `langs.js`, add a French nav item in `core/app.js`, check `CORRECTIONS`/`FOOTER_JUNK`
-  in the importer, run `node tools/test-vocab.mjs`.
+  in the importer, read every topic and fill `CONTEXT.fr` (e.g. "J'ai …" + "un chien"),
+  run `node tools/test-vocab.mjs`.
 
 ---
 

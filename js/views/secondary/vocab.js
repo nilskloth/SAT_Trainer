@@ -9,6 +9,9 @@
                       overruled ("I was right")
    Directions: to-en (target → English), to-target
    (English → target), listen (hear it, write it).
+   Entries with an opener (item.context, e.g. "Ich habe …" before
+   "einen iPod") are always shown inside it, and typing the piece or
+   the whole sentence both count.
    Stats per item+direction in store.vocab[lang].stats; a
    finished run is also recorded as an attempt so Grown-ups
    sees it under the language, by chapter.
@@ -17,7 +20,7 @@
 import { saveStore, recordAttempt } from "../../core/store.js";
 import { esc, pickN, shuffle } from "../../core/utils.js";
 import { newStat, weightedPick, applyResult } from "../../core/adaptive.js";
-import { checkAnswer, speakable, listenable } from "../../core/vocab-match.js";
+import { checkAnswer, speakable, listenable, fillGap, articleSlip } from "../../core/vocab-match.js";
 import { canSpeak, speak } from "../../core/speech.js";
 import { LANGS, loadBank, vocabState, isKnown } from "./langs.js";
 
@@ -56,6 +59,9 @@ function speakTarget(lang, text, opts) {
   speak(speakable(text), lang.voice, opts);
 }
 
+/* "Ich habe …" → "Ich habe", for the start of an answer line. */
+const openerLead = text => fillGap(text, "");
+
 const hearBtn = (label = "🔊") =>
   canSpeak() ? `<button type="button" class="quiet hear" data-hear aria-label="Hear it">${label}</button>` : "";
 
@@ -79,9 +85,9 @@ function renderList({ el, lang, bank, code }, sectionId) {
         <tbody>
           ${sec.items.map(it => `
             <tr>
-              <td lang="${code}">${esc(it[code])}</td>
-              <td>${esc(it.en)}</td>
-              <td>${canSpeak() ? `<button type="button" class="quiet hear" data-say="${esc(it[code])}" aria-label="Hear ${esc(it[code])}">🔊</button>` : ""}</td>
+              <td lang="${code}">${it.context ? `<span class="vocab-opener">${esc(it.context[code])}</span> ` : ""}${esc(it[code])}</td>
+              <td>${it.context ? `<span class="vocab-opener">${esc(it.context.en)}</span> ` : ""}${esc(it.en)}</td>
+              <td>${canSpeak() ? `<button type="button" class="quiet hear" data-say="${esc(it.context ? fillGap(it.context[code], it[code]) : it[code])}" aria-label="Hear ${esc(it[code])}">🔊</button>` : ""}</td>
               <td class="known">${isKnown(code, it.id) ? "✓" : ""}</td>
             </tr>`).join("")}
         </tbody>
@@ -355,7 +361,11 @@ function startRun(ctx, cfg) {
     const promptText = cfg.dir === "to-en" ? target : item.en;
     const expected = cfg.dir === "to-en" ? item.en : target;
     const answerLang = cfg.dir === "to-en" ? "en" : code;
-    item._q = { promptText, expected, answerLang };
+    const opener = item.context || null;
+    const promptOpener = opener ? (cfg.dir === "to-en" ? opener[code] : opener.en) : "";
+    const answerOpener = opener ? (answerLang === "en" ? opener.en : opener[code]) : "";
+    const spoken = opener ? fillGap(opener[code], target) : target;
+    item._q = { promptText, expected, answerLang, promptOpener, answerOpener, spoken };
 
     $("[data-instruction]").textContent = {
       "to-en": "What does this mean in English?",
@@ -367,14 +377,14 @@ function startRun(ctx, cfg) {
       $("[data-prompt]").innerHTML = `
         <button type="button" class="listen-big" data-hear aria-label="Play again">🔊</button>
         <button type="button" class="quiet" data-slow>Slower</button>`;
-      $("[data-slow]").addEventListener("click", () => speakTarget(lang, target, { slow: true }));
-      setTimeout(() => speakTarget(lang, target), 250);
+      $("[data-slow]").addEventListener("click", () => speakTarget(lang, spoken, { slow: true }));
+      setTimeout(() => speakTarget(lang, spoken), 250);
     } else {
       $("[data-prompt]").innerHTML = `
-        <span ${cfg.dir === "to-en" ? `lang="${code}"` : ""}>${esc(promptText)}</span>
+        <span ${cfg.dir === "to-en" ? `lang="${code}"` : ""}>${promptOpener ? `<span class="vocab-opener">${esc(promptOpener)}</span> ` : ""}<span data-prompt-text>${esc(promptText)}</span></span>
         ${cfg.dir === "to-en" ? hearBtn() : ""}`;
     }
-    $("[data-prompt] [data-hear]")?.addEventListener("click", () => speakTarget(lang, target));
+    $("[data-prompt] [data-hear]")?.addEventListener("click", () => speakTarget(lang, spoken));
 
     $("[data-context]").textContent = `${lang.chapterWord} ${item.section.chapter.number} · ${item.section.en}`;
     $("[data-feedback]").innerHTML = "";
@@ -389,6 +399,7 @@ function startRun(ctx, cfg) {
     const typingTarget = item._q.answerLang !== "en";
     $("[data-answer]").innerHTML = `
       <div class="answer-line vocab-input">
+        ${item._q.answerOpener ? `<span class="input-lead" ${typingTarget ? `lang="${code}"` : ""}>${esc(openerLead(item._q.answerOpener))}</span>` : ""}
         <input type="text" autocomplete="off" autocapitalize="off" spellcheck="false"
           ${typingTarget ? `lang="${code}"` : ""} aria-label="Your answer">
       </div>
@@ -423,8 +434,19 @@ function startRun(ctx, cfg) {
 
   /* Accept another listed item with the same prompt ("Hello!" → Hallo! or Guten Tag!). */
   function judge(item, answer) {
-    const { expected, answerLang, promptText } = item._q;
-    const r = checkAnswer(expected, answer, { lang: answerLang, prompt: promptText });
+    const { expected, answerLang, promptText, answerOpener } = item._q;
+    let r = checkAnswer(expected, answer, { lang: answerLang, prompt: promptText });
+    if (!r.ok && answerOpener) {
+      const whole = checkAnswer(fillGap(answerOpener, expected), answer, { lang: answerLang, prompt: promptText });
+      if (whole.ok || (whole.near && !r.near)) r = whole;
+    }
+    if (!r.ok && !r.near && answerLang !== "en") {
+      const needed = articleSlip(expected, answer, answerLang);
+      if (needed) {
+        const after = answerOpener ? ` after “${openerLead(answerOpener)}”` : "";
+        r = { ok: false, near: "article", tip: `Check the article — it's “${needed}” here${after}.` };
+      }
+    }
     if (r.ok || cfg.dir !== "to-target") return r;
     const twins = cfg.pool.filter(o => o.id !== item.id && sameText(o.en, item.en));
     for (const t of twins) {
@@ -493,7 +515,10 @@ function startRun(ctx, cfg) {
   function showFeedback(result) {
     const { item } = result;
     const target = item[code];
-    const shown = cfg.dir === "to-en" ? item.en : target;
+    const { spoken } = item._q;
+    const wholeDe = item.context ? fillGap(item.context[code], target) : target;
+    const wholeEn = item.context ? fillGap(item.context.en, item.en) : item.en;
+    const shown = cfg.dir === "to-en" ? wholeEn : wholeDe;
     const cls = result.ok ? "correct" : result.near ? "partial" : "wrong";
     const head = result.ok ? "Correct!" : result.near ? "Nearly!" : result.answer ? "Not quite." : "Here's the answer.";
     $("[data-feedback]").innerHTML = `
@@ -502,15 +527,16 @@ function startRun(ctx, cfg) {
         ${result.ok && !result.tip ? "" : `<p style="margin:var(--sp-1) 0 0;"><span ${cfg.dir === "to-en" ? "" : `lang="${code}"`} class="vocab-answer">${esc(shown)}</span>
           ${cfg.dir !== "to-en" ? hearBtn() : ""}</p>`}
         ${result.tip ? `<p style="margin:var(--sp-1) 0 0;">${esc(result.tip)}</p>` : ""}
-        ${cfg.dir === "to-en" ? `<p class="muted" style="margin:var(--sp-1) 0 0;" lang="${code}">${esc(target)} = ${esc(item.en)}</p>` : ""}
+        ${cfg.dir === "to-en" ? `<p class="muted" style="margin:var(--sp-1) 0 0;"><span lang="${code}">${esc(wholeDe)}</span> = ${esc(wholeEn)}</p>`
+          : item.context ? `<p class="muted" style="margin:var(--sp-1) 0 0;">= ${esc(wholeEn)}</p>` : ""}
       </div>
       <div class="vocab-actions">
         <button class="primary" data-next>Next</button>
         ${!result.ok && result.answer && cfg.style === "type" ? `<button type="button" class="quiet" data-overrule>I was right</button>` : ""}
       </div>`;
 
-    $("[data-feedback] [data-hear]")?.addEventListener("click", () => speakTarget(lang, target));
-    if (cfg.dir !== "to-en" && !result.ok) speakTarget(lang, target);
+    $("[data-feedback] [data-hear]")?.addEventListener("click", () => speakTarget(lang, spoken));
+    if (cfg.dir !== "to-en" && !result.ok) speakTarget(lang, spoken);
 
     const next = $("[data-next]");
     next.focus();
@@ -561,9 +587,9 @@ function startRun(ctx, cfg) {
               ${run.results.map((r, i) => `
                 <tr class="${r.ok ? "is-correct" : r.near ? "is-partial" : "is-wrong"}">
                   <td class="mark">${r.ok ? "✓" : r.near ? "~" : "✗"}</td>
-                  <td>${cfg.dir === "listen" ? "🔊" : esc(r.item._q.promptText)}</td>
+                  <td>${cfg.dir === "listen" ? "🔊" : `${r.item._q.promptOpener ? `<span class="vocab-opener">${esc(r.item._q.promptOpener)}</span> ` : ""}${esc(r.item._q.promptText)}`}</td>
                   <td>${r.answer ? esc(r.answer) : `<span class="muted">—</span>`}${r.tip && !r.ok ? `<br><span class="muted">${esc(r.tip)}</span>` : ""}</td>
-                  <td ${r.item._q.answerLang !== "en" ? `lang="${code}"` : ""}>${esc(r.item._q.expected)}</td>
+                  <td ${r.item._q.answerLang !== "en" ? `lang="${code}"` : ""}>${r.item._q.answerOpener ? `<span class="vocab-opener">${esc(openerLead(r.item._q.answerOpener))}</span> ` : ""}${esc(r.item._q.expected)}</td>
                   <td>${!r.ok && r.answer && cfg.style === "type" ? `<button type="button" class="quiet" data-overrule="${i}">I was right</button>` : ""}</td>
                 </tr>`).join("")}
             </tbody>

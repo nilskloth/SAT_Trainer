@@ -312,3 +312,9 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
   .vocab-prompt { font-size: var(--fs-4); }
   .word-list.review th:nth-child(2), .word-list.review td:nth-child(2) { display: none; }
 }
+
+/* Opener shown with an entry ("Ich habe …" einen iPod) */
+.vocab-opener { color: var(--ink-muted); font-weight: 400; }
+.vocab-input { display: flex; align-items: baseline; gap: var(--sp-2); }
+.vocab-input .input-lead { font-family: var(--font-paper); font-size: var(--fs-3); white-space: nowrap; color: var(--ink-muted); }
+.vocab-input input { flex: 1; min-width: 0; }

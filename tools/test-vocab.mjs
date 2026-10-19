@@ -9,7 +9,7 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { checkAnswer, speakable } from "../js/core/vocab-match.js";
+import { checkAnswer, speakable, fillGap, articleSlip } from "../js/core/vocab-match.js";
 
 const DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "data", "content", "secondary");
 let pass = 0, fail = 0;
@@ -22,6 +22,12 @@ for (const f of readdirSync(DIR).filter(f => f.endsWith(".json"))) {
   for (const ch of bank.chapters) for (const s of ch.sections) for (const it of s.items) {
     ok(checkAnswer(it.en, it.en, { lang: "en", prompt: it[lang] }).ok, `${f} en self: ${it.en}`);
     ok(checkAnswer(it[lang], it[lang], { lang, prompt: it.en }).ok, `${f} ${lang} self: ${it[lang]}`);
+    if (it.context) {
+      const full = fillGap(it.context[lang], it[lang]);
+      const fullEn = fillGap(it.context.en, it.en);
+      ok(checkAnswer(full, full, { lang }).ok, `${f} ${lang} full sentence: ${full}`);
+      ok(checkAnswer(fullEn, fullEn, { lang: "en" }).ok, `${f} en full sentence: ${fullEn}`);
+    }
   }
 }
 
@@ -86,7 +92,23 @@ for (const [exp, ans, lang, prompt, wantOk, wantNear] of cases) {
     `${lang} "${ans}" vs "${exp}" → ${JSON.stringify(r)}`);
 }
 
-/* 3. Speech text */
+/* 3. Openers */
+[
+  [["Ich habe …", "einen iPod"], "Ich habe einen iPod"],
+  [["Ich wohne in …", "…der Schweiz"], "Ich wohne in der Schweiz"],
+  [["I live in ...", "Switzerland"], "I live in Switzerland"],
+  [["Er/Sie hat …", "blaue/braune/grüne/graue Augen"], "Er/Sie hat blaue/braune/grüne/graue Augen"]
+].forEach(([[a, b], want]) => ok(fillGap(a, b) === want, `fillGap("${a}", "${b}") → "${fillGap(a, b)}"`));
+ok(checkAnswer(fillGap("Er/Sie hat …", "blaue/braune/grüne/graue Augen"), "Sie hat grüne Augen", { lang: "de" }).ok, "full hair sentence");
+ok(!checkAnswer("einen iPod", "ein iPod", { lang: "de" }).ok, "ein iPod is wrong after Ich habe");
+ok(articleSlip("einen iPod", "ein iPod") === "einen", "article slip einen");
+ok(articleSlip("eine Gitarre", "ein Gitarre") === "eine", "article slip eine");
+ok(articleSlip("Ich wohne in …", "Ich wohne in") === null, "no slip with gap");
+ok(articleSlip("…der Schweiz", "die Schweiz") === "der", "article slip der (dative)");
+ok(articleSlip("eine Gitarre", "eine Geige") === null, "different noun is not a slip");
+ok(articleSlip("einen Hund", "einen Hund") === null, "identical is not a slip");
+
+/* 4. Speech text */
 [
   ["der Tisch(-e)", "der Tisch"],
   ["der Stuhl(-¨e)", "der Stuhl"],
