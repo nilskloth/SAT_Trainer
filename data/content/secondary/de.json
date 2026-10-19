@@ -1,0 +1,2682 @@
+{
+  "language": "de",
+  "label": "German",
+  "imported": "2026-10-19",
+  "chapters": [
+    {
+      "id": "k1",
+      "number": 1,
+      "title": "Meine Welt und ich",
+      "pages": "24–25",
+      "sections": [
+        {
+          "id": "k1-s1",
+          "title": "Hallo!",
+          "en": "Meeting and greeting",
+          "items": [
+            {
+              "id": "de-k1-wie-heisst-du",
+              "de": "Wie heißt du?",
+              "en": "What’s your name?"
+            },
+            {
+              "id": "de-k1-ich-heisse",
+              "de": "Ich heiße ...",
+              "en": "My name is ..."
+            },
+            {
+              "id": "de-k1-hallo",
+              "de": "Hallo!",
+              "en": "Hello!/Hi!"
+            },
+            {
+              "id": "de-k1-guten-tag",
+              "de": "Guten Tag!",
+              "en": "Hello!"
+            },
+            {
+              "id": "de-k1-wie-geht-s",
+              "de": "Wie geht’s?",
+              "en": "How are you?"
+            },
+            {
+              "id": "de-k1-gut-danke-und-dir",
+              "de": "Gut, danke. Und dir?",
+              "en": "Fine, thanks. And you?"
+            },
+            {
+              "id": "de-k1-nicht-schlecht",
+              "de": "Nicht schlecht.",
+              "en": "Not bad."
+            },
+            {
+              "id": "de-k1-tschus",
+              "de": "Tschüs!",
+              "en": "Bye!"
+            },
+            {
+              "id": "de-k1-auf-wiedersehen",
+              "de": "Auf Wiedersehen!",
+              "en": "Goodbye!"
+            }
+          ]
+        },
+        {
+          "id": "k1-s2",
+          "title": "Die Zahlen 1–19",
+          "en": "Numbers 1–19",
+          "items": [
+            {
+              "id": "de-k1-eins",
+              "de": "eins",
+              "en": "1"
+            },
+            {
+              "id": "de-k1-zwei",
+              "de": "zwei",
+              "en": "2"
+            },
+            {
+              "id": "de-k1-drei",
+              "de": "drei",
+              "en": "3"
+            },
+            {
+              "id": "de-k1-vier",
+              "de": "vier",
+              "en": "4"
+            },
+            {
+              "id": "de-k1-funf",
+              "de": "fünf",
+              "en": "5"
+            },
+            {
+              "id": "de-k1-sechs",
+              "de": "sechs",
+              "en": "6"
+            },
+            {
+              "id": "de-k1-sieben",
+              "de": "sieben",
+              "en": "7"
+            },
+            {
+              "id": "de-k1-acht",
+              "de": "acht",
+              "en": "8"
+            },
+            {
+              "id": "de-k1-neun",
+              "de": "neun",
+              "en": "9"
+            },
+            {
+              "id": "de-k1-zehn",
+              "de": "zehn",
+              "en": "10"
+            },
+            {
+              "id": "de-k1-elf",
+              "de": "elf",
+              "en": "11"
+            },
+            {
+              "id": "de-k1-zwolf",
+              "de": "zwölf",
+              "en": "12"
+            },
+            {
+              "id": "de-k1-dreizehn",
+              "de": "dreizehn",
+              "en": "13"
+            },
+            {
+              "id": "de-k1-vierzehn",
+              "de": "vierzehn",
+              "en": "14"
+            },
+            {
+              "id": "de-k1-funfzehn",
+              "de": "fünfzehn",
+              "en": "15"
+            },
+            {
+              "id": "de-k1-sechzehn",
+              "de": "sechzehn",
+              "en": "16"
+            },
+            {
+              "id": "de-k1-siebzehn",
+              "de": "siebzehn",
+              "en": "17"
+            },
+            {
+              "id": "de-k1-achtzehn",
+              "de": "achtzehn",
+              "en": "18"
+            },
+            {
+              "id": "de-k1-neunzehn",
+              "de": "neunzehn",
+              "en": "19"
+            },
+            {
+              "id": "de-k1-wie-alt-bist-du",
+              "de": "Wie alt bist du?",
+              "en": "How old are you?"
+            },
+            {
+              "id": "de-k1-ich-bin-jahre-alt",
+              "de": "Ich bin ... Jahre alt.",
+              "en": "I am ... years old."
+            },
+            {
+              "id": "de-k1-wie-alt-ist-julia",
+              "de": "Wie alt ist (Julia)?",
+              "en": "How old is (Julia)?"
+            },
+            {
+              "id": "de-k1-julia-ist-jahre-alt",
+              "de": "(Julia) ist … Jahre alt.",
+              "en": "(Julia) is … years old."
+            }
+          ]
+        },
+        {
+          "id": "k1-s3",
+          "title": "Wo wohnst du?",
+          "en": "Where do you live?",
+          "items": [
+            {
+              "id": "de-k1-wo-wohnst-du",
+              "de": "Wo wohnst du?",
+              "en": "Where do you live?"
+            },
+            {
+              "id": "de-k1-ich-wohne-in",
+              "de": "Ich wohne in …",
+              "en": "I live in ..."
+            },
+            {
+              "id": "de-k1-er-sie-es-wohnt-in",
+              "de": "Er/Sie/Es wohnt in …",
+              "en": "He/She/It lives in ..."
+            },
+            {
+              "id": "de-k1-england",
+              "de": "…England",
+              "en": "England"
+            },
+            {
+              "id": "de-k1-irland",
+              "de": "…Irland",
+              "en": "Ireland"
+            },
+            {
+              "id": "de-k1-nordirland",
+              "de": "…Nordirland",
+              "en": "Northern Ireland"
+            },
+            {
+              "id": "de-k1-schottland",
+              "de": "…Schottland",
+              "en": "Scotland"
+            },
+            {
+              "id": "de-k1-wales",
+              "de": "…Wales",
+              "en": "Wales"
+            },
+            {
+              "id": "de-k1-deutschland",
+              "de": "…Deutschland",
+              "en": "Germany"
+            },
+            {
+              "id": "de-k1-osterreich",
+              "de": "…Österreich",
+              "en": "Austria"
+            },
+            {
+              "id": "de-k1-der-schweiz",
+              "de": "…der Schweiz",
+              "en": "Switzerland"
+            }
+          ]
+        },
+        {
+          "id": "k1-s4",
+          "title": "Wie bist du?",
+          "en": "What are you like?",
+          "items": [
+            {
+              "id": "de-k1-wie-bist-du",
+              "de": "Wie bist du?",
+              "en": "What are you like?"
+            },
+            {
+              "id": "de-k1-ich-bin",
+              "de": "Ich bin …",
+              "en": "I am …"
+            },
+            {
+              "id": "de-k1-er-sie-ist",
+              "de": "Er/Sie ist ...",
+              "en": "He/She is ..."
+            },
+            {
+              "id": "de-k1-faul",
+              "de": "faul",
+              "en": "lazy"
+            },
+            {
+              "id": "de-k1-freundlich",
+              "de": "freundlich",
+              "en": "friendly"
+            },
+            {
+              "id": "de-k1-intelligent",
+              "de": "intelligent",
+              "en": "intelligent"
+            },
+            {
+              "id": "de-k1-kreativ",
+              "de": "kreativ",
+              "en": "creative"
+            },
+            {
+              "id": "de-k1-launisch",
+              "de": "launisch",
+              "en": "moody"
+            },
+            {
+              "id": "de-k1-laut",
+              "de": "laut",
+              "en": "loud"
+            },
+            {
+              "id": "de-k1-lustig",
+              "de": "lustig",
+              "en": "funny"
+            },
+            {
+              "id": "de-k1-musikalisch",
+              "de": "musikalisch",
+              "en": "musical"
+            },
+            {
+              "id": "de-k1-sportlich",
+              "de": "sportlich",
+              "en": "sporty"
+            }
+          ]
+        },
+        {
+          "id": "k1-s5",
+          "title": "Lieblingssachen",
+          "en": "Favourite things",
+          "items": [
+            {
+              "id": "de-k1-mein-lieblingssport-ist",
+              "de": "Mein Lieblingssport ist …",
+              "en": "My favourite sport is …"
+            },
+            {
+              "id": "de-k1-mein-lieblingsmonat-ist",
+              "de": "Mein Lieblingsmonat ist ...",
+              "en": "My favourite month is …"
+            },
+            {
+              "id": "de-k1-meine-lieblingsmusik-ist",
+              "de": "Meine Lieblingsmusik ist …",
+              "en": "My favourite music is …"
+            },
+            {
+              "id": "de-k1-meine-lieblingszahl-ist",
+              "de": "Meine Lieblingszahl ist …",
+              "en": "My favourite number is ..."
+            },
+            {
+              "id": "de-k1-meine-lieblingssendung-ist",
+              "de": "Meine Lieblingssendung ist …",
+              "en": "My favourite programme is ..."
+            },
+            {
+              "id": "de-k1-meine-lieblingsfussballmannschaft-ist",
+              "de": "Meine Lieblingsfußballmannschaft ist …",
+              "en": "My favourite football team is..."
+            },
+            {
+              "id": "de-k1-mein-lieblingsspiel-ist",
+              "de": "Mein Lieblingsspiel ist ...",
+              "en": "My favourite game is ..."
+            },
+            {
+              "id": "de-k1-mein-lieblingsland-ist",
+              "de": "Mein Lieblingsland ist ...",
+              "en": "My favourite country is ..."
+            },
+            {
+              "id": "de-k1-mein-lieblingsauto-ist",
+              "de": "Mein Lieblingsauto ist ...",
+              "en": "My favourite car is ..."
+            },
+            {
+              "id": "de-k1-was-ist-dein-lieblingssport",
+              "de": "Was ist dein Lieblingssport?",
+              "en": "What’s your favourite sport?"
+            },
+            {
+              "id": "de-k1-was-ist-deine-lieblingszahl",
+              "de": "Was ist deine Lieblingszahl?",
+              "en": "What’s your favourite number?"
+            },
+            {
+              "id": "de-k1-was-ist-dein-lieblingsland",
+              "de": "Was ist dein Lieblingsland?",
+              "en": "What’s your favourite country?"
+            }
+          ]
+        },
+        {
+          "id": "k1-s6",
+          "title": "Hast du einen Computer?",
+          "en": "Have you got a computer?",
+          "items": [
+            {
+              "id": "de-k1-hast-du-einen-computer",
+              "de": "Hast du einen Computer?",
+              "en": "Have you got a computer?"
+            },
+            {
+              "id": "de-k1-ich-habe",
+              "de": "Ich habe …",
+              "en": "I have …"
+            },
+            {
+              "id": "de-k1-einen-computer",
+              "de": "einen Computer",
+              "en": "a computer"
+            },
+            {
+              "id": "de-k1-einen-ipod",
+              "de": "einen iPod",
+              "en": "an iPod"
+            },
+            {
+              "id": "de-k1-einen-fussball",
+              "de": "einen Fußball",
+              "en": "a football"
+            },
+            {
+              "id": "de-k1-eine-gitarre",
+              "de": "eine Gitarre",
+              "en": "a guitar"
+            },
+            {
+              "id": "de-k1-eine-wii",
+              "de": "eine Wii",
+              "en": "a Wii"
+            },
+            {
+              "id": "de-k1-eine-schlange",
+              "de": "eine Schlange",
+              "en": "a snake"
+            },
+            {
+              "id": "de-k1-ein-handy",
+              "de": "ein Handy",
+              "en": "a mobile phone"
+            },
+            {
+              "id": "de-k1-ein-keyboard",
+              "de": "ein Keyboard",
+              "en": "a keyboard"
+            },
+            {
+              "id": "de-k1-ein-skateboard",
+              "de": "ein Skateboard",
+              "en": "a skateboard"
+            }
+          ]
+        },
+        {
+          "id": "k1-s7",
+          "title": "Fragewörter",
+          "en": "Question words",
+          "items": [
+            {
+              "id": "de-k1-wie",
+              "de": "Wie?",
+              "en": "How?"
+            },
+            {
+              "id": "de-k1-was",
+              "de": "Was?",
+              "en": "What?"
+            },
+            {
+              "id": "de-k1-wo",
+              "de": "Wo?",
+              "en": "Where?"
+            },
+            {
+              "id": "de-k1-woher",
+              "de": "Woher?",
+              "en": "Where … from?"
+            },
+            {
+              "id": "de-k1-wer",
+              "de": "Wer?",
+              "en": "Who?"
+            }
+          ]
+        },
+        {
+          "id": "k1-s8",
+          "title": "Oft benutzte Wörter",
+          "en": "High-frequency words",
+          "items": [
+            {
+              "id": "de-k1-und",
+              "de": "und",
+              "en": "and"
+            },
+            {
+              "id": "de-k1-und-auch",
+              "de": "(und) auch",
+              "en": "(and) also"
+            },
+            {
+              "id": "de-k1-aber",
+              "de": "aber",
+              "en": "but"
+            },
+            {
+              "id": "de-k1-sehr",
+              "de": "sehr",
+              "en": "very"
+            },
+            {
+              "id": "de-k1-ziemlich",
+              "de": "ziemlich",
+              "en": "quite"
+            },
+            {
+              "id": "de-k1-nicht",
+              "de": "nicht",
+              "en": "not"
+            },
+            {
+              "id": "de-k1-was-denkst-du",
+              "de": "Was denkst du?",
+              "en": "What do you think?"
+            },
+            {
+              "id": "de-k1-ich-denke",
+              "de": "Ich denke, …",
+              "en": "I think ..."
+            },
+            {
+              "id": "de-k1-ich-auch",
+              "de": "Ich auch!",
+              "en": "Me too!"
+            },
+            {
+              "id": "de-k1-ich-nicht",
+              "de": "Ich nicht!",
+              "en": "Not me!/That’s not what I think!"
+            },
+            {
+              "id": "de-k1-was-du-spinnst",
+              "de": "Was? Du spinnst!",
+              "en": "What? You’re joking!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "k2",
+      "number": 2,
+      "title": "Familie und Tiere",
+      "pages": "46–47",
+      "sections": [
+        {
+          "id": "k2-s1",
+          "title": "Haustiere",
+          "en": "Pets",
+          "items": [
+            {
+              "id": "de-k2-hast-du-ein-haustier",
+              "de": "Hast du ein Haustier?",
+              "en": "Have you got a pet?"
+            },
+            {
+              "id": "de-k2-ich-habe",
+              "de": "Ich habe …",
+              "en": "I have ..."
+            },
+            {
+              "id": "de-k2-einen-goldfisch",
+              "de": "einen Goldfisch",
+              "en": "a goldfish"
+            },
+            {
+              "id": "de-k2-einen-hamster",
+              "de": "einen Hamster",
+              "en": "a hamster"
+            },
+            {
+              "id": "de-k2-einen-hund",
+              "de": "einen Hund",
+              "en": "a dog"
+            },
+            {
+              "id": "de-k2-ein-kaninchen",
+              "de": "ein Kaninchen",
+              "en": "a rabbit"
+            },
+            {
+              "id": "de-k2-eine-katze",
+              "de": "eine Katze",
+              "en": "a cat"
+            },
+            {
+              "id": "de-k2-eine-maus",
+              "de": "eine Maus",
+              "en": "a mouse"
+            },
+            {
+              "id": "de-k2-ein-meerschweinchen",
+              "de": "ein Meerschweinchen",
+              "en": "a guinea pig"
+            },
+            {
+              "id": "de-k2-ein-pferd",
+              "de": "ein Pferd",
+              "en": "a horse"
+            },
+            {
+              "id": "de-k2-eine-schlange",
+              "de": "eine Schlange",
+              "en": "a snake"
+            },
+            {
+              "id": "de-k2-einen-wellensittich",
+              "de": "einen Wellensittich",
+              "en": "a budgie"
+            },
+            {
+              "id": "de-k2-kein-haustier",
+              "de": "kein Haustier",
+              "en": "no pet"
+            }
+          ]
+        },
+        {
+          "id": "k2-s2",
+          "title": "Eigenschaften",
+          "en": "Qualities",
+          "items": [
+            {
+              "id": "de-k2-wie-ist-er-sie-es",
+              "de": "Wie ist er/sie/es?",
+              "en": "What is he/she/it like?"
+            },
+            {
+              "id": "de-k2-er-sie-es-ist",
+              "de": "Er/Sie/Es ist …",
+              "en": "He/She/It is ..."
+            },
+            {
+              "id": "de-k2-dick-schlank",
+              "de": "dick/schlank",
+              "en": "fat/thin"
+            },
+            {
+              "id": "de-k2-frech-niedlich",
+              "de": "frech/niedlich",
+              "en": "cheeky/cute"
+            },
+            {
+              "id": "de-k2-gemein-suss",
+              "de": "gemein/süß",
+              "en": "mean/sweet"
+            },
+            {
+              "id": "de-k2-gross-klein",
+              "de": "groß/klein",
+              "en": "big/small"
+            },
+            {
+              "id": "de-k2-kraftig",
+              "de": "kräftig",
+              "en": "strong"
+            },
+            {
+              "id": "de-k2-schlau",
+              "de": "schlau",
+              "en": "cunning"
+            },
+            {
+              "id": "de-k2-super-lustig",
+              "de": "(super)lustig",
+              "en": "(really) funny"
+            },
+            {
+              "id": "de-k2-er-sie-es-kann",
+              "de": "Er/Sie/Es kann …",
+              "en": "He/She/It can ..."
+            },
+            {
+              "id": "de-k2-italienisch-sprechen",
+              "de": "Italienisch sprechen",
+              "en": "speak Italian"
+            },
+            {
+              "id": "de-k2-fliegen",
+              "de": "fliegen",
+              "en": "fly"
+            },
+            {
+              "id": "de-k2-flote-fussball-wii-spielen",
+              "de": "Flöte/Fußball/Wii spielen",
+              "en": "play the flute/football/on the Wii"
+            },
+            {
+              "id": "de-k2-schnell-laufen",
+              "de": "(schnell) laufen",
+              "en": "run (fast)"
+            },
+            {
+              "id": "de-k2-lesen",
+              "de": "lesen",
+              "en": "read"
+            },
+            {
+              "id": "de-k2-rad-fahren",
+              "de": "Rad fahren",
+              "en": "ride a bike"
+            },
+            {
+              "id": "de-k2-schwimmen",
+              "de": "schwimmen",
+              "en": "swim"
+            },
+            {
+              "id": "de-k2-singen",
+              "de": "singen",
+              "en": "sing"
+            },
+            {
+              "id": "de-k2-springen",
+              "de": "springen",
+              "en": "jump"
+            },
+            {
+              "id": "de-k2-tanzen",
+              "de": "tanzen",
+              "en": "dance"
+            }
+          ]
+        },
+        {
+          "id": "k2-s3",
+          "title": "Die Zahlen 20–100",
+          "en": "Numbers 20-100",
+          "items": [
+            {
+              "id": "de-k2-zwanzig",
+              "de": "zwanzig",
+              "en": "twenty"
+            },
+            {
+              "id": "de-k2-dreissig",
+              "de": "dreißig",
+              "en": "thirty"
+            },
+            {
+              "id": "de-k2-vierzig",
+              "de": "vierzig",
+              "en": "forty"
+            },
+            {
+              "id": "de-k2-funfzig",
+              "de": "fünfzig",
+              "en": "fifty"
+            },
+            {
+              "id": "de-k2-sechzig",
+              "de": "sechzig",
+              "en": "sixty"
+            },
+            {
+              "id": "de-k2-siebzig",
+              "de": "siebzig",
+              "en": "seventy"
+            },
+            {
+              "id": "de-k2-achtzig",
+              "de": "achtzig",
+              "en": "eighty"
+            },
+            {
+              "id": "de-k2-neunzig",
+              "de": "neunzig",
+              "en": "ninety"
+            },
+            {
+              "id": "de-k2-hundert",
+              "de": "hundert",
+              "en": "hundred"
+            },
+            {
+              "id": "de-k2-einundzwanzig",
+              "de": "einundzwanzig",
+              "en": "twenty-one"
+            },
+            {
+              "id": "de-k2-zweiundzwanzig",
+              "de": "zweiundzwanzig",
+              "en": "twenty-two"
+            }
+          ]
+        },
+        {
+          "id": "k2-s4",
+          "title": "Meine Familie",
+          "en": "My family",
+          "items": [
+            {
+              "id": "de-k2-es-gibt-personen-in",
+              "de": "Es gibt … Personen in",
+              "en": "There are ... people in"
+            },
+            {
+              "id": "de-k2-meiner-familie",
+              "de": "meiner Familie.",
+              "en": "my family."
+            },
+            {
+              "id": "de-k2-meine-mutter",
+              "de": "meine Mutter",
+              "en": "my mother"
+            },
+            {
+              "id": "de-k2-mein-vater",
+              "de": "mein Vater",
+              "en": "my father"
+            },
+            {
+              "id": "de-k2-mein-bruder",
+              "de": "mein Bruder",
+              "en": "my brother"
+            },
+            {
+              "id": "de-k2-mein-stiefbruder-halbbruder",
+              "de": "mein Stiefbruder/Halbbruder",
+              "en": "my stepbrother/ half-brother"
+            },
+            {
+              "id": "de-k2-meine-schwester",
+              "de": "meine Schwester",
+              "en": "my sister"
+            },
+            {
+              "id": "de-k2-meine-stiefschwester-halbschwester",
+              "de": "meine Stiefschwester/Halbschwester",
+              "en": "my stepsister/half-sister"
+            },
+            {
+              "id": "de-k2-meine-eltern",
+              "de": "meine Eltern",
+              "en": "my parents"
+            },
+            {
+              "id": "de-k2-meine-grosseltern",
+              "de": "meine Großeltern",
+              "en": "my grandparents"
+            },
+            {
+              "id": "de-k2-hast-du-geschwister",
+              "de": "Hast du Geschwister?",
+              "en": "Have you any brothers and sisters?"
+            },
+            {
+              "id": "de-k2-ich-habe-zwei-bruder",
+              "de": "Ich habe zwei Brüder.",
+              "en": "I have two brothers."
+            },
+            {
+              "id": "de-k2-ich-habe-drei-schwestern",
+              "de": "Ich habe drei Schwestern.",
+              "en": "I have three sisters."
+            },
+            {
+              "id": "de-k2-ich-bin-einzelkind",
+              "de": "Ich bin Einzelkind.",
+              "en": "I am an only child."
+            },
+            {
+              "id": "de-k2-ich-habe-keine-geschwister",
+              "de": "Ich habe keine Geschwister.",
+              "en": "I have no brothers and sisters."
+            }
+          ]
+        },
+        {
+          "id": "k2-s5",
+          "title": "Die Farben",
+          "en": "Colours",
+          "items": [
+            {
+              "id": "de-k2-schwarz",
+              "de": "schwarz",
+              "en": "black"
+            },
+            {
+              "id": "de-k2-weiss",
+              "de": "weiß",
+              "en": "white"
+            },
+            {
+              "id": "de-k2-grau",
+              "de": "grau",
+              "en": "grey"
+            },
+            {
+              "id": "de-k2-braun",
+              "de": "braun",
+              "en": "brown"
+            },
+            {
+              "id": "de-k2-rot",
+              "de": "rot",
+              "en": "red"
+            },
+            {
+              "id": "de-k2-orange",
+              "de": "orange",
+              "en": "orange"
+            },
+            {
+              "id": "de-k2-gelb",
+              "de": "gelb",
+              "en": "yellow"
+            },
+            {
+              "id": "de-k2-grun",
+              "de": "grün",
+              "en": "green"
+            },
+            {
+              "id": "de-k2-blau",
+              "de": "blau",
+              "en": "blue"
+            },
+            {
+              "id": "de-k2-indigoblau",
+              "de": "indigoblau",
+              "en": "indigo"
+            },
+            {
+              "id": "de-k2-violett",
+              "de": "violett",
+              "en": "violet"
+            },
+            {
+              "id": "de-k2-lila",
+              "de": "lila",
+              "en": "purple"
+            },
+            {
+              "id": "de-k2-rosa",
+              "de": "rosa",
+              "en": "pink"
+            },
+            {
+              "id": "de-k2-bunt",
+              "de": "bunt",
+              "en": "brightly coloured"
+            },
+            {
+              "id": "de-k2-hellblau-dunkelblau",
+              "de": "hellblau/dunkelblau",
+              "en": "light blue/dark blue"
+            }
+          ]
+        },
+        {
+          "id": "k2-s6",
+          "title": "Haare und Augen",
+          "en": "Hair and eyes",
+          "items": [
+            {
+              "id": "de-k2-er-sie-hat",
+              "de": "Er/Sie hat …",
+              "en": "He/She has ..."
+            },
+            {
+              "id": "de-k2-schwarze-braune-blonde-rote-haare",
+              "de": "schwarze/braune/blonde/rote Haare",
+              "en": "black/brown/blond/red hair"
+            },
+            {
+              "id": "de-k2-kurze-lange-mittellange-haare",
+              "de": "kurze/lange/mittellange Haare",
+              "en": "short/long/mid-length hair"
+            },
+            {
+              "id": "de-k2-blaue-braune-grune-graue-augen",
+              "de": "blaue/braune/grüne/graue Augen",
+              "en": "blue/brown/green/grey eyes"
+            }
+          ]
+        },
+        {
+          "id": "k2-s7",
+          "title": "Die Monate",
+          "en": "The months",
+          "items": [
+            {
+              "id": "de-k2-januar",
+              "de": "Januar",
+              "en": "January"
+            },
+            {
+              "id": "de-k2-februar",
+              "de": "Februar",
+              "en": "February"
+            },
+            {
+              "id": "de-k2-marz",
+              "de": "März",
+              "en": "March"
+            },
+            {
+              "id": "de-k2-april",
+              "de": "April",
+              "en": "April"
+            },
+            {
+              "id": "de-k2-mai",
+              "de": "Mai",
+              "en": "May"
+            },
+            {
+              "id": "de-k2-juni",
+              "de": "Juni",
+              "en": "June"
+            },
+            {
+              "id": "de-k2-juli",
+              "de": "Juli",
+              "en": "July"
+            },
+            {
+              "id": "de-k2-august",
+              "de": "August",
+              "en": "August"
+            },
+            {
+              "id": "de-k2-september",
+              "de": "September",
+              "en": "September"
+            },
+            {
+              "id": "de-k2-oktober",
+              "de": "Oktober",
+              "en": "October"
+            },
+            {
+              "id": "de-k2-november",
+              "de": "November",
+              "en": "November"
+            },
+            {
+              "id": "de-k2-dezember",
+              "de": "Dezember",
+              "en": "December"
+            }
+          ]
+        },
+        {
+          "id": "k2-s8",
+          "title": "Das Datum",
+          "en": "The date",
+          "items": [
+            {
+              "id": "de-k2-wann-hast-du-geburtstag",
+              "de": "Wann hast du Geburtstag?",
+              "en": "When is your birthday?"
+            },
+            {
+              "id": "de-k2-am-1-ersten-januar",
+              "de": "am 1. (ersten) Januar",
+              "en": "on 1 January"
+            },
+            {
+              "id": "de-k2-am-3-dritten-februar",
+              "de": "am 3. (dritten) Februar",
+              "en": "on 3 February"
+            },
+            {
+              "id": "de-k2-am-7-siebten-marz",
+              "de": "am 7. (siebten) März",
+              "en": "on 7 March"
+            },
+            {
+              "id": "de-k2-am-8-achten-april",
+              "de": "am 8. (achten) April",
+              "en": "on 8 April"
+            },
+            {
+              "id": "de-k2-am-15-funfzehnten-mai",
+              "de": "am 15. (fünfzehnten) Mai",
+              "en": "on 15 May"
+            },
+            {
+              "id": "de-k2-am-29-neunundzwanzigsten-juni",
+              "de": "am 29. (neunundzwanzigsten) Juni",
+              "en": "on 29 June"
+            },
+            {
+              "id": "de-k2-ich-habe-heute-geburtstag",
+              "de": "Ich habe (heute) Geburtstag.",
+              "en": "It’s my birthday (today)."
+            }
+          ]
+        },
+        {
+          "id": "k2-s9",
+          "title": "Oft benutzte Wörter",
+          "en": "High-frequency words",
+          "items": [
+            {
+              "id": "de-k2-und",
+              "de": "und",
+              "en": "and"
+            },
+            {
+              "id": "de-k2-aber",
+              "de": "aber",
+              "en": "but"
+            },
+            {
+              "id": "de-k2-oder",
+              "de": "oder",
+              "en": "or"
+            },
+            {
+              "id": "de-k2-ziemlich",
+              "de": "ziemlich",
+              "en": "fairly, quite"
+            },
+            {
+              "id": "de-k2-sehr",
+              "de": "sehr",
+              "en": "very"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "k3",
+      "number": 3,
+      "title": "Freizeit - juhu!",
+      "pages": "70–71",
+      "sections": [
+        {
+          "id": "k3-s1",
+          "title": "Bist du sportlich?",
+          "en": "Are you sporty?",
+          "items": [
+            {
+              "id": "de-k3-bist-du-sportlich",
+              "de": "Bist du sportlich?",
+              "en": "Are you sporty?"
+            },
+            {
+              "id": "de-k3-ich-bin-sehr-ziemlich",
+              "de": "Ich bin (sehr/ziemlich/nicht sehr) sportlich.",
+              "en": "I am (very/quite/not very) sporty."
+            },
+            {
+              "id": "de-k3-was-spielst-du",
+              "de": "Was spielst du?",
+              "en": "What do you play?"
+            },
+            {
+              "id": "de-k3-ich-spiele",
+              "de": "Ich spiele …",
+              "en": "I play ..."
+            },
+            {
+              "id": "de-k3-ich-spiele-gern",
+              "de": "Ich spiele gern ...",
+              "en": "I like playing ..."
+            },
+            {
+              "id": "de-k3-ich-spiele-ziemlich-gern",
+              "de": "Ich spiele ziemlich gern ...",
+              "en": "I quite like playing ..."
+            },
+            {
+              "id": "de-k3-ich-spiele-nicht-gern",
+              "de": "Ich spiele nicht gern …",
+              "en": "I don’t like playing ..."
+            },
+            {
+              "id": "de-k3-badminton",
+              "de": "Badminton",
+              "en": "badminton"
+            },
+            {
+              "id": "de-k3-basketball",
+              "de": "Basketball",
+              "en": "basketball"
+            },
+            {
+              "id": "de-k3-eishockey",
+              "de": "Eishockey",
+              "en": "ice hockey"
+            },
+            {
+              "id": "de-k3-fussball",
+              "de": "Fußball",
+              "en": "football"
+            },
+            {
+              "id": "de-k3-handball",
+              "de": "Handball",
+              "en": "handball"
+            },
+            {
+              "id": "de-k3-tennis",
+              "de": "Tennis",
+              "en": "tennis"
+            },
+            {
+              "id": "de-k3-tischtennis",
+              "de": "Tischtennis",
+              "en": "table tennis"
+            },
+            {
+              "id": "de-k3-volleyball",
+              "de": "Volleyball",
+              "en": "volleyball"
+            },
+            {
+              "id": "de-k3-wasserball",
+              "de": "Wasserball",
+              "en": "water polo"
+            }
+          ]
+        },
+        {
+          "id": "k3-s2",
+          "title": "Was machst du gern?",
+          "en": "What do you like doing?",
+          "items": [
+            {
+              "id": "de-k3-was-machst-du-gern",
+              "de": "Was machst du gern?",
+              "en": "What do you like doing?"
+            },
+            {
+              "id": "de-k3-was-machst-du-gern-2",
+              "de": "Was machst du gern?",
+              "en": "What do you like doing?"
+            },
+            {
+              "id": "de-k3-ich-fahre-rad",
+              "de": "Ich fahre Rad.",
+              "en": "I ride my bike."
+            },
+            {
+              "id": "de-k3-ich-fahre-skateboard",
+              "de": "Ich fahre Skateboard.",
+              "en": "I go skateboarding."
+            },
+            {
+              "id": "de-k3-ich-fahre-ski",
+              "de": "Ich fahre Ski.",
+              "en": "I ski."
+            },
+            {
+              "id": "de-k3-ich-fahre-snowboard",
+              "de": "Ich fahre Snowboard.",
+              "en": "I snowboard."
+            },
+            {
+              "id": "de-k3-ich-lese",
+              "de": "Ich lese.",
+              "en": "I read."
+            },
+            {
+              "id": "de-k3-ich-mache-judo",
+              "de": "Ich mache Judo.",
+              "en": "I do judo."
+            },
+            {
+              "id": "de-k3-ich-mache-karate",
+              "de": "Ich mache Karate.",
+              "en": "I do karate."
+            },
+            {
+              "id": "de-k3-ich-reite",
+              "de": "Ich reite.",
+              "en": "I go horse riding."
+            },
+            {
+              "id": "de-k3-ich-schwimme",
+              "de": "Ich schwimme.",
+              "en": "I swim."
+            },
+            {
+              "id": "de-k3-ich-sehe-fern",
+              "de": "Ich sehe fern.",
+              "en": "I watch TV."
+            },
+            {
+              "id": "de-k3-ich-spiele-gitarre",
+              "de": "Ich spiele Gitarre.",
+              "en": "I play the guitar."
+            },
+            {
+              "id": "de-k3-ich-tanze",
+              "de": "Ich tanze.",
+              "en": "I dance."
+            }
+          ]
+        },
+        {
+          "id": "k3-s3",
+          "title": "Wie findest du das?",
+          "en": "What do you think of it?",
+          "items": [
+            {
+              "id": "de-k3-wie-findest-du-das",
+              "de": "Wie findest du das?",
+              "en": "What do you think of it?"
+            },
+            {
+              "id": "de-k3-ich-finde-es",
+              "de": "Ich finde es …",
+              "en": "I think it’s …"
+            },
+            {
+              "id": "de-k3-es-ist",
+              "de": "Es ist …",
+              "en": "It’s …"
+            },
+            {
+              "id": "de-k3-irre",
+              "de": "irre",
+              "en": "amazing"
+            },
+            {
+              "id": "de-k3-super",
+              "de": "super",
+              "en": "super"
+            },
+            {
+              "id": "de-k3-toll",
+              "de": "toll",
+              "en": "great"
+            },
+            {
+              "id": "de-k3-cool",
+              "de": "cool",
+              "en": "cool"
+            },
+            {
+              "id": "de-k3-gut",
+              "de": "gut",
+              "en": "good"
+            },
+            {
+              "id": "de-k3-nicht-schlecht",
+              "de": "nicht schlecht",
+              "en": "not bad"
+            },
+            {
+              "id": "de-k3-okay",
+              "de": "okay",
+              "en": "okay"
+            },
+            {
+              "id": "de-k3-langweilig",
+              "de": "langweilig",
+              "en": "boring"
+            },
+            {
+              "id": "de-k3-nervig",
+              "de": "nervig",
+              "en": "annoying"
+            },
+            {
+              "id": "de-k3-stinklangweilig",
+              "de": "stinklangweilig",
+              "en": "deadly boring"
+            },
+            {
+              "id": "de-k3-furchtbar",
+              "de": "furchtbar",
+              "en": "awful"
+            }
+          ]
+        },
+        {
+          "id": "k3-s4",
+          "title": "Was machst du in deiner Freizeit?",
+          "en": "What do you do in your free time?",
+          "items": [
+            {
+              "id": "de-k3-was-machst-du-in-deiner-freizeit",
+              "de": "Was machst du in deiner Freizeit?",
+              "en": "What do you do in your free time?"
+            },
+            {
+              "id": "de-k3-ich-chille",
+              "de": "Ich chille.",
+              "en": "I chill."
+            },
+            {
+              "id": "de-k3-ich-esse-pizza-oder-hamburger",
+              "de": "Ich esse Pizza oder Hamburger.",
+              "en": "I eat pizza or hamburgers."
+            },
+            {
+              "id": "de-k3-ich-gehe-einkaufen",
+              "de": "Ich gehe einkaufen.",
+              "en": "I go shopping."
+            },
+            {
+              "id": "de-k3-ich-gehe-ins-kino",
+              "de": "Ich gehe ins Kino.",
+              "en": "I go to the cinema."
+            },
+            {
+              "id": "de-k3-ich-gehe-in-den-park",
+              "de": "Ich gehe in den Park.",
+              "en": "I go to the park."
+            },
+            {
+              "id": "de-k3-ich-gehe-in-die-stadt",
+              "de": "Ich gehe in die Stadt.",
+              "en": "I go into town."
+            },
+            {
+              "id": "de-k3-ich-hore-musik",
+              "de": "Ich höre Musik.",
+              "en": "I listen to music."
+            },
+            {
+              "id": "de-k3-ich-mache-sport",
+              "de": "Ich mache Sport.",
+              "en": "I do sport."
+            },
+            {
+              "id": "de-k3-ich-spiele-xbox-oder-wii",
+              "de": "Ich spiele Xbox oder Wii.",
+              "en": "I play Xbox or on the Wii."
+            }
+          ]
+        },
+        {
+          "id": "k3-s5",
+          "title": "Ich bin online",
+          "en": "I’m online",
+          "items": [
+            {
+              "id": "de-k3-was-machst-du-am-computer",
+              "de": "Was machst du am Computer?",
+              "en": "What do you do on the computer?"
+            },
+            {
+              "id": "de-k3-was-machst-du-auf-deinem-handy",
+              "de": "Was machst du auf deinem Handy?",
+              "en": "What do you do on your mobile?"
+            },
+            {
+              "id": "de-k3-ich-chatte-mit-freundeniauf-facebook",
+              "de": "Ich chatte mit FreundenIauf Facebook.",
+              "en": "I chat with friends on Facebook."
+            },
+            {
+              "id": "de-k3-ich-lade-musik-herunter",
+              "de": "Ich lade Musik herunter.",
+              "en": "I download music."
+            },
+            {
+              "id": "de-k3-ich-mache-fotos-oder-filme",
+              "de": "Ich mache Fotos oder Filme.",
+              "en": "I take photos or make films."
+            },
+            {
+              "id": "de-k3-ich-sehe-videos",
+              "de": "Ich sehe Videos.",
+              "en": "I watch videos."
+            },
+            {
+              "id": "de-k3-ich-simse",
+              "de": "Ich simse.",
+              "en": "I text."
+            },
+            {
+              "id": "de-k3-ich-spiele-computerspiele",
+              "de": "Ich spiele Computerspiele.",
+              "en": "I play computer games."
+            },
+            {
+              "id": "de-k3-ich-suche-und-lese-infos",
+              "de": "Ich suche und lese Infos",
+              "en": "I look for and read information"
+            },
+            {
+              "id": "de-k3-fur-die-hausaufgaben",
+              "de": "für die Hausaufgaben.",
+              "en": "for my homework."
+            },
+            {
+              "id": "de-k3-ich-surfe-im-internet",
+              "de": "Ich surfe im Internet.",
+              "en": "I surf the internet."
+            },
+            {
+              "id": "de-k3-ich-telefoniere-mit-freunden",
+              "de": "Ich telefoniere mit Freunden.",
+              "en": "I call my friends."
+            },
+            {
+              "id": "de-k3-ich-mache-ziemlich-viel",
+              "de": "Ich mache ziemlich viel",
+              "en": "I do quite a lot of things on my"
+            },
+            {
+              "id": "de-k3-auf-meinem-handy",
+              "de": "auf meinem Handy.",
+              "en": "mobile."
+            }
+          ]
+        },
+        {
+          "id": "k3-s6",
+          "title": "Oft benutzte Wörter",
+          "en": "High-frequency words",
+          "items": [
+            {
+              "id": "de-k3-wie-oft",
+              "de": "Wie oft?",
+              "en": "How often?"
+            },
+            {
+              "id": "de-k3-sehr-ziemlich-nicht-so-oft",
+              "de": "(sehr/ziemlich/nicht so) oft",
+              "en": "(very/quite/not so) often"
+            },
+            {
+              "id": "de-k3-einmal-zweimal-dreimal",
+              "de": "einmal/zweimal/dreimal",
+              "en": "once/twice/three times"
+            },
+            {
+              "id": "de-k3-pro-woche-pro-monat",
+              "de": "pro Woche/pro Monat",
+              "en": "a week/a month"
+            },
+            {
+              "id": "de-k3-jeden-tag",
+              "de": "jeden Tag",
+              "en": "every day"
+            },
+            {
+              "id": "de-k3-jeden-morgen",
+              "de": "jeden Morgen",
+              "en": "every morning"
+            },
+            {
+              "id": "de-k3-manchmal",
+              "de": "manchmal",
+              "en": "sometimes"
+            },
+            {
+              "id": "de-k3-immer",
+              "de": "immer",
+              "en": "always"
+            },
+            {
+              "id": "de-k3-nie",
+              "de": "nie",
+              "en": "never"
+            },
+            {
+              "id": "de-k3-wann",
+              "de": "Wann?",
+              "en": "When?"
+            },
+            {
+              "id": "de-k3-am-wochenende",
+              "de": "am Wochenende",
+              "en": "at the weekend"
+            },
+            {
+              "id": "de-k3-am-abend",
+              "de": "am Abend",
+              "en": "in the evening"
+            },
+            {
+              "id": "de-k3-heute",
+              "de": "heute",
+              "en": "today"
+            },
+            {
+              "id": "de-k3-morgen",
+              "de": "morgen",
+              "en": "tomorrow"
+            },
+            {
+              "id": "de-k3-am-montag",
+              "de": "am Montag",
+              "en": "on Monday"
+            },
+            {
+              "id": "de-k3-nachste-woche",
+              "de": "nächste Woche",
+              "en": "next week"
+            },
+            {
+              "id": "de-k3-in-zwei-wochen",
+              "de": "in zwei Wochen",
+              "en": "in two weeks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "k4",
+      "number": 4,
+      "title": "Schule ist klasse!",
+      "pages": "92–93",
+      "sections": [
+        {
+          "id": "k4-s1",
+          "title": "Schulfächer",
+          "en": "School subjects",
+          "items": [
+            {
+              "id": "de-k4-deutsch",
+              "de": "Deutsch",
+              "en": "German"
+            },
+            {
+              "id": "de-k4-englisch",
+              "de": "Englisch",
+              "en": "English"
+            },
+            {
+              "id": "de-k4-erdkunde",
+              "de": "Erdkunde",
+              "en": "geography"
+            },
+            {
+              "id": "de-k4-geschichte",
+              "de": "Geschichte",
+              "en": "history"
+            },
+            {
+              "id": "de-k4-informatik",
+              "de": "Informatik",
+              "en": "ICT"
+            },
+            {
+              "id": "de-k4-kunst",
+              "de": "Kunst",
+              "en": "art"
+            },
+            {
+              "id": "de-k4-mathe",
+              "de": "Mathe",
+              "en": "maths"
+            },
+            {
+              "id": "de-k4-musik",
+              "de": "Musik",
+              "en": "music"
+            },
+            {
+              "id": "de-k4-naturwissenschaften",
+              "de": "Naturwissenschaften",
+              "en": "science"
+            },
+            {
+              "id": "de-k4-sport",
+              "de": "Sport",
+              "en": "sport/PE"
+            },
+            {
+              "id": "de-k4-technik",
+              "de": "Technik",
+              "en": "technology"
+            },
+            {
+              "id": "de-k4-theater",
+              "de": "Theater",
+              "en": "drama"
+            }
+          ]
+        },
+        {
+          "id": "k4-s2",
+          "title": "Meinungen",
+          "en": "Opinions",
+          "items": [
+            {
+              "id": "de-k4-mein-lieblingsfach-ist",
+              "de": "mein Lieblingsfach ist …",
+              "en": "my favourite subject is ..."
+            },
+            {
+              "id": "de-k4-ich-mag-sehr",
+              "de": "ich mag … (sehr)",
+              "en": "I like ... (a lot)"
+            },
+            {
+              "id": "de-k4-ich-liebe",
+              "de": "ich liebe",
+              "en": "I love"
+            },
+            {
+              "id": "de-k4-ich-mag-nicht",
+              "de": "ich mag … nicht",
+              "en": "I don’t like ..."
+            },
+            {
+              "id": "de-k4-ich-hasse",
+              "de": "ich hasse",
+              "en": "I hate"
+            },
+            {
+              "id": "de-k4-gut",
+              "de": "gut",
+              "en": "good"
+            },
+            {
+              "id": "de-k4-toll",
+              "de": "toll",
+              "en": "great"
+            },
+            {
+              "id": "de-k4-furchtbar",
+              "de": "furchtbar",
+              "en": "awful"
+            },
+            {
+              "id": "de-k4-einfach",
+              "de": "einfach",
+              "en": "easy"
+            },
+            {
+              "id": "de-k4-schwierig",
+              "de": "schwierig",
+              "en": "difficult"
+            },
+            {
+              "id": "de-k4-interessant",
+              "de": "interessant",
+              "en": "interesting"
+            },
+            {
+              "id": "de-k4-langweilig",
+              "de": "langweilig",
+              "en": "boring"
+            },
+            {
+              "id": "de-k4-nutzlich",
+              "de": "nützlich",
+              "en": "useful"
+            },
+            {
+              "id": "de-k4-nutzlos",
+              "de": "nutzlos",
+              "en": "useless"
+            },
+            {
+              "id": "de-k4-faszinierend",
+              "de": "faszinierend",
+              "en": "fascinating"
+            },
+            {
+              "id": "de-k4-nervig",
+              "de": "nervig",
+              "en": "irritating"
+            },
+            {
+              "id": "de-k4-supercool",
+              "de": "supercool",
+              "en": "really cool"
+            },
+            {
+              "id": "de-k4-stinklangweilig",
+              "de": "stinklangweilig",
+              "en": "dead boring"
+            },
+            {
+              "id": "de-k4-die-wochentage",
+              "de": "Die Wochentage",
+              "en": "The days of the week"
+            },
+            {
+              "id": "de-k4-montag-mo",
+              "de": "Montag (Mo.)",
+              "en": "Monday"
+            },
+            {
+              "id": "de-k4-dienstag-di",
+              "de": "Dienstag (Di.)",
+              "en": "Tuesday"
+            },
+            {
+              "id": "de-k4-mittwoch-mi",
+              "de": "Mittwoch (Mi.)",
+              "en": "Wednesday"
+            },
+            {
+              "id": "de-k4-donnerstag-do",
+              "de": "Donnerstag (Do.)",
+              "en": "Thursday"
+            },
+            {
+              "id": "de-k4-freitag-fr",
+              "de": "Freitag (Fr.)",
+              "en": "Friday"
+            },
+            {
+              "id": "de-k4-samstag-sa",
+              "de": "Samstag (Sa.)",
+              "en": "Saturday"
+            },
+            {
+              "id": "de-k4-sonntag-so",
+              "de": "Sonntag (So.)",
+              "en": "Sunday"
+            },
+            {
+              "id": "de-k4-was-hast-du-am-montag",
+              "de": "Was hast du am Montag?",
+              "en": "What do you have on Monday?"
+            },
+            {
+              "id": "de-k4-am-dienstag-habe-ich",
+              "de": "Am Dienstag habe ich …",
+              "en": "I have ... on Tuesday"
+            },
+            {
+              "id": "de-k4-am-sonntag-haben-wir",
+              "de": "Am Sonntag haben wir",
+              "en": "We have no school on"
+            },
+            {
+              "id": "de-k4-keine-schule",
+              "de": "keine Schule.",
+              "en": "Sunday."
+            }
+          ]
+        },
+        {
+          "id": "k4-s3",
+          "title": "Die Zeit",
+          "en": "Time",
+          "items": [
+            {
+              "id": "de-k4-wann",
+              "de": "Wann?",
+              "en": "When?"
+            },
+            {
+              "id": "de-k4-um-wie-viel-uhr",
+              "de": "Um wie viel Uhr?",
+              "en": "At what time?"
+            },
+            {
+              "id": "de-k4-um-8-30-uhr-acht-uhr-dreissig",
+              "de": "Um 8:30 Uhr (acht Uhr dreißig).",
+              "en": "At 8.30."
+            },
+            {
+              "id": "de-k4-wie-viel-uhr-ist-es",
+              "de": "Wie viel Uhr ist es?",
+              "en": "What time is it?"
+            },
+            {
+              "id": "de-k4-es-ist-9-50-uhr-neun-uhr-funfzig",
+              "de": "Es ist 9:50 Uhr (neun Uhr fünfzig).",
+              "en": "It’s 9.50."
+            },
+            {
+              "id": "de-k4-in-der-ersten-stunde",
+              "de": "in der ersten Stunde",
+              "en": "in the first lesson"
+            },
+            {
+              "id": "de-k4-vor-der-pause",
+              "de": "vor der Pause",
+              "en": "before break"
+            },
+            {
+              "id": "de-k4-nach-der-mittagspause",
+              "de": "nach der Mittagspause",
+              "en": "after the lunch break"
+            }
+          ]
+        },
+        {
+          "id": "k4-s4",
+          "title": "Eigenschaften",
+          "en": "Characteristics",
+          "items": [
+            {
+              "id": "de-k4-er-sie-ist",
+              "de": "Er/Sie ist …",
+              "en": "He/She is …"
+            },
+            {
+              "id": "de-k4-alt",
+              "de": "alt",
+              "en": "old"
+            },
+            {
+              "id": "de-k4-fair",
+              "de": "fair",
+              "en": "fair"
+            },
+            {
+              "id": "de-k4-freundlich",
+              "de": "freundlich",
+              "en": "friendly"
+            },
+            {
+              "id": "de-k4-jung",
+              "de": "jung",
+              "en": "young"
+            },
+            {
+              "id": "de-k4-launisch",
+              "de": "launisch",
+              "en": "moody"
+            },
+            {
+              "id": "de-k4-lustig",
+              "de": "lustig",
+              "en": "funny"
+            },
+            {
+              "id": "de-k4-nervig-2",
+              "de": "nervig",
+              "en": "annoying"
+            },
+            {
+              "id": "de-k4-streng",
+              "de": "streng",
+              "en": "strict"
+            },
+            {
+              "id": "de-k4-unpunktlich",
+              "de": "unpünktlich",
+              "en": "unpunctual"
+            },
+            {
+              "id": "de-k4-in-der-schule",
+              "de": "In der Schule",
+              "en": "In school"
+            },
+            {
+              "id": "de-k4-die-lehrerin-nen",
+              "de": "die Lehrerin(-nen)",
+              "en": "teacher(s) (female)"
+            },
+            {
+              "id": "de-k4-die-deutschlehrerin-nen",
+              "de": "die Deutschlehrerin(-nen)",
+              "en": "German teacher(s) (female)"
+            },
+            {
+              "id": "de-k4-der-lehrer",
+              "de": "der Lehrer(–)",
+              "en": "teacher(s) (male)"
+            },
+            {
+              "id": "de-k4-der-sportlehrer",
+              "de": "der Sportlehrer(–)",
+              "en": "sports teacher(s) (male)"
+            },
+            {
+              "id": "de-k4-was-gibt-es",
+              "de": "Was gibt es?",
+              "en": "What is there?"
+            },
+            {
+              "id": "de-k4-es-gibt-einen-eine-ein",
+              "de": "Es gibt einen/eine/ein …",
+              "en": "There is a ..."
+            },
+            {
+              "id": "de-k4-es-gibt-viele",
+              "de": "Es gibt viele …",
+              "en": "There are lots of ..."
+            },
+            {
+              "id": "de-k4-das-klassenzimmer",
+              "de": "das Klassenzimmer(–)",
+              "en": "classroom(s)"
+            },
+            {
+              "id": "de-k4-der-tisch-e",
+              "de": "der Tisch(-e)",
+              "en": "table(s)"
+            },
+            {
+              "id": "de-k4-der-stuhl-e",
+              "de": "der Stuhl(-¨e)",
+              "en": "chair(s)"
+            },
+            {
+              "id": "de-k4-der-computer",
+              "de": "der Computer(–)",
+              "en": "computer(s)"
+            },
+            {
+              "id": "de-k4-das-whiteboard-s",
+              "de": "das Whiteboard(-s)",
+              "en": "whiteboard(s)"
+            },
+            {
+              "id": "de-k4-das-poster",
+              "de": "das Poster(–)",
+              "en": "poster(s)"
+            },
+            {
+              "id": "de-k4-das-fenster",
+              "de": "das Fenster(–)",
+              "en": "window(s)"
+            },
+            {
+              "id": "de-k4-die-wand-e",
+              "de": "die Wand(-¨e)",
+              "en": "wall(s)"
+            },
+            {
+              "id": "de-k4-die-tur-en",
+              "de": "die Tür(-en)",
+              "en": "door(s)"
+            },
+            {
+              "id": "de-k4-der-korridor-e",
+              "de": "der Korridor(-e)",
+              "en": "corridor(s)"
+            }
+          ]
+        },
+        {
+          "id": "k4-s5",
+          "title": "Wo ist das?",
+          "en": "Where is it?",
+          "items": [
+            {
+              "id": "de-k4-wo-ist-das",
+              "de": "Wo ist das?",
+              "en": "Where is it?"
+            },
+            {
+              "id": "de-k4-in-der-schule-2",
+              "de": "in der Schule",
+              "en": "in the school"
+            },
+            {
+              "id": "de-k4-im-klassenzimmer",
+              "de": "im Klassenzimmer",
+              "en": "in the classroom"
+            },
+            {
+              "id": "de-k4-im-korridor",
+              "de": "im Korridor",
+              "en": "in the corridor"
+            },
+            {
+              "id": "de-k4-an-der-wand",
+              "de": "an der Wand",
+              "en": "on the wall"
+            },
+            {
+              "id": "de-k4-am-fenster",
+              "de": "am Fenster",
+              "en": "by the window"
+            },
+            {
+              "id": "de-k4-am-tisch",
+              "de": "am Tisch",
+              "en": "at the table"
+            },
+            {
+              "id": "de-k4-auf-dem-tisch",
+              "de": "auf dem Tisch",
+              "en": "on the table"
+            },
+            {
+              "id": "de-k4-neben-der-tur",
+              "de": "neben der Tür",
+              "en": "near/next to the door"
+            }
+          ]
+        },
+        {
+          "id": "k4-s6",
+          "title": "Oft benutzte Wörter",
+          "en": "High-frequency words",
+          "items": [
+            {
+              "id": "de-k4-weil",
+              "de": "weil",
+              "en": "because"
+            },
+            {
+              "id": "de-k4-sein-seine",
+              "de": "sein/seine",
+              "en": "his"
+            },
+            {
+              "id": "de-k4-ihr-ihre",
+              "de": "ihr/ihre",
+              "en": "her"
+            },
+            {
+              "id": "de-k4-zu",
+              "de": "zu",
+              "en": "too"
+            },
+            {
+              "id": "de-k4-sehr",
+              "de": "sehr",
+              "en": "very"
+            },
+            {
+              "id": "de-k4-ziemlich",
+              "de": "ziemlich",
+              "en": "quite, fairly"
+            },
+            {
+              "id": "de-k4-ein-bisschen",
+              "de": "ein bisschen",
+              "en": "a bit"
+            },
+            {
+              "id": "de-k4-nicht",
+              "de": "nicht",
+              "en": "not"
+            },
+            {
+              "id": "de-k4-haben",
+              "de": "haben",
+              "en": "to have"
+            },
+            {
+              "id": "de-k4-sein",
+              "de": "sein",
+              "en": "to be"
+            },
+            {
+              "id": "de-k4-in",
+              "de": "in",
+              "en": "in"
+            },
+            {
+              "id": "de-k4-an",
+              "de": "an",
+              "en": "at, by, on (wall)"
+            },
+            {
+              "id": "de-k4-auf",
+              "de": "auf",
+              "en": "on (top of)"
+            },
+            {
+              "id": "de-k4-neben",
+              "de": "neben",
+              "en": "near, next to"
+            },
+            {
+              "id": "de-k4-heute",
+              "de": "heute",
+              "en": "today"
+            },
+            {
+              "id": "de-k4-morgen",
+              "de": "morgen",
+              "en": "tomorrow"
+            },
+            {
+              "id": "de-k4-vor",
+              "de": "vor",
+              "en": "before"
+            },
+            {
+              "id": "de-k4-nach",
+              "de": "nach",
+              "en": "after"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "k5",
+      "number": 5,
+      "title": "Gute Reise!",
+      "pages": "114–115",
+      "sections": [
+        {
+          "id": "k5-s1",
+          "title": "In der Stadt",
+          "en": "In town",
+          "items": [
+            {
+              "id": "de-k5-es-gibt",
+              "de": "Es gibt …",
+              "en": "There is .../There are ..."
+            },
+            {
+              "id": "de-k5-es-gibt-ein-eine-einen",
+              "de": "Es gibt ein/eine/einen …",
+              "en": "There is/are a ..."
+            },
+            {
+              "id": "de-k5-es-gibt-kein-keine-keinen",
+              "de": "Es gibt kein/keine/keinen …",
+              "en": "There isn’t/aren’t ..."
+            },
+            {
+              "id": "de-k5-in-der-nahe-von",
+              "de": "in der Nähe von …",
+              "en": "near to"
+            },
+            {
+              "id": "de-k5-in-der-nahe",
+              "de": "in der Nähe …",
+              "en": "nearby"
+            },
+            {
+              "id": "de-k5-der-bahnhof-e",
+              "de": "der Bahnhof(-¨e)",
+              "en": "railway station(s)"
+            },
+            {
+              "id": "de-k5-der-imbiss-e-die-imbissstube-n",
+              "de": "der Imbiss(-e)/die Imbissstube(-n)",
+              "en": "snack stand(s)"
+            },
+            {
+              "id": "de-k5-die-kegelbahn-en",
+              "de": "die Kegelbahn(-en)",
+              "en": "bowling alley(s)"
+            },
+            {
+              "id": "de-k5-das-kino-s",
+              "de": "das Kino(-s)",
+              "en": "cinema(s)"
+            },
+            {
+              "id": "de-k5-die-kirche-n",
+              "de": "die Kirche(-n)",
+              "en": "church(es)"
+            },
+            {
+              "id": "de-k5-der-marktplatz-e",
+              "de": "der Marktplatz(-¨e)",
+              "en": "market square(s)"
+            },
+            {
+              "id": "de-k5-der-park-s",
+              "de": "der Park(-s)",
+              "en": "park(s)"
+            },
+            {
+              "id": "de-k5-das-schloss-er",
+              "de": "das Schloss(-¨er)",
+              "en": "castle(s)"
+            },
+            {
+              "id": "de-k5-das-schwimmbad-er",
+              "de": "das Schwimmbad(-¨er)",
+              "en": "swimming pool(s)"
+            },
+            {
+              "id": "de-k5-die-eisbahn-en",
+              "de": "die Eisbahn(-en)",
+              "en": "ice rink(s)"
+            },
+            {
+              "id": "de-k5-der-fischmarkt-e",
+              "de": "der Fischmarkt(-¨e)",
+              "en": "fish market(s)"
+            },
+            {
+              "id": "de-k5-das-kindertheater",
+              "de": "das Kindertheater(-)",
+              "en": "children’s theatre(s)"
+            },
+            {
+              "id": "de-k5-der-radweg-e",
+              "de": "der Radweg(-e)",
+              "en": "cycle path(s)"
+            },
+            {
+              "id": "de-k5-das-sportzentrum-die-sportzentren",
+              "de": "das Sportzentrum (die Sportzentren)",
+              "en": "sports centre (sports centres)"
+            },
+            {
+              "id": "de-k5-der-stadtpark-s",
+              "de": "der Stadtpark(-s)",
+              "en": "city/town park(s)"
+            },
+            {
+              "id": "de-k5-der-wasserpark-s",
+              "de": "der Wasserpark(-s)",
+              "en": "water park(s)"
+            }
+          ]
+        },
+        {
+          "id": "k5-s2",
+          "title": "Souvenirs",
+          "en": "Souvenirs",
+          "items": [
+            {
+              "id": "de-k5-der-aufkleber",
+              "de": "der Aufkleber",
+              "en": "sticker"
+            },
+            {
+              "id": "de-k5-das-freundschaftsband",
+              "de": "das Freundschaftsband",
+              "en": "friendship bracelet"
+            },
+            {
+              "id": "de-k5-die-kappe",
+              "de": "die Kappe",
+              "en": "(baseball) cap"
+            },
+            {
+              "id": "de-k5-der-kuli",
+              "de": "der Kuli",
+              "en": "biro"
+            },
+            {
+              "id": "de-k5-das-kuscheltier",
+              "de": "das Kuscheltier",
+              "en": "cuddly toy"
+            },
+            {
+              "id": "de-k5-die-postkarte",
+              "de": "die Postkarte",
+              "en": "postcard"
+            },
+            {
+              "id": "de-k5-der-schlusselanhanger",
+              "de": "der Schlüsselanhänger",
+              "en": "key ring"
+            },
+            {
+              "id": "de-k5-die-tasse",
+              "de": "die Tasse",
+              "en": "mug/cup"
+            },
+            {
+              "id": "de-k5-das-trikot",
+              "de": "das Trikot",
+              "en": "(football) shirt"
+            },
+            {
+              "id": "de-k5-wie-viel-kostet",
+              "de": "Wie viel kostet …?",
+              "en": "How much does ... cost?"
+            },
+            {
+              "id": "de-k5-wie-viel-kostet-das",
+              "de": "Wie viel kostet das?",
+              "en": "How much does it cost?"
+            },
+            {
+              "id": "de-k5-es-kostet-16",
+              "de": "Es kostet €16.",
+              "en": "It costs 16 Euros."
+            }
+          ]
+        },
+        {
+          "id": "k5-s3",
+          "title": "Verkaufsgespräch",
+          "en": "Sales conversation",
+          "items": [
+            {
+              "id": "de-k5-ich-gehe-einkaufen",
+              "de": "Ich gehe einkaufen.",
+              "en": "I am going shopping."
+            },
+            {
+              "id": "de-k5-ich-mochte",
+              "de": "Ich möchte …",
+              "en": "I would like …"
+            },
+            {
+              "id": "de-k5-ich-mochte-kaufen",
+              "de": "Ich möchte … kaufen.",
+              "en": "I would like to buy …"
+            },
+            {
+              "id": "de-k5-haben-sie",
+              "de": "Haben Sie …?",
+              "en": "Do you have …?"
+            },
+            {
+              "id": "de-k5-kann-ich-dir-helfen",
+              "de": "Kann ich dir helfen?",
+              "en": "Can I help you?"
+            },
+            {
+              "id": "de-k5-sonst-noch-etwas",
+              "de": "Sonst noch etwas?",
+              "en": "Anything else?"
+            },
+            {
+              "id": "de-k5-alles-zusammen",
+              "de": "alles zusammen",
+              "en": "all together"
+            }
+          ]
+        },
+        {
+          "id": "k5-s4",
+          "title": "Snacks und Getränke kaufen",
+          "en": "Buying snacks and drinks",
+          "items": [
+            {
+              "id": "de-k5-die-bratwurst",
+              "de": "die Bratwurst",
+              "en": "fried sausage"
+            },
+            {
+              "id": "de-k5-der-hamburger",
+              "de": "der Hamburger",
+              "en": "hamburger"
+            },
+            {
+              "id": "de-k5-die-pizza",
+              "de": "die Pizza",
+              "en": "pizza"
+            },
+            {
+              "id": "de-k5-die-pommes",
+              "de": "die Pommes",
+              "en": "chips"
+            },
+            {
+              "id": "de-k5-der-salat",
+              "de": "der Salat",
+              "en": "salad"
+            },
+            {
+              "id": "de-k5-das-eis",
+              "de": "das Eis",
+              "en": "ice cream"
+            },
+            {
+              "id": "de-k5-die-cola",
+              "de": "die Cola",
+              "en": "cola"
+            },
+            {
+              "id": "de-k5-das-mineralwasser",
+              "de": "das Mineralwasser",
+              "en": "mineral water"
+            },
+            {
+              "id": "de-k5-der-tee",
+              "de": "der Tee",
+              "en": "tea"
+            },
+            {
+              "id": "de-k5-das-fleisch",
+              "de": "das Fleisch",
+              "en": "meat"
+            },
+            {
+              "id": "de-k5-der-ketchup",
+              "de": "der Ketchup",
+              "en": "ketchup"
+            },
+            {
+              "id": "de-k5-die-mayo-nnaise-majonase",
+              "de": "die Mayo(nnaise)/Majonäse",
+              "en": "mayo(nnaise)"
+            },
+            {
+              "id": "de-k5-der-senf",
+              "de": "der Senf",
+              "en": "mustard"
+            },
+            {
+              "id": "de-k5-ich-mochte-einmal-zweimal-dreimal",
+              "de": "Ich möchte einmal/zweimal/dreimal …",
+              "en": "I would like one/two/three …"
+            },
+            {
+              "id": "de-k5-ich-hatte-gern",
+              "de": "Ich hätte gern …",
+              "en": "I would like …"
+            },
+            {
+              "id": "de-k5-das-macht-8",
+              "de": "Das macht €8.",
+              "en": "That’s €8."
+            },
+            {
+              "id": "de-k5-ich-esse-gern",
+              "de": "Ich esse … gern.",
+              "en": "I like eating …"
+            },
+            {
+              "id": "de-k5-ich-trinke-gern",
+              "de": "Ich trinke … gern.",
+              "en": "I like drinking …"
+            }
+          ]
+        },
+        {
+          "id": "k5-s5",
+          "title": "In den Sommerferien",
+          "en": "During the summer holidays",
+          "items": [
+            {
+              "id": "de-k5-was-wirst-du-machen",
+              "de": "Was wirst du machen?",
+              "en": "What will you do?"
+            },
+            {
+              "id": "de-k5-ich-werde",
+              "de": "Ich werde …",
+              "en": "I will …"
+            },
+            {
+              "id": "de-k5-wir-werden",
+              "de": "Wir werden …",
+              "en": "We will"
+            },
+            {
+              "id": "de-k5-klettern",
+              "de": "klettern",
+              "en": "climb"
+            },
+            {
+              "id": "de-k5-im-meer-schwimmen",
+              "de": "im Meer schwimmen",
+              "en": "swim in the sea"
+            },
+            {
+              "id": "de-k5-rodeln",
+              "de": "rodeln",
+              "en": "toboggan"
+            },
+            {
+              "id": "de-k5-im-see-baden",
+              "de": "im See baden",
+              "en": "bathe in the lake"
+            },
+            {
+              "id": "de-k5-segeln",
+              "de": "segeln",
+              "en": "sail"
+            },
+            {
+              "id": "de-k5-an-den-strand-gehen",
+              "de": "an den Strand gehen",
+              "en": "go to the beach"
+            },
+            {
+              "id": "de-k5-tauchen",
+              "de": "tauchen",
+              "en": "dive"
+            },
+            {
+              "id": "de-k5-wandern",
+              "de": "wandern",
+              "en": "hike"
+            },
+            {
+              "id": "de-k5-windsurfen",
+              "de": "windsurfen",
+              "en": "windsurf"
+            },
+            {
+              "id": "de-k5-was-kann-man-dort-machen",
+              "de": "Was kann man dort machen?",
+              "en": "What can you do there?"
+            },
+            {
+              "id": "de-k5-man-kann-besuchen",
+              "de": "Man kann … besuchen.",
+              "en": "One/people/you can visit …"
+            },
+            {
+              "id": "de-k5-die-stadt-ist-bekannt-fur",
+              "de": "Die Stadt ist bekannt für …",
+              "en": "The town is well known for …"
+            },
+            {
+              "id": "de-k5-ich-werde-eine-woche-bleiben",
+              "de": "Ich werde (eine Woche) bleiben.",
+              "en": "I will stay (for a week)."
+            }
+          ]
+        },
+        {
+          "id": "k5-s6",
+          "title": "Oft benutzte Wörter",
+          "en": "High-frequency words",
+          "items": [
+            {
+              "id": "de-k5-am-montag",
+              "de": "am Montag",
+              "en": "on Monday"
+            },
+            {
+              "id": "de-k5-am-dienstag",
+              "de": "am Dienstag",
+              "en": "on Tuesday"
+            },
+            {
+              "id": "de-k5-am-mittwoch",
+              "de": "am Mittwoch",
+              "en": "on Wednesday"
+            },
+            {
+              "id": "de-k5-am-donnerstag",
+              "de": "am Donnerstag",
+              "en": "on Thursday"
+            },
+            {
+              "id": "de-k5-am-freitag",
+              "de": "am Freitag",
+              "en": "on Friday"
+            },
+            {
+              "id": "de-k5-am-wochenende",
+              "de": "am Wochenende",
+              "en": "at the weekend"
+            },
+            {
+              "id": "de-k5-sehr",
+              "de": "sehr",
+              "en": "very"
+            },
+            {
+              "id": "de-k5-nicht-sehr",
+              "de": "nicht sehr",
+              "en": "not very"
+            },
+            {
+              "id": "de-k5-ziemlich",
+              "de": "ziemlich",
+              "en": "quite"
+            },
+            {
+              "id": "de-k5-immer",
+              "de": "immer",
+              "en": "always"
+            },
+            {
+              "id": "de-k5-nicht-immer",
+              "de": "nicht immer",
+              "en": "not always"
+            },
+            {
+              "id": "de-k5-oft",
+              "de": "oft",
+              "en": "often"
+            },
+            {
+              "id": "de-k5-nicht-oft",
+              "de": "nicht oft",
+              "en": "not often"
+            },
+            {
+              "id": "de-k5-nie",
+              "de": "nie",
+              "en": "never"
+            },
+            {
+              "id": "de-k5-alles",
+              "de": "alles",
+              "en": "everything"
+            },
+            {
+              "id": "de-k5-dort",
+              "de": "dort",
+              "en": "there"
+            },
+            {
+              "id": "de-k5-teuer",
+              "de": "teuer",
+              "en": "expensive"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

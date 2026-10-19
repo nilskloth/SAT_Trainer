@@ -10,7 +10,8 @@ import { generateReadingTest } from "../gen/generate.js";
 import { esc } from "../core/utils.js";
 import { domainLabel } from "./paper.js";
 
-const SUBJECT_LABELS = { reading: "Reading", gps: "Grammar & punctuation", maths: "Maths", spelling: "Spelling" };
+const SUBJECT_LABELS = { reading: "Reading", gps: "Grammar & punctuation", maths: "Maths", spelling: "Spelling",
+  german: "German vocabulary", french: "French vocabulary" };
 
 /* Sonnet 5 pricing (per MTok): in $3 / out $15 — rough spend estimate. */
 function estimateSpend(log) {

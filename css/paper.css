@@ -10,6 +10,8 @@
 [data-subject="gps"]      { --subject: var(--c-gps); }
 [data-subject="maths"]    { --subject: var(--c-maths); }
 [data-subject="spelling"] { --subject: var(--c-spelling); }
+[data-subject="german"]   { --subject: var(--c-german); }
+[data-subject="french"]   { --subject: var(--c-french); }
 
 /* Booklet cover */
 .paper-cover {

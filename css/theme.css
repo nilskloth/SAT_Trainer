@@ -25,6 +25,8 @@
   --c-gps: #1f6f6b;           /* teal */
   --c-maths: #2b5d8a;         /* blue */
   --c-spelling: #a86414;      /* ochre */
+  --c-german: #8a2f2a;        /* brick */
+  --c-french: #3b4f8f;        /* indigo */
 
   /* Action accent (chrome only, never on the paper) */
   --accent: #33518e;

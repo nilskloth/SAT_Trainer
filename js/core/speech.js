@@ -1,13 +1,16 @@
 /* =========================================================
-   en-GB speech for spelling: word → sentence → word,
-   the way the SATs spelling paper is read aloud.
+   Speech synthesis. Spelling reads word → sentence → word
+   (en-GB), the way the SATs spelling paper is read aloud;
+   languages read the target phrase in its own voice.
    ========================================================= */
 
-function say(text, delayMs = 0) {
+function say(text, lang, delayMs = 0, rate = 0.95) {
   setTimeout(() => {
     const u = new SpeechSynthesisUtterance(String(text || ""));
-    u.lang = "en-GB";
-    u.rate = 0.95;
+    u.lang = lang;
+    u.rate = rate;
+    const voice = window.speechSynthesis.getVoices().find(v => v.lang.replace("_", "-").startsWith(lang));
+    if (voice) u.voice = voice;
     window.speechSynthesis.speak(u);
   }, delayMs);
 }
@@ -19,9 +22,16 @@ export function canSpeak() {
 export function speakWord(word, sentence) {
   if (!canSpeak()) return;
   window.speechSynthesis.cancel();
-  say(word, 0);
+  say(word, "en-GB", 0);
   if (sentence) {
-    say(sentence, 700);
-    say(word, 1400);
+    say(sentence, "en-GB", 700);
+    say(word, "en-GB", 1400);
   }
+}
+
+/* One phrase in a given language, e.g. speak("Wie heißt du?", "de-DE"). */
+export function speak(text, lang, { slow = false } = {}) {
+  if (!canSpeak()) return;
+  window.speechSynthesis.cancel();
+  say(text, lang, 0, slow ? 0.7 : 0.9);
 }

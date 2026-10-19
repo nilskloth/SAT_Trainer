@@ -1,7 +1,6 @@
 /* =========================================================
-   Adaptive spelling trainer — engine ported from v1
-   (weighting, mastery curve, en-GB speech with example
-   sentences). Per-word stats live in the v2 store and were
+   Adaptive spelling trainer — v1 engine (core/adaptive.js),
+   en-GB speech with example sentences. Per-word stats live in the v2 store and were
    imported from v1 on first boot.
    Modes: Spoken (hear it), Flash (see it briefly).
    ========================================================= */
@@ -10,61 +9,18 @@ import { getData } from "../core/loader.js";
 import { getStore, saveStore } from "../core/store.js";
 import { esc, normaliseText } from "../core/utils.js";
 import { speakWord } from "../core/speech.js";
+import { newStat, weightedPick, applyResult } from "../core/adaptive.js";
 
-/* --- v1 adaptive engine, ported verbatim in behaviour --- */
-
-const now = () => Date.now();
+/* --- per-word stats (v1 shape, keyed by word) --- */
 
 function ensureStat(word) {
   const words = getStore().spelling.wordsByWord;
-  if (!words[word]) {
-    words[word] = {
-      word, attempts: 0, correct: 0, wrong: 0,
-      mastery: 0, wrongStreak: 0, lastSeenAt: 0, lastResult: null
-    };
-  }
+  if (!words[word]) words[word] = { word, ...newStat(word) };
   return words[word];
 }
 
-function computeWeight(stat) {
-  let weight = 0.2 + 1.2 * (1 - stat.mastery);
-  weight += 0.35 * Math.min(stat.wrongStreak, 6);
-  if (stat.attempts > 0) weight += 0.8 * (stat.wrong / stat.attempts);
-
-  const age = now() - stat.lastSeenAt;
-  if (age < 6000) weight *= 0.15;
-  else if (age < 15000) weight *= 0.45;
-
-  if (stat.mastery > 0.9) weight *= 0.15;
-  else if (stat.mastery > 0.8) weight *= 0.35;
-
-  return Math.max(0.02, weight);
-}
-
-function weightedPick(stats) {
-  let total = 0;
-  stats.forEach(s => { total += computeWeight(s); });
-  let r = Math.random() * total;
-  for (const s of stats) {
-    r -= computeWeight(s);
-    if (r <= 0) return s;
-  }
-  return stats[stats.length - 1];
-}
-
 function recordResult(stat, ok) {
-  stat.attempts++;
-  stat.lastSeenAt = now();
-  stat.lastResult = ok;
-  if (ok) {
-    stat.correct++;
-    stat.wrongStreak = 0;
-    stat.mastery = Math.min(1, stat.mastery + (stat.mastery < 0.6 ? 0.22 : stat.mastery < 0.8 ? 0.14 : 0.08));
-  } else {
-    stat.wrong++;
-    stat.wrongStreak++;
-    stat.mastery = Math.max(0, stat.mastery - (stat.mastery > 0.6 ? 0.18 : 0.12));
-  }
+  applyResult(stat, ok);
   saveStore();
 }
 

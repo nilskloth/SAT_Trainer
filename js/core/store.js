@@ -16,11 +16,13 @@ function defaultStore() {
     settings: {
       proxyToken: "",
       dailyMinutes: 15,
-      examDate: "2027-05-11"
+      examDate: "2027-05-11",
+      level: null          // "primary" | "secondary" — chosen on the start screen
     },
     attempts: [],        // { id, ts, mode, paperId?, seconds, items:[{qid, domain, subject, marks, earned, marking}] }
     domainStats: {},     // "reading.2d" -> { attempts, marksSeen, marksEarned, ewma, lastSeen }
     spelling: { wordsByWord: {} },
+    vocab: {},           // per language: { "de": { "<itemId>|<direction>": adaptive stat } }
     generatedBanks: { reading: { passages: [], questions: [] }, gps: [], maths: [] }
   };
 }
@@ -65,6 +67,9 @@ export function initStore() {
   }
   if (raw && raw.version === 2) {
     store = raw;
+    /* fields added after first release */
+    if (!("level" in store.settings)) store.settings.level = null;
+    if (!store.vocab) store.vocab = {};
   } else {
     store = importFromV1(defaultStore());
     saveStore();
@@ -78,6 +83,11 @@ export function getStore() {
 
 export function saveStore() {
   localStorage.setItem(KEY, JSON.stringify(store));
+}
+
+export function setLevel(level) {
+  store.settings.level = level;
+  saveStore();
 }
 
 export function resetStore() {

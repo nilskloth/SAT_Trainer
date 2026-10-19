@@ -6,7 +6,7 @@ import { esc } from "../core/utils.js";
 
 export function renderHome(el) {
   const { papers } = getData();
-  const attempts = getStore().attempts.filter(a => !a.legacy);
+  const attempts = getStore().attempts.filter(a => !a.legacy && !String(a.mode).startsWith("vocab"));
   const recent = attempts.filter(a => Date.now() - a.ts < 7 * 24 * 3600 * 1000).length;
 
   const cards = papers.map(p => `
