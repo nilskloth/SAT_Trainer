@@ -114,11 +114,17 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   automatically: a rule attached "Es gibt …" to dictionary nouns like "der Tisch(-e)".
   The trainer shows the opener in the prompt and at the start of the answer line; the
   piece or the whole sentence both count; a wrong article only gives "Nearly!" + tip.
-- **Data:** `{ language, label, chapters: [{ id:"k1", number, title, pages,
+- **Strategies (`STRATEGIES` in the importer):** each chapter's "Strategie" box exists only
+  in the scanned PDFs, so it is typed into the importer — retold in our own words (the site
+  is public), keeping the sheet's example words (tappable, read aloud). Shown per chapter in
+  the setup and under each word list.
+- **Data:** `{ language, label, chapters: [{ id:"k1", number, title, pages, strategy?,
   sections: [{ id:"k1-s1", title, en, items: [{ id, <lang>, en, context? }] }] }] }`
 - **Modes:** Practise (adaptive via `core/adaptive.js`, feedback each word, "I was right"
   overrule) and Test 10/20/30 (no feedback until a review screen with overrules).
-  Directions `to-en`, `to-target`, `listen` (only items without "/" or "…"); answer by typing
+  Directions `to-en`, `to-target` (read it) and `listen-en` (hear target → write English),
+  `listen-target` (hear English → write target), `listen` (dictation) — heard directions
+  only use items whose spoken side has no "/" or "…"; answer by typing
   or picking from 4 (distractors from the same topic first).
 - **Marking** (`core/vocab-match.js`, tested by `tools/test-vocab.mjs` against every entry):
   brackets optional, slashes = alternatives, "…" = any words; English lenient (case,
@@ -130,6 +136,7 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
 - **Adding French:** import the French sheets to `fr.json`, set `available: true` in
   `langs.js`, add a French nav item in `core/app.js`, check `CORRECTIONS`/`FOOTER_JUNK`
   in the importer, read every topic and fill `CONTEXT.fr` (e.g. "J'ai …" + "un chien"),
+  retell the PDFs' strategy boxes in `STRATEGIES.fr`,
   run `node tools/test-vocab.mjs`.
 
 ---

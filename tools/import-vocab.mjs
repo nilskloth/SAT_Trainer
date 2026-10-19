@@ -55,6 +55,73 @@ const CONTEXT = {
     [2, "Haare und Augen", "Er/Sie hat …", "He/She has …"]
   ]
 };
+/* The "Strategie" box from each chapter's scanned Wörter page (not in
+   the .doc files). Retold in our own words — the site is public — keeping
+   the sheet's example words. Parts: heading, text, optional steps (list)
+   and words (tappable, read aloud in the target language). */
+const STRATEGIES = {
+  de: {
+    1: {
+      title: "Do you really know a word?",
+      parts: [
+        { text: "Knowing a word means four things. Check each one:",
+          steps: ["I know what it means when I see it.", "I can say it.", "I can spell it.", "I can put it in a sentence."] },
+        { heading: "Look, Say, Cover, Write, Check",
+          text: "Five steps for meaning, sound and spelling:",
+          steps: [
+            "Look at the word, then close your eyes and picture it.",
+            "Say it out loud — hearing yourself helps you remember.",
+            "Cover it, say it again and see it in your head.",
+            "Write it from memory.",
+            "Check it against the original. Seeing, saying and writing together work best."
+          ] },
+        { heading: "Extra", text: "Too easy? Make up your own sentences with the new words." }
+      ]
+    },
+    2: {
+      title: "Cognates and compound words",
+      parts: [
+        { heading: "Cognates",
+          text: "Many German words look like English ones and mean the same — use your English to guess them. They usually sound a bit different, though, and now and then the meaning is different too.",
+          words: ["April", "orange", "Goldfisch", "braun"] },
+        { heading: "Compound words",
+          text: "Long German words are often short words glued together. Split them up and they're much easier: Halb + Schwester = half-sister, Groß + Eltern = grandparents, Haus + Tier = house animal, so a pet.",
+          words: ["Halbschwester", "Großeltern", "Haustier"] }
+      ]
+    },
+    3: {
+      title: "High-frequency words",
+      parts: [
+        { text: "Some words turn up in almost every sentence, whatever the topic. Each Wörter page has a list of them, but there are lots more. Look back through Kapitel 3 and see how many you can find. Some to start with:",
+          words: ["der", "die", "das", "ein", "eine", "einen", "und", "aber", "in", "ich", "es gibt", "gern"] },
+        { heading: "Challenge", text: "Which of these words do you think appear in every chapter? Guess, then look through the book to check." }
+      ]
+    },
+    4: {
+      title: "Memory room and mnemonics",
+      parts: [
+        { heading: "Memory room",
+          text: "Picture a room you know well, like your bedroom, and put each new word in a different spot — Erdkunde by the computer, Kunst on the wardrobe. To remember them, walk round the room in your head and say each word as you reach its place.",
+          words: ["Erdkunde", "Kunst"] },
+        { heading: "Mnemonics",
+          text: "If a spelling won't stick, make up a saying whose first letters spell it. \u201cSit Tight Until Henry Leaves\u201d spells STUHL (chair). Ones you invent yourself work best.",
+          words: ["der Stuhl"] }
+      ]
+    },
+    5: {
+      title: "Link words by their sounds",
+      parts: [
+        { text: "Group new words with ones that share a sound and its spelling — remembering one helps you say and spell the others. From Kapitel 5:" },
+        { heading: "eu sounds like “oy”", words: ["Freund", "Deutschland"] },
+        { heading: "ie sounds like “ee”", words: ["Biene", "Kuscheltier"] },
+        { heading: "st at the start sounds like “sht”", words: ["Sterne", "Imbissstube", "Strand"] },
+        { heading: "w sounds like English “v”", words: ["Wildwassersport", "Mineralwasser", "ich werde", "wandern", "windsurfen"] },
+        { heading: "sch sounds like “sh”", words: ["Schlange", "Schloss", "Schwimmbad", "Schlüsselanhänger", "schwimmen"] },
+        { heading: "Your turn", text: "Look back at the Wörter pages of Kapitel 1–4 and add words to each group. Some words have more than one key sound — Kuscheltier has sch and ie." }
+      ]
+    }
+  }
+};
 const ENDS_SENTENCE = /[.?!]$/;
 const ENDS_GAP = /(…|\.\.\.)$/;
 const fix = s => (CORRECTIONS[lang] || []).reduce((t, [from, to]) => (t === from ? to : t), s);
@@ -147,7 +214,10 @@ if (!files.length) {
 
 const chapters = files.map(({ f, n }) => {
   const text = execFileSync("textutil", ["-convert", "txt", "-stdout", join(dir, f)], { encoding: "utf8" });
-  return parseChapter(text, n);
+  const chapter = parseChapter(text, n);
+  const strategy = STRATEGIES[lang]?.[n];
+  if (strategy) chapter.strategy = { number: n, ...strategy };
+  return chapter;
 });
 
 const out = {

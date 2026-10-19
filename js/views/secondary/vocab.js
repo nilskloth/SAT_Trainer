@@ -8,7 +8,9 @@
                       then a review where answers can be
                       overruled ("I was right")
    Directions: to-en (target → English), to-target
-   (English → target), listen (hear it, write it).
+   (English → target), listen (hear it, write it), listen-en
+   (hear it, write the English), listen-target (hear the English,
+   write the target).
    Entries with an opener (item.context, e.g. "Ich habe …" before
    "einen iPod") are always shown inside it, and typing the piece or
    the whole sentence both count.
@@ -25,6 +27,12 @@ import { canSpeak, speak } from "../../core/speech.js";
 import { LANGS, loadBank, vocabState, isKnown } from "./langs.js";
 
 const TEST_LENGTHS = [10, 20, 30];
+
+/* Which way round each direction goes. */
+const answersInEnglish = dir => dir === "to-en" || dir === "listen-en";
+const isHeard = dir => dir === "listen" || dir === "listen-en" || dir === "listen-target";
+/* The language a heard direction reads aloud. */
+const heardInEnglish = dir => dir === "listen-target";
 
 /* =========================
    Entry
@@ -65,6 +73,24 @@ const openerLead = text => fillGap(text, "");
 const hearBtn = (label = "🔊") =>
   canSpeak() ? `<button type="button" class="quiet hear" data-hear aria-label="Hear it">${label}</button>` : "";
 
+/* The chapter's learning strategy (from the sheet's "Strategie" box). */
+function strategyHtml(lang, code, strategy, open = false) {
+  if (!strategy) return "";
+  return `
+    <details class="strategy"${open ? " open" : ""}>
+      <summary>💡 <strong>${esc(lang.strategyWord)} ${strategy.number}</strong> · ${esc(strategy.title)}</summary>
+      ${strategy.parts.map(p => `
+        <div class="strategy-part">
+          ${p.heading ? `<h4>${esc(p.heading)}</h4>` : ""}
+          ${p.text ? `<p>${esc(p.text)}</p>` : ""}
+          ${p.steps ? `<ol>${p.steps.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : ""}
+          ${p.words ? `<p class="strategy-words">${p.words.map(w => canSpeak()
+            ? `<button type="button" class="chip" lang="${code}" data-say="${esc(w)}">${esc(w)} 🔊</button>`
+            : `<span class="chip" lang="${code}">${esc(w)}</span>`).join("")}</p>` : ""}
+        </div>`).join("")}
+    </details>`;
+}
+
 /* =========================
    Word list (study a topic)
 ========================= */
@@ -92,7 +118,8 @@ function renderList({ el, lang, bank, code }, sectionId) {
             </tr>`).join("")}
         </tbody>
       </table>
-    </div>`;
+    </div>
+    ${strategyHtml(lang, code, sec.chapter.strategy)}`;
 
   el.querySelectorAll("[data-say]").forEach(b =>
     b.addEventListener("click", () => speakTarget(lang, b.dataset.say)));
@@ -143,6 +170,7 @@ function renderSetup(ctx) {
                 </div>`).join("")}
               </div>
             </details>
+            ${strategyHtml(lang, code, ch.strategy)}
           </div>`).join("")}
       </div>
       <p style="margin-bottom:0;">
@@ -154,13 +182,21 @@ function renderSetup(ctx) {
     <div class="card setup-card">
       <h3>2. How do you want to practise?</h3>
       <div class="seg-group">
-        <span class="seg-label">Direction</span>
+        <span class="seg-label">Read it</span>
         <div class="seg" role="radiogroup">
           ${seg("dir", "to-en", `${lang.label} → English`, prefs.dir)}
           ${seg("dir", "to-target", `English → ${lang.label}`, prefs.dir)}
-          ${canSpeak() ? seg("dir", "listen", "Listen and write", prefs.dir) : ""}
         </div>
       </div>
+      ${canSpeak() ? `
+      <div class="seg-group">
+        <span class="seg-label">Hear it</span>
+        <div class="seg" role="radiogroup">
+          ${seg("dir", "listen-en", `${lang.label} → write English`, prefs.dir)}
+          ${seg("dir", "listen-target", `English → write ${lang.label}`, prefs.dir)}
+          ${seg("dir", "listen", `${lang.label} → write ${lang.label}`, prefs.dir)}
+        </div>
+      </div>` : ""}
       <div class="seg-group">
         <span class="seg-label">Answer</span>
         <div class="seg" role="radiogroup">
@@ -217,7 +253,9 @@ function renderSetup(ctx) {
     const dirText = {
       "to-en": `You'll see the ${lang.label} and write the English.`,
       "to-target": `You'll see the English and write the ${lang.label} — capitals and ${code === "de" ? "umlauts" : "accents"} count.`,
-      listen: `You'll hear the ${lang.label} and write it down. Phrases with gaps (…) or choices (/) are left out.`
+      listen: `You'll hear the ${lang.label} and write it down. Phrases with gaps (…) or choices (/) are left out.`,
+      "listen-en": `You'll hear the ${lang.label} and write what it means in English. Phrases with gaps (…) or choices (/) are left out.`,
+      "listen-target": `You'll hear the English and write it in ${lang.label} — capitals and ${code === "de" ? "umlauts" : "accents"} count. Phrases with gaps (…) or choices (/) are left out.`
     }[val("dir")];
     const modeText = mode === "practise"
       ? "Practise: you see the answer after each word, and words you find hard come back more often."
@@ -241,6 +279,11 @@ function renderSetup(ctx) {
       if (t.checked) t.closest(".chapter").querySelector("details").open = true;
     }
     refresh();
+  });
+
+  el.querySelector("[data-setup]").addEventListener("click", e => {
+    const b = e.target.closest("[data-say]");
+    if (b) speakTarget(lang, b.dataset.say);
   });
 
   el.querySelector("[data-all]").addEventListener("click", () => {
@@ -277,7 +320,7 @@ function buildPool(bank, selected, dir, code) {
   return allSections(bank)
     .filter(s => selected.has(s.id))
     .flatMap(s => s.items.map(it => ({ ...it, section: s })))
-    .filter(it => dir !== "listen" || listenable(it[code]));
+    .filter(it => !isHeard(dir) || listenable(heardInEnglish(dir) ? it.en : it[code]));
 }
 
 /* =========================
@@ -310,7 +353,12 @@ function startRun(ctx, cfg) {
     startedAt: Date.now()
   };
 
-  const dirLabel = { "to-en": `${lang.label} → English`, "to-target": `English → ${lang.label}`, listen: "Listen and write" }[cfg.dir];
+  const dirLabel = {
+    "to-en": `${lang.label} → English`, "to-target": `English → ${lang.label}`,
+    listen: `Hear ${lang.label} → write ${lang.label}`, "listen-en": `Hear ${lang.label} → write English`,
+    "listen-target": `Hear English → write ${lang.label}`
+  }[cfg.dir];
+  const toEn = answersInEnglish(cfg.dir);
 
   el.innerHTML = `
     <div class="run-bar">
@@ -358,33 +406,40 @@ function startRun(ctx, cfg) {
     progress();
 
     const target = item[code];
-    const promptText = cfg.dir === "to-en" ? target : item.en;
-    const expected = cfg.dir === "to-en" ? item.en : target;
-    const answerLang = cfg.dir === "to-en" ? "en" : code;
+    const promptText = toEn ? target : item.en;
+    const expected = toEn ? item.en : target;
+    const answerLang = toEn ? "en" : code;
     const opener = item.context || null;
-    const promptOpener = opener ? (cfg.dir === "to-en" ? opener[code] : opener.en) : "";
+    const promptOpener = opener ? (toEn ? opener[code] : opener.en) : "";
     const answerOpener = opener ? (answerLang === "en" ? opener.en : opener[code]) : "";
     const spoken = opener ? fillGap(opener[code], target) : target;
+    const spokenEn = opener ? fillGap(opener.en, item.en) : item.en;
     item._q = { promptText, expected, answerLang, promptOpener, answerOpener, spoken };
+    /* what the 🔊 prompt plays */
+    const playPrompt = opts => heardInEnglish(cfg.dir)
+      ? speak(speakable(spokenEn), "en-GB", opts)
+      : speakTarget(lang, spoken, opts);
 
     $("[data-instruction]").textContent = {
       "to-en": "What does this mean in English?",
       "to-target": `How do you say this in ${lang.label}?`,
-      listen: `Listen and write the ${lang.label}.`
+      listen: `Listen and write the ${lang.label}.`,
+      "listen-en": "Listen — what does it mean in English?",
+      "listen-target": `Listen — how do you say it in ${lang.label}?`
     }[cfg.dir];
 
-    if (cfg.dir === "listen") {
+    if (isHeard(cfg.dir)) {
       $("[data-prompt]").innerHTML = `
         <button type="button" class="listen-big" data-hear aria-label="Play again">🔊</button>
         <button type="button" class="quiet" data-slow>Slower</button>`;
-      $("[data-slow]").addEventListener("click", () => speakTarget(lang, spoken, { slow: true }));
-      setTimeout(() => speakTarget(lang, spoken), 250);
+      $("[data-slow]").addEventListener("click", () => playPrompt({ slow: true }));
+      setTimeout(() => playPrompt(), 250);
     } else {
       $("[data-prompt]").innerHTML = `
         <span ${cfg.dir === "to-en" ? `lang="${code}"` : ""}>${promptOpener ? `<span class="vocab-opener">${esc(promptOpener)}</span> ` : ""}<span data-prompt-text>${esc(promptText)}</span></span>
         ${cfg.dir === "to-en" ? hearBtn() : ""}`;
     }
-    $("[data-prompt] [data-hear]")?.addEventListener("click", () => speakTarget(lang, spoken));
+    $("[data-prompt] [data-hear]")?.addEventListener("click", () => playPrompt());
 
     $("[data-context]").textContent = `${lang.chapterWord} ${item.section.chapter.number} · ${item.section.en}`;
     $("[data-feedback]").innerHTML = "";
@@ -518,17 +573,17 @@ function startRun(ctx, cfg) {
     const { spoken } = item._q;
     const wholeDe = item.context ? fillGap(item.context[code], target) : target;
     const wholeEn = item.context ? fillGap(item.context.en, item.en) : item.en;
-    const shown = cfg.dir === "to-en" ? wholeEn : wholeDe;
+    const shown = toEn ? wholeEn : wholeDe;
     const cls = result.ok ? "correct" : result.near ? "partial" : "wrong";
     const head = result.ok ? "Correct!" : result.near ? "Nearly!" : result.answer ? "Not quite." : "Here's the answer.";
     $("[data-feedback]").innerHTML = `
       <div class="mark-note ${cls}">
         <strong>${head}</strong>
-        ${result.ok && !result.tip ? "" : `<p style="margin:var(--sp-1) 0 0;"><span ${cfg.dir === "to-en" ? "" : `lang="${code}"`} class="vocab-answer">${esc(shown)}</span>
-          ${cfg.dir !== "to-en" ? hearBtn() : ""}</p>`}
+        ${result.ok && !result.tip ? "" : `<p style="margin:var(--sp-1) 0 0;"><span ${toEn ? "" : `lang="${code}"`} class="vocab-answer">${esc(shown)}</span>
+          ${toEn ? "" : hearBtn()}</p>`}
         ${result.tip ? `<p style="margin:var(--sp-1) 0 0;">${esc(result.tip)}</p>` : ""}
-        ${cfg.dir === "to-en" ? `<p class="muted" style="margin:var(--sp-1) 0 0;"><span lang="${code}">${esc(wholeDe)}</span> = ${esc(wholeEn)}</p>`
-          : item.context ? `<p class="muted" style="margin:var(--sp-1) 0 0;">= ${esc(wholeEn)}</p>` : ""}
+        ${toEn ? `<p class="muted" style="margin:var(--sp-1) 0 0;"><span lang="${code}">${esc(wholeDe)}</span> = ${esc(wholeEn)} ${cfg.dir === "listen-en" ? hearBtn() : ""}</p>`
+          : item.context || heardInEnglish(cfg.dir) ? `<p class="muted" style="margin:var(--sp-1) 0 0;">= ${esc(wholeEn)}</p>` : ""}
       </div>
       <div class="vocab-actions">
         <button class="primary" data-next>Next</button>
@@ -587,7 +642,7 @@ function startRun(ctx, cfg) {
               ${run.results.map((r, i) => `
                 <tr class="${r.ok ? "is-correct" : r.near ? "is-partial" : "is-wrong"}">
                   <td class="mark">${r.ok ? "✓" : r.near ? "~" : "✗"}</td>
-                  <td>${cfg.dir === "listen" ? "🔊" : `${r.item._q.promptOpener ? `<span class="vocab-opener">${esc(r.item._q.promptOpener)}</span> ` : ""}${esc(r.item._q.promptText)}`}</td>
+                  <td ${toEn ? `lang="${code}"` : ""}>${cfg.dir === "listen" ? "🔊" : `${isHeard(cfg.dir) ? "🔊 " : ""}${r.item._q.promptOpener ? `<span class="vocab-opener">${esc(r.item._q.promptOpener)}</span> ` : ""}${esc(r.item._q.promptText)}`}</td>
                   <td>${r.answer ? esc(r.answer) : `<span class="muted">—</span>`}${r.tip && !r.ok ? `<br><span class="muted">${esc(r.tip)}</span>` : ""}</td>
                   <td ${r.item._q.answerLang !== "en" ? `lang="${code}"` : ""}>${r.item._q.answerOpener ? `<span class="vocab-opener">${esc(openerLead(r.item._q.answerOpener))}</span> ` : ""}${esc(r.item._q.expected)}</td>
                   <td>${!r.ok && r.answer && cfg.style === "type" ? `<button type="button" class="quiet" data-overrule="${i}">I was right</button>` : ""}</td>
