@@ -1,309 +1,139 @@
-# KS2 SATs Practice Runner — CLAUDE.md
+# KS2 SATs Trainer (v2) — CLAUDE.md
 
 ## What this project is
-A fully client-side web app for Year 6 (KS2) SATs preparation. No backend — all data is JSON files fetched at startup, all state stored in `localStorage`. Live at **https://6oclock.net/sats-trainer/**.
+A web app for Year 6 (KS2) SATs preparation. Child-first, calm, paper-like design: a Year 6
+child drives sessions on their own; a parent checks progress afterwards in "Grown-ups".
+Live at **https://6oclock.net/sats-trainer/**.
 
-Hosted on Strato shared hosting via SFTP. Deploy by uploading changed files — no build step.
+v2 is a full rebuild (plan and SATs standards: `docs/REBUILD_PLAN.md`). v1 is archived as git
+tag `v1-final` / branch `v1-archive`, and on the server at `/sats-trainer-old/` after switchover.
 
 ---
 
-## Tech stack
-- Vanilla JS (ES modules), HTML5, CSS3
-- No framework, no bundler
-- `localStorage` key: `ks2_sats_runner_v1` (main app); `ks2_warmup_v1` (Warm Up)
-- Web Speech API for spoken spelling mode
-- Must be served via HTTP(S) — ES modules block on `file://`
+## Tech stack / hard constraints
+- Vanilla JS ES modules, HTML, CSS — **no framework, no build step**
+- Content is static JSON in `data/content/`; state in `localStorage` key `ks2_sats_v2`
+  (one-time import of spelling history + paper attempts from v1 key `ks2_sats_runner_v1`)
+- AI (marking + reading-test generation) goes through a small **PHP proxy** in `api/` —
+  the API key lives server-side only. The app must stay fully usable without the proxy
+  (free-text answers fall back to self-marking with a mark-scheme checklist).
+- Web Speech API (en-GB) for spelling
+- Must be served over HTTP(S). Locally: `php -S 127.0.0.1:8765` from the repo root
+  (serves the app and `api/proxy.php`; without `api/config.php` the proxy answers
+  "Proxy not configured" and the app self-marks)
+- `tools/` is offline Node tooling only — never deployed
 
 ---
 
 ## File structure
 
 ```
-sats-trainer/
-├── index.html                  # Single-page app, all UI defined here
-├── css/styles.css              # All styles
-├── js/
-│   ├── app.js                  # Bootstrap: loads data, inits all modules
-│   ├── loader.js               # Fetches all JSON in parallel, validates
-│   ├── store.js                # localStorage state management
-│   ├── tabs.js                 # Top-level tab switching
-│   ├── utils.js                # randInt, pickN helpers
-│   ├── runner/
-│   │   ├── runner.js           # Exam state machine, timer, scoring
-│   │   ├── papers.js           # Paper metadata
-│   │   └── render.js          # DOM factories for MCQ/short-answer questions
-│   ├── training/
-│   │   ├── arithmetic.js       # Random arithmetic drill generation
-│   │   ├── spelling.js         # Adaptive spelling trainer, speech synthesis
-│   │   ├── grammar.js          # SPaG topic tabs, token-selection tests
-│   │   ├── prefixes.js         # Prefix word-pair + sentence exercises
-│   │   ├── algebra.js          # Algebra question sets, pairs validator
-│   │   ├── reading.js          # Reading comprehension test runner
-│   │   ├── reasoning.js        # Maths reasoning drill (strand filter)
-│   │   └── warmup.js           # Daily warm-up MCQ (data embedded, no JSON file)
-│   └── stats/
-│       └── stats.js            # Progress display
-└── data/
-    ├── papers.json             # Exam paper definitions
-    ├── banks/
-    │   ├── reading.json
-    │   ├── spag.json
-    │   ├── reasoning.json
-    │   └── grammar.json        # Grammar topic data (token-based)
-    └── training/
-        ├── spelling.json       # Word lists with sentences
-        ├── prefixes.json       # Word pairs + sentences for prefix trainer
-        ├── algebra.json        # 4 sets × 10 questions
-        ├── reading.json        # Reading comprehension tests (passage + questions)
-        └── reasoning.json      # Maths reasoning questions by strand
+index.html              # app shell (hash router mounts views into #view)
+css/theme.css           # design tokens   css/app.css  # chrome   css/paper.css  # SATs-paper look
+js/core/
+  app.js                # boot + hash router (ROUTES: home, papers, practice, grown-ups)
+  loader.js             # fetches data/content/*.json, merges generated banks (additive by id)
+  store.js              # ks2_sats_v2 state, v1 import, recordAttempt() → domainStats EWMA
+  schema.js             # browser schema checks (mirror of tools/lib/schema-v2.mjs)
+  marking.js            # mark(q, answer) — deterministic markers, DOM-free
+  ai.js                 # proxy client: ping, usage, markAI
+  speech.js             # en-GB speech: word → sentence → word
+  utils.js              # randInt, shuffle, pickN, esc, normaliseText, normaliseNumeric
+js/render/
+  question.js           # paper-style renderer per question type; collectAnswer/showResult
+  selfmark.js           # self-mark checklist (AI fallback)
+js/views/
+  home.js               # greeting, Today's practice, full-paper cards
+  paper.js              # paper runner: cover → timed paper → marking → results (+ domain labels)
+  practice.js           # practice hub + generic set runner, topics, domains, prefixes, Today
+  spelling.js           # adaptive spelling trainer (v1 engine)
+  division.js           # short-division walkthrough
+  progress.js           # Grown-ups: mastery, timeline, AI usage, settings, generation
+js/gen/
+  arithmetic.js         # random arithmetic paper/drill
+  generate.js           # runtime reading-test generation via proxy
+data/content/           # reading.json gps.json maths.json spelling.json papers.json manifest.json
+api/                    # proxy.php prompts.php ratelimit.php .htaccess state/ (config.php server-only)
+tools/                  # validate2.mjs, test-marking.mjs, lib/schema-v2.mjs (+ legacy v1 tools)
+docs/REBUILD_PLAN.md    # v2 decisions, SATs standards, schema, phases
 ```
 
 ---
 
-## Adding a new training module — checklist
+## Papers (`data/content/papers.json`, runner in `views/paper.js`)
+- **reading** — one passage + its questions picked at random (the shipped bank has one
+  passage per test; the real paper has 3 texts / 50 marks)
+- **gps1** — GPS Paper 1, questions sampled by `domainQuotas`
+- **gps2** — Spelling Paper 2: 20 words, each shown as an example sentence with a gap,
+  read aloud (word → sentence → word); results also feed the adaptive spelling history
+- **maths1** — arithmetic, generated by `gen/arithmetic.js`
+- **maths2/3** — reasoning, ~80 % number/ratio/algebra strands
 
-1. Create `data/training/<name>.json`
-2. Create `js/training/<name>.js` — export `init<Name>()`
-3. Add a `<button data-training="<name>">` to `.training-tabs` in `index.html`
-4. Add a `<div class="training-panel hidden" id="training-<name>">` panel in `index.html`
-5. Add the JSON fetch to `loader.js` (in the `Promise.all` array and the returned `data` object)
-6. Import and call `init<Name>()` in `app.js`
+## Practice (`views/practice.js`)
+Routes: `#/practice` hub · `/today` · `/gps/<topicId>` · `/<subject>/d/<domain>` ·
+`/maths/arithmetic` · `/prefixes` · `/spelling` · `/division`.
+Most trainers are "filter bank → render → mark" via the generic `runSet()`.
 
-The training tab switching in `app.js` is automatic — it picks up any element matching `[data-training]` and `[id^="training-"]`.
-
----
-
-## Top-level tabs
-
-The main nav tabs are (in order): **Practice Run · Warm Up · Training · Question Banks · Stats · Settings**
-
-Tab switching is handled by `tabs.js` — it matches `[data-tab]` buttons to `[id^="tab-"]` panels automatically.
-
----
-
-## Warm Up (`js/training/warmup.js`)
-
-A separate top-level tab (not a Training sub-tab). No JSON file — all question data is embedded directly in `warmup.js`.
-
-- 4 day tabs: Mon 11 (SPaG), Tue 12 (Reading), Wed 13 (Maths 1), Thu 14 (Maths 2)
-- 3 sets per day (A, B, C) × 8 MCQ questions = 96 questions total
-- On answer: locks all options, highlights correct (green) and wrong (red), reveals hint below
-- Live score tracker updates after every answer
-- Results summary card shown when all 8 questions in a set are answered
-- Reset button clears the active set only
-- Day tabs turn green when all 3 sets are complete; set tabs turn green individually
-- Parent dashboard at the bottom shows per-set scores for all 4 days
-- State saved to `localStorage` under key `ks2_warmup_v1` (separate from main app state)
-- Old state with wrong shape (e.g. from before sets were added) is silently reset to default
-
-**Adding or editing questions:** edit the `DAYS` array in `warmup.js`. Each day has a `sets` array; each set has a `questions` array of `{ q, opts, ans, hint }` objects where `ans` is the zero-based index of the correct option.
+### Adding a new practice section — checklist
+1. Content: add questions to the right `data/content/*.json` bank in the v2 schema (below),
+   or a new bank file + fetch in `core/loader.js`
+2. If it needs a new question type: a builder in `render/question.js` (`BUILDERS`), a
+   `collectAnswer` case if the default (first input) isn't right, a marker in
+   `core/marking.js`, and the type in both `core/schema.js` and `tools/lib/schema-v2.mjs`
+3. A route branch in `renderPractice()` and a link/card in `renderHub()`
+4. A bespoke view (if needed) in `js/views/<name>.js`
+5. New domain codes → `DOMAIN_LABELS` in `views/paper.js` (used by results + progress)
+6. Run `node tools/validate2.mjs` and `node tools/test-marking.mjs`
 
 ---
 
-## Training modules
+## v2 question schema (unified)
 
-### Maths — Arithmetic (`training/arithmetic.js`)
-- Generates 10 random questions per set (add/sub/mul/div)
-- Difficulties: easy, y6 mix, hard
-- Scoring: normalises commas (so "12,345" matches "12345")
-
-### Maths — Algebra (`training/algebra.js`)
-- 4 sets × 10 questions loaded from `algebra.json`
-- Dropdown auto-loads set on change (no Load button)
-- Maths sub-tabs (Arithmetic / Algebra) wired inside `initAlgebra()` via `[data-maths-tab]`
-- Question types:
-  - `short` — text input, normalised string match
-  - `multi` — comma-separated values (sequences)
-  - `mcq` — radio buttons
-  - `pairs` — two number inputs, validated by named function in `PAIR_VALIDATORS`
-  - `reveal` — no input, solution auto-shown when Check is pressed
-- Solutions revealed for ALL questions when "Check answers" is pressed
-- `PAIR_VALIDATORS` map in `algebra.js` — add new validators here for new two-unknown questions
-
-### English — Spelling (`training/spelling.js`)
-- Adaptive word selection weighted by mastery, recency, streak
-- Modes: Hidden (flash), Visible, Spoken (Web Speech API)
-- Progress saved per-word in `localStorage`
-
-### English — Grammar (`training/grammar.js`)
-- Data from `data/banks/grammar.json`
-- Topic tabs built dynamically from JSON
-- Token-based sentence selection (click words to identify parts of speech)
-- Indices in `answer` arrays are zero-based word positions after `split(" ")`
-- A **"TENSES"** group label is inserted in the tab bar before the first tense topic (handled in `buildTopicTabs()` via the `TENSE_IDS` set)
-- Tense topics in order: Simple Present · Simple Past · Present Progressive · Past Progressive · Present Perfect · Past Perfect · Simple Future
-
-### English — Prefixes (`training/prefixes.js`)
-- Data from `data/training/prefixes.json`
-- Two sections per round: word pairs (dropdown + root) and sentence fill-ins
-- 7 word pairs + 4 sentences per round, randomly sampled
-- All distractor options verified to not form valid English words with the root
-
-### English — Reading (`training/reading.js`)
-- Data from `data/training/reading.json`
-- Tests grouped by set (A, B, …); selection grid shows title, genre, time, and total marks
-- Each test has a full HTML passage and a list of questions
-- Question types: `short`, `mcq`, `tick2` (tick two correct answers)
-- Timed: timer runs while the test is active; shown in the UI
-- Back button returns to the test selection grid without losing test state
-
-### Maths — Reasoning (`training/reasoning.js`)
-- Data from `data/training/reasoning.json`
-- 10 random questions per set, optionally filtered by strand via dropdown
-- Strands: `large_numbers`, `place_value`, `ordering`, `rounding`, `negative`, `roman`
-- Question type: `short` — text input, answer matched as trimmed string
-- "New set" button picks a fresh random selection; "Check answers" reveals all solutions
+```json
+{
+  "id": "rd-2d-0031", "subject": "reading|gps|maths|spelling",
+  "domain": "2d | G5 | 6C7a | S", "strand": "number|ratio|algebra|measure|geometry|stats",
+  "type": "…", "marks": 2, "stem": "HTML", "passageId": "p-003",
+  "…type-specific answer fields": "accept[], answer, answers[], order[], statements[], tokenIndices[], validator",
+  "markScheme": {
+    "acceptablePoints": [{ "point": "…", "evidence": ["'…'"] }],
+    "award": { "1": "one acceptable point", "2": "two points, or one point plus evidence" },
+    "doNotAccept": ["…"], "modelAnswer": "…"
+  }
+}
+```
+- **Auto-marked types:** `mcq tick2 truefalse factopin match order circle2 short-closed
+  numeric multi pairs tokens roles spelling prefix`
+- **AI-marked types** (self-mark fallback): `short multishort open` — need `markScheme`
+  with `acceptablePoints` or `modelAnswer`, plus `award`
+- Domains: reading `2a`–`2h`, GPS `G1`–`G7`, spelling `S`, maths by content-domain code /
+  strand
+- `tokens`: indices are zero-based positions in `sentence.split(" ")`; punctuation stays
+  attached to its token — always recount after editing a sentence
+- Prefix distractors: no distractor + root may form a real English word
 
 ---
 
-## Key data formats
-
-### algebra.json — question object
-```json
-{
-  "id": "s1q1",
-  "type": "short | multi | mcq | pairs | reveal",
-  "strand": "missing_value | substitution | sequence | formula | express | two_unknowns",
-  "stem": "HTML string",
-  "label": "n =",          // short only
-  "answer": "17",           // short/mcq
-  "answers": ["23","28"],   // multi only
-  "choices": ["..."],       // mcq only
-  "labels": ["a","b"],      // pairs only
-  "validator": "sum10_agtb",// pairs only — key into PAIR_VALIDATORS
-  "solution": "HTML string shown after Check"
-}
-```
-
-### prefixes.json — word pair object
-```json
-{ "root": "happy", "prefix": "un", "options": ["un","dis","mis","re"] }
-```
-**Important:** verify that no option other than `prefix` forms a valid English word with `root` before adding.
-
-### grammar.json — question object
-```json
-{
-  "sentence": "The cat slept on the sofa.",
-  "task": "Select all the nouns.",
-  "answer": [1, 5]
-}
-```
-Indices are zero-based positions in `sentence.split(" ")`. Punctuation stays attached to its token (e.g. "sofa." is index 5). Multi-word verb phrases (e.g. progressive tenses) use multiple indices: `"answer": [1, 2]`.
-
-### grammar.json — topic object
-```json
-{
-  "id": "present-progressive",
-  "label": "Present Progressive",
-  "definition": "HTML string",
-  "examples": [
-    { "sentence": "…", "highlight": [1, 2], "explanation": "…" }
-  ],
-  "questions": [ { "sentence": "…", "task": "…", "answer": [1, 2] } ]
-}
-```
-
-### reading.json — test object
-```json
-{
-  "id": "b5",
-  "set": "B",
-  "testNumber": 5,
-  "title": "Should We Use Tablet Computers in the Classroom?",
-  "genre": "Argument",
-  "minutes": 10,
-  "totalMarks": 8,
-  "passage": "<p>HTML passage…</p>",
-  "questions": [
-    {
-      "id": "b5q1", "num": 1, "type": "short", "marks": 1,
-      "stem": "HTML string",
-      "accept": ["tablet computers"],   // short: array of accepted strings
-      "solution": "tablet computers"
-    },
-    {
-      "id": "b5q2", "num": 2, "type": "tick2", "marks": 2,
-      "stem": "HTML string",
-      "choices": ["option A", "option B", "option C"],
-      "answers": ["option A", "option B"],  // tick2: correct choices
-      "solution": "option A; option B"
-    },
-    {
-      "id": "b5q4", "num": 4, "type": "mcq", "marks": 1,
-      "stem": "HTML string",
-      "choices": ["option A", "option B"],
-      "answer": "option A",             // mcq: single correct choice
-      "solution": "option A"
-    }
-  ]
-}
-```
-
-### reasoning.json — question object
-```json
-{
-  "id": "rq01",
-  "strand": "large_numbers",
-  "type": "short",
-  "stem": "HTML string",
-  "answer": "999900",
-  "solution": "1,000,000 − 100 = 999,900"
-}
-```
-Valid strands: `large_numbers`, `place_value`, `ordering`, `rounding`, `negative`, `roman`.
-
-### warmup.js — question object (embedded, no JSON file)
-```js
-{
-  q: "Question text",
-  opts: ["Option A", "Option B", "Option C", "Option D"],
-  ans: 1,       // zero-based index of correct option
-  hint: "Explanation shown after answering"
-}
-```
+## AI proxy (`api/`)
+- Browser sends only `{token, op, payload}`; prompts, models, schemas, caps are server-side.
+  **Never add a freeform-prompt op.**
+- Ops: `ping`, `usage`, `mark` (claude-sonnet-5, structured {marks, feedback, matchedPoints}),
+  `generate-passage` (claude-sonnet-5, ~1–3 min; Sonnet chosen to fit Strato time limits)
+- `config.php` (copy of `config.example.php`: API key, shared token, daily caps) exists
+  **only on the server** — never commit it. `.htaccess` denies config/prompts/ratelimit and `state/`.
+- The parent enters the shared token once in Grown-ups → Settings.
 
 ---
 
 ## Version control
-
-- GitHub: `git@github.com:nilskloth/SAT_Trainer.git`
-- Branch: `main`
-- SSH key: `~/.ssh/id_ed25519` (ed25519, added to GitHub as Authentication Key)
-
-```bash
-git add -A && git commit -m "message" && git push origin main
-```
-
----
+- GitHub: `git@github.com:nilskloth/SAT_Trainer.git`, branch `main`
+- SSH key: `~/.ssh/id_ed25519`
 
 ## Deployment
-
-SFTP to Strato hosting:
-- Server: `5186167.ssh.w1.strato.hosting`
-- User: `stu698771234`
-- Remote root: `/` (home directory contains the `sats-trainer/` folder directly)
-
-Upload individual files with `lftp`:
-```bash
-lftp -u stu698771234,PASSWORD sftp://5186167.ssh.w1.strato.hosting <<'EOF'
-set sftp:auto-confirm yes
-put ./local/file.js -o sats-trainer/remote/file.js
-EOF
-```
+SFTP to Strato (`5186167.ssh.w1.strato.hosting`, user `stu698771234`, remote root `/`
+contains `sats-trainer/`). Upload changed files with `lftp` (`put local -o sats-trainer/…`).
+Deploy set: `index.html css/{theme,app,paper}.css js/{core,render,views,gen}/ data/content/
+api/{proxy,prompts,ratelimit}.php api/.htaccess api/state/.htaccess` — never `tools/`,
+`docs/`, `_res/`, or a local `config.php`.
 
 **Change the SFTP password after each session where it was shared in chat.**
-
----
-
-## Known design decisions
-
-- **No eval for validators** — pair constraints use named functions in `PAIR_VALIDATORS`, not `eval()`
-- **Grammar token indices** — always recount after editing a sentence; punctuation is part of the token
-- **Prefix distractors** — every distractor option must be checked: does `option + root` form a real English word? If yes, it cannot be used as a distractor
-- **Arithmetic normalisation** — commas stripped before comparison so "12,345" matches "12345"
-- **"whole numbers" vs "positive whole numbers"** — always use "positive whole numbers" in algebra stems to avoid 0 being a valid answer where unintended
-- **Maths sub-tabs** — wired in `algebra.js` not `app.js`; initial state set programmatically to ensure Arithmetic is active on load
-- **Warm Up data embedded** — question data lives in `warmup.js` rather than a JSON file; no loader changes needed when editing questions
-- **Warm Up state migration** — `initWarmup()` checks for the new `sets` shape and resets to default if the old shape is detected, avoiding silent bugs from stale localStorage
-- **Grammar tense group label** — the "TENSES" label is injected by `buildTopicTabs()` in `grammar.js` using the `TENSE_IDS` set; it is not stored in `grammar.json`

@@ -7,6 +7,7 @@
    ========================================================= */
 
 import { esc } from "../core/utils.js";
+import { canSpeak, speakWord } from "../core/speech.js";
 
 export function renderQuestion(q, num) {
   const el = document.createElement("div");
@@ -144,6 +145,18 @@ const BUILDERS = {
   "short-closed"(q, input) {
     input.innerHTML = `<div class="answer-line"><input type="text" autocomplete="off" ${q.label ? `aria-label="${esc(q.label)}"` : ""}></div>`;
     if (q.label) input.insertAdjacentHTML("afterbegin", `<span style="margin-right:var(--sp-2);">${esc(q.label)}</span>`);
+  },
+
+  /* Spelling paper: the sentence (with its gap) is the stem; the word is spoken. */
+  spelling(q, input) {
+    input.innerHTML = `
+      <div style="display:flex;gap:var(--sp-3);align-items:center;flex-wrap:wrap;">
+        ${canSpeak() ? `<button type="button" data-hear>🔊 Hear it</button>` : ""}
+        <div class="answer-line" style="flex:1;min-width:200px;">
+          <input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Missing word">
+        </div>
+      </div>`;
+    input.querySelector("[data-hear]")?.addEventListener("click", () => speakWord(q.word, q.sentence));
   },
 
   numeric(q, input) {

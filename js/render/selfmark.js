@@ -3,8 +3,7 @@
    Renders the mark scheme as a checklist (like a real
    marker's "acceptable points"); the child ticks the
    points their answer makes and marks follow the award
-   rules. Used whenever the proxy is unavailable — and in
-   Phase 2, before the proxy exists at all.
+   rules. Used whenever the proxy is unavailable.
    ========================================================= */
 
 import { esc } from "../core/utils.js";

@@ -1,7 +1,7 @@
 /* =========================================================
    Paper runner: blueprint covers → timed paper → marking
-   → results. Free-text questions self-mark in Phase 2;
-   Phase 3 tries the AI marker first and falls back here.
+   → results. Free-text answers go to the AI marker first
+   and fall back to self-marking.
    ========================================================= */
 
 import { getData } from "../core/loader.js";
@@ -12,13 +12,15 @@ import { pickN, esc } from "../core/utils.js";
 import { renderQuestion, collectAnswer, hasAnswer, showResult, showPending } from "../render/question.js";
 import { renderSelfMark } from "../render/selfmark.js";
 import { generateArithmeticPaper } from "../gen/arithmetic.js";
+import { recordSpellingResult } from "./spelling.js";
 
 const DOMAIN_LABELS = {
   "2a": "Word meanings", "2b": "Finding information", "2c": "Summarising",
   "2d": "Inference", "2e": "Predicting", "2f": "Text structure",
   "2g": "Language choices", "2h": "Comparing",
   G1: "Word classes", G2: "Sentence types", G3: "Clauses & phrases",
-  G4: "Verbs & tenses", G5: "Punctuation", G6: "Vocabulary", G7: "Standard English"
+  G4: "Verbs & tenses", G5: "Punctuation", G6: "Vocabulary", G7: "Standard English",
+  S: "Spelling"
 };
 
 export function domainLabel(domain) {
@@ -77,6 +79,10 @@ function assemble(paper) {
     return { questions: pickN(questions, questions.length) };
   }
 
+  if (paper.subject === "spelling") {
+    return { questions: spellingQuestions(paper.words || 20) };
+  }
+
   if (paper.kind === "arithmetic") {
     return { questions: generateArithmeticPaper() };
   }
@@ -90,6 +96,31 @@ function assemble(paper) {
   }
 
   return null;
+}
+
+/* Paper 2: one example sentence per word, with the word blanked out. */
+function spellingQuestions(count) {
+  const words = Object.values(getData().spelling.lists).flatMap(l => l.words || []);
+  const questions = [];
+  for (const w of pickN(words, words.length)) {
+    if (questions.length >= count) break;
+    const escaped = w.word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const re = new RegExp("\\b" + escaped + "\\b", "i");
+    const sentence = pickN((w.sentences || []).filter(t => re.test(t)), 1)[0];
+    if (!sentence) continue;
+    questions.push({
+      id: `sp-${w.word.toLowerCase()}`,
+      subject: "spelling",
+      domain: "S",
+      type: "spelling",
+      marks: 1,
+      word: w.word,
+      sentence,
+      stem: `<p style="font-family:var(--font-passage);font-size:var(--fs-2);margin:0;">${esc(sentence).replace(re, "<span class=\"spelling-gap\"></span>")}</p>`,
+      markScheme: { modelAnswer: esc(w.word) }
+    });
+  }
+  return questions;
 }
 
 /* =========================
@@ -106,13 +137,6 @@ function startPaper(el, paperId) {
   stopTimer();
   const paper = getData().papers.find(p => p.id === paperId);
   if (!paper) { location.hash = "#/papers"; return; }
-
-  if (paper.subject === "spelling") {
-    el.innerHTML = `<div class="card"><h2 style="margin-top:0;">${esc(paper.label)}</h2>
-      <p class="muted">The spoken spelling paper arrives with the practice tools (Phase 4).</p>
-      <a class="btn" href="#/papers">Back to papers</a></div>`;
-    return;
-  }
 
   const set = assemble(paper);
   if (!set || !set.questions.length) {
@@ -277,6 +301,9 @@ function finish(root, paper, set, results, seconds) {
   });
 
   recordAttempt({ mode: "paper", paperId: paper.id, seconds, items });
+  if (paper.subject === "spelling") {
+    set.questions.forEach(q => recordSpellingResult(q.word, results.get(q.id).earned > 0));
+  }
 
   /* Per-domain bars */
   const byDomain = {};

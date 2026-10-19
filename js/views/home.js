@@ -1,4 +1,4 @@
-/* Child home: subject entry points. "Today's practice" assembler arrives in Phase 6. */
+/* Child home: greeting, Today's practice, full papers. */
 
 import { getData } from "../core/loader.js";
 import { getStore } from "../core/store.js";

@@ -308,3 +308,11 @@
 }
 
 .timer-pill.closing { color: var(--partial); border-color: var(--partial); }
+
+/* Spelling paper gap */
+.spelling-gap {
+  display: inline-block;
+  width: 7em;
+  border-bottom: 2px solid var(--ink);
+  vertical-align: baseline;
+}

@@ -9,6 +9,7 @@
 import { getData } from "../core/loader.js";
 import { getStore, saveStore } from "../core/store.js";
 import { esc, normaliseText } from "../core/utils.js";
+import { speakWord } from "../core/speech.js";
 
 /* --- v1 adaptive engine, ported verbatim in behaviour --- */
 
@@ -67,27 +68,14 @@ function recordResult(stat, ok) {
   saveStore();
 }
 
-/* --- speech (en-GB, word + example sentence + word) --- */
-
-function speak(text, delayMs = 0) {
-  if (!("speechSynthesis" in window)) return;
-  setTimeout(() => {
-    const u = new SpeechSynthesisUtterance(String(text || ""));
-    u.lang = "en-GB";
-    u.rate = 0.95;
-    window.speechSynthesis.speak(u);
-  }, delayMs);
+function speakItem(item) {
+  const sentences = item.sentences || [];
+  speakWord(item.word, sentences[Math.floor(Math.random() * sentences.length)]);
 }
 
-function speakWord(item) {
-  if (!("speechSynthesis" in window)) return;
-  window.speechSynthesis.cancel();
-  speak(item.word, 0);
-  const sentences = item.sentences || [];
-  if (sentences.length) {
-    speak(sentences[Math.floor(Math.random() * sentences.length)], 700);
-    speak(item.word, 1400);
-  }
+/* Paper 2 feeds its results into the same adaptive history. */
+export function recordSpellingResult(word, ok) {
+  recordResult(ensureStat(String(word).toLowerCase()), ok);
 }
 
 /* --- view --- */
@@ -154,7 +142,7 @@ export function renderSpelling(el) {
 
     if (currentMode() === "spoken") {
       stage.textContent = "🔊 Listen…";
-      speakWord(item);
+      speakItem(item);
     } else {
       stage.textContent = item.word;
       setTimeout(() => {
@@ -180,7 +168,7 @@ export function renderSpelling(el) {
   el.querySelector("[data-submit]").addEventListener("click", submit);
   input.addEventListener("keydown", e => { if (e.key === "Enter") submit(); });
   el.querySelector("[data-repeat]").addEventListener("click", () => {
-    if (session.current) speakWord(session.current.item);
+    if (session.current) speakItem(session.current.item);
   });
   el.querySelector("[data-mode]").addEventListener("change", next);
   el.querySelector("[data-list]").addEventListener("change", next);
