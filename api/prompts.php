@@ -7,10 +7,10 @@
  */
 
 const OPS = ['ping', 'usage', 'mark', 'generate-passage',
-  'vocab-unlock', 'import-vocab', 'vocab-publish', 'vocab-remove'];
+  'vocab-unlock', 'import-vocab', 'vocab-publish', 'vocab-remove', 'vocab-history', 'vocab-restore'];
 
 /* Ops that need the upload password as well as the shared token. */
-const PASSWORD_OPS = ['vocab-unlock', 'import-vocab', 'vocab-publish', 'vocab-remove'];
+const PASSWORD_OPS = ['vocab-unlock', 'import-vocab', 'vocab-publish', 'vocab-remove', 'vocab-history', 'vocab-restore'];
 
 /* Which daily-cap bucket an op draws from. */
 function op_cap_bucket(string $op): string {

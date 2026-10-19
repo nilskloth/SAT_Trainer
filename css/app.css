@@ -381,3 +381,5 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
   .wl-table td:last-child { position: absolute; top: var(--sp-2); right: 0; width: auto; }
   .wl-table td:first-child { padding-right: 2.5em; }
 }
+.wl-history { margin-top: var(--sp-4); }
+.wl-history summary { cursor: pointer; }

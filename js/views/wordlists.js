@@ -8,6 +8,8 @@
       until published or discarded)
    4. Publish → data/uploads/<lang>.json on the server; the
       trainer merges it with the built-in lists
+   5. History: the server backs up the uploads before every
+      change; any backup can be restored (and that undone)
    The password is kept in memory only, for this visit.
    ========================================================= */
 
@@ -67,6 +69,7 @@ export function renderWordLists(el) {
     <div class="card wl-card" data-published-card>
       <h3 style="margin-top:0;">Uploaded chapters</h3>
       <div data-published><p class="muted">Loading…</p></div>
+      <div data-history></div>
     </div>`;
 
   const unlocked = el.querySelector("[data-unlocked]");
@@ -450,6 +453,7 @@ function renderEditor(root, box, draft) {
 async function showPublished(root) {
   const box = root.querySelector("[data-published]");
   if (!box) return;
+  showHistory(root);
   const rows = [];
   for (const lang of Object.values(LANGS)) {
     try {
@@ -482,6 +486,55 @@ async function showPublished(root) {
       forgetBank(code);
       window.dispatchEvent(new Event("langs-changed"));
       showPublished(root);
+    } catch (err) {
+      b.textContent = errText(err);
+    }
+  }));
+}
+
+/* =========================
+   History: server backups, newest first (unlocked only)
+========================= */
+
+async function showHistory(root) {
+  const box = root.querySelector("[data-history]");
+  if (!box || !password) return;
+  let backups = [];
+  try {
+    backups = (await proxyCall("vocab-history", { password })).backups || [];
+  } catch (err) {
+    box.innerHTML = `<p class="muted">History couldn't load: ${esc(errText(err))}</p>`;
+    return;
+  }
+  const when = ts => new Date(ts).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" });
+  const what = b => b.chapters.length
+    ? b.chapters.map(c => `${LANGS[b.lang].chapterWord} ${c.number}${c.title ? ` “${esc(c.title)}”` : ""} (${c.words})`).join(", ")
+    : "no uploaded chapters";
+  box.innerHTML = `
+    <details class="wl-history"${backups.length ? "" : " hidden"}>
+      <summary><strong>History</strong> <span class="muted">· ${backups.length} backup${backups.length === 1 ? "" : "s"} — the uploads as they were before each change</span></summary>
+      <table class="word-list">
+        <tbody>
+          ${backups.map(b => `
+            <tr>
+              <td class="muted" style="white-space:nowrap;">${esc(when(b.ts))}</td>
+              <td>${esc(LANGS[b.lang].label)}: ${what(b)}</td>
+              <td><button type="button" class="quiet" data-restore="${esc(b.file)}">Restore</button></td>
+            </tr>`).join("")}
+        </tbody>
+      </table>
+      <p class="muted" style="margin-bottom:0;">Restoring puts that language's uploaded chapters back exactly as they were then. What's there now is backed up first, so a restore can be undone too.</p>
+    </details>`;
+
+  box.querySelectorAll("[data-restore]").forEach(b => b.addEventListener("click", async () => {
+    if (!b.dataset.sure) { b.dataset.sure = "1"; b.textContent = "Really restore?"; return; }
+    b.disabled = true;
+    try {
+      await proxyCall("vocab-restore", { password, file: b.dataset.restore }, 30000);
+      Object.keys(LANGS).forEach(forgetBank);
+      window.dispatchEvent(new Event("langs-changed"));
+      await showPublished(root);
+      root.querySelector("[data-history] details")?.setAttribute("open", "");
     } catch (err) {
       b.textContent = errText(err);
     }

@@ -5,12 +5,18 @@
  *                  chapter in the trainer's shape; nothing is stored
  *   vocab-publish  a checked chapter → data/uploads/<lang>.json
  *   vocab-remove   delete one uploaded chapter
+ *   vocab-history  list the backups; vocab-restore puts one back
+ * Uploads never touch the built-in lists (data/content/). Before every
+ * change the current uploads file is copied to api/state/backups/
+ * (not web-readable; the newest BACKUPS_KEEP per language are kept).
  * All three need the upload password as well as the shared token
  * (see sec_check_password in ratelimit.php).
  */
 
 const VOCAB_LANGS = ['de' => 'German', 'fr' => 'French'];
 const UPLOADS_DIR = __DIR__ . '/../data/uploads';
+const BACKUPS_DIR = __DIR__ . '/state/backups';
+const BACKUPS_KEEP = 50;
 const IMPORT_MAX_FILES = 8;
 const IMPORT_MAX_BYTES = 9 * 1024 * 1024;   // decoded, all files together
 const IMPORT_MEDIA = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'];
@@ -235,10 +241,12 @@ function vocab_update_uploads(string $lang, callable $change): array {
   if ($fh === false) throw new RuntimeException('The server could not write data/uploads');
   try {
     flock($fh, LOCK_EX);
-    $data = json_decode(stream_get_contents($fh) ?: 'null', true);
+    $raw = stream_get_contents($fh) ?: '';
+    $data = json_decode($raw ?: 'null', true);
     if (!is_array($data) || !is_array($data['chapters'] ?? null)) {
       $data = ['language' => $lang, 'label' => VOCAB_LANGS[$lang], 'chapters' => []];
     }
+    if ($data['chapters']) vocab_backup($lang, $raw);
     $data['chapters'] = array_values($change($data['chapters']));
     usort($data['chapters'], fn($a, $b) => $a['number'] <=> $b['number']);
     ftruncate($fh, 0);
@@ -265,4 +273,53 @@ function vocab_remove(array $p): array {
   if (!is_int($number)) throw new InvalidArgumentException('payload.number missing');
   $data = vocab_update_uploads($lang, fn($chs) => array_filter($chs, fn($c) => ($c['number'] ?? 0) !== $number));
   return ['removed' => $number, 'chapters' => count($data['chapters'])];
+}
+
+function vocab_backup(string $lang, string $raw): void {
+  if (!is_dir(BACKUPS_DIR) && !@mkdir(BACKUPS_DIR, 0755, true)) {
+    throw new RuntimeException('The server could not create a backup — nothing was changed');
+  }
+  // the last part is tenths of milliseconds, so names sort in time order
+  $now = microtime(true);
+  $name = sprintf('%s-%s-%04d.json', $lang, gmdate('Ymd-His', (int) $now), (int) (fmod($now, 1) * 10000));
+  if (@file_put_contents(BACKUPS_DIR . "/{$name}", $raw) === false) {
+    throw new RuntimeException('The server could not write a backup — nothing was changed');
+  }
+  $all = glob(BACKUPS_DIR . "/{$lang}-*.json") ?: [];
+  sort($all);
+  foreach (array_slice($all, 0, max(0, count($all) - BACKUPS_KEEP)) as $old) @unlink($old);
+}
+
+/* Newest first: what each backup contained. */
+function vocab_history(): array {
+  $out = [];
+  $files = glob(BACKUPS_DIR . '/*.json') ?: [];
+  rsort($files);
+  foreach (array_slice($files, 0, 60) as $f) {
+    $name = basename($f);
+    if (!preg_match('/^(de|fr)-(\d{8})-(\d{6})-\d{4}\.json$/', $name, $m)) continue;
+    $data = json_decode((string) @file_get_contents($f), true);
+    $chapters = [];
+    foreach (($data['chapters'] ?? []) as $c) {
+      $words = 0;
+      foreach (($c['sections'] ?? []) as $sec) $words += count($sec['items'] ?? []);
+      $chapters[] = ['number' => $c['number'] ?? 0, 'title' => (string) ($c['title'] ?? ''), 'words' => $words];
+    }
+    $ts = DateTime::createFromFormat('Ymd His', "{$m[2]} {$m[3]}", new DateTimeZone('UTC'));
+    $out[] = ['file' => $name, 'lang' => $m[1], 'ts' => $ts ? $ts->format('c') : '', 'chapters' => $chapters];
+  }
+  return ['backups' => $out];
+}
+
+/* Put a backup back (the current state is backed up first, so this can be undone too). */
+function vocab_restore(array $p): array {
+  $name = $p['file'] ?? '';
+  if (!is_string($name) || !preg_match('/^(de|fr)-\d{8}-\d{6}-\d{4}\.json$/', $name, $m) || !is_file(BACKUPS_DIR . "/{$name}")) {
+    throw new InvalidArgumentException('No such backup');
+  }
+  $backup = json_decode((string) file_get_contents(BACKUPS_DIR . "/{$name}"), true);
+  if (!is_array($backup['chapters'] ?? null)) throw new InvalidArgumentException('That backup is damaged');
+  $lang = $m[1];
+  $data = vocab_update_uploads($lang, fn($chs) => $backup['chapters']);
+  return ['restored' => $name, 'chapters' => count($data['chapters'])];
 }

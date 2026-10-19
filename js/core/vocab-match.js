@@ -5,7 +5,8 @@
    A printed answer such as "(Julia) is … years old." or
    "der Tisch(-e)" or "Hello!/Hi!" expands into every
    acceptable form:
-     (…)        optional — with or without the bracket content
+     (…)        optional — with or without the bracket content;
+                after a number it's the number in words: either form
      a/b        alternatives (whole phrases, or single words)
      a, b       English alternatives when the prompt has no comma
      …  / ...   stands for any words ("I am 12 years old")
@@ -21,12 +22,21 @@ const MAX_VARIANTS = 400;
 
 /* ---------- expansion ---------- */
 
+/* A number followed by its reading in words — "am 1. (ersten) Januar",
+   "Um 8:30 Uhr (acht Uhr dreißig)." — means either form, not both. */
+const NUMBER_BEFORE = /(\d+(?:[.:]\d+)?\.?(?:\s+Uhr)?)\s*$/;
+
 function parenVariants(s) {
   const m = s.match(/\([^()]*\)/);
   if (!m) return [s];
   const before = s.slice(0, m.index);
   const after = s.slice(m.index + m[0].length);
   const inner = m[0].slice(1, -1);
+  const num = before.match(NUMBER_BEFORE);
+  if (num && /\p{L}/u.test(inner) && !/\d/.test(inner)) {
+    const lead = before.slice(0, num.index);
+    return [...parenVariants(before + " " + after), ...parenVariants(lead + inner + after)];
+  }
   const fills = [inner, ...(inner.includes("/") ? inner.split("/") : []), " "];
   return fills.flatMap(fill => parenVariants(before + fill + after));
 }
@@ -74,7 +84,7 @@ function tokens(s, lang) {
     .filter(Boolean);
 
   if (lang === "en") {
-    out = out.map(w => (w === WILD ? w : w.split("/").map(x => UK[x] || x).join("/")))
+    out = out.map(w => (w === WILD ? w : w.split("/").map(x => UK[x] || x.replace(/^(\d+)(st|nd|rd|th)$/, "$1")).join("/")))
       .filter(w => !EN_SKIP.has(w));
     if (out[0] === "to") out = out.slice(1);
   }
@@ -155,10 +165,22 @@ const bare = w => w.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ß/g, "ss"
  *   prompt the text that was shown (decides comma alternatives)
  * → { ok, near?: "case"|"accents", tip? }
  */
+const asPrinted = s => String(s ?? "").replace(/[’‘`´]/g, "'").replace(/\.{3}/g, "…")
+  .replace(/\s+/g, " ").trim().replace(/[.!?]$/, "");
+
 export function checkAnswer(expected, answer, { lang, prompt = "" } = {}) {
   let got = tokens(answer, lang);
   if (!got.length) return { ok: false };
+  /* copied exactly as printed, brackets and all */
+  if (asPrinted(answer) && asPrinted(answer) === asPrinted(expected)) return { ok: true };
   let vs = variants(expected, lang, prompt);
+
+  /* Starting a phrase with a capital ("Am 1. Januar") is fine; a single
+     word keeps its case ("essen" ≠ "Essen"). */
+  if (lang !== "en" && got.length > 1) {
+    const cap = w => w.charAt(0).toUpperCase() + w.slice(1);
+    vs = vs.flatMap(v => (v.length > 1 && typeof v[0] === "string" && v[0] !== cap(v[0]) ? [v, [cap(v[0]), ...v.slice(1)]] : [v]));
+  }
 
   /* A sentence's first word is capitalised by position, not grammar —
      don't count "wie heißt du?" as a capitals mistake. */

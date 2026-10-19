@@ -129,7 +129,10 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   only use items whose spoken side has no "/" or "…"; answer by typing
   or picking from 4 (distractors from the same topic first).
 - **Marking** (`core/vocab-match.js`, tested by `tools/test-vocab.mjs` against every entry):
-  brackets optional, slashes = alternatives, "…" = any words; English lenient (case,
+  brackets optional — except after a number, where the bracket is the number in words and
+  either form counts ("am 1. (ersten) Januar": am 1. Januar / am ersten Januar); typing the
+  printed text verbatim always counts; slashes = alternatives, "…" = any words; a phrase may
+  start with a capital (single words keep their case); English lenient (case, 1st = 1,
   contractions, articles, UK/US, one typo); German needs capitals and umlauts ("Nearly!"),
   ae/oe/ue/ss accepted with a tip; a sentence's first word may be lowercase.
 - **State:** `store.vocab[lang] = { stats: { "<itemId>|<dir>": stat }, prefs }` (stats only
@@ -142,7 +145,10 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   it with the built-in file; an uploaded chapter replaces a built-in one with the same number
   (same id scheme as the importer, so progress on unchanged words is kept). A language shows
   in the hub/nav once it has any chapter. Photos are shrunk in the browser to fit the
-  server's `post_max_size` (reported by `ping`).
+  server's `post_max_size` (reported by `ping`). Uploads never change `data/content/`; before
+  every publish/remove/restore the proxy copies the uploads file to `api/state/backups/`
+  (newest 50 per language) — Word lists → History restores any of them (`vocab-history`,
+  `vocab-restore`; a restore is itself backed up, so it can be undone).
 - **Adding French:** import the French sheets to `fr.json`, set `available: true` in
   `langs.js`, add a French nav item in `core/app.js`, check `CORRECTIONS`/`FOOTER_JUNK`
   in the importer, read every topic and fill `CONTEXT.fr` (e.g. "J'ai …" + "un chien"),
@@ -184,8 +190,8 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
 - Ops: `ping`, `usage`, `mark` (claude-sonnet-5-5, thinking `between_tools`, structured {marks, feedback, matchedPoints}),
   `generate-passage` (claude-sonnet-5-5, effort medium, ~1–3 min; Sonnet chosen to fit Strato time limits),
   `import-vocab` (claude-sonnet-5-5, effort low, ~20 s per 2-page sheet, ~$0.07; cap bucket `import`, default 15/day),
-  `vocab-unlock`, `vocab-publish`, `vocab-remove` (no AI)
-- **Upload password:** the four vocab ops also need `upload_password_hash` (set with
+  `vocab-unlock`, `vocab-publish`, `vocab-remove`, `vocab-history`, `vocab-restore` (no AI)
+- **Upload password:** the vocab ops also need `upload_password_hash` (set with
   `php tools/set-upload-password.php`, run by the parent in their own Terminal — never in chat).
   Every wrong shared key or upload password is logged (`state/security.json`), shown in
   Grown-ups, and emailed to `alert_email` (PHP `mail()`, at most once an hour); 5 wrong

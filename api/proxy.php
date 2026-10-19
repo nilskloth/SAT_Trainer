@@ -71,10 +71,15 @@ if (in_array($op, PASSWORD_OPS, true)) {
 }
 
 /* Word-list ops that only touch the server's files */
-if ($op === 'vocab-unlock' || $op === 'vocab-publish' || $op === 'vocab-remove') {
+if ($op !== 'import-vocab' && str_starts_with($op, 'vocab-')) {
   try {
-    $data = $op === 'vocab-unlock' ? ['unlocked' => true]
-      : ($op === 'vocab-publish' ? vocab_publish($payload) : vocab_remove($payload));
+    $data = match ($op) {
+      'vocab-unlock' => ['unlocked' => true],
+      'vocab-publish' => vocab_publish($payload),
+      'vocab-remove' => vocab_remove($payload),
+      'vocab-history' => vocab_history(),
+      'vocab-restore' => vocab_restore($payload),
+    };
   } catch (InvalidArgumentException $e) {
     respond_error(400, 'bad_request', $e->getMessage());
   } catch (RuntimeException $e) {
