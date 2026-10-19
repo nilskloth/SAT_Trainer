@@ -120,7 +120,6 @@ curl_setopt_array($ch, [
 $raw = curl_exec($ch);
 $status = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
 $curlErr = curl_error($ch);
-curl_close($ch);
 
 if ($raw === false) {
   respond_error(502, 'timeout', 'Upstream request failed: ' . $curlErr);
