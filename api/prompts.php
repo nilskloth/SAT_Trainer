@@ -95,11 +95,13 @@ SYS;
   ];
 
   return [
-    'model' => 'claude-sonnet-5',
+    'model' => 'claude-sonnet-5-5',
     'max_tokens' => 16000,
     'system' => $system,
     'messages' => [['role' => 'user', 'content' => $user]],
     'output_config' => [
+      // Thinking counts toward max_tokens and Strato's time limit — keep it moderate.
+      'effort' => 'medium',
       'format' => [
         'type' => 'json_schema',
         'schema' => [
@@ -155,10 +157,10 @@ SYS;
       . "PUPIL'S ANSWER:\n{$answer}";
 
   return [
-    'model' => 'claude-sonnet-5',
+    'model' => 'claude-sonnet-5-5',
     'max_tokens' => 1024,
-    // Constrained judgment task: disable thinking so max_tokens is all output.
-    'thinking' => ['type' => 'disabled'],
+    // Constrained judgment task: lowest thinking setting so max_tokens is all output.
+    'thinking' => ['type' => 'between_tools'],
     'system' => $system,
     'messages' => [['role' => 'user', 'content' => $user]],
     'output_config' => [

@@ -117,8 +117,8 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
 ## AI proxy (`api/`)
 - Browser sends only `{token, op, payload}`; prompts, models, schemas, caps are server-side.
   **Never add a freeform-prompt op.**
-- Ops: `ping`, `usage`, `mark` (claude-sonnet-5, structured {marks, feedback, matchedPoints}),
-  `generate-passage` (claude-sonnet-5, ~1–3 min; Sonnet chosen to fit Strato time limits)
+- Ops: `ping`, `usage`, `mark` (claude-sonnet-5-5, thinking `between_tools`, structured {marks, feedback, matchedPoints}),
+  `generate-passage` (claude-sonnet-5-5, effort medium, ~1–3 min; Sonnet chosen to fit Strato time limits)
 - `config.php` (copy of `config.example.php`: API key, shared token, daily caps) exists
   **only on the server** — never commit it. `.htaccess` denies config/prompts/ratelimit and `state/`.
 - The parent enters the shared token once in Grown-ups → Settings.

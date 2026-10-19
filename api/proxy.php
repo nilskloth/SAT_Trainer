@@ -98,6 +98,9 @@ try {
   respond_error(400, 'bad_request', $e->getMessage());
 }
 
+/* Refusals are retried server-side on a fallback model */
+$request['fallbacks'] = 'default';
+
 /* Upstream call — raw curl, no SDK (shared hosting) */
 set_time_limit(op_timeout($op) + 20);
 $ch = curl_init(ANTHROPIC_URL);
@@ -110,6 +113,7 @@ curl_setopt_array($ch, [
     'Content-Type: application/json',
     'x-api-key: ' . $config['anthropic_api_key'],
     'anthropic-version: 2023-06-01',
+    'anthropic-beta: server-side-fallback-2026-07-01',
   ],
   CURLOPT_POSTFIELDS => json_encode($request, JSON_UNESCAPED_UNICODE),
 ]);
