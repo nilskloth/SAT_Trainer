@@ -12,8 +12,10 @@ declare(strict_types=1);
 
 require __DIR__ . '/prompts.php';
 require __DIR__ . '/ratelimit.php';
+require __DIR__ . '/vocab.php';
 
 const MAX_BODY_BYTES = 32768;
+const MAX_UPLOAD_BODY_BYTES = 13 * 1024 * 1024;   // import-vocab: base64 pages
 const ANTHROPIC_URL = 'https://api.anthropic.com/v1/messages';
 
 header('Content-Type: application/json; charset=utf-8');
@@ -36,8 +38,8 @@ if (!is_file($configPath)) {
 }
 $config = require $configPath;
 
-$body = file_get_contents('php://input', false, null, 0, MAX_BODY_BYTES + 1);
-if ($body === false || strlen($body) > MAX_BODY_BYTES) {
+$body = file_get_contents('php://input', false, null, 0, MAX_UPLOAD_BODY_BYTES + 1);
+if ($body === false || strlen($body) > MAX_UPLOAD_BODY_BYTES) {
   respond_error(413, 'bad_request', 'Request too large');
 }
 
@@ -49,6 +51,7 @@ if (!is_array($req)) {
 $token = $req['token'] ?? '';
 if (!is_string($token) || $token === '' ||
     !hash_equals((string) $config['shared_token'], $token)) {
+  sec_record_fail('token', $config);
   respond_error(401, 'unauthorized', 'Bad token');
 }
 
@@ -56,10 +59,41 @@ $op = $req['op'] ?? '';
 if (!in_array($op, OPS, true)) {
   respond_error(400, 'bad_request', 'Unknown operation');
 }
+if ($op !== 'import-vocab' && strlen($body) > MAX_BODY_BYTES) {
+  respond_error(413, 'bad_request', 'Request too large');
+}
+$payload = is_array($req['payload'] ?? null) ? $req['payload'] : [];
+
+if (in_array($op, PASSWORD_OPS, true)) {
+  $denied = sec_check_password($payload['password'] ?? null, $config);
+  if ($denied !== null) respond_error($denied[0], $denied[1], $denied[2]);
+  unset($payload['password']);
+}
+
+/* Word-list ops that only touch the server's files */
+if ($op === 'vocab-unlock' || $op === 'vocab-publish' || $op === 'vocab-remove') {
+  try {
+    $data = $op === 'vocab-unlock' ? ['unlocked' => true]
+      : ($op === 'vocab-publish' ? vocab_publish($payload) : vocab_remove($payload));
+  } catch (InvalidArgumentException $e) {
+    respond_error(400, 'bad_request', $e->getMessage());
+  } catch (RuntimeException $e) {
+    respond_error(500, 'server', $e->getMessage());
+  }
+  echo json_encode(['ok' => true, 'data' => $data]);
+  exit;
+}
 
 /* ping: no upstream call — connectivity + remaining quota */
 if ($op === 'ping') {
-  echo json_encode(['ok' => true, 'data' => ['remaining' => rl_remaining($config)]]);
+  echo json_encode(['ok' => true, 'data' => [
+    'remaining' => rl_remaining($config),
+    'uploads' => [
+      'passwordSet' => ((string) ($config['upload_password_hash'] ?? '')) !== '',
+      'postMax' => (string) ini_get('post_max_size'),
+      'alerts' => ((string) ($config['alert_email'] ?? '')) !== '',
+    ],
+  ]]);
   exit;
 }
 
@@ -83,6 +117,7 @@ if ($op === 'usage') {
   echo json_encode(['ok' => true, 'data' => [
     'remaining' => rl_remaining($config),
     'log' => $entries,
+    'security' => sec_summary(),
   ]]);
   exit;
 }
@@ -93,7 +128,7 @@ if ($limitError !== null) {
 }
 
 try {
-  $request = build_request($op, is_array($req['payload'] ?? null) ? $req['payload'] : []);
+  $request = build_request($op, $payload);
 } catch (InvalidArgumentException $e) {
   respond_error(400, 'bad_request', $e->getMessage());
 }

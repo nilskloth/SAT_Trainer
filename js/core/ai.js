@@ -30,7 +30,14 @@ async function call(op, payload, timeoutMs) {
     clearTimeout(timer);
   }
 
-  const body = await res.json();
+  let body;
+  try {
+    body = await res.json();
+  } catch {
+    const err = new Error(res.status === 413 ? "That was too large for the server" : `The server answered HTTP ${res.status}`);
+    err.code = res.status === 413 ? "too_large" : "server";
+    throw err;
+  }
   if (!body.ok) {
     const err = new Error(body.error?.message || "proxy-error");
     err.code = body.error?.code || "unknown";
@@ -38,6 +45,12 @@ async function call(op, payload, timeoutMs) {
     throw err;
   }
   return body;
+}
+
+/* Any other op (word lists): resolves with body.data. */
+export async function proxyCall(op, payload, timeoutMs = TIMEOUT_MS) {
+  const body = await call(op, payload, timeoutMs);
+  return body.data;
 }
 
 export async function ping() {

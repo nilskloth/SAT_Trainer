@@ -36,7 +36,7 @@ mirror -R --delete --exclude-glob .DS_Store js/render $DEST/js/render
 mirror -R --delete --exclude-glob .DS_Store js/views  $DEST/js/views
 mirror -R --delete --exclude-glob .DS_Store js/gen    $DEST/js/gen
 mirror -R --delete --exclude-glob .DS_Store data/content $DEST/data/content
-mput -O $DEST/api api/proxy.php api/prompts.php api/ratelimit.php api/.htaccess
+mput -O $DEST/api api/proxy.php api/prompts.php api/ratelimit.php api/vocab.php api/.htaccess
 put api/state/.htaccess -o $DEST/api/state/.htaccess
 $CONFIG_PUT
 EOF

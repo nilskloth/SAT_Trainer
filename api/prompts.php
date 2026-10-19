@@ -6,11 +6,16 @@
  * open relay. Generation ops are added in Phase 5.
  */
 
-const OPS = ['ping', 'usage', 'mark', 'generate-passage'];
+const OPS = ['ping', 'usage', 'mark', 'generate-passage',
+  'vocab-unlock', 'import-vocab', 'vocab-publish', 'vocab-remove'];
+
+/* Ops that need the upload password as well as the shared token. */
+const PASSWORD_OPS = ['vocab-unlock', 'import-vocab', 'vocab-publish', 'vocab-remove'];
 
 /* Which daily-cap bucket an op draws from. */
 function op_cap_bucket(string $op): string {
-  return $op === 'mark' ? 'mark' : 'generate';
+  if ($op === 'mark') return 'mark';
+  return $op === 'import-vocab' ? 'import' : 'generate';
 }
 
 /*
@@ -23,6 +28,8 @@ function build_request(string $op, array $payload): array {
       return build_mark_request($payload);
     case 'generate-passage':
       return build_generate_passage_request($payload);
+    case 'import-vocab':
+      return build_import_vocab_request($payload);
     default:
       throw new InvalidArgumentException("Unknown op: $op");
   }

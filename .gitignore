@@ -5,3 +5,4 @@ api/config.php
 api/state/*
 !api/state/.htaccess
 tools/node_modules/
+data/uploads/

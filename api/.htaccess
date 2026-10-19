@@ -11,6 +11,9 @@
 <Files "ratelimit.php">
   Require all denied
 </Files>
+<Files "vocab.php">
+  Require all denied
+</Files>
 
 RewriteEngine On
 RewriteRule ^state/ - [F,L]

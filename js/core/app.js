@@ -13,6 +13,7 @@ import { renderPapers } from "../views/paper.js";
 import { renderProgress } from "../views/progress.js";
 import { renderStart } from "../views/start.js";
 import { renderSecondary } from "../views/secondary/home.js";
+import { availableLangs } from "../views/secondary/langs.js";
 
 const ROUTES = [
   { path: "start", render: renderStart },
@@ -32,10 +33,22 @@ const NAV = {
   ],
   secondary: [
     { href: "#/secondary", label: "Home", match: "secondary" },
-    { href: "#/secondary/de", label: "German", match: "secondary/de" },
+    /* one item per language with word lists — filled in by refreshLanguageNav() */
     { href: "#/grown-ups", label: "Grown-ups", match: "grown-ups" }
   ]
 };
+
+/* Languages appear in the nav once they have word lists (built in or uploaded). */
+async function refreshLanguageNav() {
+  const langs = await availableLangs();
+  NAV.secondary = [
+    NAV.secondary[0],
+    ...langs.map(l => ({ href: `#/secondary/${l.code}`, label: l.label, match: `secondary/${l.code}` })),
+    NAV.secondary[NAV.secondary.length - 1]
+  ];
+  const { path, params } = parseHash();
+  if (getStore().settings.level === "secondary") buildChrome("secondary", path, params);
+}
 
 const TITLES = { primary: "SATs Trainer", secondary: "Language Trainer" };
 const HOME = { primary: "#/home", secondary: "#/secondary" };
@@ -106,6 +119,8 @@ function route() {
     await loadContent();
     window.addEventListener("hashchange", route);
     route();
+    refreshLanguageNav();
+    window.addEventListener("langs-changed", refreshLanguageNav);   // after a word-list upload
     console.log("Trainer ready");
   } catch (err) {
     console.error("Failed to start:", err);

@@ -17,7 +17,17 @@ return [
   'daily_caps' => [
     'mark' => 150,
     'generate' => 8,
+    'import' => 15,      // word-list uploads read by Claude
   ],
+
+  // Grown-ups → Word lists: uploading and publishing need this password too.
+  // Make the hash with:  php -r 'echo password_hash(readline("Password: "), PASSWORD_DEFAULT), "\n";'
+  'upload_password_hash' => '',
+
+  // Failed sign-ins (wrong shared key or upload password) are emailed here,
+  // at most once an hour. alert_from should be an address on the hosting domain.
+  'alert_email' => '',
+  'alert_from' => '',
 
   // Global requests per minute across all operations.
   'per_minute_cap' => 20,

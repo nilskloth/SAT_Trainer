@@ -9,6 +9,7 @@ import { ping, usage } from "../core/ai.js";
 import { generateReadingTest } from "../gen/generate.js";
 import { esc } from "../core/utils.js";
 import { domainLabel } from "./paper.js";
+import { renderWordLists } from "./wordlists.js";
 
 const SUBJECT_LABELS = { reading: "Reading", gps: "Grammar & punctuation", maths: "Maths", spelling: "Spelling",
   german: "German vocabulary", french: "French vocabulary" };
@@ -21,7 +22,24 @@ function estimateSpend(log) {
   return { inTok, outTok, usd: (inTok * 3 + outTok * 15) / 1e6 };
 }
 
-export function renderProgress(el) {
+/* Failed sign-ins on the server (wrong shared key / upload password). */
+function securityHtml(sec, uploads) {
+  if (!sec) return "";
+  const kind = k => (k === "upload-password" ? "wrong upload password" : "wrong shared key");
+  const alerts = uploads?.alerts ? "You're emailed about these (at most once an hour)." : "Email alerts are off — set alert_email in api/config.php.";
+  if (!sec.fails?.length) return `<p class="muted">No failed sign-in attempts. ${alerts}</p>`;
+  return `
+    <div class="mark-note ${sec.locked ? "wrong" : "partial"}" style="margin-top:var(--sp-3);">
+      <strong>${sec.total} failed sign-in attempt${sec.total === 1 ? "" : "s"}</strong>${sec.locked ? " — uploading is locked for now" : ""}.
+      <span class="muted">${alerts}</span>
+      <ul style="margin:var(--sp-2) 0 0;padding-left:1.2em;">
+        ${sec.fails.map(f => `<li>${esc(new Date(f.ts).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" }))} — ${kind(f.kind)} from ${esc(f.ip)}</li>`).join("")}
+      </ul>
+    </div>`;
+}
+
+export function renderProgress(el, params = []) {
+  if (params[0] === "word-lists") return renderWordLists(el);
   const store = getStore();
   const stats = store.domainStats;
 
@@ -96,6 +114,13 @@ export function renderProgress(el) {
       <p data-gen-status class="muted"></p>
     </div>
 
+    <div class="card" style="margin-bottom:var(--sp-4);">
+      <h2 style="margin-top:0;">Word lists</h2>
+      <p>Add a chapter to the language trainer (German, French) by uploading photos or a PDF of the vocabulary sheet — Claude reads it, you check it, then publish.
+        Needs the shared key above and the upload password.</p>
+      <p style="margin-bottom:0;"><a class="btn" href="#/grown-ups/word-lists">Word lists…</a></p>
+    </div>
+
     <div class="card">
       <h2 style="margin-top:0;">Data</h2>
       <p>
@@ -117,12 +142,16 @@ export function renderProgress(el) {
     statusEl.textContent = "Checking connection…";
     try {
       const data = await ping();
-      statusEl.innerHTML = `Connected ✓ — today's allowance left: <strong>${data.remaining.mark}</strong> markings, <strong>${data.remaining.generate}</strong> generations.`;
+      statusEl.innerHTML = `Connected ✓ — today's allowance left: <strong>${data.remaining.mark}</strong> markings, <strong>${data.remaining.generate}</strong> generations`
+        + (data.remaining.import !== undefined ? `, <strong>${data.remaining.import}</strong> word-list uploads.` : ".");
       const u = await usage();
+      let html = "";
       if (u.log?.length) {
         const s = estimateSpend(u.log);
-        usageEl.innerHTML = `<p class="muted">Recent AI use: ${u.log.length} requests, ~${s.inTok.toLocaleString()} tokens in / ${s.outTok.toLocaleString()} out (≈ $${s.usd.toFixed(3)}).</p>`;
+        html += `<p class="muted">Recent AI use: ${u.log.length} requests, ~${s.inTok.toLocaleString()} tokens in / ${s.outTok.toLocaleString()} out (≈ $${s.usd.toFixed(3)}).</p>`;
       }
+      html += securityHtml(u.security, data.uploads);
+      usageEl.innerHTML = html;
     } catch (err) {
       statusEl.textContent = err.code === "unauthorized"
         ? "That key was not accepted — check it matches api/config.php on the server."
