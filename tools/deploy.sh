@@ -24,6 +24,7 @@ set sftp:auto-confirm yes
 set cmd:fail-exit yes
 mkdir -p -f $DEST/css $DEST/data/content $DEST/api/state
 put index.html -o $DEST/index.html
+put .htaccess -o $DEST/.htaccess
 mput -O $DEST/css css/theme.css css/app.css css/paper.css
 mirror -R --delete --exclude-glob .DS_Store js/core   $DEST/js/core
 mirror -R --delete --exclude-glob .DS_Store js/render $DEST/js/render

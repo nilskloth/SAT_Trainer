@@ -1,0 +1,7 @@
+# Make browsers re-check the app's files on every load, so a deploy is seen at once.
+# Unchanged files still come back as a small "304 Not Modified" (ETag / Last-Modified).
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|js|css|json)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
