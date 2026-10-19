@@ -10,6 +10,11 @@ DEST="${1:?usage: tools/deploy.sh <remote-dir>}"
 HOST=5186167.ssh.w1.strato.hosting
 USER=stu698771234
 
+# Versioned index.html: every module URL gets ?v=<commit>-<time> (see tools/build-index.mjs)
+VERSION="$(git rev-parse --short HEAD 2>/dev/null || echo dev)-$(date +%s)"
+INDEX_TMP="$(mktemp -t index).html"
+node tools/build-index.mjs "$VERSION" "$INDEX_TMP"
+
 CONFIG_PUT=""
 [ -f api/config.php ] && CONFIG_PUT="put api/config.php -o $DEST/api/config.php"
 
@@ -23,7 +28,7 @@ lftp $CONNECT <<EOF
 set sftp:auto-confirm yes
 set cmd:fail-exit yes
 mkdir -p -f $DEST/css $DEST/data/content $DEST/api/state
-put index.html -o $DEST/index.html
+put $INDEX_TMP -o $DEST/index.html
 put .htaccess -o $DEST/.htaccess
 mput -O $DEST/css css/theme.css css/app.css css/paper.css
 mirror -R --delete --exclude-glob .DS_Store js/core   $DEST/js/core
@@ -35,4 +40,5 @@ mput -O $DEST/api api/proxy.php api/prompts.php api/ratelimit.php api/.htaccess
 put api/state/.htaccess -o $DEST/api/state/.htaccess
 $CONFIG_PUT
 EOF
-echo "Deployed to $DEST/"
+rm -f "$INDEX_TMP"
+echo "Deployed to $DEST/ (v=$VERSION)"

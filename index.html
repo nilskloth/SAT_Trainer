@@ -19,6 +19,30 @@
     </header>
     <main id="view"></main>
   </div>
+  <script>
+    /* If the app's modules fail to load (old cached file, unsupported browser),
+       nothing else can report it — show the error instead of a blank page. */
+    (function () {
+      var errors = [];
+      var esc = function (s) { return String(s).replace(/[&<>]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]; }); };
+      addEventListener("error", function (e) {
+        var t = e.target;
+        if (t && t !== window && t.src) errors.push("Couldn't load " + t.src.split("/").slice(-3).join("/"));
+        else errors.push((e.message || "Error") + (e.filename ? " (" + e.filename.split("/").slice(-3).join("/") + ":" + e.lineno + ")" : ""));
+      }, true);
+      addEventListener("unhandledrejection", function (e) { errors.push(String(e.reason)); });
+      setTimeout(function () {
+        var v = document.getElementById("view");
+        if (v && !v.children.length) {
+          v.innerHTML = '<div class="card"><h2 style="margin-top:0;">The app didn\'t start</h2>' +
+            '<p>Please reload the page. If this stays, send a screenshot of this message.</p>' +
+            '<p class="muted" style="font-family:monospace;font-size:13px;">' +
+            (errors.length ? errors.map(esc).join("<br>") : "No error was reported — the scripts may not have loaded.") +
+            "<br>" + esc(navigator.userAgent) + "</p></div>";
+        }
+      }, 4000);
+    })();
+  </script>
   <script type="module" src="js/core/app.js"></script>
 </body>
 </html>
