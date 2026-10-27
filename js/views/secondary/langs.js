@@ -14,7 +14,7 @@ export const LANGS = {
   },
   fr: {
     code: "fr", label: "French", native: "Français", voice: "fr-FR",
-    chapterWord: "Module", strategyWord: "Stratégie", subject: "french",
+    chapterWord: "Half-term", strategyWord: "Stratégie", subject: "french",
     keys: ["é", "è", "ê", "à", "â", "ç", "ô", "î", "ï", "ù", "û", "ë", "œ"]
   }
 };

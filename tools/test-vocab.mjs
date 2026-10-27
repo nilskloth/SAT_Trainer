@@ -9,7 +9,7 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { checkAnswer, speakable, fillGap, articleSlip } from "../js/core/vocab-match.js";
+import { checkAnswer, speakable, fillGap, articleSlip, missingArticle } from "../js/core/vocab-match.js";
 
 const DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "data", "content", "secondary");
 let pass = 0, fail = 0;
@@ -99,7 +99,17 @@ const cases = [
   ["on 3 February", "on the 3rd February", "en", "", true],
   ["Je m'appelle …", "je m'appelle Lucie", "fr", "", true],
   ["le collège", "le college", "fr", "", false, "accents"],
-  ["le collège", "Le collège", "fr", "", true]
+  ["le collège", "Le collège", "fr", "", true],
+  ["J’aime …", "j'aime le sport", "fr", "", true],
+  ["Je n’aime pas …", "Je n'aime pas les serpents", "fr", "", true],
+  ["Quel âge as-tu ?", "quel age as-tu?", "fr", "", false, "accents"],
+  ["Quel âge as-tu ?", "Quel âge as tu", "fr", "", true],
+  ["J’ai onze ans.", "J'ai onze ans", "fr", "", true],
+  ["des élèves", "des eleves", "fr", "", false, "accents"],
+  ["(some) students", "students", "en", "des élèves", true],
+  ["I am very friendly./I am very nice.", "I'm very nice", "en", "", true],
+  ["I also like sport./I like sport too.", "I like sport too", "en", "", true],
+  ["I don’t like …", "I do not like snakes", "en", "", true]
 ];
 
 for (const [exp, ans, lang, prompt, wantOk, wantNear] of cases) {
@@ -123,6 +133,13 @@ ok(articleSlip("Ich wohne in …", "Ich wohne in") === null, "no slip with gap")
 ok(articleSlip("…der Schweiz", "die Schweiz") === "der", "article slip der (dative)");
 ok(articleSlip("eine Gitarre", "eine Geige") === null, "different noun is not a slip");
 ok(articleSlip("einen Hund", "einen Hund") === null, "identical is not a slip");
+ok(articleSlip("la musique", "le musique", "fr") === "la", "French article slip la");
+ok(articleSlip("les pizzas", "des pizzas", "fr") === "les", "French article slip les");
+ok(missingArticle("les pizzas", "pizzas", "fr") === "les", "French missing article");
+ok(missingArticle("le poisson", "poisson", "fr") === "le", "French missing article le");
+ok(missingArticle("der Tisch(-e)", "Tisch", "de") === "der", "German missing article");
+ok(missingArticle("très", "tres", "fr") === null, "no article to miss");
+ok(missingArticle("pas très", "très", "fr") === null, "pas is not an article");
 
 /* 4. Speech text */
 [

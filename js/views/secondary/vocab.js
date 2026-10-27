@@ -22,7 +22,7 @@
 import { saveStore, recordAttempt } from "../../core/store.js";
 import { esc, pickN, shuffle } from "../../core/utils.js";
 import { newStat, weightedPick, applyResult } from "../../core/adaptive.js";
-import { checkAnswer, speakable, listenable, fillGap, articleSlip } from "../../core/vocab-match.js";
+import { checkAnswer, speakable, listenable, fillGap, articleSlip, missingArticle } from "../../core/vocab-match.js";
 import { canSpeak, speak } from "../../core/speech.js";
 import { LANGS, loadBank, vocabState, isKnown } from "./langs.js";
 
@@ -105,14 +105,14 @@ function renderList({ el, lang, bank, code }, sectionId) {
       <a class="btn quiet" href="#/secondary/${code}">Back</a>
     </div>
     <div class="paper-sheet" data-subject="${lang.subject}">
-      <p class="muted" style="margin-top:0;">${esc(lang.chapterWord)} ${sec.chapter.number} · ${esc(sec.chapter.title)}${canSpeak() ? " · tap 🔊 to hear each one" : ""}</p>
+      <p class="muted" style="margin-top:0;">${esc(lang.chapterWord)} ${sec.chapter.number} · ${esc(sec.chapter.title)}${sec.extra ? " · extra practice, not on the sheet" : ""}${canSpeak() ? " · tap 🔊 to hear each one" : ""}</p>
       <table class="word-list">
         <thead><tr><th>${esc(lang.label)}</th><th>English</th><th></th><th></th></tr></thead>
         <tbody>
           ${sec.items.map(it => `
             <tr>
               <td lang="${code}">${it.context ? `<span class="vocab-opener">${esc(it.context[code])}</span> ` : ""}${esc(it[code])}</td>
-              <td>${it.context ? `<span class="vocab-opener">${esc(it.context.en)}</span> ` : ""}${esc(it.en)}</td>
+              <td>${it.context ? `<span class="vocab-opener">${esc(it.context.en)}</span> ` : ""}${esc(it.en)}${it.note ? `<br><span class="muted vocab-note">ⓘ ${esc(it.note)}</span>` : ""}</td>
               <td>${canSpeak() ? `<button type="button" class="quiet hear" data-say="${esc(it.context ? fillGap(it.context[code], it[code]) : it[code])}" aria-label="Hear ${esc(it[code])}">🔊</button>` : ""}</td>
               <td class="known">${isKnown(code, it.id) ? "✓" : ""}</td>
             </tr>`).join("")}
@@ -136,7 +136,7 @@ function renderSetup(ctx) {
   const sections = allSections(bank);
   const valid = new Set(sections.map(s => s.id));
   let selected = new Set((prefs.sections || []).filter(id => valid.has(id)));
-  if (!selected.size) bank.chapters[0].sections.forEach(s => selected.add(s.id));
+  if (!selected.size) bank.chapters[0].sections.filter(s => !s.extra).forEach(s => selected.add(s.id));
 
   const knownIn = sec => sec.items.filter(i => isKnown(code, i.id)).length;
 
@@ -156,7 +156,8 @@ function renderSetup(ctx) {
             <details class="chapter-topics"${ch.sections.some(s => selected.has(s.id)) ? " open" : ""}>
               <summary>${ch.sections.length} topics</summary>
               <div class="section-grid">
-              ${ch.sections.map(s => `
+              ${ch.sections.map((s, i) => `
+                ${s.extra && !ch.sections[i - 1]?.extra ? `<p class="section-group muted">Extra practice — not on the sheet</p>` : ""}
                 <div class="section-row">
                   <label class="section-pick">
                     <input type="checkbox" data-section="${s.id}" ${selected.has(s.id) ? "checked" : ""}>
@@ -175,6 +176,7 @@ function renderSetup(ctx) {
       </div>
       <p style="margin-bottom:0;">
         <button type="button" class="quiet" data-all>Select everything</button>
+        ${sections.some(s => s.extra) ? `<button type="button" class="quiet" data-sheet>Just the sheet</button>` : ""}
         <button type="button" class="quiet" data-none>Clear</button>
       </p>
     </div>
@@ -294,6 +296,12 @@ function renderSetup(ctx) {
   el.querySelector("[data-none]").addEventListener("click", () => {
     selected = new Set();
     el.querySelectorAll("[data-section]").forEach(b => { b.checked = false; });
+    refresh();
+  });
+  /* only the topics printed on the school's sheets, not our extras */
+  el.querySelector("[data-sheet]")?.addEventListener("click", () => {
+    selected = new Set(sections.filter(s => !s.extra).map(s => s.id));
+    el.querySelectorAll("[data-section]").forEach(b => { b.checked = selected.has(b.dataset.section); });
     refresh();
   });
 
@@ -500,6 +508,8 @@ function startRun(ctx, cfg) {
       if (needed) {
         const after = answerOpener ? ` after “${openerLead(answerOpener)}”` : "";
         r = { ok: false, near: "article", tip: `Check the article — it's “${needed}” here${after}.` };
+      } else if (missingArticle(expected, answer, answerLang)) {
+        r = { ok: false, near: "article", tip: `Don't forget the article: “${expected}”.` };
       }
     }
     if (r.ok || cfg.dir !== "to-target") return r;
@@ -582,6 +592,7 @@ function startRun(ctx, cfg) {
         ${result.ok && !result.tip ? "" : `<p style="margin:var(--sp-1) 0 0;"><span ${toEn ? "" : `lang="${code}"`} class="vocab-answer">${esc(shown)}</span>
           ${toEn ? "" : hearBtn()}</p>`}
         ${result.tip ? `<p style="margin:var(--sp-1) 0 0;">${esc(result.tip)}</p>` : ""}
+        ${item.note ? `<p class="muted vocab-note" style="margin:var(--sp-1) 0 0;">ⓘ ${esc(item.note)}</p>` : ""}
         ${toEn ? `<p class="muted" style="margin:var(--sp-1) 0 0;"><span lang="${code}">${esc(wholeDe)}</span> = ${esc(wholeEn)} ${cfg.dir === "listen-en" ? hearBtn() : ""}</p>`
           : item.context || heardInEnglish(cfg.dir) ? `<p class="muted" style="margin:var(--sp-1) 0 0;">= ${esc(wholeEn)}</p>` : ""}
       </div>

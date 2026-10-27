@@ -234,6 +234,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .section-pick input { margin-top: 4px; }
 .section-meta { font-size: var(--fs-0); white-space: nowrap; }
 .section-look { font-size: var(--fs-0); white-space: nowrap; color: var(--accent); }
+/* our added topics, after the ones printed on the sheet */
+.section-group { margin: var(--sp-2) 0 0; font-size: var(--fs-0); border-top: 1px dashed var(--line-soft); padding-top: var(--sp-2); }
+.vocab-note { font-size: var(--fs-0); }
 
 /* Chapter learning strategy (the sheet's "Strategie" box) */
 .strategy {

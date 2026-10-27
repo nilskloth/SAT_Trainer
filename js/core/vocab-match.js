@@ -222,9 +222,14 @@ export function checkAnswer(expected, answer, { lang, prompt = "" } = {}) {
   return { ok: false };
 }
 
-/* German articles and possessives whose ending carries the case. */
-const DETERMINERS = new Set(("ein eine einen einem einer eines kein keine keinen keinem keiner keines " +
-  "der die das den dem des mein meine meinen meinem meiner meines dein deine deinen deinem deiner deines").split(" "));
+/* Articles and possessives: German endings carry the case, French
+   ones the gender and number. */
+const DETERMINERS = {
+  de: new Set(("ein eine einen einem einer eines kein keine keinen keinem keiner keines " +
+    "der die das den dem des mein meine meinen meinem meiner meines dein deine deinen deinem deiner deines").split(" ")),
+  fr: new Set("le la les un une des du de mon ma mes ton ta tes son sa ses".split(" "))
+};
+const isDeterminer = (w, lang) => !!DETERMINERS[lang]?.has(String(w).toLowerCase());
 
 /*
  * If the answer is right except for one article ("ein Gitarre" for
@@ -236,9 +241,22 @@ export function articleSlip(expected, answer, lang = "de") {
     if (v[0] === WILD) v = v.slice(1);            // "…der Schweiz": the gap is the opener's
     if (v.length !== got.length || v.includes(WILD)) continue;
     const diffs = v.map((w, i) => (w.toLowerCase() === got[i] ? -1 : i)).filter(i => i >= 0);
-    if (diffs.length === 1 && DETERMINERS.has(v[diffs[0]].toLowerCase()) && DETERMINERS.has(got[diffs[0]])) {
+    if (diffs.length === 1 && isDeterminer(v[diffs[0]], lang) && isDeterminer(got[diffs[0]], lang)) {
       return v[diffs[0]];
     }
+  }
+  return null;
+}
+
+/*
+ * If the answer is the entry without its leading article ("pizzas"
+ * for "les pizzas"), return the article that was left out; otherwise null.
+ */
+export function missingArticle(expected, answer, lang = "de") {
+  const got = tokens(answer, lang).map(w => String(w).toLowerCase());
+  for (const v of variants(expected, lang)) {
+    if (v.length !== got.length + 1 || v.includes(WILD) || !isDeterminer(v[0], lang)) continue;
+    if (v.slice(1).every((w, i) => bare(w) === bare(got[i]))) return v[0];
   }
   return null;
 }

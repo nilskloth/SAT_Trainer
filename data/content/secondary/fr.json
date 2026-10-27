@@ -1,0 +1,730 @@
+{
+  "language": "fr",
+  "label": "French",
+  "imported": "2026-10-27",
+  "source": "Y7 French Half-Term 1 Revision Worksheet (sections marked extra are not on the sheet)",
+  "chapters": [
+    {
+      "id": "k1",
+      "number": 1,
+      "title": "Revision worksheet",
+      "pages": "",
+      "strategy": {
+        "number": 1,
+        "title": "Writing to your penfriend (task 7)",
+        "parts": [
+          {
+            "text": "Not on the sheet — a plan for task 7. Write one or two sentences for each step:",
+            "steps": [
+              "Say hello and give your name.",
+              "Say your age.",
+              "Describe your personality — use très, assez or pas très.",
+              "Say what you like and what you don't like.",
+              "Join ideas with et, mais and aussi.",
+              "Give an opinion: c'est génial, c'est nul."
+            ]
+          },
+          {
+            "heading": "Example",
+            "text": "Salut ! Je m'appelle Sam. J'ai onze ans. Je suis assez bavard mais je ne suis pas très timide. J'aime la musique et j'aime aussi le sport. Je n'aime pas les serpents. À bientôt !",
+            "words": [
+              "Je m'appelle Sam.",
+              "J'ai onze ans.",
+              "Je suis assez bavard.",
+              "J'aime aussi le sport.",
+              "Je n'aime pas les serpents."
+            ]
+          },
+          {
+            "heading": "Girls and boys",
+            "text": "Many adjectives add -e for a girl: il est grand, elle est grande. Words that already end in -e stay the same: timide, sympa.",
+            "words": [
+              "Il est grand.",
+              "Elle est grande.",
+              "Elle est timide."
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "id": "k1-s1",
+          "title": "Le vocabulaire de la classe",
+          "en": "1. Classroom vocabulary",
+          "items": [
+            {
+              "id": "fr-k1-une-porte",
+              "fr": "une porte",
+              "en": "a door"
+            },
+            {
+              "id": "fr-k1-un-ordinateur",
+              "fr": "un ordinateur",
+              "en": "a computer"
+            },
+            {
+              "id": "fr-k1-des-chaises",
+              "fr": "des chaises",
+              "en": "(some) chairs"
+            },
+            {
+              "id": "fr-k1-un-professeur",
+              "fr": "un professeur",
+              "en": "a teacher"
+            },
+            {
+              "id": "fr-k1-des-eleves",
+              "fr": "des élèves",
+              "en": "(some) students"
+            }
+          ]
+        },
+        {
+          "id": "k1-s2",
+          "title": "J’aime … / Je n’aime pas …",
+          "en": "2. Likes and dislikes",
+          "items": [
+            {
+              "id": "fr-k1-j-aime",
+              "fr": "J’aime …",
+              "en": "I like …"
+            },
+            {
+              "id": "fr-k1-je-n-aime-pas",
+              "fr": "Je n’aime pas …",
+              "en": "I don’t like …"
+            },
+            {
+              "id": "fr-k1-les-pizzas",
+              "fr": "les pizzas",
+              "en": "pizza"
+            },
+            {
+              "id": "fr-k1-les-serpents",
+              "fr": "les serpents",
+              "en": "snakes"
+            },
+            {
+              "id": "fr-k1-le-poisson",
+              "fr": "le poisson",
+              "en": "fish"
+            },
+            {
+              "id": "fr-k1-la-musique",
+              "fr": "la musique",
+              "en": "music"
+            },
+            {
+              "id": "fr-k1-la-danse",
+              "fr": "la danse",
+              "en": "dance"
+            },
+            {
+              "id": "fr-k1-le-sport",
+              "fr": "le sport",
+              "en": "sport"
+            },
+            {
+              "id": "fr-k1-les-glaces",
+              "fr": "les glaces",
+              "en": "ice cream"
+            }
+          ]
+        },
+        {
+          "id": "k1-s3",
+          "title": "Traduis en français",
+          "en": "3. Translate into French",
+          "items": [
+            {
+              "id": "fr-k1-j-ai-onze-ans",
+              "fr": "J’ai onze ans.",
+              "en": "I am 11 years old."
+            },
+            {
+              "id": "fr-k1-j-aime-la-musique",
+              "fr": "J’aime la musique.",
+              "en": "I like music."
+            },
+            {
+              "id": "fr-k1-je-n-aime-pas-les-araignees",
+              "fr": "Je n’aime pas les araignées.",
+              "en": "I do not like spiders."
+            },
+            {
+              "id": "fr-k1-je-suis-assez-sympa-mais-pas-timide",
+              "fr": "Je suis assez sympa mais pas timide.",
+              "en": "I am quite friendly but not shy."
+            },
+            {
+              "id": "fr-k1-j-aime-aussi-le-sport",
+              "fr": "J’aime aussi le sport.",
+              "en": "I also like sport."
+            }
+          ]
+        },
+        {
+          "id": "k1-s4",
+          "title": "Traduis en anglais",
+          "en": "4. Translate into English",
+          "items": [
+            {
+              "id": "fr-k1-j-aime-les-pizzas",
+              "fr": "J’aime les pizzas.",
+              "en": "I like pizza."
+            },
+            {
+              "id": "fr-k1-je-n-aime-pas-les-araignees-2",
+              "fr": "Je n’aime pas les araignées.",
+              "en": "I don’t like spiders."
+            },
+            {
+              "id": "fr-k1-je-suis-tres-sympa",
+              "fr": "Je suis très sympa.",
+              "en": "I am very friendly./I am very nice."
+            },
+            {
+              "id": "fr-k1-j-aime-aussi-le-sport-2",
+              "fr": "J’aime aussi le sport.",
+              "en": "I also like sport./I like sport too."
+            }
+          ]
+        },
+        {
+          "id": "k1-s5",
+          "title": "Les adjectifs",
+          "en": "5. Adjectives",
+          "items": [
+            {
+              "id": "fr-k1-timide",
+              "fr": "timide",
+              "en": "shy"
+            },
+            {
+              "id": "fr-k1-fort",
+              "fr": "fort",
+              "en": "strong"
+            },
+            {
+              "id": "fr-k1-bavard",
+              "fr": "bavard",
+              "en": "talkative"
+            },
+            {
+              "id": "fr-k1-amusant",
+              "fr": "amusant",
+              "en": "funny"
+            },
+            {
+              "id": "fr-k1-grand",
+              "fr": "grand",
+              "en": "tall"
+            },
+            {
+              "id": "fr-k1-intelligent",
+              "fr": "intelligent",
+              "en": "intelligent"
+            },
+            {
+              "id": "fr-k1-arrogant",
+              "fr": "arrogant",
+              "en": "arrogant"
+            }
+          ]
+        },
+        {
+          "id": "k1-s6",
+          "title": "Les adverbes",
+          "en": "6. Adverbs",
+          "items": [
+            {
+              "id": "fr-k1-tres",
+              "fr": "très",
+              "en": "very"
+            },
+            {
+              "id": "fr-k1-pas-tres",
+              "fr": "pas très",
+              "en": "not very"
+            },
+            {
+              "id": "fr-k1-assez",
+              "fr": "assez",
+              "en": "quite"
+            },
+            {
+              "id": "fr-k1-un-peu",
+              "fr": "un peu",
+              "en": "a bit",
+              "note": "The sheet says “too = un peu”, but un peu means “a bit”. “Too” is trop."
+            }
+          ]
+        },
+        {
+          "id": "k1-s7",
+          "title": "Écris à ton correspondant",
+          "en": "7. Penfriend checklist",
+          "items": [
+            {
+              "id": "fr-k1-quel-age-as-tu",
+              "fr": "Quel âge as-tu ?",
+              "en": "How old are you?"
+            },
+            {
+              "id": "fr-k1-tu-es-comment",
+              "fr": "Tu es comment ?",
+              "en": "What are you like?"
+            },
+            {
+              "id": "fr-k1-qu-est-ce-que-tu-aimes",
+              "fr": "Qu’est-ce que tu aimes ?",
+              "en": "What do you like?"
+            },
+            {
+              "id": "fr-k1-qu-est-ce-que-tu-n-aimes-pas",
+              "fr": "Qu’est-ce que tu n’aimes pas ?",
+              "en": "What don’t you like?"
+            },
+            {
+              "id": "fr-k1-et",
+              "fr": "et",
+              "en": "and"
+            },
+            {
+              "id": "fr-k1-mais",
+              "fr": "mais",
+              "en": "but"
+            },
+            {
+              "id": "fr-k1-aussi",
+              "fr": "aussi",
+              "en": "also"
+            }
+          ]
+        },
+        {
+          "id": "k1-x1",
+          "title": "Les nombres 1–20",
+          "en": "Numbers for your age",
+          "extra": true,
+          "items": [
+            {
+              "id": "fr-k1-un",
+              "fr": "un",
+              "en": "1"
+            },
+            {
+              "id": "fr-k1-deux",
+              "fr": "deux",
+              "en": "2"
+            },
+            {
+              "id": "fr-k1-trois",
+              "fr": "trois",
+              "en": "3"
+            },
+            {
+              "id": "fr-k1-quatre",
+              "fr": "quatre",
+              "en": "4"
+            },
+            {
+              "id": "fr-k1-cinq",
+              "fr": "cinq",
+              "en": "5"
+            },
+            {
+              "id": "fr-k1-six",
+              "fr": "six",
+              "en": "6"
+            },
+            {
+              "id": "fr-k1-sept",
+              "fr": "sept",
+              "en": "7"
+            },
+            {
+              "id": "fr-k1-huit",
+              "fr": "huit",
+              "en": "8"
+            },
+            {
+              "id": "fr-k1-neuf",
+              "fr": "neuf",
+              "en": "9"
+            },
+            {
+              "id": "fr-k1-dix",
+              "fr": "dix",
+              "en": "10"
+            },
+            {
+              "id": "fr-k1-onze",
+              "fr": "onze",
+              "en": "11"
+            },
+            {
+              "id": "fr-k1-douze",
+              "fr": "douze",
+              "en": "12"
+            },
+            {
+              "id": "fr-k1-treize",
+              "fr": "treize",
+              "en": "13"
+            },
+            {
+              "id": "fr-k1-quatorze",
+              "fr": "quatorze",
+              "en": "14"
+            },
+            {
+              "id": "fr-k1-quinze",
+              "fr": "quinze",
+              "en": "15"
+            },
+            {
+              "id": "fr-k1-seize",
+              "fr": "seize",
+              "en": "16"
+            },
+            {
+              "id": "fr-k1-dix-sept",
+              "fr": "dix-sept",
+              "en": "17"
+            },
+            {
+              "id": "fr-k1-dix-huit",
+              "fr": "dix-huit",
+              "en": "18"
+            },
+            {
+              "id": "fr-k1-dix-neuf",
+              "fr": "dix-neuf",
+              "en": "19"
+            },
+            {
+              "id": "fr-k1-vingt",
+              "fr": "vingt",
+              "en": "20"
+            },
+            {
+              "id": "fr-k1-j-ai-ans",
+              "fr": "J’ai … ans.",
+              "en": "I am … years old."
+            },
+            {
+              "id": "fr-k1-j-ai-douze-ans",
+              "fr": "J’ai douze ans.",
+              "en": "I am 12 years old."
+            }
+          ]
+        },
+        {
+          "id": "k1-x2",
+          "title": "Moi",
+          "en": "About me",
+          "extra": true,
+          "items": [
+            {
+              "id": "fr-k1-salut",
+              "fr": "Salut !",
+              "en": "Hi!"
+            },
+            {
+              "id": "fr-k1-bonjour",
+              "fr": "Bonjour !",
+              "en": "Hello!"
+            },
+            {
+              "id": "fr-k1-je-m-appelle",
+              "fr": "Je m’appelle …",
+              "en": "My name is …"
+            },
+            {
+              "id": "fr-k1-comment-tu-t-appelles",
+              "fr": "Comment tu t’appelles ?",
+              "en": "What’s your name?"
+            },
+            {
+              "id": "fr-k1-je-suis",
+              "fr": "Je suis …",
+              "en": "I am …"
+            },
+            {
+              "id": "fr-k1-je-ne-suis-pas",
+              "fr": "Je ne suis pas …",
+              "en": "I am not …"
+            },
+            {
+              "id": "fr-k1-je-suis-assez-bavard",
+              "fr": "Je suis assez bavard.",
+              "en": "I am quite talkative."
+            },
+            {
+              "id": "fr-k1-je-ne-suis-pas-tres-timide",
+              "fr": "Je ne suis pas très timide.",
+              "en": "I am not very shy."
+            },
+            {
+              "id": "fr-k1-trop",
+              "fr": "trop",
+              "en": "too"
+            },
+            {
+              "id": "fr-k1-sympa",
+              "fr": "sympa",
+              "en": "friendly/nice"
+            },
+            {
+              "id": "fr-k1-a-bientot",
+              "fr": "À bientôt !",
+              "en": "See you soon!"
+            }
+          ]
+        },
+        {
+          "id": "k1-x3",
+          "title": "Elle est …",
+          "en": "Girl forms of the adjectives",
+          "extra": true,
+          "items": [
+            {
+              "id": "fr-k1-timide-2",
+              "fr": "timide",
+              "en": "shy",
+              "context": {
+                "fr": "Elle est …",
+                "en": "She is …"
+              }
+            },
+            {
+              "id": "fr-k1-forte",
+              "fr": "forte",
+              "en": "strong",
+              "context": {
+                "fr": "Elle est …",
+                "en": "She is …"
+              }
+            },
+            {
+              "id": "fr-k1-bavarde",
+              "fr": "bavarde",
+              "en": "talkative",
+              "context": {
+                "fr": "Elle est …",
+                "en": "She is …"
+              }
+            },
+            {
+              "id": "fr-k1-amusante",
+              "fr": "amusante",
+              "en": "funny",
+              "context": {
+                "fr": "Elle est …",
+                "en": "She is …"
+              }
+            },
+            {
+              "id": "fr-k1-grande",
+              "fr": "grande",
+              "en": "tall",
+              "context": {
+                "fr": "Elle est …",
+                "en": "She is …"
+              }
+            },
+            {
+              "id": "fr-k1-intelligente",
+              "fr": "intelligente",
+              "en": "intelligent",
+              "context": {
+                "fr": "Elle est …",
+                "en": "She is …"
+              }
+            },
+            {
+              "id": "fr-k1-arrogante",
+              "fr": "arrogante",
+              "en": "arrogant",
+              "context": {
+                "fr": "Elle est …",
+                "en": "She is …"
+              }
+            },
+            {
+              "id": "fr-k1-sympa-2",
+              "fr": "sympa",
+              "en": "friendly/nice",
+              "context": {
+                "fr": "Elle est …",
+                "en": "She is …"
+              }
+            }
+          ]
+        },
+        {
+          "id": "k1-x4",
+          "title": "J’adore … / Je déteste …",
+          "en": "More likes and dislikes",
+          "extra": true,
+          "items": [
+            {
+              "id": "fr-k1-j-adore",
+              "fr": "J’adore …",
+              "en": "I love …"
+            },
+            {
+              "id": "fr-k1-je-deteste",
+              "fr": "Je déteste …",
+              "en": "I hate …"
+            },
+            {
+              "id": "fr-k1-parce-que",
+              "fr": "parce que",
+              "en": "because"
+            },
+            {
+              "id": "fr-k1-c-est",
+              "fr": "c’est",
+              "en": "it is"
+            },
+            {
+              "id": "fr-k1-genial",
+              "fr": "génial",
+              "en": "great"
+            },
+            {
+              "id": "fr-k1-nul",
+              "fr": "nul",
+              "en": "rubbish"
+            },
+            {
+              "id": "fr-k1-interessant",
+              "fr": "intéressant",
+              "en": "interesting"
+            },
+            {
+              "id": "fr-k1-les-araignees",
+              "fr": "les araignées",
+              "en": "spiders"
+            },
+            {
+              "id": "fr-k1-les-chats",
+              "fr": "les chats",
+              "en": "cats"
+            },
+            {
+              "id": "fr-k1-les-chiens",
+              "fr": "les chiens",
+              "en": "dogs"
+            },
+            {
+              "id": "fr-k1-le-chocolat",
+              "fr": "le chocolat",
+              "en": "chocolate"
+            },
+            {
+              "id": "fr-k1-le-foot",
+              "fr": "le foot",
+              "en": "football"
+            },
+            {
+              "id": "fr-k1-les-jeux-video",
+              "fr": "les jeux vidéo",
+              "en": "video games"
+            },
+            {
+              "id": "fr-k1-la-natation",
+              "fr": "la natation",
+              "en": "swimming"
+            },
+            {
+              "id": "fr-k1-le-dessin",
+              "fr": "le dessin",
+              "en": "drawing"
+            },
+            {
+              "id": "fr-k1-j-adore-le-foot-parce-que-c-est-genial",
+              "fr": "J’adore le foot parce que c’est génial.",
+              "en": "I love football because it is great."
+            },
+            {
+              "id": "fr-k1-je-deteste-les-serpents-mais-j-aime-les-",
+              "fr": "Je déteste les serpents mais j’aime les chats.",
+              "en": "I hate snakes but I like cats."
+            }
+          ]
+        },
+        {
+          "id": "k1-x5",
+          "title": "Dans ma classe",
+          "en": "More classroom words",
+          "extra": true,
+          "items": [
+            {
+              "id": "fr-k1-dans-ma-classe-il-y-a",
+              "fr": "Dans ma classe, il y a …",
+              "en": "In my classroom there is …/In my classroom there are …"
+            },
+            {
+              "id": "fr-k1-une-fenetre",
+              "fr": "une fenêtre",
+              "en": "a window"
+            },
+            {
+              "id": "fr-k1-une-table",
+              "fr": "une table",
+              "en": "a table"
+            },
+            {
+              "id": "fr-k1-un-tableau",
+              "fr": "un tableau",
+              "en": "a board"
+            },
+            {
+              "id": "fr-k1-un-livre",
+              "fr": "un livre",
+              "en": "a book"
+            },
+            {
+              "id": "fr-k1-un-cahier",
+              "fr": "un cahier",
+              "en": "an exercise book"
+            },
+            {
+              "id": "fr-k1-un-stylo",
+              "fr": "un stylo",
+              "en": "a pen"
+            },
+            {
+              "id": "fr-k1-un-crayon",
+              "fr": "un crayon",
+              "en": "a pencil"
+            },
+            {
+              "id": "fr-k1-une-regle",
+              "fr": "une règle",
+              "en": "a ruler"
+            },
+            {
+              "id": "fr-k1-une-gomme",
+              "fr": "une gomme",
+              "en": "a rubber"
+            },
+            {
+              "id": "fr-k1-une-trousse",
+              "fr": "une trousse",
+              "en": "a pencil case"
+            },
+            {
+              "id": "fr-k1-un-sac",
+              "fr": "un sac",
+              "en": "a bag"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
