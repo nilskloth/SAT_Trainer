@@ -289,3 +289,31 @@ export function fillGap(opener, piece) {
   const tail = String(piece ?? "").replace(/^(…|\.\.\.)\s*/, "");
   return `${head} ${tail}`.trim();
 }
+
+/* ---------- verb tables ---------- */
+
+/* The pronoun shown before a form: "je" elides before a vowel (j'ai). */
+export function verbPronoun(persons, verb, i) {
+  return i === 0 && verb.elide ? "j'" : persons[i];
+}
+
+/* Pronoun + form as one phrase: "du bist", "j'ai", "je m'appelle". */
+export function verbPhrase(persons, verb, i) {
+  const p = verbPronoun(persons, verb, i);
+  return p.endsWith("'") ? p + verb.forms[i] : `${p} ${verb.forms[i]}`;
+}
+
+/*
+ * Mark one cell of a verb table. The form alone or with its pronoun
+ * both count; capitals never matter (a form can start a sentence),
+ * accents and umlauts give "nearly".
+ */
+export function checkVerbForm(persons, verb, i, answer, lang) {
+  const phrase = verbPhrase(persons, verb, i);
+  if (checkAnswer(phrase, answer, { lang }).ok) return { ok: true };       // as printed: "sie/Sie sind"
+  const typed = lang === "de" ? String(answer ?? "").toLowerCase() : answer;
+  const alone = checkAnswer(verb.forms[i], typed, { lang });
+  if (alone.ok) return alone;
+  const whole = checkAnswer(phrase, typed, { lang });
+  return whole.ok || (whole.near && !alone.near) ? whole : alone;
+}

@@ -1,0 +1,252 @@
+{
+  "language": "fr",
+  "tense": "le présent",
+  "tenseEn": "present tense",
+  "persons": [
+    "je",
+    "tu",
+    "il/elle/on",
+    "nous",
+    "vous",
+    "ils/elles"
+  ],
+  "personsEn": [
+    "I",
+    "you",
+    "he/she/one",
+    "we",
+    "you (all / polite)",
+    "they"
+  ],
+  "verbs": [
+    {
+      "id": "fr-v-etre",
+      "inf": "être",
+      "en": "to be",
+      "from": "Revision worksheet",
+      "forms": [
+        "suis",
+        "es",
+        "est",
+        "sommes",
+        "êtes",
+        "sont"
+      ],
+      "formsEn": [
+        "I am",
+        "you are",
+        "he/she/it is",
+        "we are",
+        "you (all) are",
+        "they are"
+      ]
+    },
+    {
+      "id": "fr-v-avoir",
+      "inf": "avoir",
+      "en": "to have",
+      "from": "Revision worksheet",
+      "elide": true,
+      "note": "Your age uses avoir: J'ai onze ans = I am eleven.",
+      "forms": [
+        "ai",
+        "as",
+        "a",
+        "avons",
+        "avez",
+        "ont"
+      ],
+      "formsEn": [
+        "I have",
+        "you have",
+        "he/she/it has",
+        "we have",
+        "you (all) have",
+        "they have"
+      ]
+    },
+    {
+      "id": "fr-v-aimer",
+      "inf": "aimer",
+      "en": "to like, to love",
+      "from": "Revision worksheet",
+      "elide": true,
+      "note": "-er verbs: je/il/elle sound the same (aime, aimes, aime, aiment) — only the spelling changes.",
+      "forms": [
+        "aime",
+        "aimes",
+        "aime",
+        "aimons",
+        "aimez",
+        "aiment"
+      ],
+      "formsEn": [
+        "I like",
+        "you like",
+        "he/she/it likes",
+        "we like",
+        "you (all) like",
+        "they like"
+      ]
+    },
+    {
+      "id": "fr-v-adorer",
+      "inf": "adorer",
+      "en": "to love",
+      "extra": true,
+      "elide": true,
+      "forms": [
+        "adore",
+        "adores",
+        "adore",
+        "adorons",
+        "adorez",
+        "adorent"
+      ],
+      "formsEn": [
+        "I love",
+        "you love",
+        "he/she/it loves",
+        "we love",
+        "you (all) love",
+        "they love"
+      ]
+    },
+    {
+      "id": "fr-v-detester",
+      "inf": "détester",
+      "en": "to hate",
+      "extra": true,
+      "forms": [
+        "déteste",
+        "détestes",
+        "déteste",
+        "détestons",
+        "détestez",
+        "détestent"
+      ],
+      "formsEn": [
+        "I hate",
+        "you hate",
+        "he/she/it hates",
+        "we hate",
+        "you (all) hate",
+        "they hate"
+      ]
+    },
+    {
+      "id": "fr-v-jouer",
+      "inf": "jouer",
+      "en": "to play",
+      "extra": true,
+      "forms": [
+        "joue",
+        "joues",
+        "joue",
+        "jouons",
+        "jouez",
+        "jouent"
+      ],
+      "formsEn": [
+        "I play",
+        "you play",
+        "he/she/it plays",
+        "we play",
+        "you (all) play",
+        "they play"
+      ]
+    },
+    {
+      "id": "fr-v-habiter",
+      "inf": "habiter",
+      "en": "to live",
+      "extra": true,
+      "elide": true,
+      "forms": [
+        "habite",
+        "habites",
+        "habite",
+        "habitons",
+        "habitez",
+        "habitent"
+      ],
+      "formsEn": [
+        "I live",
+        "you live",
+        "he/she/it lives",
+        "we live",
+        "you (all) live",
+        "they live"
+      ]
+    },
+    {
+      "id": "fr-v-s-appeler",
+      "inf": "s'appeler",
+      "en": "to be called",
+      "extra": true,
+      "note": "The little word changes with the person: je m'appelle, tu t'appelles. Double l except nous and vous.",
+      "forms": [
+        "m'appelle",
+        "t'appelles",
+        "s'appelle",
+        "nous appelons",
+        "vous appelez",
+        "s'appellent"
+      ],
+      "formsEn": [
+        "my name is",
+        "your name is",
+        "his/her name is",
+        "our names are",
+        "your names are",
+        "their names are"
+      ]
+    },
+    {
+      "id": "fr-v-aller",
+      "inf": "aller",
+      "en": "to go",
+      "extra": true,
+      "note": "Irregular — learn it by heart.",
+      "forms": [
+        "vais",
+        "vas",
+        "va",
+        "allons",
+        "allez",
+        "vont"
+      ],
+      "formsEn": [
+        "I go",
+        "you go",
+        "he/she/it goes",
+        "we go",
+        "you (all) go",
+        "they go"
+      ]
+    },
+    {
+      "id": "fr-v-faire",
+      "inf": "faire",
+      "en": "to do, to make",
+      "extra": true,
+      "note": "Irregular — learn it by heart. vous faites (not faisez).",
+      "forms": [
+        "fais",
+        "fais",
+        "fait",
+        "faisons",
+        "faites",
+        "font"
+      ],
+      "formsEn": [
+        "I do",
+        "you do",
+        "he/she/it does",
+        "we do",
+        "you (all) do",
+        "they do"
+      ]
+    }
+  ]
+}

@@ -3,13 +3,16 @@
      #/secondary                       language cards
      #/secondary/<lang>                vocabulary trainer setup
      #/secondary/<lang>/list/<secId>   word list for one topic
+     #/secondary/<lang>/verbs[/<id>]   verb tables: setup, or one table
    ========================================================= */
 
 import { esc } from "../../core/utils.js";
 import { LANGS, loadBank, isKnown } from "./langs.js";
 import { renderVocab } from "./vocab.js";
+import { renderVerbs } from "./verbs.js";
 
 export function renderSecondary(el, params = []) {
+  if (params[0] && LANGS[params[0]] && params[1] === "verbs") return renderVerbs(el, params[0], params.slice(2));
   if (params[0] && LANGS[params[0]]) return renderVocab(el, params[0], params.slice(1));
   renderHub(el);
 }

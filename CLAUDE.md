@@ -54,6 +54,7 @@ js/views/
   secondary/home.js     # languages hub + routes #/secondary/<lang>[/list/<sectionId>]
   secondary/langs.js    # language registry (voice, special keys, available flag), bank loader
   secondary/vocab.js    # vocab trainer: setup, word lists, practise + test runs
+  secondary/verbs.js    # verb tables: setup, look at a table, fill-the-table / one-at-a-time runs
   home.js               # greeting, Today's practice, full-paper cards
   paper.js              # paper runner: cover → timed paper → marking → results (+ domain labels)
   practice.js           # practice hub + generic set runner, topics, domains, prefixes, Today
@@ -66,6 +67,7 @@ js/gen/
   generate.js           # runtime reading-test generation via proxy
 data/content/           # reading.json gps.json maths.json spelling.json papers.json manifest.json
 data/content/secondary/ # de.json (tools/import-vocab.mjs), fr.json (hand-written)
+  verbs/                # de.json fr.json — present-tense verb tables (hand-written)
 data/uploads/           # SERVER-ONLY, written by the proxy: <lang>.json uploaded chapters (gitignored, never deployed)
 api/                    # proxy.php prompts.php ratelimit.php vocab.php .htaccess state/ (config.php server-only)
 tools/                  # validate2.mjs, test-marking.mjs, test-vocab.mjs, import-vocab.mjs,
@@ -159,6 +161,16 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   change (Elle est … grande). French marking: capitals don't count, accents give "Nearly!";
   a wrong or missing article (le/la/les/un/une/des…) gives "Nearly!" + tip. Further French
   sheets: add as chapter 2, 3… (or upload via Word lists), keep `extra` for anything not printed.
+
+- **Verb tables (`verbs/<lang>.json`, `views/secondary/verbs.js`, `#/secondary/<lang>/verbs[/<id>]`):**
+  present tense, linked from the top of the vocab setup. `{ language, tense, tenseEn, persons[6],
+  personsEn[6], verbs: [{ id, inf, en, from? | extra?, elide? (je → j'), note?, forms[6], formsEn[6] }] }`.
+  German: verbs used on the Kapitel 1–5 sheets (`from` names the chapter); French: être, avoir,
+  aimer from the worksheet, the rest `extra`. Forms with the reflexive pronoun are stored whole
+  ("m'appelle", "nous appelons"). Formats: fill the whole table, or one person at a time; adaptive
+  per `"<verbId>|<0–5>"` in `store.vocab[lang].verbs`; runs recorded as mode `verbs`, domain
+  "Verbs". Marking `checkVerbForm` (vocab-match.js): the form alone or with its pronoun, capitals
+  never count, accents/umlauts "Nearly!". Tested in `tools/test-vocab.mjs` (every form, both ways).
 
 ---
 

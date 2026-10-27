@@ -344,6 +344,19 @@ button.hear { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-3); line-hei
   .setup-card .seg-opt span { text-align: center; border-bottom: 1px solid var(--line); margin-bottom: -1px; }
 }
 
+/* Verb tables */
+.verb-link { display: flex; flex-direction: column; gap: var(--sp-1); margin-bottom: var(--sp-4); text-decoration: none; color: inherit; border-left: 4px solid var(--subject, var(--accent)); }
+.verb-link:hover strong { color: var(--accent); }
+.verb-table { width: 100%; max-width: 28rem; margin: var(--sp-3) auto 0; border-collapse: collapse; text-align: left; }
+.verb-table td { padding: var(--sp-1) var(--sp-2); border-bottom: 1px solid var(--line-soft); vertical-align: middle; }
+.verb-table td.pronoun { font-family: var(--font-paper); font-size: var(--fs-2); color: var(--ink-muted); white-space: nowrap; text-align: right; width: 1%; }
+.verb-table input { width: 100%; min-width: 0; }
+.verb-table tr.is-correct input { border-color: var(--correct); color: var(--correct); }
+.verb-table tr.is-partial input { border-color: var(--partial); }
+.verb-table tr.is-wrong input { border-color: var(--wrong); text-decoration: line-through; }
+.verb-table .fix { font-family: var(--font-paper); font-weight: 700; white-space: nowrap; }
+.verb-table .fix-tip { font-size: var(--fs-0); }
+
 /* Opener shown with an entry ("Ich habe …" einen iPod) */
 .vocab-opener { color: var(--ink-muted); font-weight: 400; }
 .vocab-input { display: flex; align-items: baseline; gap: var(--sp-2); }

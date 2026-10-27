@@ -1,0 +1,427 @@
+{
+  "language": "de",
+  "tense": "Präsens",
+  "tenseEn": "present tense",
+  "persons": [
+    "ich",
+    "du",
+    "er/sie/es",
+    "wir",
+    "ihr",
+    "sie/Sie"
+  ],
+  "personsEn": [
+    "I",
+    "you",
+    "he/she/it",
+    "we",
+    "you (all)",
+    "they / you (polite)"
+  ],
+  "verbs": [
+    {
+      "id": "de-v-sein",
+      "inf": "sein",
+      "en": "to be",
+      "from": "Kapitel 1",
+      "forms": [
+        "bin",
+        "bist",
+        "ist",
+        "sind",
+        "seid",
+        "sind"
+      ],
+      "formsEn": [
+        "I am",
+        "you are",
+        "he/she/it is",
+        "we are",
+        "you (all) are",
+        "they are"
+      ]
+    },
+    {
+      "id": "de-v-haben",
+      "inf": "haben",
+      "en": "to have",
+      "from": "Kapitel 1",
+      "forms": [
+        "habe",
+        "hast",
+        "hat",
+        "haben",
+        "habt",
+        "haben"
+      ],
+      "formsEn": [
+        "I have",
+        "you have",
+        "he/she/it has",
+        "we have",
+        "you (all) have",
+        "they have"
+      ]
+    },
+    {
+      "id": "de-v-heissen",
+      "inf": "heißen",
+      "en": "to be called",
+      "from": "Kapitel 1",
+      "forms": [
+        "heiße",
+        "heißt",
+        "heißt",
+        "heißen",
+        "heißt",
+        "heißen"
+      ],
+      "formsEn": [
+        "my name is",
+        "your name is",
+        "his/her name is",
+        "our names are",
+        "your names are",
+        "their names are"
+      ]
+    },
+    {
+      "id": "de-v-wohnen",
+      "inf": "wohnen",
+      "en": "to live",
+      "from": "Kapitel 1",
+      "forms": [
+        "wohne",
+        "wohnst",
+        "wohnt",
+        "wohnen",
+        "wohnt",
+        "wohnen"
+      ],
+      "formsEn": [
+        "I live",
+        "you live",
+        "he/she/it lives",
+        "we live",
+        "you (all) live",
+        "they live"
+      ]
+    },
+    {
+      "id": "de-v-spielen",
+      "inf": "spielen",
+      "en": "to play",
+      "from": "Kapitel 3",
+      "forms": [
+        "spiele",
+        "spielst",
+        "spielt",
+        "spielen",
+        "spielt",
+        "spielen"
+      ],
+      "formsEn": [
+        "I play",
+        "you play",
+        "he/she/it plays",
+        "we play",
+        "you (all) play",
+        "they play"
+      ]
+    },
+    {
+      "id": "de-v-machen",
+      "inf": "machen",
+      "en": "to do, to make",
+      "from": "Kapitel 3",
+      "forms": [
+        "mache",
+        "machst",
+        "macht",
+        "machen",
+        "macht",
+        "machen"
+      ],
+      "formsEn": [
+        "I do",
+        "you do",
+        "he/she/it does",
+        "we do",
+        "you (all) do",
+        "they do"
+      ]
+    },
+    {
+      "id": "de-v-finden",
+      "inf": "finden",
+      "en": "to find, to think of",
+      "from": "Kapitel 3",
+      "forms": [
+        "finde",
+        "findest",
+        "findet",
+        "finden",
+        "findet",
+        "finden"
+      ],
+      "formsEn": [
+        "I find",
+        "you find",
+        "he/she/it finds",
+        "we find",
+        "you (all) find",
+        "they find"
+      ]
+    },
+    {
+      "id": "de-v-gehen",
+      "inf": "gehen",
+      "en": "to go",
+      "from": "Kapitel 3",
+      "forms": [
+        "gehe",
+        "gehst",
+        "geht",
+        "gehen",
+        "geht",
+        "gehen"
+      ],
+      "formsEn": [
+        "I go",
+        "you go",
+        "he/she/it goes",
+        "we go",
+        "you (all) go",
+        "they go"
+      ]
+    },
+    {
+      "id": "de-v-horen",
+      "inf": "hören",
+      "en": "to listen to, to hear",
+      "from": "Kapitel 3",
+      "forms": [
+        "höre",
+        "hörst",
+        "hört",
+        "hören",
+        "hört",
+        "hören"
+      ],
+      "formsEn": [
+        "I listen",
+        "you listen",
+        "he/she/it listens",
+        "we listen",
+        "you (all) listen",
+        "they listen"
+      ]
+    },
+    {
+      "id": "de-v-fahren",
+      "inf": "fahren",
+      "en": "to go (by vehicle), to ride",
+      "from": "Kapitel 3",
+      "note": "du and er/sie/es add an umlaut: du fährst, er fährt.",
+      "forms": [
+        "fahre",
+        "fährst",
+        "fährt",
+        "fahren",
+        "fahrt",
+        "fahren"
+      ],
+      "formsEn": [
+        "I ride",
+        "you ride",
+        "he/she/it rides",
+        "we ride",
+        "you (all) ride",
+        "they ride"
+      ]
+    },
+    {
+      "id": "de-v-lesen",
+      "inf": "lesen",
+      "en": "to read",
+      "from": "Kapitel 3",
+      "note": "du and er/sie/es change e → ie: du liest, sie liest.",
+      "forms": [
+        "lese",
+        "liest",
+        "liest",
+        "lesen",
+        "lest",
+        "lesen"
+      ],
+      "formsEn": [
+        "I read",
+        "you read",
+        "he/she/it reads",
+        "we read",
+        "you (all) read",
+        "they read"
+      ]
+    },
+    {
+      "id": "de-v-sehen",
+      "inf": "sehen",
+      "en": "to see, to watch",
+      "from": "Kapitel 3",
+      "note": "du and er/sie/es change e → ie: du siehst, er sieht.",
+      "forms": [
+        "sehe",
+        "siehst",
+        "sieht",
+        "sehen",
+        "seht",
+        "sehen"
+      ],
+      "formsEn": [
+        "I see",
+        "you see",
+        "he/she/it sees",
+        "we see",
+        "you (all) see",
+        "they see"
+      ]
+    },
+    {
+      "id": "de-v-essen",
+      "inf": "essen",
+      "en": "to eat",
+      "from": "Kapitel 3",
+      "note": "du and er/sie/es change e → i: du isst, er isst.",
+      "forms": [
+        "esse",
+        "isst",
+        "isst",
+        "essen",
+        "esst",
+        "essen"
+      ],
+      "formsEn": [
+        "I eat",
+        "you eat",
+        "he/she/it eats",
+        "we eat",
+        "you (all) eat",
+        "they eat"
+      ]
+    },
+    {
+      "id": "de-v-trinken",
+      "inf": "trinken",
+      "en": "to drink",
+      "from": "Kapitel 5",
+      "forms": [
+        "trinke",
+        "trinkst",
+        "trinkt",
+        "trinken",
+        "trinkt",
+        "trinken"
+      ],
+      "formsEn": [
+        "I drink",
+        "you drink",
+        "he/she/it drinks",
+        "we drink",
+        "you (all) drink",
+        "they drink"
+      ]
+    },
+    {
+      "id": "de-v-mogen",
+      "inf": "mögen",
+      "en": "to like",
+      "from": "Kapitel 4",
+      "note": "ich and er/sie/es are the same: ich mag, er mag.",
+      "forms": [
+        "mag",
+        "magst",
+        "mag",
+        "mögen",
+        "mögt",
+        "mögen"
+      ],
+      "formsEn": [
+        "I like",
+        "you like",
+        "he/she/it likes",
+        "we like",
+        "you (all) like",
+        "they like"
+      ]
+    },
+    {
+      "id": "de-v-konnen",
+      "inf": "können",
+      "en": "can, to be able to",
+      "from": "Kapitel 2",
+      "note": "ich and er/sie/es are the same, and the other verb goes to the end: Er kann schwimmen.",
+      "forms": [
+        "kann",
+        "kannst",
+        "kann",
+        "können",
+        "könnt",
+        "können"
+      ],
+      "formsEn": [
+        "I can",
+        "you can",
+        "he/she/it can",
+        "we can",
+        "you (all) can",
+        "they can"
+      ]
+    },
+    {
+      "id": "de-v-mochten",
+      "inf": "möchten",
+      "en": "would like",
+      "from": "Kapitel 5",
+      "note": "ich and er/sie/es are the same: ich möchte, sie möchte.",
+      "forms": [
+        "möchte",
+        "möchtest",
+        "möchte",
+        "möchten",
+        "möchtet",
+        "möchten"
+      ],
+      "formsEn": [
+        "I would like",
+        "you would like",
+        "he/she/it would like",
+        "we would like",
+        "you (all) would like",
+        "they would like"
+      ]
+    },
+    {
+      "id": "de-v-werden",
+      "inf": "werden",
+      "en": "will (future)",
+      "from": "Kapitel 5",
+      "note": "For the future: Ich werde wandern. The other verb goes to the end.",
+      "forms": [
+        "werde",
+        "wirst",
+        "wird",
+        "werden",
+        "werdet",
+        "werden"
+      ],
+      "formsEn": [
+        "I will",
+        "you will",
+        "he/she/it will",
+        "we will",
+        "you (all) will",
+        "they will"
+      ]
+    }
+  ]
+}

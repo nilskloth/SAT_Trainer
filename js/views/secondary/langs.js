@@ -50,6 +50,16 @@ async function fetchBank(code) {
   return { language: code, label: LANGS[code].label, chapters };
 }
 
+/* Present-tense verb tables (data/content/secondary/verbs/<code>.json), or null. */
+const verbBanks = {};
+export async function loadVerbs(code) {
+  if (!(code in verbBanks)) {
+    verbBanks[code] = fetchJson(`data/content/secondary/verbs/${code}.json`)
+      .catch(err => { delete verbBanks[code]; throw err; });
+  }
+  return verbBanks[code];
+}
+
 /* After publishing or removing an upload. */
 export function forgetBank(code) {
   delete banks[code];
@@ -64,10 +74,11 @@ export async function availableLangs() {
   return out;
 }
 
-/* Per-language progress: { stats: { "<itemId>|<dir>": adaptive stat }, prefs: {…} } */
+/* Per-language progress: { stats: { "<itemId>|<dir>": adaptive stat }, verbs: {…}, prefs: {…} } */
 export function vocabState(code) {
   const v = getStore().vocab;
   if (!v[code]) v[code] = { stats: {}, prefs: {} };
+  if (!v[code].verbs) v[code].verbs = {};          // "<verbId>|<person 0–5>": adaptive stat
   return v[code];
 }
 

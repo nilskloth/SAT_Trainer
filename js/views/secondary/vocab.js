@@ -22,9 +22,9 @@
 import { saveStore, recordAttempt } from "../../core/store.js";
 import { esc, pickN, shuffle } from "../../core/utils.js";
 import { newStat, weightedPick, applyResult } from "../../core/adaptive.js";
-import { checkAnswer, speakable, listenable, fillGap, articleSlip, missingArticle } from "../../core/vocab-match.js";
+import { checkAnswer, speakable, listenable, fillGap, articleSlip, missingArticle, verbPhrase } from "../../core/vocab-match.js";
 import { canSpeak, speak } from "../../core/speech.js";
-import { LANGS, loadBank, vocabState, isKnown } from "./langs.js";
+import { LANGS, loadBank, loadVerbs, vocabState, isKnown } from "./langs.js";
 
 const TEST_LENGTHS = [10, 20, 30];
 
@@ -50,7 +50,8 @@ export async function renderVocab(el, code, params = []) {
       <p class="muted">${esc(err.message)}</p></div>`;
     return;
   }
-  const ctx = { el, lang, bank, code };
+  const verbs = await loadVerbs(code).catch(() => null);
+  const ctx = { el, lang, bank, code, verbs };
   if (params[0] === "list" && params[1]) return renderList(ctx, params[1]);
   renderSetup(ctx);
 }
@@ -70,7 +71,7 @@ function speakTarget(lang, text, opts) {
 /* "Ich habe …" → "Ich habe", for the start of an answer line. */
 const openerLead = text => fillGap(text, "");
 
-const hearBtn = (label = "🔊") =>
+export const hearBtn = (label = "🔊") =>
   canSpeak() ? `<button type="button" class="quiet hear" data-hear aria-label="Hear it">${label}</button>` : "";
 
 /* The chapter's learning strategy (from the sheet's "Strategie" box). */
@@ -130,7 +131,7 @@ function renderList({ el, lang, bank, code }, sectionId) {
 ========================= */
 
 function renderSetup(ctx) {
-  const { el, lang, bank, code } = ctx;
+  const { el, lang, bank, code, verbs } = ctx;
   const state = vocabState(code);
   const prefs = state.prefs;
   const sections = allSections(bank);
@@ -142,6 +143,11 @@ function renderSetup(ctx) {
 
   el.innerHTML = `<div data-setup>
     <div class="run-bar"><h2>${esc(lang.label)} vocabulary</h2></div>
+    ${verbs ? `
+    <a class="card verb-link" href="#/secondary/${code}/verbs">
+      <strong>Verb tables →</strong>
+      <span class="muted">${verbs.verbs.length} verbs in the ${esc(verbs.tenseEn)} — <span lang="${code}">${esc(verbPhrase(verbs.persons, verbs.verbs[0], 0))}, ${esc(verbPhrase(verbs.persons, verbs.verbs[0], 1))} …</span></span>
+    </a>` : ""}
 
     <div class="card setup-card">
       <h3>1. Choose your words</h3>
@@ -320,7 +326,7 @@ function renderSetup(ctx) {
   refresh();
 }
 
-function seg(name, value, label, current) {
+export function seg(name, value, label, current) {
   return `<label class="seg-opt"><input type="radio" name="${name}" value="${value}"${current === value ? " checked" : ""}><span>${esc(label)}</span></label>`;
 }
 

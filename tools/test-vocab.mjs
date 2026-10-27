@@ -9,7 +9,7 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { checkAnswer, speakable, fillGap, articleSlip, missingArticle } from "../js/core/vocab-match.js";
+import { checkAnswer, speakable, fillGap, articleSlip, missingArticle, checkVerbForm, verbPhrase } from "../js/core/vocab-match.js";
 
 const DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "data", "content", "secondary");
 let pass = 0, fail = 0;
@@ -29,6 +29,41 @@ for (const f of readdirSync(DIR).filter(f => f.endsWith(".json"))) {
       ok(checkAnswer(fullEn, fullEn, { lang: "en" }).ok, `${f} en full sentence: ${fullEn}`);
     }
   }
+}
+
+/* 1b. Verb tables: every form, alone and with its pronoun */
+const VERB_DIR = join(DIR, "verbs");
+const verbBanks = {};
+for (const f of readdirSync(VERB_DIR).filter(f => f.endsWith(".json"))) {
+  const vb = JSON.parse(readFileSync(join(VERB_DIR, f), "utf8"));
+  verbBanks[vb.language] = vb;
+  const ids = new Set();
+  for (const v of vb.verbs) {
+    ok(!ids.has(v.id) && v.forms.length === 6 && v.formsEn.length === 6, `verbs/${f} ${v.inf}: id and 6 forms`);
+    ids.add(v.id);
+    v.forms.forEach((form, i) => {
+      ok(checkVerbForm(vb.persons, v, i, form, vb.language).ok, `verbs/${f} ${v.inf} form ${i}: ${form}`);
+      const phrase = verbPhrase(vb.persons, v, i);
+      ok(checkVerbForm(vb.persons, v, i, phrase, vb.language).ok, `verbs/${f} ${v.inf} phrase: ${phrase}`);
+    });
+  }
+}
+{
+  const verb = id => Object.values(verbBanks).flatMap(b => b.verbs).find(v => v.id === id);
+  const vc = (lang, id, i, ans) => checkVerbForm(verbBanks[lang].persons, verb(id), i, ans, lang);
+  ok(vc("de", "de-v-sein", 0, "Bin").ok, "German form with a capital");
+  ok(vc("de", "de-v-sein", 2, "sie ist").ok, "er/sie/es: sie ist");
+  ok(vc("de", "de-v-sein", 5, "Sie sind").ok, "polite Sie sind");
+  ok(vc("de", "de-v-fahren", 1, "fahrst").near === "accents", "fahrst → check umlaut");
+  ok(vc("de", "de-v-fahren", 2, "faehrt").ok, "faehrt accepted");
+  ok(!vc("de", "de-v-sein", 1, "bin").ok, "wrong person");
+  ok(vc("fr", "fr-v-avoir", 0, "j'ai").ok, "j'ai");
+  ok(vc("fr", "fr-v-avoir", 0, "ai").ok, "ai alone");
+  ok(!vc("fr", "fr-v-avoir", 0, "je ai").ok, "je ai is wrong");
+  ok(vc("fr", "fr-v-etre", 4, "etes").near === "accents", "etes → check accents");
+  ok(vc("fr", "fr-v-s-appeler", 0, "je m'appelle").ok, "je m'appelle");
+  ok(vc("fr", "fr-v-s-appeler", 3, "nous nous appelons").ok, "nous nous appelons");
+  ok(!vc("fr", "fr-v-aimer", 5, "aime").ok, "ils aime is wrong");
 }
 
 /* 2. Rules */
