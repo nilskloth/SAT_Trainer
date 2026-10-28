@@ -7,7 +7,8 @@ remembered in `settings.level`, switchable from the header):
 - **Secondary** — languages: vocabulary trainer for German and French
 
 Child-first, calm, paper-like design: the child drives sessions on their own; a parent checks
-progress afterwards in "Grown-ups" (shared by both levels).
+progress afterwards in "Grown-ups" (shared by both levels), including Grown-ups → Activity: how long,
+when and on what the site is used, from every device (usage monitor, below).
 Live at **https://6oclock.net/sats-trainer/**.
 
 v2 is a full rebuild (plan and SATs standards: `docs/REBUILD_PLAN.md`). v1 is archived as git
@@ -61,7 +62,8 @@ js/views/
   practice.js           # practice hub + generic set runner, topics, domains, prefixes, Today
   spelling.js           # adaptive spelling trainer (v1 engine)
   division.js           # short-division walkthrough
-  progress.js           # Grown-ups: mastery, timeline, AI usage + failed sign-ins, settings, generation
+  progress.js           # Grown-ups: Activity link, mastery, timeline, AI usage + failed sign-ins, settings,
+                        # generation, export (never includes the shared key)
   wordlists.js          # Grown-ups → Word lists (#/grown-ups/word-lists): upload, check, publish
   activity.js           # Grown-ups → Activity (#/grown-ups/activity): usage dashboard, all devices
 js/gen/
@@ -248,7 +250,8 @@ SFTP to Strato (`5186167.ssh.w1.strato.hosting`, user `stu698771234`, remote roo
 contains `sats-trainer/`). Upload changed files with `lftp` (`put local -o sats-trainer/…`).
 Run `tools/deploy.sh <remote-dir>` (lftp, password from `~/.netrc`). Deploy set:
 `index.html css/{theme,app,paper}.css js/{core,render,views,gen}/ data/content/
-api/{proxy,prompts,ratelimit,vocab}.php api/.htaccess api/state/.htaccess` + local `api/config.php`
-— never `tools/`, `docs/`, `_res/`, and never touch the server's `data/uploads/`.
+api/{proxy,prompts,ratelimit,vocab,activity,track}.php api/.htaccess api/state/.htaccess` + local `api/config.php`
+— never `tools/`, `docs/`, `_res/`, and never touch the server's `data/uploads/` or `api/state/`
+(activity logs, AI usage, security log, upload backups live there).
 
 **Change the SFTP password after each session where it was shared in chat.**
