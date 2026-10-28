@@ -10,6 +10,7 @@ import { getStore, saveStore } from "../core/store.js";
 import { esc, normaliseText } from "../core/utils.js";
 import { speakWord } from "../core/speech.js";
 import { newStat, weightedPick, applyResult } from "../core/adaptive.js";
+import { noteAnswer } from "../core/activity.js";
 
 /* --- per-word stats (v1 shape, keyed by word) --- */
 
@@ -112,6 +113,7 @@ export function renderSpelling(el) {
     if (!cur || !input.value.trim()) return;
     const ok = normaliseText(input.value) === normaliseText(cur.item.word);
     recordResult(cur.stat, ok);
+    noteAnswer("spelling", ok);
     session.score.total++;
     if (ok) session.score.right++;
     scoreEl.textContent = `${session.score.right} / ${session.score.total} this session`;

@@ -5,6 +5,8 @@
    site keeps working until switchover.
    ========================================================= */
 
+import { noteAttempt } from "./activity.js";
+
 const KEY = "ks2_sats_v2";
 const V1_KEY = "ks2_sats_runner_v1";
 
@@ -121,5 +123,6 @@ export function recordAttempt({ mode, paperId, seconds, items }) {
   });
 
   saveStore();
+  noteAttempt(attempt);
   return attempt;
 }

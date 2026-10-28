@@ -10,6 +10,7 @@ import { generateReadingTest } from "../gen/generate.js";
 import { esc } from "../core/utils.js";
 import { domainLabel } from "./paper.js";
 import { renderWordLists } from "./wordlists.js";
+import { renderActivity } from "./activity.js";
 
 const SUBJECT_LABELS = { reading: "Reading", gps: "Grammar & punctuation", maths: "Maths", spelling: "Spelling",
   german: "German vocabulary", french: "French vocabulary" };
@@ -40,6 +41,7 @@ function securityHtml(sec, uploads) {
 
 export function renderProgress(el, params = []) {
   if (params[0] === "word-lists") return renderWordLists(el);
+  if (params[0] === "activity") return renderActivity(el);
   const store = getStore();
   const stats = store.domainStats;
 
@@ -77,6 +79,11 @@ export function renderProgress(el, params = []) {
   }).join(" · ") || `<span class="muted">No papers completed yet.</span>`;
 
   el.innerHTML = `
+    <a class="card verb-link" href="#/grown-ups/activity">
+      <strong>Activity →</strong>
+      <span class="muted">How long and how often the trainer is used, on what, and how well — from all devices.</span>
+    </a>
+
     <div class="card" style="margin-bottom:var(--sp-4);">
       <h2 style="margin-top:0;">Run-up to the SATs</h2>
       <p><strong>${weeks} weeks</strong> until ${examDate.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}.
@@ -184,7 +191,9 @@ export function renderProgress(el, params = []) {
   });
 
   el.querySelector("[data-export]").addEventListener("click", () => {
-    const blob = new Blob([JSON.stringify(getStore(), null, 2)], { type: "application/json" });
+    /* never the shared key — the file may be passed on */
+    const data = { ...getStore(), settings: { ...getStore().settings, proxyToken: "" } };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
     a.download = `sats-progress-${new Date().toISOString().slice(0, 10)}.json`;

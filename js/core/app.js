@@ -6,6 +6,7 @@
    ========================================================= */
 
 import { initStore, getStore, setLevel } from "./store.js";
+import { startActivity } from "./activity.js";
 import { loadContent } from "./loader.js";
 import { renderHome } from "../views/home.js";
 import { renderPractice } from "../views/practice.js";
@@ -115,6 +116,7 @@ function route() {
   const view = document.getElementById("view");
   try {
     initStore();
+    startActivity();
     view.innerHTML = `<div class="card"><p class="muted">Getting your questions ready…</p></div>`;
     await loadContent();
     window.addEventListener("hashchange", route);
