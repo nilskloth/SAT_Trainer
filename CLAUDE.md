@@ -71,7 +71,7 @@ data/content/           # reading.json gps.json maths.json spelling.json papers.
 data/content/secondary/ # de.json (tools/import-vocab.mjs), fr.json (hand-written)
   verbs/                # de.json fr.json — present-tense verb tables (hand-written)
 data/uploads/           # SERVER-ONLY, written by the proxy: <lang>.json uploaded chapters (gitignored, never deployed)
-api/                    # proxy.php prompts.php ratelimit.php vocab.php activity.php .htaccess state/ (config.php server-only)
+api/                    # proxy.php prompts.php ratelimit.php vocab.php activity.php track.php .htaccess state/ (config.php server-only)
 tools/                  # validate2.mjs, test-marking.mjs, test-vocab.mjs, import-vocab.mjs,
                         # deploy.sh, lib/schema-v2.mjs (+ legacy v1 tools)
 docs/REBUILD_PLAN.md    # v2 decisions, SATs standards, schema, phases
@@ -227,13 +227,15 @@ Most trainers are "filter bank → render → mark" via the generic `runSet()`.
   **active** = learning time (visible and touched/typed/scrolled in the last 90 s), the last per screen, mapped by `activityFor(hash)` to an area (reading, gps, maths,
   spelling, german, french, menus) + label. Start screen and Grown-ups don't count; a 15-min gap starts a
   new session. `recordAttempt()` calls `noteAttempt()` (answer tally + a named result); the spelling
-  trainer calls `noteAnswer()`. Records queue in localStorage `ks2_activity` and go to proxy op
-  `activity-log` (shared token) about once a minute and when the page is hidden; nothing typed is sent.
-- Server `api/activity.php`: `state/activity/<YYYY-MM>.jsonl`, append-only, newest line per id wins;
-  `activity-report` needs the upload password. All children count as one learner (no profiles yet).
+  trainer calls `noteAnswer()`. Records queue in localStorage `ks2_activity` and go to `api/track.php`
+  (op `log`, **no key** — every device counts without setup) about once a minute and when the page is
+  hidden; nothing typed is sent. Guards: same-site Origin, 64 KB bodies, 300 posts/hour per address
+  (hashed, `state/track-rate.json`), strict record checks, 20 MB per month. Op `report` needs the upload
+  password (same lockout/alerts as uploads).
+- Storage `api/activity.php`: `state/activity/<YYYY-MM>.jsonl`, append-only, newest line per id wins.
+  All children count as one learner (no profiles yet).
   The dashboard downloads sessions as CSV (one row per session) or everything as JSON (last 400 days);
   for deeper analysis, download `state/activity/*.jsonl` over SFTP.
-- Every device the children use needs the shared key saved in Grown-ups → AI marking, or it only queues.
 - When adding a route or trainer: extend `activityFor()`; new subjects need an `AREAS` entry (fixed
   colour order, `--viz-N` in app.css — validated dataviz palette, not the subject colours).
 

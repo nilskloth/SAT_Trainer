@@ -12,12 +12,10 @@
              in the last 90 s
    A gap of 15 min starts a new session. Grown-ups and the start
    screen don't count.
-   Records wait in localStorage (ks2_activity) until the shared
-   key is set and the server answers; a session is re-sent as it
-   grows (the server keeps the newest copy).
+   Records wait in localStorage (ks2_activity) until the server
+   (api/track.php, no key needed) answers; a session is re-sent
+   as it grows (the server keeps the newest copy).
    ========================================================= */
-
-import { getStore } from "./store.js";
 
 const KEY = "ks2_activity";
 const TICK_MS = 5000;
@@ -25,7 +23,7 @@ const IDLE_MS = 90 * 1000;
 const SESSION_GAP_MS = 15 * 60 * 1000;
 const SEND_EVERY_MS = 60 * 1000;
 const MAX_OUTBOX = 2000;
-const PROXY_URL = "api/proxy.php";
+const TRACK_URL = "api/track.php";
 
 /* Areas, in the fixed order the dashboard colours them. */
 export const AREAS = {
@@ -145,17 +143,16 @@ function tick() {
 
 /* Post the outbox; on success drop what was sent (unless it changed since). */
 async function send({ leaving = false } = {}) {
-  const token = getStore()?.settings?.proxyToken;
   const records = Object.values(state.outbox).slice(0, 200);
-  if (!token || !records.length || (sending && !leaving)) return;
+  if (!records.length || (sending && !leaving)) return;
   sending = true;
   lastSent = Date.now();
   const sent = JSON.stringify(records);
   try {
-    const res = await fetch(PROXY_URL, {
+    const res = await fetch(TRACK_URL, {
       method: "POST", keepalive: leaving,
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ token, op: "activity-log", payload: { records } })
+      body: JSON.stringify({ op: "log", records })
     });
     const body = await res.json();
     if (body.ok) {

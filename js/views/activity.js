@@ -1,14 +1,12 @@
 /* =========================================================
    Grown-ups → Activity (#/grown-ups/activity): how much the
    trainer is used, when, on what, and how well — from every
-   device that has the shared key (records sent by
-   core/activity.js, read back with op activity-report, which
-   also needs the upload password). All children's use counts
-   as one learner for now.
+   device (records sent by core/activity.js to api/track.php,
+   read back there with the upload password). All children's
+   use counts as one learner for now.
    ========================================================= */
 
 import { getStore, saveStore } from "../core/store.js";
-import { proxyCall } from "../core/ai.js";
 import { esc } from "../core/utils.js";
 import { AREAS, pendingCount } from "../core/activity.js";
 
@@ -20,9 +18,26 @@ let password = "";                                 // this visit only
 
 const ERRORS = {
   bad_password: "That password isn't right.",
-  no_password: "No upload password is set on the server yet — run php tools/set-upload-password.php, then deploy.",
-  unauthorized: "The shared key on this device wasn't accepted — check it in Grown-ups → AI marking."
+  no_password: "No upload password is set on the server yet — run php tools/set-upload-password.php, then deploy."
 };
+
+/* The report, from api/track.php; throws {code, message} like the proxy client. */
+async function fetchReport(password, days, timeoutMs = 15000) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    const res = await fetch("api/track.php", {
+      method: "POST", signal: ctrl.signal,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ op: "report", password, days })
+    });
+    const body = await res.json().catch(() => ({ ok: false, error: { message: `The server answered HTTP ${res.status}` } }));
+    if (!body.ok) throw Object.assign(new Error(body.error?.message || "Something went wrong."), { code: body.error?.code });
+    return body.data;
+  } finally {
+    clearTimeout(timer);
+  }
+}
 const errText = err => ERRORS[err.code] || err.message || "Something went wrong.";
 
 /* 75 → "1 min", 3900 → "1 h 05 min" */
@@ -39,7 +54,6 @@ const timeLabel = ts => new Date(ts).toLocaleTimeString("en-GB", { hour: "2-digi
 
 export function renderActivity(el) {
   const store = getStore();
-  const hasToken = !!store.settings.proxyToken;
   const pending = pendingCount();
   el.innerHTML = `
     <div class="run-bar">
@@ -47,19 +61,16 @@ export function renderActivity(el) {
       <a class="btn quiet" href="#/grown-ups">Back</a>
     </div>
     <div class="card" data-locked>
-      <p style="margin-top:0;">How long and how often the trainer is used, on what, and how well — from every device that has the shared key.</p>
-      ${hasToken ? `
-        <p class="wl-row">
-          <input type="password" data-password placeholder="Upload password" autocomplete="current-password" class="wl-input" style="width:min(280px,60vw);">
-          <button class="primary" data-unlock>Show activity</button>
-        </p>
-        <p class="muted" data-status style="margin-bottom:0;"></p>`
-      : `<p class="muted" style="margin-bottom:0;">First save the shared key in <a href="#/grown-ups">Grown-ups → AI marking</a> — on this device and on each device the children use.</p>`}
+      <p style="margin-top:0;">How long and how often the trainer is used, on what, and how well — from every device that opens the site.</p>
+      <p class="wl-row">
+        <input type="password" data-password placeholder="Upload password" autocomplete="current-password" class="wl-input" style="width:min(280px,60vw);">
+        <button class="primary" data-unlock>Show activity</button>
+      </p>
+      <p class="muted" data-status style="margin-bottom:0;"></p>
     </div>
     <div data-report></div>
-    <p class="muted act-foot">This device: ${pending ? `${pending} record${pending === 1 ? "" : "s"} waiting to send` : "everything sent"}${hasToken ? "" : " — not sending (no shared key)"}.
+    <p class="muted act-foot">This device: ${pending ? `${pending} record${pending === 1 ? "" : "s"} waiting to send` : "everything sent"}.
       Only timings, activity names and scores are sent — never what is typed.</p>`;
-  if (!hasToken) return;
 
   const status = el.querySelector("[data-status]");
   const report = el.querySelector("[data-report]");
@@ -68,11 +79,11 @@ export function renderActivity(el) {
   async function show(days) {
     status.textContent = "Loading…";
     try {
-      const data = await proxyCall("activity-report", { password, days }, 15000);
+      const data = await fetchReport(password, days);
       el.querySelector("[data-locked]").classList.add("hidden");
       prefs.days = days;
       saveStore();
-      drawReport(report, data, days, show, () => proxyCall("activity-report", { password, days: 400 }, 30000));
+      drawReport(report, data, days, show, () => fetchReport(password, 400, 30000));
     } catch (err) {
       el.querySelector("[data-locked]").classList.remove("hidden");
       status.textContent = errText(err);
@@ -195,7 +206,7 @@ function drawReport(box, data, days, reload, fetchAll) {
       <h3>Recent sessions</h3>
       ${sessionList(s)}
     </div>` : `
-    <div class="card act-card"><p class="muted" style="margin:0;">Nothing recorded in the last ${days} days yet. Each device the children use needs the shared key saved in Grown-ups → AI marking before it can send activity.</p></div>`}
+    <div class="card act-card"><p class="muted" style="margin:0;">Nothing recorded in the last ${days} days yet.</p></div>`}
 
     <p class="muted act-foot">${devices.length ? `Devices: ${esc(devices.join(", "))}. ` : ""}<strong>Learning</strong> counts only while the page is in use (touched, typed or scrolled in the last 1½ minutes). <strong>On screen</strong> is time the page was in front, up to 15 minutes without input. <strong>Length</strong> is the clock time from a session's first to last activity, short breaks included. A day counts as used from 1 minute of learning.</p>`;
 

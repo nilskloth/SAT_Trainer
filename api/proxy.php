@@ -13,7 +13,6 @@ declare(strict_types=1);
 require __DIR__ . '/prompts.php';
 require __DIR__ . '/ratelimit.php';
 require __DIR__ . '/vocab.php';
-require __DIR__ . '/activity.php';
 
 const MAX_BODY_BYTES = 32768;
 const MAX_UPLOAD_BODY_BYTES = 13 * 1024 * 1024;   // import-vocab: base64 pages
@@ -69,17 +68,6 @@ if (in_array($op, PASSWORD_OPS, true)) {
   $denied = sec_check_password($payload['password'] ?? null, $config);
   if ($denied !== null) respond_error($denied[0], $denied[1], $denied[2]);
   unset($payload['password']);
-}
-
-/* Usage monitor: no upstream call */
-if (str_starts_with($op, 'activity-')) {
-  try {
-    $data = $op === 'activity-log' ? activity_log($payload) : activity_report($payload);
-  } catch (RuntimeException $e) {
-    respond_error(500, 'server', $e->getMessage());
-  }
-  echo json_encode(['ok' => true, 'data' => $data]);
-  exit;
 }
 
 /* Word-list ops that only touch the server's files */

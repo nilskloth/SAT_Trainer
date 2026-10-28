@@ -1,8 +1,8 @@
 <?php
 /*
- * Usage monitor: the app's devices send small activity records
- * (op activity-log, shared token only); the parent reads them back
- * in Grown-ups → Activity (op activity-report, upload password too).
+ * Usage monitor storage. Every device sends small activity records to
+ * track.php (op log, no key); the parent reads them back in Grown-ups →
+ * Activity (op report, upload password).
  *
  * Records, one JSON object per line in state/activity/<YYYY-MM>.jsonl:
  *   session  {kind, id, dev, start, end, active, open, parts:{key: seconds}, tally:{area: [answered, right]}}
